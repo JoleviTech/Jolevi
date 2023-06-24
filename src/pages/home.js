@@ -11,16 +11,16 @@ export const SimplePage = () => {
   return (
     <div className="container-fluid HeroBg">
       <Navbar />
-      <div className="row align-items-center justify-content-center px-4">
+      <div className="row align-items-center justify-content-center px-3">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
-          <h2 className=" d-none d-lg-block d-md-none d-sm-none d-xs-none">
+          <h1 className=" d-none d-lg-block d-md-none d-sm-none d-xs-none">
+            Unlock your writing potential and connect with the creative economy
+            <br />
+          </h1>
+          <h2 className=" d-xs-block d-sm-block d-md-block d-lg-none">
             Unlock your writing potential and connect with the creative economy
             <br />
           </h2>
-          <h3 className=" d-xs-block d-sm-block d-md-block d-lg-none">
-            Unlock your writing potential and connect with the creative economy
-            <br />
-          </h3>
           <p className="mt-2">
             Your Ultimate Writing Companion for Book Writing, Launching, and
             Selling. Explore our Creative Marketplace for Authors and MSMEs!

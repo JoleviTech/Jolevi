@@ -33,7 +33,7 @@ export const WorkWithUsBtn = () => {
         target="_blank"
         className="text-decoration-none"
       >
-        <button class="WorkWithUsBtn btnText me-2">
+        <button class="WorkWithUsBtn btnText mx-1 mt-2">
           {" "}
           <b>Work With Us </b>
         </button>
@@ -49,7 +49,7 @@ export const ChallengeBtn = () => {
         target="_blank"
         className="text-decoration-none btnText linkColor"
       >
-        <button class="ChallengeBtn mx-1">
+        <button class="ChallengeBtn mx-1 mt-2">
           {" "}
           <b> 45 Day Challenge </b>
         </button>
