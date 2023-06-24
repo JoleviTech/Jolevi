@@ -11,8 +11,8 @@ export const Navbar = () => {
             src={jolevilogo}
             className="img-fluid"
             alt="jolevi"
-            width="180"
-            height="174"
+            width="120"
+            height="124"
           />
         </Link>
         <button

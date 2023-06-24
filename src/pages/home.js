@@ -54,24 +54,18 @@ export const SimplePage = () => {
         <div className="col-lg-5 col-md-5 col-sm-12"></div>
       </div> */}
       <div className="">
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center mt-3">
           <a
             href="mailto:info@jolevi.com"
-            className="text-decoration-none text-black"
+            className="text-decoration-none linkColor"
           >
-            <p className="paragraphColor mx-3 textShow m-0 p-1">
-              info@jolevi.com
-            </p>
+            <p className="paragraphColor textShow m-0 p-1">info@jolevi.com</p>
           </a>
-        </div>{" "}
-        <div className="d-flex justify-content-center">
           <a
             href="tel:2349065996599"
             className="text-decoration-none text-black"
           >
-            <p className="paragraphColor mx-3 textShow m-0 p-1">
-              +2349065996599
-            </p>
+            <p className="paragraphColor textShow m-0 p-1">+2349065996599</p>
           </a>
         </div>{" "}
         <div className="d-flex justify-content-center">
@@ -107,7 +101,9 @@ export const SimplePage = () => {
           </a>
         </div>
         {/* <div className="d-flex justify-content-center"> */}
-        <p className="text-center">Copyright &copy; Jolevi 2023</p>
+        <p className="text-center m-0 p-0" style={{ fontSize: "0.8rem" }}>
+          Copyright &copy; Jolevi 2023
+        </p>
         {/* </div> */}
       </div>
     </div>

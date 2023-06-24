@@ -28,37 +28,32 @@ export const AuthorsLink = () => {
 export const WorkWithUsBtn = () => {
   return (
     <>
-      <button type="button" class="WorkWithUsBtn btnText mx-1">
-        <b>
-          <a
-            href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
-            target="_blank"
-            className="text-white text-decoration-none"
-          >
-            {" "}
-            Work With Us
-          </a>
-        </b>
-      </button>
+      <a
+        href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
+        target="_blank"
+        className="text-decoration-none"
+      >
+        <button class="WorkWithUsBtn btnText mx-1">
+          {" "}
+          <b>Work With Us </b>
+        </button>
+      </a>
     </>
   );
 };
 export const ChallengeBtn = () => {
   return (
     <>
-      <button type="button" class="WorkWithUsBtn btnText mx-1">
-        <b>
+      <a
+        href="https://forms.gle/dRdRsVyWfQa4Cks38"
+        target="_blank"
+        className="text-decoration-none btnText linkColor"
+      >
+        <button class="ChallengeBtn mx-1">
           {" "}
-          <a
-            href="https://forms.gle/dRdRsVyWfQa4Cks38"
-            target="_blank"
-            className="text-white text-decoration-none"
-          >
-            {" "}
-            45 Day Challenge
-          </a>
-        </b>
-      </button>
+          <b> 45 Day Challenge </b>
+        </button>
+      </a>
     </>
   );
 };
