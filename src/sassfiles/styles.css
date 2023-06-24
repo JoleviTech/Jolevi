@@ -82,6 +82,18 @@ p {
   color: #f15a24 !important;
 }
 
+.LinkedIncolor {
+  color: #0072b1 !important;
+}
+
+.IGcolor {
+  color: #e4405f !important;
+}
+
+.Twittercolor {
+  color: #00acee !important;
+}
+
 .HeroBg {
   background-color: rgba(94, 178, 81, 0.02);
 }

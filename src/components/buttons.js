@@ -33,7 +33,7 @@ export const WorkWithUsBtn = () => {
         target="_blank"
         className="text-decoration-none"
       >
-        <button class="WorkWithUsBtn btnText mx-1">
+        <button class="WorkWithUsBtn btnText me-2">
           {" "}
           <b>Work With Us </b>
         </button>

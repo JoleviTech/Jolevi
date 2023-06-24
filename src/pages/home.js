@@ -25,9 +25,18 @@ export const SimplePage = () => {
             Your Ultimate Writing Companion for Book Writing, Launching, and
             Selling. Explore our Creative Marketplace for Authors and MSMEs!
           </p>
-          <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none mt-2">
+          {/* <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none mt-2">
             <CreativesLink /> <AuthorsLink />
+          </div> */}
+          <div className="d-flex">
+            <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none">
+              <CreativesLink />
+            </div>
+            <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none ms-3">
+              <AuthorsLink />
+            </div>
           </div>
+
           <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none mt-4">
             <WorkWithUsBtn />
             <ChallengeBtn />
@@ -40,8 +49,19 @@ export const SimplePage = () => {
             alt=""
             loading=""
           />
-          <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
-            <CreativesLink /> <AuthorsLink />
+          {/* <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
+            <CreativesLink />
+          </div>
+          <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center ms-4">
+            <AuthorsLink />
+          </div> */}
+          <div className="d-flex justify-content-center">
+            <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
+              <CreativesLink />
+            </div>
+            <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center ms-3">
+              <AuthorsLink />
+            </div>
           </div>
           <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
             <WorkWithUsBtn />
@@ -72,23 +92,19 @@ export const SimplePage = () => {
           <a
             href="https://www.linkedin.com/company/joleving/"
             target="_blank"
-            className="text-decoration-none text-black my-2"
+            className="text-decoration-none my-2"
           >
-            <i class="bi bi-linkedin mx-2 paragraphColor textShow"></i>
+            <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
           </a>
           <a
             href="https://instagram.com/joleving?igshid=MzRlODBiNWFlZA=="
             target="_blank"
-            className="text-decoration-none text-black my-2"
+            className=" my-2"
           >
-            <i class="bi bi-instagram mx-2 paragraphColor textShow"></i>
+            <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
           </a>
-          <a
-            href=""
-            target="_blank"
-            className="text-decoration-none text-black my-2"
-          >
-            <i class="bi bi-twitter mx-2 paragraphColor textShow"></i>
+          <a href="" target="_blank" className="text-decoration-none my-2">
+            <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
           </a>
         </div>
         <div className="d-flex justify-content-center">
