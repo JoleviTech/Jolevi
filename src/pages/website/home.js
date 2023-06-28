@@ -1,11 +1,11 @@
-import simplepagehero from "../assets/images/hero/homehero/simplepagehero.png";
-import { Navbar } from "../components/navbar";
+import simplepagehero from "../../assets/website/images/hero/homehero/simplepagehero.png";
+import { Navbar } from "../../components/website/navbar";
 import {
   WorkWithUsBtn,
   CreativesLink,
   AuthorsLink,
   ChallengeBtn,
-} from "../components/buttons";
+} from "../../components/website/buttons";
 
 export const SimplePage = () => {
   return (

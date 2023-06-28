@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import jolevilogo from "../assets/icons/logo/jolevilogo.png";
+import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 
 export const Navbar = () => {
   return (

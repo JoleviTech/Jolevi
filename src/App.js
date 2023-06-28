@@ -1,7 +1,7 @@
 import * as React from "react";
 // import { Component } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { SimplePage } from "./pages/home";
+import { SimplePage } from "./pages/website/home";
 
 function App() {
   return (

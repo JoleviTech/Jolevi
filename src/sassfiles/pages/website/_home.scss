@@ -1,0 +1,6 @@
+@use "../../colors" as *;
+@use "../../components/website/buttons" as *;
+
+.HeroBg {
+  background-color: $secbgcolor;
+}
