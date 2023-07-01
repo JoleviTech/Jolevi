@@ -29,6 +29,7 @@ export const SimplePage = () => {
             <CreativesLink /> <AuthorsLink />
           </div> */}
           <div className="d-flex">
+            <p className="me-2">Talk to us:</p>
             <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none">
               <CreativesLink />
             </div>
@@ -79,13 +80,18 @@ export const SimplePage = () => {
             href="mailto:info@jolevi.com"
             className="text-decoration-none linkColor"
           >
-            <p className="paragraphColor textShow m-0 p-1">info@jolevi.com</p>
+            <p className="paragraphColor textShow m-0 p-1">
+              <i class="bi bi-envelope me-2"></i>
+              info@jolevi.com
+            </p>
           </a>
           <a
             href="tel:2349065996599"
             className="text-decoration-none text-black"
           >
-            <p className="paragraphColor textShow m-0 p-1">+2349065996599</p>
+            <p className="paragraphColor textShow m-0 p-1">
+              <i class="bi bi-telephone me-2"></i>+2349065996599
+            </p>
           </a>
         </div>{" "}
         <div className="d-flex justify-content-center">
