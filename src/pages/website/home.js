@@ -29,7 +29,9 @@ export const SimplePage = () => {
             <CreativesLink /> <AuthorsLink />
           </div> */}
           <div className="d-flex">
-            <p className="me-2">Talk to us:</p>
+            <p className="me-2 d-none d-lg-block d-md-block d-sm-none d-xs-none">
+              Talk to us:
+            </p>
             <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none">
               <CreativesLink />
             </div>
@@ -56,14 +58,21 @@ export const SimplePage = () => {
           <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center ms-4">
             <AuthorsLink />
           </div> */}
-          <div className="d-flex justify-content-center">
-            <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
-              <CreativesLink />
-            </div>
-            <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center ms-3">
-              <AuthorsLink />
+          <div>
+            {" "}
+            <p className="d-xs-block d-sm-block d-md-none d-lg-none mt-5 text-center m-0 p-0">
+              Talk to us:
+            </p>
+            <div className="d-flex justify-content-center">
+              <div className="d-xs-block d-sm-block d-md-none d-lg-none text-center">
+                <CreativesLink />
+              </div>
+              <div className="d-xs-block d-sm-block d-md-none d-lg-none text-center ms-3">
+                <AuthorsLink />
+              </div>
             </div>
           </div>
+
           <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
             <WorkWithUsBtn />
             <ChallengeBtn />
