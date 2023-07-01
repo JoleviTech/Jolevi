@@ -40,7 +40,7 @@ export const SimplePage = () => {
             </div>
           </div>
 
-          <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none mt-4">
+          <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none">
             <WorkWithUsBtn />
             <ChallengeBtn />
           </div>
@@ -72,8 +72,7 @@ export const SimplePage = () => {
               </div>
             </div>
           </div>
-
-          <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-4 text-center">
+          <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-3 text-center">
             <WorkWithUsBtn />
             <ChallengeBtn />
           </div>
