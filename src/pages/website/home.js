@@ -83,7 +83,93 @@ export const SimplePage = () => {
         <div className="col-lg-5 col-md-5 col-sm-12"></div>
       </div> */}
       <div className="">
-        <div className="d-flex justify-content-center mt-3">
+        <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-5">
+          {/* <div></div> */}
+          <div className="mb-sm-0 mx-3">
+            <a
+              href="mailto:info@jolevi.com"
+              className="text-decoration-none linkColor"
+            >
+              <p className="paragraphColor textShow">
+                <i class="bi bi-envelope me-2"></i>
+                info@jolevi.com
+              </p>
+            </a>
+          </div>
+          <div className="mb-sm-0 mx-3">
+            <a
+              href="tel:2349065996599"
+              className="text-decoration-none text-black"
+            >
+              <p className="paragraphColor textShow">
+                <i class="bi bi-telephone me-2"></i>+2349065996599
+              </p>
+            </a>
+          </div>
+          <div className="mb-3 mx-3">
+            <a
+              href="https://www.linkedin.com/company/joleving/"
+              target="_blank"
+              className="text-decoration-none"
+            >
+              <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
+            </a>
+            <a
+              href="https://instagram.com/joleving?igshid=MzRlODBiNWFlZA=="
+              target="_blank"
+              className=""
+            >
+              <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
+            </a>
+            <a href="" target="_blank" className="text-decoration-none">
+              <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
+            </a>
+          </div>
+        </div>
+
+        {/* <div className="d-flex justify-content-center mt-5">
+          <div className="mx-3">
+            <a
+              href="mailto:info@jolevi.com"
+              className="text-decoration-none linkColor"
+            >
+              <p className="paragraphColor textShow">
+                <i class="bi bi-envelope me-2"></i>
+                info@jolevi.com
+              </p>
+            </a>
+          </div>
+          <div className="mx-3">
+            <a
+              href="tel:2349065996599"
+              className="text-decoration-none text-black"
+            >
+              <p className="paragraphColor textShow">
+                <i class="bi bi-telephone me-2"></i>+2349065996599
+              </p>
+            </a>
+          </div>{" "}
+          <div className="mt-1 mx-3">
+            <a
+              href="https://www.linkedin.com/company/joleving/"
+              target="_blank"
+              className="text-decoration-none  "
+            >
+              <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
+            </a>
+            <a
+              href="https://instagram.com/joleving?igshid=MzRlODBiNWFlZA=="
+              target="_blank"
+              className=""
+            >
+              <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
+            </a>
+            <a href="" target="_blank" className="text-decoration-none ">
+              <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
+            </a>
+          </div>
+        </div> */}
+        {/* <div className="d-flex justify-content-center mt-3">
           <a
             href="mailto:info@jolevi.com"
             className="text-decoration-none linkColor"
@@ -120,7 +206,7 @@ export const SimplePage = () => {
           <a href="" target="_blank" className="text-decoration-none my-2">
             <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
           </a>
-        </div>
+        </div> */}
         <div className="d-flex justify-content-center">
           <a
             href="https://maps.app.goo.gl/DFurq3id3D9i5TrE7"
