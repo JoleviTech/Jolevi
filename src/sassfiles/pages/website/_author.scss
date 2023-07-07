@@ -1,0 +1,84 @@
+@use "../../colors" as *;
+
+.AuthorHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.AuthorHeroBg {
+  background: url(/src/assets/website/images/authors/hero.png);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.AuthorHeroBg h1 {
+  position: relative;
+}
+.AuthorHeroBg h2 {
+  position: relative;
+}
+.AuthorHeroBg p {
+  position: relative;
+}
+.AuthorHeroBg .GetMyBookBtn {
+  position: relative;
+}
+
+.textWhite {
+  color: $sectextcolor;
+}
+
+.aboutBg {
+  background: rgba(94, 178, 81, 0.2);
+}
+
+.GetMyBookBtn {
+  background-color: $secbtncolor;
+  color: $sectextcolor;
+  width: 180px;
+  height: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+}
+
+.GetMyBookBtnTwo {
+  width: 180px;
+  height: 50px;
+  color: $prytextcolor;
+  border: 2px solid $secbtncolor;
+  background: rgba(94, 178, 81, 0.04);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  &:hover {
+    background-color: $secbtncolor;
+    color: $sectextcolor;
+  }
+}
+.booksBg {
+  background: rgba(94, 178, 81, 0.1);
+}
+
+.testimonialCard {
+  border-radius: 15px;
+  // background: #FFF;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
