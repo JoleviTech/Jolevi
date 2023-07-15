@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import simplepagehero from "../../assets/website/images/hero/homehero/simplepagehero.png";
 import { Navbar } from "../../components/website/navbar";
 import {
@@ -217,9 +218,22 @@ export const SimplePage = () => {
           </a>
         </div>
         {/* <div className="d-flex justify-content-center"> */}
-        <p className="text-center m-0 p-0" style={{ fontSize: "0.8rem" }}>
-          Copyright &copy; Jolevi 2023
-        </p>
+        <div className="d-flex justify-content-center">
+          {" "}
+          <p
+            className="text-center m-0 p-0 mx-1"
+            style={{ fontSize: "0.8rem" }}
+          >
+            <Link to="/privacy-policy"> Privacy Policy</Link>
+          </p>
+          <p
+            className="text-center m-0 p-0 mx-1"
+            style={{ fontSize: "0.8rem" }}
+          >
+            Copyright &copy; Jolevi 2023
+          </p>
+        </div>
+
         {/* </div> */}
       </div>
     </div>
