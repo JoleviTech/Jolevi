@@ -232,6 +232,12 @@ export const SimplePage = () => {
           >
             Copyright &copy; Jolevi 2023
           </p>
+          <p
+            className="text-center m-0 p-0 mx-1"
+            style={{ fontSize: "0.8rem" }}
+          >
+            Copyright &copy; Jolevi 2023
+          </p>
         </div>
 
         {/* </div> */}
