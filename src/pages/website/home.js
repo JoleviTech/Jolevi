@@ -88,12 +88,12 @@ export const SimplePage = () => {
           {/* <div></div> */}
           <div className="mb-sm-0 mx-3">
             <a
-              href="mailto:info@jolevi.com"
+              href="mailto:jolevibooks@gmail.com"
               className="text-decoration-none linkColor"
             >
               <p className="paragraphColor textShow">
                 <i class="bi bi-envelope me-2"></i>
-                info@jolevi.com
+                jolevibooks@gmail.com
               </p>
             </a>
           </div>

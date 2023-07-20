@@ -115,6 +115,72 @@ p {
   background-color: rgba(94, 178, 81, 0.02);
 }
 
+.WhatWeDoBg {
+  background-color: rgba(94, 178, 81, 0.02);
+}
+
+.WhatWeDoCard {
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.LandingPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.LandingPageHeroBg {
+  background: url(/src/assets/website/images/authors/hero.png);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.LandingPageHeroBg h1 {
+  position: relative;
+}
+
+.LandingPageHeroBg h2 {
+  position: relative;
+}
+
+.LandingPageHeroBg p {
+  position: relative;
+}
+
+.LandingPageHeroBg .WorkWithUsBtn {
+  position: relative;
+}
+
+.processesNumber {
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #f15a24;
+}
+
+.impactCard {
+  border-radius: 100px;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.impactNumber {
+  font-size: 1.8rem;
+}
+
 .AuthorHeroBgg::before {
   content: "";
   position: absolute;
