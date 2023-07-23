@@ -61,3 +61,19 @@ export const ChallengeBtn = () => {
     </>
   );
 };
+export const GetStartedBtn = () => {
+  return (
+    <>
+      <a
+        href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
+        target="_blank"
+        className="text-decoration-none"
+      >
+        <button class="WorkWithUsBtn btnText mx-1 mt-2">
+          {" "}
+          <b>Get Started </b>
+        </button>
+      </a>
+    </>
+  );
+};

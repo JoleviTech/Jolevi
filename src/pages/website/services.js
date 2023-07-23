@@ -1,9 +1,14 @@
 import writing from "../../assets/website/images/services/writing.png";
+import writingicon from "../../assets/website/icons/whatwedo/writing.png";
+import pricing from "../../assets/website/images/services/pricing.png";
+
+import { GetStartedBtn } from "../../components/website/buttons";
 
 const Services = () => {
   return (
     <>
       <ServicesSection />
+      <Pricing />
     </>
   );
 };
@@ -77,6 +82,61 @@ const ServicesSection = () => {
                   eiusmod tempr incididunt ut labore et dolore magna aliqua. Ut
                   enim ad
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const Pricing = () => {
+  return (
+    <>
+      <div className="container-fluid p-5">
+        {" "}
+        <h4 className="ms-5">Pricing</h4>
+        {/* <div
+          className="col-lg-4 card firstPricingCard"
+          style={{ width: "18rem" }}
+        >
+          <div className="card-body">
+            <h5 className="card-title">Lorem Ipsum</h5>
+            <h5 className="card-title">Lorem Ipsum Dolor</h5>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum
+              dolor sit amet consectetur adipiscing Lorem ipsum dolor sit amet
+              consectetur adipiscing
+            </p>
+          </div>{" "}
+          <img src={pricing} className="card-img-top" alt="..." />
+        </div> */}
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <div className="d-flex align-items-center">
+                  <img src={writingicon} />
+                  <h5 class="card-title ms-3">
+                    <b>Lite</b>
+                  </h5>
+                </div>
+                <p class="card-text">Lorem ipsum dolor sit amet</p>{" "}
+                <div className="d-flex align-items-center justify-content-center">
+                  <h2 className="mx-1">N2,000</h2>
+                  <p className="mt-4 mx-1">per month</p>
+                </div>
+                <div className="text-center">
+                  <GetStartedBtn />
+                </div>
+                <h5>
+                  <b>Lite includes:</b>
+                </h5>
+                <div className="d-flex align-items-center">
+                  {" "}
+                  <img src={writingicon} className="img-fluid" />
+                  <p>Lorem ipsum dolor sit amet </p>
+                </div>
               </div>
             </div>
           </div>
