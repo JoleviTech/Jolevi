@@ -15,7 +15,7 @@ export const Author = () => {
       <AboutAuthor />
       <FirstBook />
       <SecondBook />
-      <ThirdBook />
+      {/* <ThirdBook /> */}
       <Services />
       <Testimonials />
       <Footer />
@@ -30,6 +30,18 @@ const GetMyBookBtn = () => {
         <button class="GetMyBookBtn btnText mt-2">
           {" "}
           <b>Get My Book </b>
+        </button>
+      </a>
+    </>
+  );
+};
+const PreorderBtn = () => {
+  return (
+    <>
+      <a href="" target="_blank" className="text-decoration-none">
+        <button class="GetMyBookBtn btnText mt-2">
+          {" "}
+          <b>Preorder</b>
         </button>
       </a>
     </>
@@ -100,7 +112,7 @@ export const Hero = () => {
             </p>
           </div>
           <div className="ms-5">
-            <GetMyBookBtn />
+            <PreorderBtn />
           </div>
         </div>
       </div>
@@ -111,35 +123,73 @@ export const Hero = () => {
 const AboutAuthor = () => {
   return (
     <div className="container-fluid aboutBg">
-      <div className="row align-items-center justify-content-center px-4 py-5">
-        <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
+      <div className="row align-items-center justify-content-center px-4 py-4 g-0">
+        <div className="col-lg-10 col-md-7 col-sm-12">
           <h3 className="">
             About Me
             <br />
           </h3>
           <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, nostrud exercitation ullamco Lorem ipsum dolor sit amet, cse
-            adipiscing elit, sed do eiusmod tempr incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, nostrud exercitation ullamco
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, nostrud exercitation ullamco Lorem ipsum dolor sit amet, cse
-            adipiscing elit, sed do eiusmod tempr incididunt ut labore et dolore
-            magna aliqua. Ut enim
+            Titilayo Ekundayo is a dynamic entrepreneur, business strategist,
+            and influential figure in the world of entrepreneurship. With a
+            strong focus on entrepreneurship, business development, and
+            strategy, she has made a significant impact on the success of
+            countless businesses.
           </p>
-          <div className="mb-4">
-            <GetMyBookBtn />
-          </div>
+          <p className="mt-4">
+            As a successful serial entrepreneur, Titilayo's journey is a
+            testament to her expertise and dedication. Her valuable insights
+            have led her to serve on various boards, where she passionately
+            supports and guides entrepreneurs in building profitable and
+            sustainable businesses.
+          </p>
+          <p className="mt-4">
+            A true advocate for emerging entrepreneurs, Titilayo takes great
+            pleasure in mentoring and handholding those who are just starting
+            their journey. From ideation to growth, she provides the necessary
+            guidance and encouragement for their success.
+          </p>
+          <p className="mt-4">
+            Beyond her entrepreneurial pursuits, Titilayo is also the host of{" "}
+            <a
+              href=" https://podcasters.spotify.com/pod/show/abeg-who-send-me"
+              target="_blank"
+            >
+              The Abegwhosendme podcast
+            </a>{" "}
+            a popular platform for entrepreneurs and aspiring business owners.
+            Through her podcast, she shares inspiring stories, advice, and
+            practical tips, motivating listeners to overcome challenges and
+            achieve their dreams in the business world.
+          </p>
+          <p className="mt-4">
+            As a lifelong learner and educator, Titilayo finds joy in teaching
+            and imparting knowledge. She frequently facilitates entrepreneurship
+            classes, where she equips aspiring business minds with the necessary
+            tools to thrive in today's competitive landscape.
+          </p>
+          <p className="mt-4">
+            Titilayo's passion for effective communication and leadership is
+            evident in her role as the current president of the Ikeja
+            Toastmasters Club, an esteemed international organization.
+          </p>
+          <p className="mt-4">
+            Outside her professional life, Titilayo enjoys the pleasures of
+            reading books, indulging in epic movies, and engaging in stimulating
+            intellectual discussions. With her unwavering commitment to
+            entrepreneurship, dedication to nurturing emerging talents, and keen
+            sense of leadership, Titilayo Ekundayo continues to be a guiding
+            light in the entrepreneurial community, leaving an indelible mark on
+            the world of business development and strategy.
+          </p>
         </div>
-        <div className="col-lg-5 col-md-5 col-sm-12">
-          <img
-            src={authorImg}
-            className="d-block mx-lg-auto img-fluid"
-            alt=""
-            loading=""
-          />
+      </div>
+      <div className="row align-items-center justify-content-center">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <img src={authorImg} className="d-block" alt="" loading="" />
+        </div>{" "}
+        <div className="mt-5 text-center mb-4">
+          <GetMyBookBtn />
         </div>
       </div>
     </div>
@@ -160,7 +210,7 @@ const FirstBook = () => {
         </div>
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
           <h3 className="">
-            <b> Book Name</b>
+            <b>Abeg who send me</b>
             <br />
           </h3>
           <p className="mt-2">
@@ -181,8 +231,13 @@ const FirstBook = () => {
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
           </p>
+          <p className="mt-4">
+            Books are available at <a href="#">Amazon</a>,{" "}
+            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
+            <a href="#">Bambooks</a>
+          </p>
           <div className="">
-            <GetMyBookBtnTwo />
+            <PreorderBtn />
           </div>
         </div>
       </div>
@@ -195,7 +250,7 @@ const SecondBook = () => {
       <div className="row align-items-center justify-content-center px-4 py-5">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
           <h3 className="">
-            <b> Book Name</b>
+            <b>Tts Random Thoughts</b>
             <br />
           </h3>
           <p className="mt-2">
@@ -216,8 +271,13 @@ const SecondBook = () => {
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
           </p>
+          <p className="mt-4">
+            Books are available at <a href="#">Amazon</a>,{" "}
+            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
+            <a href="#">Bambooks</a>
+          </p>
           <div className="mb-4">
-            <GetMyBookBtnTwo />
+            <PreorderBtn />
           </div>
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12">
@@ -291,7 +351,7 @@ const Services = () => {
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
                   <img src={Icon} className="img-fluid" />
-                  <h6 className="mt-3">Writing</h6>
+                  <h6 className="mt-3">Business Consulting</h6>
                 </div>
                 <div>
                   {" "}
@@ -304,7 +364,7 @@ const Services = () => {
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
                   <img src={Icon} className="img-fluid" />
-                  <h6 className="mt-3">Writing</h6>
+                  <h6 className="mt-3">Facilitation</h6>
                 </div>
                 <div>
                   {" "}
@@ -317,7 +377,7 @@ const Services = () => {
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
                   <img src={Icon} className="img-fluid" />
-                  <h6 className="mt-3">Writing</h6>
+                  <h6 className="mt-3">Strategy Development</h6>
                 </div>
                 <div>
                   {" "}
@@ -327,7 +387,7 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
+              {/* <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
                   <img src={Icon} className="img-fluid" />
                   <h6 className="mt-3">Writing</h6>
@@ -365,7 +425,7 @@ const Services = () => {
                     eiusmod tempr incididunt ut labore et dolore magna
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -490,12 +550,12 @@ const Footer = () => {
           {/* <div></div> */}
           <div className="mb-sm-0 mx-3">
             <a
-              href="mailto:info@jolevi.com"
+              href="mailto:holla@titiekundayo.com"
               className="text-decoration-none linkColor"
             >
               <p className="paragraphColor textShow">
                 <i class="bi bi-envelope me-2"></i>
-                info@jolevi.com
+                holla@titiekundayo.com
               </p>
             </a>
           </div>
@@ -540,7 +600,7 @@ const Footer = () => {
         </div>
 
         <p className="text-center m-0 p-0" style={{ fontSize: "0.8rem" }}>
-          Copyright &copy; Jolevi 2023
+          Copyright &copy; Titi Ekundayo 2023
         </p>
       </div>
     </>
