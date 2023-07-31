@@ -348,40 +348,40 @@ const Services = () => {
         <div className="card-group mx-5">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
             <div className="row d-lg-flex d-md-flex ">
-              <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
-                <div>
+              <div className="col-lg-4 col-md-6 col-sm-12 d-lg-flex d-md-flex py-2 align-items-center">
+                <div className="col-lg-3 col-sm-6">
                   <img src={Icon} className="img-fluid" />
                   <h6 className="mt-3">Business Consulting</h6>
                 </div>
-                <div>
+                <div className="col-lg-9 col-sm-6">
                   {" "}
-                  <p className="ms-3">
+                  <p className="ms-lg-3 ms-md-3">
                     Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
                     eiusmod tempr incididunt ut labore et dolore magna
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
-                <div>
+              <div className="col-lg-4 col-md-6 d-lg-flex d-md-flex py-2 align-items-center">
+                <div className="col-lg-3 col-sm-6">
                   <img src={Icon} className="img-fluid" />
                   <h6 className="mt-3">Facilitation</h6>
                 </div>
-                <div>
+                <div className="col-lg-9 col-sm-6">
                   {" "}
-                  <p className="ms-3">
+                  <p className="ms-lg-3 ms-md-3">
                     Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
                     eiusmod tempr incididunt ut labore et dolore magna
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
-                <div>
+              <div className="col-lg-4 col-md-6 d-lg-flex d-md-flex py-2 align-items-center">
+                <div className="col-lg-3 col-sm-6">
                   <img src={Icon} className="img-fluid" />
                   <h6 className="mt-3">Strategy Development</h6>
                 </div>
-                <div>
+                <div className="col-lg-9 col-sm-6">
                   {" "}
-                  <p className="ms-3">
+                  <p className="ms-lg-3 ms-md-3">
                     Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
                     eiusmod tempr incididunt ut labore et dolore magna
                   </p>
@@ -441,7 +441,7 @@ const Testimonials = () => {
         <h3 className="pb-4 mx-5">
           <b>Testimonials</b>
         </h3>
-        <div className="card-group mx-5">
+        <div className="card-group mx-lg-5">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
             <div className="row d-lg-flex d-md-flex">
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
