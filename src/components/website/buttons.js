@@ -80,7 +80,11 @@ export const GetStartedBtn = () => {
 export const JoinTheTeamBtn = () => {
   return (
     <>
-      <a href="#" target="_blank" className="text-decoration-none">
+      <a
+        href="https://forms.gle/fQ6yZGwUNvco27H9A"
+        target="_blank"
+        className="text-decoration-none"
+      >
         <button class="WorkWithUsBtn btnText mx-1 mt-2">
           {" "}
           <b>Join the team</b>
