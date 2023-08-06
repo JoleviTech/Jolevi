@@ -6,6 +6,10 @@ import BookTwo from "../../assets/website/images/authors/BookTwo.png";
 import BookThree from "../../assets/website/images/authors/BookThree.png";
 import Icon from "../../assets/website/images/authors/icon.png";
 import testimonial from "../../assets/website/images/authors/testimonial.png";
+import homehero from "../../assets/website/images/authors/homehero.jpg";
+import homeherotwo from "../../assets/website/images/authors/homeherotwo.png";
+import homeherothree from "../../assets/website/images/authors/homeherothree.png";
+import homeherofour from "../../assets/website/images/authors/homeherofour.png";
 
 export const Author = () => {
   return (
@@ -17,7 +21,7 @@ export const Author = () => {
       <SecondBook />
       {/* <ThirdBook /> */}
       <Services />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );
@@ -42,6 +46,22 @@ const PreorderBtn = () => {
         <button class="GetMyBookBtn btnText mt-2">
           {" "}
           <b>Preorder</b>
+        </button>
+      </a>
+    </>
+  );
+};
+const ContactMeBtn = () => {
+  return (
+    <>
+      <a
+        href="mailto:holla@titiekundayo.com"
+        target="_blank"
+        className="text-decoration-none"
+      >
+        <button class="GetMyBookBtn btnText mt-2">
+          {" "}
+          <b>Contact me</b>
         </button>
       </a>
     </>
@@ -96,103 +116,117 @@ const Navbar = () => {
 
 export const Hero = () => {
   return (
-    <div className="container-fluid AuthorHeroBg d-flex align-items-center">
-      <div className="container-fluid AuthorHeroBgg d-flex pt-3 pb-4">
-        <div className="row justify-content-start">
-          <div className="col-lg-6 col-md-8 col-sm-12 px-lg-5 ms-2">
-            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing
-            </h1>
-            <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing
-            </h2>
-            <p className="mt-2 textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum
-              dolor sit amet consectetur adipiscing
-            </p>
-          </div>
-          <div className="ms-5">
+    <div className="container-fluid newHeroBg ">
+      <div className="row align-items-center justify-content-center px-4">
+        <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
+          <h2 className=" d-none d-lg-block d-md-none d-sm-none d-xs-none">
+            Leaving the world better than we met it
+            <br />
+          </h2>
+          <h3 className=" d-xs-block d-sm-block d-md-block d-lg-none">
+            Leaving the world better than we met it
+            <br />
+          </h3>
+          <p>
+            Pre Order Amount - Hardcopy &#8358;<b>4000</b>, Softcopy &#8358;
+            <b>3000</b>, Audiobook &#8358;<b>3500</b>
+          </p>
+          <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none mt-4">
             <PreorderBtn />
           </div>
+        </div>
+        <div className="col-lg-5 col-md-5 col-sm-12">
+          <img
+            // src={homeherothree}
+            // src={homeherofour}
+            src={homeherotwo}
+            className="d-block mx-lg-auto img-fluid"
+            alt=""
+            loading=""
+          />
         </div>
       </div>
     </div>
   );
 };
+// export const Hero = () => {
+//   return (
+//     <div className="container-fluid AuthorHeroBg d-flex align-items-center">
+//       <div className="container-fluid AuthorHeroBgg d-flex pt-3 pb-4">
+//         <div className="row justify-content-start">
+//           <div className="col-lg-6 col-md-8 col-sm-12 px-lg-5 ms-2">
+//             <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite">
+//               Leaving the world better than we met it
+//             </h1>
+//             <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
+//               Leaving the world better than we met it
+//             </h2>
+//             {/* <p className="mt-2 textWhite">
+//               Lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum
+//               dolor sit amet consectetur adipiscing
+//             </p> */}
+//           </div>
+//           <div className="ms-5">
+//             <PreorderBtn />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const AboutAuthor = () => {
   return (
-    <div className="container-fluid aboutBg">
-      <div className="row align-items-center justify-content-center px-4 py-4 g-0">
-        <div className="col-lg-10 col-md-7 col-sm-12">
-          <h3 className="">
-            About Me
-            <br />
-          </h3>
-          <p className="mt-4">
-            Titilayo Ekundayo is a dynamic entrepreneur, business strategist,
-            and influential figure in the world of entrepreneurship. With a
-            strong focus on entrepreneurship, business development, and
-            strategy, she has made a significant impact on the success of
-            countless businesses.
-          </p>
-          <p className="mt-4">
-            As a successful serial entrepreneur, Titilayo's journey is a
-            testament to her expertise and dedication. Her valuable insights
-            have led her to serve on various boards, where she passionately
-            supports and guides entrepreneurs in building profitable and
-            sustainable businesses.
-          </p>
-          <p className="mt-4">
-            A true advocate for emerging entrepreneurs, Titilayo takes great
-            pleasure in mentoring and handholding those who are just starting
-            their journey. From ideation to growth, she provides the necessary
-            guidance and encouragement for their success.
-          </p>
-          <p className="mt-4">
-            Beyond her entrepreneurial pursuits, Titilayo is also the host of{" "}
-            <a
-              href=" https://podcasters.spotify.com/pod/show/abeg-who-send-me"
-              target="_blank"
-            >
-              The Abegwhosendme podcast
-            </a>{" "}
-            a popular platform for entrepreneurs and aspiring business owners.
-            Through her podcast, she shares inspiring stories, advice, and
-            practical tips, motivating listeners to overcome challenges and
-            achieve their dreams in the business world.
-          </p>
-          <p className="mt-4">
-            As a lifelong learner and educator, Titilayo finds joy in teaching
-            and imparting knowledge. She frequently facilitates entrepreneurship
-            classes, where she equips aspiring business minds with the necessary
-            tools to thrive in today's competitive landscape.
-          </p>
-          <p className="mt-4">
-            Titilayo's passion for effective communication and leadership is
-            evident in her role as the current president of the Ikeja
-            Toastmasters Club, an esteemed international organization.
-          </p>
-          <p className="mt-4">
-            Outside her professional life, Titilayo enjoys the pleasures of
-            reading books, indulging in epic movies, and engaging in stimulating
-            intellectual discussions. With her unwavering commitment to
-            entrepreneurship, dedication to nurturing emerging talents, and keen
-            sense of leadership, Titilayo Ekundayo continues to be a guiding
-            light in the entrepreneurial community, leaving an indelible mark on
-            the world of business development and strategy.
-          </p>
+    <>
+      <div className="container-fluid aboutBg">
+        <div className="row align-items-center justify-content-center px-4 py-5">
+          <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
+            <h3 className="">
+              About Me
+              <br />
+            </h3>
+            <p className="mt-4">
+              Titilayo Ekundayo is a dynamic entrepreneur, strategist, and
+              influencer in the business world. With a strong focus on
+              entrepreneurship, she's had a significant impact on numerous
+              businesses. As a serial entrepreneur, her journey showcases
+              expertise and dedication. She supports and guides entrepreneurs on
+              various boards, aiding in profitable and sustainable businesses.
+            </p>
+            <p className="mt-4">
+              An advocate for emerging entrepreneurs, Titilayo enjoys mentoring,
+              guiding from ideation to growth. She hosts{" "}
+              <a
+                href=" https://podcasters.spotify.com/pod/show/abeg-who-send-me"
+                target="_blank"
+              >
+                The Abegwhosendme podcast
+              </a>{" "}
+              sharing stories and advice for business success. As an educator,
+              she teaches entrepreneurship, equipping aspiring business minds.
+              Titilayo is also the president of Ikeja Toastmasters Club,
+              showcasing her communication and leadership skills.
+            </p>
+            <p className="mt-4">
+              Amid her professional life, she finds joy in reading, movies, and
+              intellectual discussions. Titilayo Ekundayo is a guiding light,
+              leaving an indelible mark on business development and strategy.
+            </p>
+            <div className="mb-4">
+              <ContactMeBtn />
+            </div>
+          </div>
+          <div className="col-lg-5 col-md-5 col-sm-12">
+            <img
+              src={authorImg}
+              className="d-block mx-lg-auto img-fluid"
+              alt=""
+              loading=""
+            />
+          </div>
         </div>
       </div>
-      <div className="row align-items-center justify-content-center">
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <img src={authorImg} className="d-block" alt="" loading="" />
-        </div>{" "}
-        <div className="mt-5 text-center mb-4">
-          <GetMyBookBtn />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
@@ -214,6 +248,19 @@ const FirstBook = () => {
             <br />
           </h3>
           <p className="mt-2">
+            "Abeg Who Send Me: Embracing Fear and Embracing Growth in
+            Entrepreneurship" is a compelling and insightful compilation of
+            short stories,chronicling the author's entrepreneurial journey in
+            Nigeria. Fueled by a need to share lessons learned, the book
+            captures mistakes made, both avoidable and unavoidable, and the
+            invaluable insights gained in hindsight. With a candid narrative and
+            a "so what" attitude towards failure, the book serves as an
+            indispensable guide for aspiring and young entrepreneurs, offering
+            them a chance to navigate their ventures more confidently. Even
+            seasoned businesspeople can find it a refreshing reminder of the
+            fundamentals that drive success.
+          </p>
+          {/* <p className="mt-4">
             Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
             tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
@@ -224,13 +271,7 @@ const FirstBook = () => {
             tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
+          </p> */}
           <p className="mt-4">
             Books are available at <a href="#">Amazon</a>,{" "}
             <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
@@ -254,6 +295,17 @@ const SecondBook = () => {
             <br />
           </h3>
           <p className="mt-2">
+            "Inspired Reflections: 365 Days of Enlightening Thoughts" is a
+            delightful collection of random musings that began with a playful
+            WhatsApp status challenge. Evolving into a treasure trove of quotes,
+            each page aims to leave readers enriched and inspired. Extracted
+            from the author's daily encounters, every thought comes with a
+            charming short story, providing context and depth. This fantastic
+            read offers 365 days of instructive, educative, and enlightening
+            insights, making it a must-have for those seeking daily doses of
+            inspiration."
+          </p>
+          {/* <p className="mt-4">
             Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
             tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
@@ -264,13 +316,7 @@ const SecondBook = () => {
             tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
+          </p> */}
           <p className="mt-4">
             Books are available at <a href="#">Amazon</a>,{" "}
             <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
@@ -356,8 +402,12 @@ const Services = () => {
                 <div className="col-lg-9 col-sm-6">
                   {" "}
                   <p className="ms-lg-3 ms-md-3">
-                    Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
-                    eiusmod tempr incididunt ut labore et dolore magna
+                    Discover the Power of Business Consulting with Titilayo!
+                    With a decade of entrepreneurial experience and successful
+                    ventures, Titilayo offers expert advice to business owners
+                    at all stages – ideation, product-market fit, and growth.
+                    Achieve efficiency and sustainable growth for your business
+                    with her strategic insights. Unlock your potential today!
                   </p>
                 </div>
               </div>
@@ -369,8 +419,16 @@ const Services = () => {
                 <div className="col-lg-9 col-sm-6">
                   {" "}
                   <p className="ms-lg-3 ms-md-3">
-                    Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
-                    eiusmod tempr incididunt ut labore et dolore magna
+                    At the heart of every problem lies a knowledge gap, and Titi
+                    is on a mission to bridge it! With a passion for guiding
+                    entrepreneurs, she finds immense joy in imparting the
+                    essential skills of building, growing, and scaling
+                    businesses. As a seasoned facilitator, Titi has shared her
+                    expertise through entrepreneurship classes at prestigious
+                    institutions such as 8thGear Venture Studio, Leap Africa's
+                    E-learning bootcamp, and FCMB Agrohack incubation, among
+                    others. Join Titi on an empowering journey of learning and
+                    watch your entrepreneurial dreams flourish!
                   </p>
                 </div>
               </div>
@@ -382,8 +440,14 @@ const Services = () => {
                 <div className="col-lg-9 col-sm-6">
                   {" "}
                   <p className="ms-lg-3 ms-md-3">
-                    Lorem ipsum dolor sit amet, cse adipiscing elit, sed do
-                    eiusmod tempr incididunt ut labore et dolore magna
+                    "Unlock Success with Expert Strategy Development! With years
+                    of experience in business consulting, our team, led by
+                    Titilayo, has helped numerous businesses achieve their
+                    goals. From ideation to implementation, we offer tailored
+                    strategies for growth and efficiency. Let us guide you
+                    through every stage, ensuring your business thrives in
+                    today's competitive landscape. Take the first step towards
+                    success and partner with our strategy development experts!"
                   </p>
                 </div>
               </div>
