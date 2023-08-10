@@ -77,6 +77,18 @@ export const GetStartedBtn = () => {
     </>
   );
 };
+export const GetaQuoteBtn = () => {
+  return (
+    <>
+      <a href="#" target="_blank" className="text-decoration-none">
+        <button class="WorkWithUsBtn btnText mx-1 mt-2">
+          {" "}
+          <b>Get a quote</b>
+        </button>
+      </a>
+    </>
+  );
+};
 export const JoinTheTeamBtn = () => {
   return (
     <>
