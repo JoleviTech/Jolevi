@@ -61,6 +61,22 @@ export const ChallengeBtn = () => {
     </>
   );
 };
+export const PublishNowPayLaterBtn = () => {
+  return (
+    <>
+      <a
+        href="https://forms.gle/wuqyN4WWXq8MBYvK8"
+        target="_blank"
+        className="text-decoration-none btnText linkColor"
+      >
+        <button class="PublishNowPayLaterBtn mx-1 mt-2">
+          {" "}
+          <b> Publish now, Pay later </b>
+        </button>
+      </a>
+    </>
+  );
+};
 export const GetStartedBtn = () => {
   return (
     <>

@@ -6,6 +6,7 @@ import {
   CreativesLink,
   AuthorsLink,
   ChallengeBtn,
+  PublishNowPayLaterBtn,
 } from "../../components/website/buttons";
 
 export const SimplePage = () => {
@@ -43,7 +44,7 @@ export const SimplePage = () => {
 
           <div className="d-none d-lg-block d-md-block d-sm-none d-xs-none">
             <WorkWithUsBtn />
-            <ChallengeBtn />
+            <PublishNowPayLaterBtn />
           </div>
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12">
@@ -75,7 +76,7 @@ export const SimplePage = () => {
           </div>
           <div className="d-xs-block d-sm-block d-md-none d-lg-none mt-3 text-center">
             <WorkWithUsBtn />
-            <ChallengeBtn />
+            <PublishNowPayLaterBtn />
           </div>
         </div>
       </div>

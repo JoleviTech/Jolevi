@@ -36,6 +36,22 @@
     color: $sectextcolor;
   }
 }
+.PublishNowPayLaterBtn {
+  width: 220px;
+  height: 50px;
+  color: $prytextcolor;
+  border-radius: 15px;
+  border: 2px solid $terbtncolor;
+  background: rgba(94, 178, 81, 0.04);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  &:hover {
+    background-color: $terbtncolor;
+    color: $sectextcolor;
+  }
+}
 
 .CreativesLink,
 .AuthorsLink {
