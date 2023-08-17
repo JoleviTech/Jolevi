@@ -12,6 +12,7 @@ import { JoinTheTeamBtn } from "../../components/website/buttons";
 import ife from "../../assets/website/images/about/advisory/ife.png";
 import adeniran from "../../assets/website/images/about/advisory/adeniran.png";
 import { NewNavbar } from "../../components/website/navbar";
+import { Footer } from "../../components/website/footer";
 
 const About = () => {
   return (
@@ -22,6 +23,7 @@ const About = () => {
       <AdvisoryCouncil />
       <Partners />
       <JoinTheTeam />
+      <Footer />
     </>
   );
 };

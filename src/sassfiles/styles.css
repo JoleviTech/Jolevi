@@ -221,6 +221,10 @@ p {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.footerBg {
+  background: rgba(94, 108, 112, 0.03);
+}
+
 .AuthorHeroBgg::before {
   content: "";
   position: absolute;

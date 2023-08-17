@@ -2,6 +2,7 @@ import writing from "../../assets/website/images/services/writing.png";
 import writingicon from "../../assets/website/icons/whatwedo/writing.png";
 import pricing from "../../assets/website/images/services/pricing.png";
 import { NewNavbar } from "../../components/website/navbar";
+import { Footer } from "../../components/website/footer";
 
 import { GetStartedBtn, GetaQuoteBtn } from "../../components/website/buttons";
 
@@ -11,6 +12,7 @@ const Services = () => {
       <NewNavbar />
       <ServicesSection />
       <Pricing />
+      <Footer />
     </>
   );
 };
