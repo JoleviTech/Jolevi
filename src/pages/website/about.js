@@ -11,10 +11,12 @@ import vouch from "../../assets/website/images/about/vouch.png";
 import { JoinTheTeamBtn } from "../../components/website/buttons";
 import ife from "../../assets/website/images/about/advisory/ife.png";
 import adeniran from "../../assets/website/images/about/advisory/adeniran.png";
+import { NewNavbar } from "../../components/website/navbar";
 
 const About = () => {
   return (
     <>
+      <NewNavbar />
       <VisionAndMission />
       <Team />
       <AdvisoryCouncil />
