@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<SimplePage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/author" element={<Author />} />
+        {/* <Route path="/author" element={<Author />} /> */}
       </Routes>
     </BrowserRouter>
   );
