@@ -6,6 +6,7 @@ import { PrivacyPolicy } from "./pages/website/privacyPolicy";
 import LandingPage from "./pages/website/newHome";
 import Services from "./pages/website/services";
 import About from "./pages/website/about";
+import { Blog } from "./pages/website/blog";
 
 //Author
 import { Author } from "./pages/website/author";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/" element={<SimplePage />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/author" element={<Author />} />
       </Routes>
