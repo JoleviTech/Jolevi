@@ -61,6 +61,22 @@ export const ChallengeBtn = () => {
     </>
   );
 };
+export const PublishNowPayLaterBtn = () => {
+  return (
+    <>
+      <a
+        href="https://forms.gle/wuqyN4WWXq8MBYvK8"
+        target="_blank"
+        className="text-decoration-none btnText linkColor"
+      >
+        <button class="PublishNowPayLaterBtn mx-1 mt-2">
+          {" "}
+          <b> Publish now, Pay later </b>
+        </button>
+      </a>
+    </>
+  );
+};
 export const GetStartedBtn = () => {
   return (
     <>
@@ -77,10 +93,26 @@ export const GetStartedBtn = () => {
     </>
   );
 };
-export const JoinTheTeamBtn = () => {
+export const GetaQuoteBtn = () => {
   return (
     <>
       <a href="#" target="_blank" className="text-decoration-none">
+        <button class="WorkWithUsBtn btnText mx-1 mt-2">
+          {" "}
+          <b>Get a quote</b>
+        </button>
+      </a>
+    </>
+  );
+};
+export const JoinTheTeamBtn = () => {
+  return (
+    <>
+      <a
+        href="https://forms.gle/fQ6yZGwUNvco27H9A"
+        target="_blank"
+        className="text-decoration-none"
+      >
         <button class="WorkWithUsBtn btnText mx-1 mt-2">
           {" "}
           <b>Join the team</b>

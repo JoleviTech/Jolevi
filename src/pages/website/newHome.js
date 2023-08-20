@@ -1,6 +1,7 @@
 import { NewNavbar } from "../../components/website/navbar";
 import { LandingPageHero } from "../../components/website/hero";
 import { WhatWeDoCard } from "../../components/website/cards/homeCards";
+import { Footer } from "../../components/website/footer";
 
 //images
 import bookone from "../../assets/website/images/books/bookone.png";
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <OurProcesses />
       <Books />
       <ImpactNumbers />
+      <Footer />
     </>
   );
 };

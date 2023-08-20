@@ -23,7 +23,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogarticle" element={<BlogReadMore />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/author" element={<Author />} />
+        {/* <Route path="/author" element={<Author />} /> */}
       </Routes>
     </BrowserRouter>
   );
