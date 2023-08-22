@@ -1,6 +1,6 @@
 import writing from "../../assets/website/images/services/writing.png";
-import vision from "../../assets/website/images/about/vision.png";
-import mission from "../../assets/website/images/about/mission.png";
+import vision from "../../assets/website/icons/about/vision.png";
+import mission from "../../assets/website/icons/about/mission.png";
 import advisory from "../../assets/website/images/about/advisory.png";
 import jolevi from "../../assets/website/images/about/jolevi.png";
 import eightgear from "../../assets/website/images/about/eightgear.png";
@@ -11,6 +11,7 @@ import vouch from "../../assets/website/images/about/vouch.png";
 import { JoinTheTeamBtn } from "../../components/website/buttons";
 import ife from "../../assets/website/images/about/advisory/ife.png";
 import adeniran from "../../assets/website/images/about/advisory/adeniran.png";
+import damilola from "../../assets/website/images/about/advisory/damilola.png";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 
@@ -33,9 +34,12 @@ const VisionAndMission = () => {
     <>
       <div className="container-fluid px-5 pt-5 pb-3 mt-5">
         {" "}
-        <h4 className="ms-4">
+        <h3 className="text-center">
+          <b>VISION & MISSION</b>
+        </h3>
+        {/* <h4 className="ms-4">
           <b>Vision & Mission</b>
-        </h4>
+        </h4> */}
         <div className="row justify-content-center text-center mt-5">
           <div className="col-lg-4 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-stretch">
             <div className="px-3 mb-5 py-4 visionCard">
@@ -77,14 +81,17 @@ const VisionAndMission = () => {
 const Team = () => {
   return (
     <>
-      <div className="container-fluid px-5 pt-5 pb-3 SectionTwoBg mt-5">
+      <div className="container px-5 pt-3 pb-3 SectionTwoBg mt-5">
         {" "}
-        <h4 className="ms-4">
+        <h3 className="text-center">
+          <b>TEAM</b>
+        </h3>
+        {/* <h4 className="ms-4">
           <b>Team</b>
-        </h4>
-        <div className="row justify-content-center mt-4 text-center">
+        </h4> */}
+        <div className="row justify-content-center text-center">
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard">
+            <div className="card w-75 mx-auto teamCard mt-4">
               <img src={advisory} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <div className="text-center">
@@ -97,7 +104,7 @@ const Team = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard">
+            <div className="card w-75 mx-auto teamCard mt-4">
               <img src={advisory} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <div className="text-center">
@@ -110,7 +117,7 @@ const Team = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard">
+            <div className="card w-75 mx-auto teamCard mt-4">
               <img src={advisory} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <div className="text-center">
@@ -132,45 +139,75 @@ const AdvisoryCouncil = () => {
     <>
       <div className="container-fluid px-5 pt-5 pb-3 SectionTwoBg mt-5">
         {" "}
-        <h4 className="ms-4">
-          <b>Advisory Council</b>
+        <h4 className="text-center">
+          <b>ADVISORY COUNCIL</b>
         </h4>
+        {/* <h4 className="ms-4">
+          <b>Advisory Council</b>
+        </h4> */}
         <div className="row justify-content-center mt-4">
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className=" w-75 mx-auto">
+            <div className=" w-75 mx-auto mt-2">
               <img src={ife} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <figure className="">
                   <figcaption className="card-text mt-3">
                     Ife Olujuyigbe
                   </figcaption>
-                  <p className="Text mb-3">Role</p>
+                  <p className="p-0 m-0">Role</p>
+                  <a
+                    href="https://www.linkedin.com/in/ifeolujuyigbe/"
+                    target="_blank"
+                  >
+                    <i class="bi bi-linkedin textShow LinkedIncolor"></i>
+                  </a>
                 </figure>
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="w-75 mx-auto">
-              <img src={advisory} className="card-img-top" alt="Teamimage" />
+            <div className="w-75 mx-auto mt-2">
+              <img src={damilola} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <figure className="">
                   <figcaption className="card-text mt-3">
                     Damilola Obidairo
                   </figcaption>
-                  <p className="Text mb-3">Role</p>
+                  <p className="m-0 p-0">
+                    CEO,{" "}
+                    <a
+                      href="https://8thgearpartners.com/"
+                      target="_blank"
+                      className="text-decoration-none text-black"
+                    >
+                      8thGear Partners Limited
+                    </a>
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/damilolaobidairo/"
+                    target="_blank"
+                  >
+                    <i class="bi bi-linkedin textShow LinkedIncolor"></i>
+                  </a>
                 </figure>
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className=" w-75 mx-auto">
+            <div className=" w-75 mx-auto mt-2">
               <img src={adeniran} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <figure className="">
                   <figcaption className="card-text mt-3">
                     Adeniran Akinboyewa
                   </figcaption>
-                  <p className="Text mb-3">Role</p>
+                  <p className="m-0 p-0">CEO, Vouch by Brein and Accion</p>
+                  <a
+                    href="https://www.linkedin.com/in/adeniran-akinboyewa-b851a0ba/"
+                    target="_blank"
+                  >
+                    <i class="bi bi-linkedin textShow LinkedIncolor"></i>
+                  </a>
                 </figure>
               </div>
             </div>
@@ -185,10 +222,10 @@ const Partners = () => {
   return (
     <>
       <div className="container-fluid px-5 pt-5 pb-3 mt-5 WhatWeDoBg">
-        <h4 className="ms-4">
-          <b>Partners</b>
-        </h4>
-        <div className="row justify-content-center text-center mt-3">
+        <h3 className="text-center">
+          <b>PARTNERS</b>
+        </h3>
+        <div className="row justify-content-center text-center mt-4">
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
@@ -308,7 +345,7 @@ const JoinTheTeam = () => {
       <div className="container-fluid px-5 pb-3 mt-5 text-center">
         {" "}
         <h4 className="">Interested in joining our team?</h4>
-        <p>
+        <p className="">
           We are a group of young people who embrace challenging endeavors,
           transforming the seemingly impossible into achievable realities. We
           firmly believe in the infinite power of words, as everything was

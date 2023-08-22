@@ -17,8 +17,8 @@ export const Footer = () => {
                       src={jolevilogo}
                       className="img-fluid"
                       alt="jolevi"
-                      width="180"
-                      height="184"
+                      width="100"
+                      height="104"
                     />
                   </Link>
                   <h5 className="mb-4" style={{ fontSize: "1rem" }}>
