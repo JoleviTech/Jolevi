@@ -117,7 +117,7 @@ export const SimplePage = () => {
               <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
             </a>
             <a
-              href="https://instagram.com/joleving?igshid=MzRlODBiNWFlZA=="
+              href="https://instagram.com/jolevi_?igshid=ZGUzMzM3NWJiOQ=="
               target="_blank"
               className=""
             >
