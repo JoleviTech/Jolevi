@@ -23,20 +23,20 @@ const Services = () => {
 const ServicesSection = () => {
   return (
     <>
-      <div className="container-fluid p-4 WhatWeDoBg">
-        <h4 className="ms-5 mt-4">
-          <b>Services</b>
-        </h4>
-        <div className="row justify-content-center mt-4 px-5">
+      <div className="container-fluid p-5 WhatWeDoBg">
+        <h3 className="text-center">
+          <b>SERVICES</b>
+        </h3>
+        <div className="row justify-content-center mt-4 mx-1">
           <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3 col-sm-12">
+                <div className="col-lg-3 col-md-3 col-sm-12">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8 col-sm-12">
-                  <h4 className="mt-2">Book Coaching</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 col-sm-12 mt-4">
+                  <h4 className="mt-2 ms-3">Book Coaching</h4>
+                  <p className="ms-3">
                     Unlock your authorial potential with our comprehensive book
                     coaching services. Empowering writers, we provide
                     <span id="bookCoachingReadMore" style={{ display: "none" }}>
@@ -79,12 +79,12 @@ const ServicesSection = () => {
             </div>
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3">
+                <div className="col-lg-3 col-md-3">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8">
-                  <h4>Proofreading</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="mt-2 ms-3">Proofreading</h4>
+                  <p className="ms-3">
                     Savor your literary creation without the distractions of
                     errors. Like stones in a flavorful
                     <span id="proofReadingReadMore" style={{ display: "none" }}>
@@ -125,12 +125,12 @@ const ServicesSection = () => {
             </div>
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3">
+                <div className="col-lg-3 col-md-3">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8">
-                  <h4>Publish now,pay later</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="mt-2 ms-3">Publish now,pay later</h4>
+                  <p className="ms-3">
                     Write fearlessly; we'll handle the publishing. Create your
                     masterpiece while we manage the rest.
                     <span
@@ -174,16 +174,70 @@ const ServicesSection = () => {
                 </div>{" "}
               </div>{" "}
             </div>
+            <div className="col mb-5 align-items-center">
+              <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
+                <div className="col-lg-3 col-md-3">
+                  <img src={writing} />
+                </div>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="mt-2 ms-3">Sales and Marketing</h4>
+                  <p className="ms-3">
+                    Your brilliant book deserves a global stage. Say goodbye to
+                    anonymity with our comprehensive sales and marketing
+                    approach.
+                    <span
+                      id="salesAndMarketingReadMore"
+                      style={{ display: "none" }}
+                    >
+                      {" "}
+                      We'll ensure your masterpiece reaches readers worldwide
+                      through platforms like Amazon, Okadabook, and more. Enjoy
+                      a custom author page at authorname.jolevi.com, your
+                      literary hub for seamless access to all your works. Let
+                      your words resonate across the world, while we handle
+                      sales, marketing, and delivery.
+                    </span>
+                    <span id="salesAndMarketingIntro">...</span>
+                    <button
+                      className="btn btn-link btn-sm p-0 mb-1"
+                      onClick={() => {
+                        const readMoreContent = document.getElementById(
+                          "salesAndMarketingReadMore"
+                        );
+                        const readMoreButton = document.getElementById(
+                          "salesAndMarketingReadMoreButton"
+                        );
+                        const introText = document.getElementById(
+                          "salesAndMarketingIntro"
+                        );
+                        if (readMoreContent.style.display === "none") {
+                          readMoreContent.style.display = "inline";
+                          readMoreButton.style.display = "none";
+                          introText.style.display = "none";
+                        } else {
+                          readMoreContent.style.display = "none";
+                          readMoreButton.style.display = "inline";
+                          introText.style.display = "inline";
+                        }
+                      }}
+                      id="salesAndMarketingReadMoreButton"
+                    >
+                      read more
+                    </button>
+                  </p>
+                </div>{" "}
+              </div>{" "}
+            </div>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3">
+                <div className="col-lg-3 col-md-3">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8">
-                  <h4>Editing</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="ms-3">Editing</h4>
+                  <p className="ms-3">
                     Capture your thoughts brilliantly, and watch our expert
                     editors weave magic into your words.
                     <span id="editingReadMore" style={{ display: "none" }}>
@@ -223,12 +277,12 @@ const ServicesSection = () => {
             </div>
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3">
+                <div className="col-lg-3 col-md-3">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8">
-                  <h4>Publishing</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="mt-2 ms-3">Publishing</h4>
+                  <p className="ms-3">
                     Write your masterpiece while we handle the rest. Our
                     expertise ensures your book shines.
                     <span id="publishingReadMore" style={{ display: "none" }}>
@@ -268,12 +322,12 @@ const ServicesSection = () => {
             </div>
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
-                <div className="col-lg-4 col-md-3">
+                <div className="col-lg-3 col-md-3">
                   <img src={writing} />
                 </div>
-                <div className="col-lg-7 col-md-8">
-                  <h4>Book Launch</h4>
-                  <p>
+                <div className="col-lg-7 col-md-8 mt-4">
+                  <h4 className="mt-2 ms-3">Book Launch</h4>
+                  <p className="ms-3">
                     Leave the event planning to us! While planning an event
                     might be daunting, it's a breeze for our team.
                     <span id="bookLaunchReadMore" style={{ display: "none" }}>
@@ -378,12 +432,12 @@ const ServicesSection = () => {
             </div>
           </div>
         </div> */}
-        <div className="col mb-5 align-items-center ms-5">
+        {/* <div className="col mb-5 align-items-center ms-5">
           <div className="d-lg-flex d-md-flex align-items-center ">
-            <div className="col-lg-2 col-md-4">
+            <div className="col-lg-3 col-md-4">
               <img src={writing} />
             </div>
-            <div className="col-lg-3 col-md-7 ms-4">
+            <div className="col-lg-3 col-md-7 mt-4">
               <h4>Sales and Marketing</h4>
               <p>
                 Your brilliant book deserves a global stage. Say goodbye to
@@ -430,7 +484,7 @@ const ServicesSection = () => {
               </p>
             </div>{" "}
           </div>{" "}
-        </div>
+        </div> */}
       </div>
     </>
   );
