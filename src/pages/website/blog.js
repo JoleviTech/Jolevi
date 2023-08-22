@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "../../components/website/navbar";
 import blog from "../../assets/website/images/blog/blog.png";
 import BlogCards from "../../components/website/cards/blogCards";
+import { Footer } from "../../components/website/footer";
 
 export const Blog = () => {
   return (
@@ -65,7 +66,7 @@ export const Blog = () => {
           </div>
         </div>
       </div>
-      <footer />
+      <Footer/>
     </div>
   );
 };
