@@ -50,6 +50,86 @@ p {
   font-family: "Comic Neue", cursive;
 }
 
+.AboutPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.AboutPageHeroBg {
+  background: url(/src/assets/website/images/hero/abouthero/aboutheroimage3.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.AboutPageHeroBg h1 {
+  position: relative;
+}
+
+.AboutPageHeroBg h2 {
+  position: relative;
+}
+
+.AboutPageHeroBg p {
+  position: relative;
+}
+
+.AboutPageHeroBg .WorkWithUsBtn {
+  position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+  .Navitemmobile {
+    background: #fff;
+    color: #000000;
+    border: 1px solid #0087cb !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 14rem;
+    height: 1.8rem;
+  }
+  .Navitemmobile:hover {
+    background: #0087cb !important;
+    color: #ffffff;
+  }
+  .Navitemmobile:focus {
+    background: #0087cb !important;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Navicons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .NavUL {
+    align-items: center;
+  }
+}
+.navText {
+  font-weight: 400;
+  font-family: "Comic Neue", cursive;
+}
+
 .WorkWithUsBtn {
   color: #000;
   border: 2px solid #0087cb;

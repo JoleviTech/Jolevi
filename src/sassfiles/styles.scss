@@ -1,5 +1,9 @@
 @use "./reset";
 @use "./fonts" as *;
+
+@use "./components/website/hero" as *;
+
+@use "../sassfiles/components/website/navbar" as *;
 @use "../sassfiles/pages/website/home" as *;
 @use "../sassfiles/pages/website/newHome" as *;
 @use "../sassfiles/pages/website/services" as *;

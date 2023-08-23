@@ -9,10 +9,13 @@ import { Footer } from "../../components/website/footer";
 
 import { GetStartedBtn, GetaQuoteBtn } from "../../components/website/buttons";
 
+import { ServicesPageHero } from "../../components/website/hero";
+
 const Services = () => {
   return (
     <>
       <NewNavbar />
+      <ServicesPageHero />
       <ServicesSection />
       <Pricing />
       <Footer />

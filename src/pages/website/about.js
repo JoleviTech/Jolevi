@@ -15,10 +15,13 @@ import damilola from "../../assets/website/images/about/advisory/damilola.png";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 
+import { AboutPageHero } from "../../components/website/hero";
+
 const About = () => {
   return (
     <>
       <NewNavbar />
+      <AboutPageHero />
       <VisionAndMission />
       <Team />
       <AdvisoryCouncil />

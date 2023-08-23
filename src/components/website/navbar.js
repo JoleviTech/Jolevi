@@ -3,6 +3,135 @@ import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 
 export const NewNavbar = () => {
   return (
+    <div className="navbar navbar-expand-lg navbar-light bg-white py-0">
+      <div className="container">
+        <a className="navbar-brand" href="/">
+          <img
+            src={jolevilogo}
+            alt=""
+            className="d-inline-block align-text-top"
+            style={{ maxWidth: "6rem", maxHeight: "6rem" }}
+          />
+        </a>
+        {/* <Link to="/" className="navbar-brand ms-2 ">
+          {" "}
+          <img src={havenfavico} className="w-200 h-200" alt="" />
+        </Link> */}
+        <div
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </div>
+
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <div className="navbar-nav NavUL py-2">
+            <li className="nav-item mx-3">
+              <Link
+                to="/"
+                className="nav-link active navText"
+                style={{ color: "#000000" }}
+                aria-current="page"
+              >
+                <div className="Navitemmobile">
+                  <b>Home</b>
+                </div>{" "}
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                to="/about"
+                style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile">
+                  <b>About</b>
+                </div>
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                to="/services"
+                style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile">
+                  <b>Services</b>
+                </div>
+              </Link>
+            </li>
+            <li className="nav-item mx-3">
+              <Link
+                to="/marketplace"
+                style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile">
+                  <b>Marketplace</b>
+                </div>
+              </Link>
+            </li>
+            <li className="nav-item mx-3">
+              <Link
+                to="/blog"
+                style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile">
+                  <b>Blog</b>
+                </div>
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                to="/contact"
+                style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile">
+                  <b>Contact</b>
+                </div>
+              </Link>
+            </li>
+          </div>{" "}
+          {/* <Navicons className="d-flex">
+            <Link
+              to="https://m.facebook.com/haveneduservices/"
+              className="mx-2"
+              style={{ color: "#2D25E1" }}
+            >
+              <FacebookIcon />
+            </Link>
+            <Link
+              to="https://instagram.com/haveneduservices?igshid=1fyt565z18d4u"
+              className="mx-2"
+              style={{ color: "#E1116C" }}
+            >
+              <InstagramIcon />
+            </Link>
+            <Link to="/about" className="mx-2" style={{ color: "#37A7CF" }}>
+              <LinkedInIcon />
+            </Link>
+          </Navicons> */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const NewNavbarr = () => {
+  return (
     <nav class="navbar navbar-expand-lg bg-white">
       <div class="container-fluid">
         <Link to="/" className="navbar-brand ms-lg-5">

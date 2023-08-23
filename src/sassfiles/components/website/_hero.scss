@@ -1,0 +1,40 @@
+@use "../../colors" as *;
+
+.AboutPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.AboutPageHeroBg {
+  //   background: url(/src/assets/website/images/hero/aboutheroimage.jpg);
+  background: url(/src/assets/website/images/hero/abouthero/aboutheroimage3.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.AboutPageHeroBg h1 {
+  position: relative;
+}
+.AboutPageHeroBg h2 {
+  position: relative;
+}
+.AboutPageHeroBg p {
+  position: relative;
+}
+.AboutPageHeroBg .WorkWithUsBtn {
+  position: relative;
+}
