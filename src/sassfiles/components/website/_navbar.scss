@@ -12,12 +12,11 @@
     height: 1.8rem;
     &:hover {
       background: $terbtncolor !important;
-      color: #ffffff;
+      color: #fff;
     }
-
     &:focus {
       background: $terbtncolor !important;
-      color: #ffffff;
+      color: #fff;
     }
   }
 }
@@ -31,12 +30,27 @@
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 992px) {
   .NavUL {
     align-items: center;
+    justify-content: center;
   }
 }
 .navText {
   font-weight: 400;
   font-family: "Comic Neue", cursive;
+}
+
+@media only screen and (max-width: 1600px) {
+  .Navitemlarge {
+    &:hover {
+      background: $terbtncolor !important;
+      color: #fff;
+    }
+    &:active,
+    &:focus {
+      background: $terbtncolor !important;
+      color: #fff;
+    }
+  }
 }

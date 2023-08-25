@@ -12,7 +12,7 @@ import {
 export const SimplePage = () => {
   return (
     <div className="container-fluid HeroBg">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="row align-items-center justify-content-center px-3">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
           <h1 className=" d-none d-lg-block d-md-none d-sm-none d-xs-none">

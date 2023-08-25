@@ -3,8 +3,8 @@ import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 
 export const NewNavbar = () => {
   return (
-    <div className="navbar navbar-expand-lg navbar-light bg-white py-0">
-      <div className="container">
+    <div className="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-center">
+      <div className="container ">
         <a className="navbar-brand" href="/">
           <img
             src={jolevilogo}
@@ -33,44 +33,44 @@ export const NewNavbar = () => {
           className="collapse navbar-collapse justify-content-center"
           id="navbarNav"
         >
-          <div className="navbar-nav NavUL py-2">
-            <li className="nav-item mx-3">
+          <div className="navbar-nav NavUL py-2 d-flex">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/"
-                className="nav-link active navText"
+                className="nav-link navText"
                 style={{ color: "#000000" }}
                 aria-current="page"
               >
-                <div className="Navitemmobile">
+                <div className="Navitemmobile Navitemlarge ">
                   <b>Home</b>
                 </div>{" "}
               </Link>
             </li>
 
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/about"
                 style={{ color: "#000000" }}
                 className="nav-link navText"
               >
-                <div className="Navitemmobile">
+                <div className="Navitemmobile Navitemlarge">
                   <b>About</b>
                 </div>
               </Link>
             </li>
 
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/services"
                 style={{ color: "#000000" }}
                 className="nav-link navText"
               >
-                <div className="Navitemmobile">
+                <div className="Navitemmobile Navitemlarge">
                   <b>Services</b>
                 </div>
               </Link>
             </li>
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/marketplace"
                 style={{ color: "#000000" }}
@@ -81,7 +81,7 @@ export const NewNavbar = () => {
                 </div>
               </Link>
             </li>
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/blog"
                 style={{ color: "#000000" }}
@@ -93,7 +93,7 @@ export const NewNavbar = () => {
               </Link>
             </li>
 
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-3 d-flex justify-content-center">
               <Link
                 to="/contact"
                 style={{ color: "#000000" }}
@@ -209,36 +209,36 @@ export const NewNavbarr = () => {
     </nav>
   );
 };
-export const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light">
-      <div className="container-fluid px-2 py-2">
-        <Link to="/" className="navbar-brand ms-lg-5">
-          {" "}
-          <img
-            src={jolevilogo}
-            className="img-fluid"
-            alt="jolevi"
-            width="120"
-            height="124"
-          />
-        </Link>
-        <button
-          className="navbar-toggler btn"
-          type=""
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDarkDropdown"
-          aria-controls="navbarNavDarkDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavDarkDropdown"
-        ></div>
-      </div>
-    </nav>
-  );
-};
+// export const Navbar = () => {
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-light">
+//       <div className="container-fluid px-2 py-2">
+//         <Link to="/" className="navbar-brand ms-lg-5">
+//           {" "}
+//           <img
+//             src={jolevilogo}
+//             className="img-fluid"
+//             alt="jolevi"
+//             width="120"
+//             height="124"
+//           />
+//         </Link>
+//         <button
+//           className="navbar-toggler btn"
+//           type=""
+//           data-bs-toggle="collapse"
+//           data-bs-target="#navbarNavDarkDropdown"
+//           aria-controls="navbarNavDarkDropdown"
+//           aria-expanded="false"
+//           aria-label="Toggle navigation"
+//         >
+//           <span className="navbar-toggler-icon"></span>
+//         </button>
+//         <div
+//           className="collapse navbar-collapse justify-content-end"
+//           id="navbarNavDarkDropdown"
+//         ></div>
+//       </div>
+//     </nav>
+//   );
+// };

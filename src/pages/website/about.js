@@ -1,6 +1,11 @@
 import writing from "../../assets/website/images/services/writing.png";
 import vision from "../../assets/website/icons/about/vision.png";
 import mission from "../../assets/website/icons/about/mission.png";
+import discipline from "../../assets/website/icons/about/corevalues/discipline.png";
+import creative from "../../assets/website/icons/about/corevalues/authentic.png";
+import impactdriven from "../../assets/website/icons/about/corevalues/creative.png";
+import learning from "../../assets/website/icons/about/corevalues/impactdriven.png";
+import authentic from "../../assets/website/icons/about/corevalues/learning.png";
 import advisory from "../../assets/website/images/about/advisory.png";
 import jolevi from "../../assets/website/images/about/jolevi.png";
 import eightgear from "../../assets/website/images/about/eightgear.png";
@@ -23,6 +28,7 @@ const About = () => {
       <NewNavbar />
       <AboutPageHero />
       <VisionAndMission />
+      <CoreValues />
       <Team />
       <AdvisoryCouncil />
       <Partners />
@@ -35,7 +41,7 @@ const About = () => {
 const VisionAndMission = () => {
   return (
     <>
-      <div className="container-fluid px-5 pt-5 pb-3 mt-5">
+      <div className="container-fluid px-5 pt-5 pb-3 mt-3">
         {" "}
         <h3 className="text-center">
           <b>VISION & MISSION</b>
@@ -72,6 +78,69 @@ const VisionAndMission = () => {
                   organizations to the existing body of knowledge, utilizing the
                   power of both written and spoken words.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const CoreValues = () => {
+  return (
+    <>
+      <div className="container-fluid px-5 pt-5 pb-3 mt-5 WhatWeDoBg">
+        <h3 className="text-center">
+          <b>CORE VALUES</b>
+        </h3>
+        <div className="row justify-content-center text-center mt-4">
+          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+            <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center">
+                <img src={discipline} className="h-100" />
+                <h5 className="mt-2">
+                  <b>Discipline</b>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+            <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center">
+                <img src={authentic} className="h-100" />
+                <h5 className="mt-2">
+                  <b>Authentic</b>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+            <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center">
+                <img src={creative} className="h-100" />
+                <h5 className="mt-2">
+                  <b>Creative</b>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+            <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center">
+                <img src={impactdriven} className="h-100" />
+                <h5 className="mt-2">
+                  <b>Impact driven</b>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+            <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center">
+                <img src={learning} className="h-100" />
+                <h5 className="mt-2">
+                  <b>Continuous Learning</b>
+                </h5>
               </div>
             </div>
           </div>

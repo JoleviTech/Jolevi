@@ -105,11 +105,11 @@ p {
   }
   .Navitemmobile:hover {
     background: #0087cb !important;
-    color: #ffffff;
+    color: #fff;
   }
   .Navitemmobile:focus {
     background: #0087cb !important;
-    color: #ffffff;
+    color: #fff;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -120,9 +120,10 @@ p {
     margin-bottom: 1rem;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 992px) {
   .NavUL {
     align-items: center;
+    justify-content: center;
   }
 }
 .navText {
@@ -130,6 +131,16 @@ p {
   font-family: "Comic Neue", cursive;
 }
 
+@media only screen and (max-width: 1600px) {
+  .Navitemlarge:hover {
+    background: #0087cb !important;
+    color: #fff;
+  }
+  .Navitemlarge:active, .Navitemlarge:focus {
+    background: #0087cb !important;
+    color: #fff;
+  }
+}
 .WorkWithUsBtn {
   color: #000;
   border: 2px solid #0087cb;
