@@ -2,7 +2,6 @@ import React from "react";
 // import { Navbar } from "../../components/website/navbar";
 import BlogCards from "../../components/website/cards/blogCards";
 import blog from "../../assets/website/images/blog/blog.png";
-import "../website/blogReadMore.css";
 import { Footer } from "../../components/website/footer";
 
 export const BlogReadMore = () => {

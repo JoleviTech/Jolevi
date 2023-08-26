@@ -44,17 +44,15 @@
 @media only screen and (max-width: 1600px) {
   .Navitemlarge {
     &:hover {
-      background: $terbtncolor !important;
-      color: #fff;
-    }
-    &:active,
-    &:focus {
-      background: $terbtncolor !important;
-      color: #fff;
+      color: $terbtncolor !important;
     }
   }
 }
 /* Example CSS */
-.active {
-  color: #ff0000; /* Change this to the desired active link color */
-}
+// .active {
+//   color: #ff0000; /* Change this to the desired active link color */
+// }
+
+// .activeNavItem {
+//   color: #ff0000; /* Set the desired active color */
+// }

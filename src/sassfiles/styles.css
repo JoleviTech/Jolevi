@@ -133,19 +133,10 @@ p {
 
 @media only screen and (max-width: 1600px) {
   .Navitemlarge:hover {
-    background: #0087cb !important;
-    color: #fff;
-  }
-  .Navitemlarge:active, .Navitemlarge:focus {
-    background: #0087cb !important;
-    color: #fff;
+    color: #0087cb !important;
   }
 }
 /* Example CSS */
-.active {
-  color: #ff0000; /* Change this to the desired active link color */
-}
-
 .WorkWithUsBtn {
   color: #000;
   border: 2px solid #0087cb;

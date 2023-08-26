@@ -1,7 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 
+export const NewNavvbar = () => {
+  const navActive = ({ isActive }) => {
+    return {
+      color: isActive ? "#ff0000" : "#000000",
+    };
+  };
+  return (
+    <nav>
+      <NavLink style={navActive} to="/about">
+        About
+      </NavLink>
+      <NavLink style={navActive} to="/services">
+        Services
+      </NavLink>
+      <NavLink style={navActive} to="/blog">
+        Blog
+      </NavLink>
+    </nav>
+  );
+};
 export const NewNavbar = () => {
+  const navActive = ({ isActive }) => {
+    return {
+      color: isActive ? "#0087cb" : "#000000",
+    };
+  };
   return (
     <div className="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-center">
       <div className="container ">
@@ -35,74 +60,80 @@ export const NewNavbar = () => {
         >
           <div className="navbar-nav NavUL py-2 d-flex">
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
-                to="/"
+              <NavLink
+                style={navActive}
+                to="/landing-page"
                 className="nav-link navText"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 aria-current="page"
               >
                 <div className="Navitemmobile Navitemlarge ">
                   <b>Home</b>
                 </div>{" "}
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
+              <NavLink
+                style={navActive}
                 to="/about"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile Navitemlarge">
                   <b>About</b>
                 </div>
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
+              <NavLink
+                style={navActive}
                 to="/services"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile Navitemlarge">
                   <b>Services</b>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
+              <NavLink
+                style={navActive}
                 to="/marketplace"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile">
                   <b>Marketplace</b>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
+              <NavLink
+                style={navActive}
                 to="/blog"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile">
                   <b>Blog</b>
                 </div>
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-3 d-flex justify-content-center">
-              <Link
+              <NavLink
+                style={navActive}
                 to="/contact"
-                style={{ color: "#000000" }}
+                // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile">
                   <b>Contact</b>
                 </div>
-              </Link>
+              </NavLink>
             </li>
           </div>{" "}
           {/* <Navicons className="d-flex">
