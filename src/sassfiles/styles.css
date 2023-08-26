@@ -352,9 +352,6 @@ form {
     width: 100%;
     box-shadow: none;
   }
-  p {
-    width: 90% !important;
-  }
 }
 .card-container {
   height: 308px;
