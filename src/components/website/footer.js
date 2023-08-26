@@ -5,6 +5,7 @@ export const Footer = () => {
   return (
     <>
       <div class="container-fluid footerBg mt-5 pt-5 px-5">
+        {/* <div class="container-fluid footerBg mt-5 pt-5 px-5"> */}
         <footer class="">
           <div className="row d-flex justify-content-between">
             <div class="d-lg-flex">
@@ -91,18 +92,21 @@ export const Footer = () => {
                 <div class="col mb-3">
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">
-                        <b> Services</b>
+                      <a
+                        href="/services"
+                        class="nav-link p-0 text-body-secondary"
+                      >
+                        Services
                       </a>
                     </li>
                     <li class="nav-item mb-2">
                       <a href="#" class="nav-link p-0 text-body-secondary">
-                        <b>Marketplace</b>
+                        Marketplace
                       </a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">
-                        <b>About</b>
+                      <a href="/about" class="nav-link p-0 text-body-secondary">
+                        About
                       </a>
                     </li>
                   </ul>
@@ -147,13 +151,16 @@ export const Footer = () => {
                 <div class="col mb-3">
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">
-                        <b>Blog</b>
+                      <a href="/blog" class="nav-link p-0 text-body-secondary">
+                        Blog
                       </a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">
-                        <b>Contact</b>
+                      <a
+                        href="/contact"
+                        class="nav-link p-0 text-body-secondary"
+                      >
+                        Contact
                       </a>
                     </li>
                   </ul>
@@ -161,6 +168,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
+
           {/* <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>&copy; 2023 Company, Inc. All rights reserved.</p>
            
@@ -243,6 +251,22 @@ export const Footer = () => {
             </div>
           </div> */}
         </footer>
+      </div>{" "}
+      <div
+        className="container-fluid footerTwoBgColor d-flex justify-content-center py-2"
+        style={{ backgroundColor: "#FBB03B" }}
+      >
+        {" "}
+        <p class="text-center text-white p-0 m-0 mx-2">&copy; 2023 Jolevi</p>
+        <p className="text-center m-0 p-0 mx-2" style={{ fontSize: "0.8rem" }}>
+          <Link
+            to="/privacy-policy"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            {" "}
+            Privacy Policy
+          </Link>
+        </p>
       </div>
     </>
   );
