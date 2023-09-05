@@ -6,6 +6,7 @@ import creative from "../../assets/website/icons/about/corevalues/authentic.png"
 import impactdriven from "../../assets/website/icons/about/corevalues/creative.png";
 import learning from "../../assets/website/icons/about/corevalues/impactdriven.png";
 import authentic from "../../assets/website/icons/about/corevalues/learning.png";
+import titi from "../../assets/website/images/about/titi.png";
 import advisory from "../../assets/website/images/about/advisory.png";
 import jolevi from "../../assets/website/images/about/jolevi.png";
 import eightgear from "../../assets/website/images/about/eightgear.png";
@@ -164,7 +165,7 @@ const Team = () => {
         <div className="row justify-content-center text-center">
           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
             <div className="card w-75 mx-auto teamCard mt-4">
-              <img src={advisory} className="card-img-top" alt="Teamimage" />
+              <img src={titi} className="card-img-top" alt="Teamimage" />
               <div className="card-body teamcardbody">
                 <div className="text-center">
                   <figcaption className="card-text m-0 p-0">
