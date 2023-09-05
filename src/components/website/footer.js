@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <>
-      <div class="container-fluid footerBg mt-5 pt-5 px-5">
+      <div class="container-fluid mt-5 pt-5 px-5">
         {/* <div class="container-fluid footerBg mt-5 pt-5 px-5"> */}
         <footer class="">
           <div className="row d-flex justify-content-between">

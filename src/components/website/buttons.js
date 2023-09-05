@@ -45,6 +45,22 @@ export const WorkWithUsBtn = () => {
     </>
   );
 };
+export const WorkWithUsBtnn = () => {
+  return (
+    <>
+      <a
+        href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
+        target="_blank"
+        className="text-decoration-none"
+      >
+        <button class="WorkWithUsBtnn btnText mx-1 mt-2">
+          {" "}
+          <b>Work With Us </b>
+        </button>
+      </a>
+    </>
+  );
+};
 export const ChallengeBtn = () => {
   return (
     <>

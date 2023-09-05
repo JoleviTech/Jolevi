@@ -5,8 +5,11 @@ export const WhatWeDoCard = () => {
   return (
     <div className="container-fluid px-5 py-5 WhatWeDoBg">
       {" "}
-      <h4 className="ms-5">What We Do</h4>
-      <p className="col-lg-7 ms-5">
+      <h3 className="text-center">
+        <b>WHAT WE DO</b>
+      </h3>
+      {/* <p className="col-lg-7 ms-5"> */}
+      <p className="text-center">
         Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod tempr
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         nostrud exercitation ullamco

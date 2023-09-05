@@ -87,7 +87,9 @@ p {
   position: relative;
 }
 
-.AboutPageHeroBg .WorkWithUsBtn {
+.AboutPageHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn {
   position: relative;
 }
 
@@ -105,11 +107,11 @@ p {
   }
   .Navitemmobile:hover {
     background: #0087cb !important;
-    color: #fff;
+    color: #fbb03b;
   }
   .Navitemmobile:focus {
     background: #0087cb !important;
-    color: #fff;
+    color: #fbb03b;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -133,7 +135,7 @@ p {
 
 @media only screen and (max-width: 1600px) {
   .Navitemlarge:hover {
-    color: #0087cb !important;
+    color: #fbb03b !important;
   }
 }
 /* Example CSS */
@@ -150,6 +152,22 @@ p {
 }
 .WorkWithUsBtn:hover {
   background-color: #0087cb;
+  color: #ffffff;
+}
+
+.WorkWithUsBtnn {
+  color: #000;
+  border: 2px solid #fbb03b;
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+}
+.WorkWithUsBtnn:hover {
+  background-color: #fbb03b;
   color: #ffffff;
 }
 
@@ -268,14 +286,16 @@ p {
   position: relative;
 }
 
-.LandingPageHeroBg .WorkWithUsBtn {
+.LandingPageHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn {
   position: relative;
 }
 
 .processesNumber {
   font-size: 3.2rem;
   font-weight: 400;
-  color: #f15a24;
+  color: #000;
 }
 
 .impactCard {

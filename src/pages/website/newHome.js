@@ -25,9 +25,15 @@ const LandingPage = () => {
 
 const OurProcesses = () => {
   return (
-    <div className="container-fluid py-5">
+    <div
+      className="container-fluid py-5"
+      style={{ backgroundColor: "#fbb03b" }}
+    >
       {" "}
-      <h4 className="ms-5">Our Processes</h4>
+      <h3 className="text-center">
+        <b>OUR PROCESSES</b>
+      </h3>
+      {/* <h4 className="ms-5">Our Processes</h4> */}
       <div className="row justify-content-evenly mt-5 mx-5">
         <div className="col-lg-6 col-md-6 col-sm-10 d-flex align-items-stretch">
           <div className="d-flex align-items-center">
@@ -102,7 +108,9 @@ const Books = () => {
   return (
     <div className="container-fluid p-5 WhatWeDoBg">
       {" "}
-      <h4 className="ms-5">Books</h4>
+      <h3 className="text-center">
+        <b>BOOKS</b>
+      </h3>
       <div className="card-group row justify-content-center mt-5">
         {" "}
         <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 m-auto">
@@ -147,9 +155,13 @@ const Books = () => {
 
 const ImpactNumbers = () => {
   return (
-    <div className="container-fluid p-5">
+    //     margin-left: 20px;
+    <div className="container-fluid p-5" style={{ backgroundColor: "#fbb03b" }}>
       {" "}
-      <h4 className="ms-5">Impact Numbers</h4>
+      <h3 className="text-center">
+        <b>IMPACT NUMBERS</b>
+      </h3>
+      {/* <h4 className="ms-5">Impact Numbers</h4> */}
       <div className="row justify-content-center justify-content-evenly mt-5">
         <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
           <div
@@ -161,13 +173,13 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>130</b>
+                <b>100</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
           <div
             className="d-flex align-items-center impactCard px-4 py-4"
             style={{ width: "20rem", height: "8rem" }}
@@ -177,12 +189,28 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>130</b>
+                <b>100</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
+        {/* <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
+          <div
+            className="d-flex align-items-center impactCard px-4 py-4"
+            style={{ width: "20rem", height: "8rem" }}
+          >
+            <div className="mx-3">
+              <img src={impact} className="img-fluid" width="50" height="50" />
+            </div>
+            <div className="card-body mx-3">
+              <h4 className="card-title impactNumber">
+                <b>120</b>
+              </h4>
+              <p className="card-text">Projects Delivered</p>
+            </div>
+          </div>
+        </div> */}
       </div>
       <div className="row justify-content-center justify-content-evenly mt-5">
         <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
@@ -195,13 +223,13 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>130</b>
+                <b>150</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
           <div
             className="d-flex align-items-center impactCard px-4 py-4"
             style={{ width: "20rem", height: "8rem" }}
@@ -211,12 +239,28 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>130</b>
+                <b>150</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
+        {/* <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
+          <div
+            className="d-flex align-items-center impactCard px-4 py-4"
+            style={{ width: "20rem", height: "8rem" }}
+          >
+            <div className="mx-3">
+              <img src={impact} className="img-fluid" width="50" height="50" />
+            </div>
+            <div className="card-body mx-3">
+              <h4 className="card-title impactNumber">
+                <b>200</b>
+              </h4>
+              <p className="card-text">Projects Delivered</p>
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );

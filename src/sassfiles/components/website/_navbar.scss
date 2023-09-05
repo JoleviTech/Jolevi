@@ -12,11 +12,11 @@
     height: 1.8rem;
     &:hover {
       background: $terbtncolor !important;
-      color: #fff;
+      color: #fbb03b;
     }
     &:focus {
       background: $terbtncolor !important;
-      color: #fff;
+      color: #fbb03b;
     }
   }
 }
@@ -44,7 +44,8 @@
 @media only screen and (max-width: 1600px) {
   .Navitemlarge {
     &:hover {
-      color: $terbtncolor !important;
+      color: #fbb03b !important;
+      // color: $terbtncolor !important;
     }
   }
 }

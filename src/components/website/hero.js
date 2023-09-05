@@ -2,7 +2,7 @@
 //ServicesHero
 //AboutHero
 
-import { WorkWithUsBtn } from "./buttons";
+import { WorkWithUsBtn, WorkWithUsBtnn } from "./buttons";
 
 export const LandingPageHero = () => {
   return (
@@ -22,7 +22,8 @@ export const LandingPageHero = () => {
             </p>
           </div>
           <div className="ms-lg-5">
-            <WorkWithUsBtn />
+            {/* <WorkWithUsBtn /> */}
+            <WorkWithUsBtnn />
           </div>
         </div>
       </div>
@@ -47,7 +48,7 @@ export const AboutPageHero = () => {
             </p>
           </div>
           <div className="ms-lg-5">
-            <WorkWithUsBtn />
+            <WorkWithUsBtnn />
           </div>
         </div>
       </div>

@@ -24,7 +24,8 @@ export const NewNavvbar = () => {
 export const NewNavbar = () => {
   const navActive = ({ isActive }) => {
     return {
-      color: isActive ? "#0087cb" : "#000000",
+      color: isActive ? "#FBB03B" : "#000000",
+      // color: isActive ? "#0087cb" : "#000000",
     };
   };
   return (
