@@ -112,8 +112,12 @@ export const GetStartedBtn = () => {
 export const GetaQuoteBtn = () => {
   return (
     <>
-      <a href="#" target="_blank" className="text-decoration-none">
-        <button class="WorkWithUsBtn btnText mx-1 mt-2">
+      <a
+        href="https://forms.gle/xivFgq8rtsU4d5MeA"
+        target="_blank"
+        className="text-decoration-none"
+      >
+        <button class="WorkWithUsBtnn btnText mx-1 mt-2">
           {" "}
           <b>Get a quote</b>
         </button>
@@ -129,7 +133,7 @@ export const JoinTheTeamBtn = () => {
         target="_blank"
         className="text-decoration-none"
       >
-        <button class="WorkWithUsBtn btnText mx-1 mt-2">
+        <button class="WorkWithUsBtnn btnText mx-1 mt-2">
           {" "}
           <b>Join the team</b>
         </button>

@@ -30,11 +30,11 @@ const About = () => {
       <AboutPageHero />
       <VisionAndMission />
       <CoreValues />
-      <Team />
+      {/* <Team /> */}
       <AdvisoryCouncil />
       <Partners />
       <JoinTheTeam />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
@@ -227,7 +227,7 @@ const AdvisoryCouncil = () => {
                   <figcaption className="card-text mt-3">
                     Ife Olujuyigbe
                   </figcaption>
-                  <p className="p-0 m-0">Role</p>
+                  <p className="p-0 m-0">Author/Film Maker</p>
                   <a
                     href="https://www.linkedin.com/in/ifeolujuyigbe/"
                     target="_blank"
@@ -415,10 +415,13 @@ const Partnners = () => {
 const JoinTheTeam = () => {
   return (
     <>
-      <div className="container-fluid px-5 pb-3 mt-5 text-center">
+      <div className="container px-5 pb-3 mt-5 text-center">
         {" "}
-        <h4 className="">Interested in joining our team?</h4>
-        <p className="">
+        <h3 className="text-center">
+          <b>INTERESTED IN JOINING OUR TEAM?</b>
+        </h3>
+        {/* <h4 className="">Interested in joining our team?</h4> */}
+        <p className="mt-3">
           We are a group of young people who embrace challenging endeavors,
           transforming the seemingly impossible into achievable realities. We
           firmly believe in the infinite power of words, as everything was

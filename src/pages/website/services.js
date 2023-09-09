@@ -7,7 +7,12 @@ import pricing from "../../assets/website/images/services/pricing.png";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 
-import { GetStartedBtn, GetaQuoteBtn } from "../../components/website/buttons";
+import {
+  GetStartedBtn,
+  GetaQuoteBtn,
+  WorkWithUsBtn,
+  WorkWithUsBtnn,
+} from "../../components/website/buttons";
 
 import { ServicesPageHero } from "../../components/website/hero";
 
@@ -18,7 +23,7 @@ const Services = () => {
       <ServicesPageHero />
       <ServicesSection />
       <Pricing />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
@@ -38,7 +43,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 col-sm-12 mt-4">
-                  <h4 className="mt-2 ms-3">Book Coaching</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Book Coaching</b>
+                  </h4>
                   <p className="ms-3">
                     Unlock your authorial potential with our comprehensive book
                     coaching services. Empowering writers, we provide
@@ -86,7 +93,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="mt-2 ms-3">Proofreading</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Proofreading</b>
+                  </h4>
                   <p className="ms-3">
                     Savor your literary creation without the distractions of
                     errors. Like stones in a flavorful
@@ -132,7 +141,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="mt-2 ms-3">Publish now,pay later</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Publish now,pay later</b>
+                  </h4>
                   <p className="ms-3">
                     Write fearlessly; we'll handle the publishing. Create your
                     masterpiece while we manage the rest.
@@ -183,7 +194,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="mt-2 ms-3">Sales and Marketing</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Sales and Marketing</b>
+                  </h4>
                   <p className="ms-3">
                     Your brilliant book deserves a global stage. Say goodbye to
                     anonymity with our comprehensive sales and marketing
@@ -239,7 +252,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="ms-3">Editing</h4>
+                  <h4 className="ms-3 mt-2">
+                    <b>Editing</b>
+                  </h4>
                   <p className="ms-3">
                     Capture your thoughts brilliantly, and watch our expert
                     editors weave magic into your words.
@@ -284,7 +299,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="mt-2 ms-3">Publishing</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Publishing</b>
+                  </h4>
                   <p className="ms-3">
                     Write your masterpiece while we handle the rest. Our
                     expertise ensures your book shines.
@@ -329,7 +346,9 @@ const ServicesSection = () => {
                   <img src={writing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
-                  <h4 className="mt-2 ms-3">Book Launch</h4>
+                  <h4 className="mt-2 ms-3">
+                    <b>Book Launch</b>
+                  </h4>
                   <p className="ms-3">
                     Leave the event planning to us! While planning an event
                     might be daunting, it's a breeze for our team.
@@ -488,6 +507,10 @@ const ServicesSection = () => {
             </div>{" "}
           </div>{" "}
         </div> */}
+        <div className="text-center">
+          {" "}
+          <WorkWithUsBtnn />
+        </div>
       </div>
     </>
   );
@@ -1003,12 +1026,19 @@ const Pricing = () => {
                     <i class="bi bi-check2-all"></i>
                   </div>
                   <div>
-                    <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+                    <p
+                      className="p-0 m-0 ms-1"
+                      style={{
+                        fontSize: "0.85rem",
+                        color: "#fbb03b",
+                        fontWeight: "700",
+                      }}
+                    >
                       Everything in Gold
                     </p>
                   </div>
                 </div>
-                <div className="d-flex align-items-center mx-1">
+                <div className="d-flex mx-1">
                   <div>
                     <i class="bi bi-check2-all"></i>
                   </div>
@@ -1018,7 +1048,7 @@ const Pricing = () => {
                     </p>
                   </div>
                 </div>
-                <div className="d-flex align-items-center mx-1">
+                <div className="d-flex mx-1">
                   <div>
                     <i class="bi bi-check2-all"></i>
                   </div>
@@ -1053,12 +1083,19 @@ const Pricing = () => {
                     <i class="bi bi-check2-all"></i>
                   </div>
                   <div>
-                    <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+                    <p
+                      className="p-0 m-0 ms-1"
+                      style={{
+                        fontSize: "0.85rem",
+                        color: "#fbb03b",
+                        fontWeight: "700",
+                      }}
+                    >
                       Everything in Platinum
                     </p>
                   </div>
                 </div>
-                <div className="d-flex align-items-center mx-1">
+                <div className="d-flex mx-1">
                   <div>
                     <i class="bi bi-check2-all"></i>
                   </div>
@@ -1069,7 +1106,7 @@ const Pricing = () => {
                     </p>
                   </div>
                 </div>
-                <div className="d-flex align-items-center mx-1">
+                <div className="d-flex  mx-1">
                   <div>
                     <i class="bi bi-check2-all"></i>
                   </div>

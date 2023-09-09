@@ -18,7 +18,7 @@ const LandingPage = () => {
       <OurProcesses />
       <Books />
       <ImpactNumbers />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
@@ -27,7 +27,7 @@ const OurProcesses = () => {
   return (
     <div
       className="container-fluid py-5"
-      style={{ backgroundColor: "#fbb03b" }}
+      // style={{ backgroundColor: "#fbb03b" }}
     >
       {" "}
       <h3 className="text-center">
@@ -156,7 +156,10 @@ const Books = () => {
 const ImpactNumbers = () => {
   return (
     //     margin-left: 20px;
-    <div className="container-fluid p-5" style={{ backgroundColor: "#fbb03b" }}>
+    <div
+      className="container-fluid p-5"
+      // style={{ backgroundColor: "#fbb03b" }}
+    >
       {" "}
       <h3 className="text-center">
         <b>IMPACT NUMBERS</b>
