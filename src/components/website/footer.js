@@ -86,7 +86,11 @@ export const Footer = () => {
               >
                 <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
               </a>
-              <a href="#" target="_blank" className="text-decoration-none">
+              <a
+                href="https://twitter.com/joleving95281?t=OjgIPFBCLzQDc-PVxkjz2A&s=09"
+                target="_blank"
+                className="text-decoration-none"
+              >
                 <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
               </a>
             </div>
