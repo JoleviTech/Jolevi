@@ -23,7 +23,7 @@ const Services = () => {
       <ServicesPageHero />
       <ServicesSection />
       <Pricing />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

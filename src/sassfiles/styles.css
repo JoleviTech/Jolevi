@@ -50,6 +50,14 @@ p {
   font-family: "Comic Neue", cursive;
 }
 
+.footerParagraph {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000 !important;
+  line-height: 1.75rem;
+  font-family: "Comic Neue", cursive;
+}
+
 .AboutPageHeroBgg::before {
   content: "";
   position: absolute;
@@ -450,7 +458,7 @@ form {
   }
 }
 .footerBg {
-  background: rgba(94, 108, 112, 0.03);
+  background: #fff;
 }
 
 .AuthorHeroBgg::before {

@@ -34,7 +34,7 @@ const About = () => {
       <AdvisoryCouncil />
       <Partners />
       <JoinTheTeam />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

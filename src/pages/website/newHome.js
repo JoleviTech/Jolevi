@@ -18,7 +18,7 @@ const LandingPage = () => {
       <OurProcesses />
       <Books />
       <ImpactNumbers />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
@@ -36,7 +36,7 @@ const OurProcesses = () => {
       {/* <h4 className="ms-5">Our Processes</h4> */}
       <div className="row justify-content-evenly mt-5 mx-5">
         <div className="col-lg-6 col-md-6 col-sm-10 d-flex align-items-stretch">
-          <div className="d-flex align-items-center">
+          <div className="d-lg-flex align-items-center">
             <div className="mx-3">
               <h1 className="processesNumber">01.</h1>
             </div>
@@ -52,7 +52,7 @@ const OurProcesses = () => {
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-10 d-flex align-items-stretch mt-5">
-          <div className="d-flex align-items-center">
+          <div className="d-lg-flex align-items-center">
             <div className="mx-3">
               <h1 className="processesNumber">02.</h1>
             </div>
@@ -68,7 +68,7 @@ const OurProcesses = () => {
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-10 d-flex align-items-stretch mt-5">
-          <div className="d-flex align-items-center">
+          <div className="d-lg-flex align-items-center">
             <div className="mx-3">
               <h1 className="processesNumber">03.</h1>
             </div>
@@ -84,7 +84,7 @@ const OurProcesses = () => {
           </div>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-10 d-flex align-items-stretch mt-5">
-          <div className="d-flex align-items-center">
+          <div className="d-lg-flex align-items-center">
             <div className="mx-3">
               <h1 className="processesNumber">04.</h1>
             </div>
@@ -157,7 +157,7 @@ const ImpactNumbers = () => {
   return (
     //     margin-left: 20px;
     <div
-      className="container-fluid p-5"
+      className="container-fluid justify-content-center p-5"
       // style={{ backgroundColor: "#fbb03b" }}
     >
       {" "}
@@ -166,9 +166,9 @@ const ImpactNumbers = () => {
       </h3>
       {/* <h4 className="ms-5">Impact Numbers</h4> */}
       <div className="row justify-content-center justify-content-evenly mt-5">
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
           <div
-            className="d-flex align-items-center impactCard px-4 py-4"
+            className="d-flex align-items-center impactCard px-4 "
             style={{ width: "20rem", height: "8rem" }}
           >
             <div className="mx-3">
@@ -176,15 +176,15 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>100</b>
+                <b>180</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
           <div
-            className="d-flex align-items-center impactCard px-4 py-4"
+            className="d-flex align-items-center impactCard px-4 "
             style={{ width: "20rem", height: "8rem" }}
           >
             <div className="mx-3">
@@ -215,10 +215,10 @@ const ImpactNumbers = () => {
           </div>
         </div> */}
       </div>
-      <div className="row justify-content-center justify-content-evenly mt-5">
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
+      <div className="row justify-content-center justify-content-evenly">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
           <div
-            className="d-flex align-items-center impactCard px-4 py-4"
+            className="d-flex align-items-center impactCard px-4 "
             style={{ width: "20rem", height: "8rem" }}
           >
             <div className="mx-3">
@@ -226,15 +226,15 @@ const ImpactNumbers = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title impactNumber">
-                <b>150</b>
+                <b>190</b>
               </h4>
               <p className="card-text">Projects Delivered</p>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4">
+        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
           <div
-            className="d-flex align-items-center impactCard px-4 py-4"
+            className="d-flex align-items-center impactCard px-4 "
             style={{ width: "20rem", height: "8rem" }}
           >
             <div className="mx-3">
