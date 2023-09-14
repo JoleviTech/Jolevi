@@ -1030,7 +1030,7 @@ const Pricing = () => {
                       className="p-0 m-0 ms-1"
                       style={{
                         fontSize: "0.85rem",
-                        color: "#fbb03b",
+                        color: "#0087cb",
                         fontWeight: "700",
                       }}
                     >
@@ -1087,7 +1087,7 @@ const Pricing = () => {
                       className="p-0 m-0 ms-1"
                       style={{
                         fontSize: "0.85rem",
-                        color: "#fbb03b",
+                        color: "#0087cb",
                         fontWeight: "700",
                       }}
                     >

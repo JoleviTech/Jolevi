@@ -37,16 +37,12 @@ export const AboutPageHero = () => {
     <div className="container-fluid AboutPageHeroBg d-flex align-items-center">
       <div className="container-fluid AboutPageHeroBgg d-flex pt-3 pb-4">
         <div className="row justify-content-start">
-          <div className="col-lg-6 col-md-8 col-sm-12 px-lg-5 ms-2">
-            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite">
-              From a mother's love for reading, our story began, creating a
-              world of possibilities by crafting words that inspire and bring
-              hope.
+          <div className="col-lg-9 col-md-8 col-sm-12 px-lg-5 ms-2">
+            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
+              Creating a world of hope
             </h1>
             <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
-              From a mother's love for reading, our story began, creating a
-              world of possibilities by crafting words that inspire and bring
-              hope.
+              Creating a world of hope
             </h2>
             <p className="mt-2 textWhite">
               Jolevi: Empowering Creativity to Forge Limitless Possibilities.
@@ -66,7 +62,7 @@ export const ServicesPageHero = () => {
       <div className="container-fluid AboutPageHeroBgg d-flex pt-3 pb-4">
         <div className="row justify-content-start">
           <div className="col-lg-9 col-md-8 col-sm-12 px-lg-5 ms-2">
-            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite">
+            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
               Ignite Your Creativity!
             </h1>
             <h2 className="d-none d-xs-none d-sm-none d-md-block d-lg-none textWhite">

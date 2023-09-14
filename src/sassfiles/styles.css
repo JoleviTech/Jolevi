@@ -58,6 +58,10 @@ p {
   font-family: "Comic Neue", cursive;
 }
 
+.bigFont {
+  font-size: 3rem;
+}
+
 .AboutPageHeroBgg::before {
   content: "";
   position: absolute;
@@ -147,7 +151,7 @@ p {
 
 @media only screen and (max-width: 1600px) {
   .Navitemlarge:hover {
-    color: #fbb03b !important;
+    color: #0087cb !important;
   }
 }
 /* Example CSS */

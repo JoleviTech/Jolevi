@@ -24,8 +24,8 @@ export const NewNavvbar = () => {
 export const NewNavbar = () => {
   const navActive = ({ isActive }) => {
     return {
-      color: isActive ? "#FBB03B" : "#000000",
-      // color: isActive ? "#0087cb" : "#000000",
+      // color: isActive ? "#FBB03B" : "#000000",
+      color: isActive ? "#0087cb" : "#000000",
     };
   };
   return (
@@ -118,7 +118,7 @@ export const NewNavbar = () => {
                 // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
-                <div className="Navitemmobile">
+                <div className="Navitemmobile Navitemlarge">
                   <b>Blog</b>
                 </div>
               </NavLink>
@@ -131,7 +131,7 @@ export const NewNavbar = () => {
                 // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
-                <div className="Navitemmobile">
+                <div className="Navitemmobile Navitemlarge">
                   <b>Contact</b>
                 </div>
               </NavLink>
