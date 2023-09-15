@@ -1,4 +1,11 @@
 import writing from "../../assets/website/images/services/writing.png";
+import bookcoaching from "../../assets/website/images/services/bookcoaching.png";
+import proofreading from "../../assets/website/images/services/proofreading.png";
+import publishnow from "../../assets/website/images/services/publishnow.png";
+import sales from "../../assets/website/images/services/sales.png";
+import editing from "../../assets/website/images/services/editing.png";
+import publishing from "../../assets/website/images/services/publishing.png";
+import booklaunch from "../../assets/website/images/services/booklaunch.png";
 import writingicon from "../../assets/website/icons/whatwedo/writing.png";
 import goldicon from "../../assets/website/icons/services/gold.png";
 import rhodiumicon from "../../assets/website/icons/services/rhodium.png";
@@ -40,7 +47,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3 col-sm-12">
-                  <img src={writing} />
+                  <img src={bookcoaching} />
                 </div>
                 <div className="col-lg-7 col-md-8 col-sm-12 mt-4">
                   <h4 className="mt-2 ms-3">
@@ -90,7 +97,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={proofreading} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="mt-2 ms-3">
@@ -138,7 +145,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={publishnow} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="mt-2 ms-3">
@@ -191,7 +198,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={sales} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="mt-2 ms-3">
@@ -249,7 +256,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={editing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="ms-3 mt-2">
@@ -296,7 +303,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={publishing} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="mt-2 ms-3">
@@ -343,7 +350,7 @@ const ServicesSection = () => {
             <div className="col mb-5 align-items-center">
               <div className="d-lg-flex d-md-flex align-items-center justify-content-between">
                 <div className="col-lg-3 col-md-3">
-                  <img src={writing} />
+                  <img src={booklaunch} />
                 </div>
                 <div className="col-lg-7 col-md-8 mt-4">
                   <h4 className="mt-2 ms-3">
