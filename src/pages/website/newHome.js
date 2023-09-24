@@ -3,6 +3,8 @@ import { LandingPageHero } from "../../components/website/hero";
 import { WhatWeDoCard } from "../../components/website/cards/homeCards";
 import { Footer } from "../../components/website/footer";
 
+import { PreOrderBtn } from "../../components/website/buttons";
+
 //images
 import bookone from "../../assets/website/images/books/bookone.png";
 import booktwo from "../../assets/website/images/books/booktwo.png";
@@ -16,8 +18,10 @@ const LandingPage = () => {
       <LandingPageHero />
       <WhatWeDoCard />
       <OurProcesses />
-      <Books />
-      <ImpactNumbers />
+      <FirstBook />
+      <SecondBook />
+      {/* <Books /> */}
+      {/* <ImpactNumbers /> */}
       <Footer />
     </>
   );
@@ -42,11 +46,11 @@ const OurProcesses = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title">
-                <b>Writing</b>
+                <b> Initiate Contact</b>
               </h4>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
+                Feel free to contact us through call, online forms, or email. We
+                are here to assist you in achieving your objectives.
               </p>
             </div>
           </div>
@@ -58,11 +62,12 @@ const OurProcesses = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title">
-                <b>Writing</b>
+                <b> Exploratory Meeting</b>
               </h4>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
+                We arrange a physical or virtual meeting to comprehensively
+                comprehend your project's scope and appreciate your creative
+                vision.
               </p>
             </div>
           </div>
@@ -74,11 +79,11 @@ const OurProcesses = () => {
             </div>
             <div className="card-body mx-2">
               <h4 className="card-title">
-                <b>Writing</b>
+                <b>Agree on Terms</b>
               </h4>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
+                Once we've reached a consensus, the agreed-upon terms are
+                formalized, setting the stage for project commencement.
               </p>
             </div>
           </div>
@@ -90,11 +95,11 @@ const OurProcesses = () => {
             </div>
             <div className="card-body mx-3">
               <h4 className="card-title">
-                <b>Writing</b>
+                <b>Project Closure</b>
               </h4>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
+                Our final meeting is a project closure, during which all
+                deliverables are officially transferred and concluded.
               </p>
             </div>
           </div>
@@ -104,7 +109,129 @@ const OurProcesses = () => {
   );
 };
 
-const Books = () => {
+const FirstBook = () => {
+  return (
+    <div className="container-fluid WhatWeDoBg">
+      <h3 className="text-center pt-5">
+        <b>BOOKS</b>
+      </h3>
+      <div className="row align-items-center justify-content-center px-4 py-5">
+        <div className="col-lg-6 col-md-7 col-sm-12 pt-3 ">
+          <h4 className="">
+            <b>Abeg who send me</b>
+            <br />
+          </h4>
+          <p className="mt-2">
+            "Abeg Who Send Me: Embracing Fear and Embracing Growth in
+            Entrepreneurship" is a compelling and insightful compilation of
+            short stories,chronicling the author's entrepreneurial journey in
+            Nigeria. Fueled by a need to share lessons learned, the book
+            captures mistakes made, both avoidable and unavoidable, and the
+            invaluable insights gained in hindsight. With a candid narrative and
+            a "so what" attitude towards failure, the book serves as an
+            indispensable guide for aspiring and young entrepreneurs, offering
+            them a chance to navigate their ventures more confidently. Even
+            seasoned businesspeople can find it a refreshing reminder of the
+            fundamentals that drive success.
+          </p>
+          {/* <p className="mt-4">
+            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
+            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
+            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
+            et dolore magna Lorem ipsum dolor sit amet, cse
+          </p>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
+            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
+            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
+            et dolore magna Lorem ipsum dolor sit amet, cse
+          </p> */}
+          <p className="m-0 p-0">
+            <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
+            &#8358;
+            <b>3000</b>, Audiobook &#8358;<b>3500</b>
+          </p>
+          {/* <p className="mt-2">
+            Books are available at <a href="#">Amazon</a>,{" "}
+            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
+            <a href="#">Bambooks</a>
+          </p> */}
+
+          <div className="">
+            <PreOrderBtn />
+          </div>
+        </div>
+        <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
+          <img
+            src={bookone}
+            className="d-block mx-auto img-fluid"
+            alt=""
+            loading=""
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+const SecondBook = () => {
+  return (
+    <div className="container-fluid WhatWeDoBg">
+      <div className="row align-items-center justify-content-center px-4 py-5 flex-lg-row-reverse">
+        <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
+          <h4 className="">
+            <b>Tts Random Thoughts</b>
+            <br />
+          </h4>
+          <p className="mt-2">
+            "Inspired Reflections: 365 Days of Enlightening Thoughts" is a
+            delightful collection of random musings that began with a playful
+            WhatsApp status challenge. Evolving into a treasure trove of quotes,
+            each page aims to leave readers enriched and inspired. Extracted
+            from the author's daily encounters, every thought comes with a
+            charming short story, providing context and depth. This fantastic
+            read offers 365 days of instructive, educative, and enlightening
+            insights, making it a must-have for those seeking daily doses of
+            inspiration."
+          </p>
+          {/* <p className="mt-4">
+            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
+            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
+            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
+            et dolore magna Lorem ipsum dolor sit amet, cse
+          </p>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
+            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
+            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
+            et dolore magna Lorem ipsum dolor sit amet, cse
+          </p> */}
+          <p className="m-0 p-0">
+            <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
+            &#8358;
+            <b>3000</b>, Audiobook &#8358;<b>3500</b>
+          </p>
+          {/* <p className="mt-2">
+            Books are available at <a href="#">Amazon</a>,{" "}
+            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
+            <a href="#">Bambooks</a>
+          </p> */}
+          <div className="mb-4">
+            <PreOrderBtn />
+          </div>
+        </div>
+        <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
+          <img
+            src={booktwo}
+            className="d-block mx-auto img-fluid"
+            alt=""
+            loading=""
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+const OldBooks = () => {
   return (
     <div className="container-fluid p-5 WhatWeDoBg">
       {" "}
@@ -140,14 +267,14 @@ const Books = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
+        {/* <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
           <img src={bookthree} className="card-img-top" alt="..." />
           <h4 className="mt-4">Lorem Ipsum</h4>
           <p>
             Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
             tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

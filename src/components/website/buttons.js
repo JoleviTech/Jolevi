@@ -141,3 +141,15 @@ export const JoinTheTeamBtn = () => {
     </>
   );
 };
+export const PreOrderBtn = () => {
+  return (
+    <>
+      <a href="#" target="_blank" className="text-decoration-none">
+        <button class="WorkWithUsBtnn btnText mx-1 mt-2">
+          {" "}
+          <b>PreOrder</b>
+        </button>
+      </a>
+    </>
+  );
+};

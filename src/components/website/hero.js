@@ -11,16 +11,15 @@ export const LandingPageHero = () => {
     <div className="container-fluid LandingPageHeroBg d-flex align-items-center">
       <div className="container-fluid LandingPageHeroBgg d-flex pt-3 pb-4">
         <div className="row justify-content-start">
-          <div className="col-lg-6 col-md-8 col-sm-12 px-lg-5 ms-2">
-            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing
+          <div className="col-lg-8 col-md-8 col-sm-12 px-lg-5 ms-2">
+            <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
+              Empowering Self-Publishers and Connecting Creatives
             </h1>
-            <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing
+            <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite bigFont">
+              Empowering Self-Publishers and Connecting Creatives
             </h2>
-            <p className="mt-2 textWhite">
-              Lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum
-              dolor sit amet consectetur adipiscing
+            <p className="mt-2 textWhite smallFont">
+              Jolevi, Your Path to Authorship and Creative Collaboration.
             </p>
           </div>
           <div className="ms-lg-5">
@@ -37,14 +36,14 @@ export const AboutPageHero = () => {
     <div className="container-fluid AboutPageHeroBg d-flex align-items-center">
       <div className="container-fluid AboutPageHeroBgg d-flex pt-3 pb-4">
         <div className="row justify-content-start">
-          <div className="col-lg-9 col-md-8 col-sm-12 px-lg-5 ms-2">
+          <div className="col-lg-7 col-md-8 col-sm-12 px-lg-5 ms-2">
             <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
-              Creating a world of hope
+              Crafting words that inspire and bring hope
             </h1>
             <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
-              Creating a world of hope
+              Crafting words that inspire and bring hope
             </h2>
-            <p className="mt-2 textWhite">
+            <p className="mt-2 textWhite smallFont">
               Jolevi: Empowering Creativity to Forge Limitless Possibilities.
             </p>
           </div>
@@ -58,8 +57,8 @@ export const AboutPageHero = () => {
 };
 export const ServicesPageHero = () => {
   return (
-    <div className="container-fluid AboutPageHeroBg d-flex align-items-center">
-      <div className="container-fluid AboutPageHeroBgg d-flex pt-3 pb-4">
+    <div className="container-fluid ServicesPageHeroBg d-flex align-items-center">
+      <div className="container-fluid ServicesPageHeroBgg d-flex pt-3 pb-4">
         <div className="row justify-content-start">
           <div className="col-lg-9 col-md-8 col-sm-12 px-lg-5 ms-2">
             <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
@@ -74,7 +73,7 @@ export const ServicesPageHero = () => {
             >
               Ignite Your Creativity!
             </h3>
-            <p className="mt-2 textWhite">
+            <p className="mt-2 textWhite smallFont">
               Jolevi - Your Self-Publishing Partner and Creative Marketplace.
             </p>
           </div>
