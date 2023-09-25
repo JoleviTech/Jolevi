@@ -194,11 +194,11 @@ p {
   }
   .Navitemmobile:hover {
     background: #0087cb !important;
-    color: #fbb03b;
+    color: #ffffff;
   }
   .Navitemmobile:focus {
     background: #0087cb !important;
-    color: #fbb03b;
+    color: #ffffff;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -220,7 +220,7 @@ p {
   font-family: "Comic Neue", cursive;
 }
 
-@media only screen and (max-width: 1600px) {
+@media (min-width: 992px) and (max-width: 1600px) {
   .Navitemlarge:hover {
     color: #0087cb !important;
   }

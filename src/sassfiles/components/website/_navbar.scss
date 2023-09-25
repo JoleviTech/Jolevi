@@ -12,11 +12,11 @@
     height: 1.8rem;
     &:hover {
       background: $terbtncolor !important;
-      color: #fbb03b;
+      color: #ffffff;
     }
     &:focus {
       background: $terbtncolor !important;
-      color: #fbb03b;
+      color: #ffffff;
     }
   }
 }
@@ -41,7 +41,7 @@
   font-family: "Comic Neue", cursive;
 }
 
-@media only screen and (max-width: 1600px) {
+@media (min-width: 992px) and (max-width: 1600px) {
   .Navitemlarge {
     &:hover {
       // color: #fbb03b !important;
