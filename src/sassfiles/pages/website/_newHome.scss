@@ -43,6 +43,16 @@
 .WorkWithUsBtnn {
   position: relative;
 }
+
+@media only screen and (max-width: 725px) {
+  .LandingPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .LandingPageHeroBg {
+    height: 70vh;
+  }
+}
 .processesNumber {
   font-size: 3.2rem;
   font-weight: 400;
