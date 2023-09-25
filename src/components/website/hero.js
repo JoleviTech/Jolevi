@@ -15,7 +15,7 @@ export const LandingPageHero = () => {
             <h1 className="d-none d-lg-block d-md-none d-sm-none d-xs-none textWhite bigFont">
               Empowering Self-Publishers and Connecting Creatives
             </h1>
-            <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite">
+            <h2 className="d-xs-block d-sm-block d-md-block d-lg-none textWhite mediumFont">
               Empowering Self-Publishers and Connecting Creatives
             </h2>
             <p className="mt-2 textWhite smallFont">

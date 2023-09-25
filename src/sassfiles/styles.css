@@ -164,6 +164,22 @@ p {
   position: relative;
 }
 
+@media only screen and (max-width: 725px) {
+  .AboutPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .AboutPageHeroBg {
+    height: 70vh;
+  }
+  .ServicesPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .ServicesPageHeroBg {
+    height: 70vh;
+  }
+}
 @media only screen and (max-width: 991px) {
   .Navitemmobile {
     background: #fff;
