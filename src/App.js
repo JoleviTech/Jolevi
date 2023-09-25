@@ -17,14 +17,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/landing-page" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
-        <Route path="/" element={<SimplePage />} />
+        {/* <Route path="/" element={<SimplePage />} /> */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogarticle" element={<BlogReadMore />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* <Route path="/author" element={<Author />} /> */}
       </Routes>
     </BrowserRouter>

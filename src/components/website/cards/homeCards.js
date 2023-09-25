@@ -1,6 +1,7 @@
 import publish from "../../../assets/website/icons/home/publish.png";
 import publishnow from "../../../assets/website/icons/home/publishnow.png";
 import sales from "../../../assets/website/icons/home/sales.png";
+import { WorkWithUsBtnn } from "../buttons";
 
 // import writing from "../../../assets/website/icons/whatwedo/writing.png";
 export const WhatWeDoCard = () => {
@@ -11,12 +12,15 @@ export const WhatWeDoCard = () => {
         <b>WHAT WE DO</b>
       </h3>
       {/* <p className="col-lg-7 ms-5"> */}
-      <p className="text-center">
-        We are a distinguished book publishing firm and a thriving marketplace
-        for creative professionals. Our unwavering commitment lies in supporting
-        self-published authors throughout their journey towards achieving
-        best-seller status.
-      </p>
+      <div className="text-center">
+        {" "}
+        <p className="d-lg-inline-block col-lg-7">
+          We are a distinguished book publishing firm and a thriving marketplace
+          for creative professionals. Our unwavering commitment lies in
+          supporting self-published authors throughout their journey towards
+          achieving best-seller status.
+        </p>
+      </div>
       <div className="row justify-content-evenly mt-5 mx-5">
         <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
           <div className="mb-5 py-4 WhatWeDoCard">
@@ -64,6 +68,9 @@ export const WhatWeDoCard = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center">
+        <WorkWithUsBtnn />
       </div>
     </div>
   );

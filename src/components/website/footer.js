@@ -21,6 +21,11 @@ export const Footer = () => {
           <ul class="nav justify-content-center ">
             {/* <ul class="nav justify-content-center border-bottom pb-3 mb-3"> */}
             <li class="nav-item">
+              <Link to="/" class="nav-link px-2 footerParagraph">
+                Home
+              </Link>
+            </li>
+            <li class="nav-item">
               <Link to="/about" class="nav-link px-2 footerParagraph">
                 About
               </Link>
@@ -30,12 +35,12 @@ export const Footer = () => {
                 Services
               </Link>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <Link to="/marketplace" class="nav-link px-2 footerParagraph">
                 Marketplace
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> */}
+            {/* <li class="nav-item">
               <Link to="/blog" class="nav-link px-2 footerParagraph">
                 Blog
               </Link>
@@ -44,12 +49,23 @@ export const Footer = () => {
               <Link to="/contact" class="nav-link px-2 footerParagraph">
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </footer>
         <div className="">
           <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-2">
             {/* <div></div> */}
+            <div className="mb-sm-0 mx-3">
+              <a
+                href="mailto:info@jolevi.com"
+                className="text-decoration-none linkColor"
+              >
+                <p className="paragraphColor textShow">
+                  <i class="bi bi-envelope me-2"></i>
+                  info@jolevi.com
+                </p>
+              </a>
+            </div>
             <div className="mb-sm-0 mx-3">
               <a
                 href="mailto:jolevibooks@gmail.com"

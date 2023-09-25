@@ -115,7 +115,7 @@ const FirstBook = () => {
       <h3 className="text-center pt-5">
         <b>BOOKS</b>
       </h3>
-      <div className="row align-items-center justify-content-center px-4 py-5">
+      <div className="row align-items-center justify-content-center px-4 pb-5 pt-3">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3 ">
           <h4 className="">
             <b>Abeg who send me</b>
@@ -127,12 +127,13 @@ const FirstBook = () => {
             short stories,chronicling the author's entrepreneurial journey in
             Nigeria. Fueled by a need to share lessons learned, the book
             captures mistakes made, both avoidable and unavoidable, and the
-            invaluable insights gained in hindsight. With a candid narrative and
+            invaluable insights gained in hindsight.
+            {/* With a candid narrative and
             a "so what" attitude towards failure, the book serves as an
             indispensable guide for aspiring and young entrepreneurs, offering
             them a chance to navigate their ventures more confidently. Even
             seasoned businesspeople can find it a refreshing reminder of the
-            fundamentals that drive success.
+            fundamentals that drive success. */}
           </p>
           {/* <p className="mt-4">
             Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
@@ -188,10 +189,12 @@ const SecondBook = () => {
             WhatsApp status challenge. Evolving into a treasure trove of quotes,
             each page aims to leave readers enriched and inspired. Extracted
             from the author's daily encounters, every thought comes with a
-            charming short story, providing context and depth. This fantastic
+            charming short story, providing context and depth.
+            {/* This fantastic
             read offers 365 days of instructive, educative, and enlightening
             insights, making it a must-have for those seeking daily doses of
-            inspiration."
+            inspiration. */}
+            "
           </p>
           {/* <p className="mt-4">
             Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod

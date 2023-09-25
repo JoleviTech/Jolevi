@@ -63,7 +63,7 @@ export const NewNavbar = () => {
             <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
                 style={navActive}
-                to="/landing-page"
+                to="/"
                 className="nav-link navText"
                 // style={{ color: "#000000" }}
                 aria-current="page"
@@ -99,7 +99,7 @@ export const NewNavbar = () => {
                 </div>
               </NavLink>
             </li>
-            <li className="nav-item mx-3 d-flex justify-content-center">
+            {/* <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
                 style={navActive}
                 to="/marketplace"
@@ -110,8 +110,8 @@ export const NewNavbar = () => {
                   <b>Marketplace</b>
                 </div>
               </NavLink>
-            </li>
-            <li className="nav-item mx-3 d-flex justify-content-center">
+            </li> */}
+            {/* <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
                 style={navActive}
                 to="/blog"
@@ -135,7 +135,7 @@ export const NewNavbar = () => {
                   <b>Contact</b>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
           </div>{" "}
           {/* <Navicons className="d-flex">
             <Link
