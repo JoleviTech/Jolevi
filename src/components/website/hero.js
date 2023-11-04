@@ -4,7 +4,7 @@
 
 //images, footer, sales and marketing
 
-import { WorkWithUsBtn, WorkWithUsBtnn } from "./buttons";
+import { ChallengeBtn, WorkWithUsBtn, WorkWithUsBtnn } from "./buttons";
 
 export const LandingPageHero = () => {
   return (
@@ -24,6 +24,7 @@ export const LandingPageHero = () => {
           </div>
           <div className="ms-lg-5">
             {/* <WorkWithUsBtn /> */}
+            <ChallengeBtn />
             <WorkWithUsBtnn />
           </div>
         </div>
