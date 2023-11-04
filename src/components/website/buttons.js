@@ -73,7 +73,7 @@ export const ChallengeBtn = () => {
       >
         <button class="WorkWithUsBtnn mx-1 mt-2">
           {/* <button class="ChallengeBtn mx-1 mt-2"> */}{" "}
-          <b> 45 Day Challenge </b>
+          <b> 45-Day Challenge </b>
         </button>
       </a>
     </>
