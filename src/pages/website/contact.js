@@ -226,10 +226,7 @@ export const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
-  // const [showModal, setShowModal] = useState(false);
-  // const [modalMessage, setModalMessage] = useState("");
-  // const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); // New state for loading
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
@@ -252,6 +249,7 @@ export const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true); // Set loading state to true
     // If validation passes, send data to the server
     try {
       const response = await axios.post(
@@ -263,9 +261,6 @@ export const Contact = () => {
         }
       );
 
-      // setModalMessage("Form submitted successfully!");
-      // setIsSuccess(true);
-      // setShowModal(true);
       setShowModal(true);
       setModalMessage(response.data.message); // Assuming a success message is returned
       setIsSuccess(true);
@@ -277,26 +272,15 @@ export const Contact = () => {
       // Handle the response accordingly (e.g., show success message)
       // console.log(response.data);
     } catch (error) {
-      // setModalMessage("Error submitting form. Please try again later.");
-      // setIsSuccess(false);
-      // setShowModal(true);
       setShowModal(true);
       setModalMessage("Error submitting form: " + error.message);
       setIsSuccess(false);
       // Handle errors (e.g., show error message)
       console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false); // Reset loading state whether success or error
     }
   };
-
-  // const closeModal = () => {
-  //   setShowModal(false);
-  //   setModalMessage("");
-  //   setIsSuccess(false);
-  //   setName("");
-  //   setEmail("");
-  //   setMessage("");
-  //   setErrors({});
-  // };
 
   return (
     <div className="container-fluid">
@@ -347,7 +331,7 @@ export const Contact = () => {
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
-                setErrors({ ...errors, email: "" }); // Clear validation error on change
+                setErrors({ ...errors, email: "" });
               }}
             />
             {errors.email && <p className="error-text">{errors.email}</p>}
@@ -363,41 +347,35 @@ export const Contact = () => {
               value={message}
               onChange={(e) => {
                 setMessage(e.target.value);
-                setErrors({ ...errors, message: "" }); // Clear validation error on change
+                setErrors({ ...errors, message: "" });
               }}
             />
             {errors.message && <p className="error-text">{errors.message}</p>}
 
             <div className="button mt-3">
-              <button type="submit" className="WorkWithUsBtnn mt-3 mb-3">
+              {/* <button type="submit" className="WorkWithUsBtnn mt-3 mb-3">
                 Submit
+              </button> */}
+              <button
+                type="submit"
+                className="WorkWithUsBtnn mt-3 mb-3"
+                disabled={isSubmitting} // Disable the button during submission
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
         </div>
       </div>
-      {/* <Modal
-        show={showModal}
-        onClose={closeModal}
-        isSuccess={isSuccess}
-        message={modalMessage}
-      /> */}
+
       <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
-          {/* <Modal.Title>{isSuccess ? "Success!" : "Error"}</Modal.Title> */}
-        </Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body className="text-center pb-0 mb-0">
           <img src={successicon} className="img-fluid" width="80" height="80" />
         </Modal.Body>
         <Modal.Body className="h5 text-center pt-0 mt-0">
           {modalMessage}
         </Modal.Body>
-
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Close
-          </Button>
-        </Modal.Footer> */}
       </Modal>
 
       <Footer />
