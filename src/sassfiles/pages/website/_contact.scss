@@ -38,3 +38,9 @@ form {
   //   width: 90% !important;
   // }
 }
+.error-text {
+  margin: 0; /* Remove margin */
+  color: red; /* Add color for emphasis */
+  text-align: start; /* Align text to the start */
+  margin-left: 2rem;
+}
