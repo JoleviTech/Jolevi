@@ -191,7 +191,7 @@ import { Modal, Button } from "react-bootstrap";
 
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
-import successicon from "../../assets/website/icons/contact/successicon.png";
+import successicon from "../../assets/website/icons/contact/successicon.jpg";
 
 // import "../website/contact.css";
 
@@ -275,7 +275,7 @@ export const Contact = () => {
       setEmail("");
       setMessage("");
       // Handle the response accordingly (e.g., show success message)
-      console.log(response.data);
+      // console.log(response.data);
     } catch (error) {
       // setModalMessage("Error submitting form. Please try again later.");
       // setIsSuccess(false);
@@ -386,15 +386,12 @@ export const Contact = () => {
         <Modal.Header closeButton>
           {/* <Modal.Title>{isSuccess ? "Success!" : "Error"}</Modal.Title> */}
         </Modal.Header>
-        <Modal.Body className="text-center">
-          <img
-            src={successicon}
-            className="img-fluid"
-            width="100"
-            height="100"
-          />
+        <Modal.Body className="text-center pb-0 mb-0">
+          <img src={successicon} className="img-fluid" width="80" height="80" />
         </Modal.Body>
-        <Modal.Body className="h5 text-center">{modalMessage}</Modal.Body>
+        <Modal.Body className="h5 text-center pt-0 mt-0">
+          {modalMessage}
+        </Modal.Body>
 
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>
