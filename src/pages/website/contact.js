@@ -187,9 +187,35 @@
 // };
 import React, { useState } from "react";
 import axios from "axios";
+import { Modal, Button } from "react-bootstrap";
+
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
+import successicon from "../../assets/website/icons/contact/successicon.png";
+
 // import "../website/contact.css";
+
+// Modal.js
+// import React from "react";
+
+// const Modal = ({ show, onClose, isSuccess, message }) => {
+//   if (!show) {
+//     return null;
+//   }
+
+//   return (
+//     <div className={`modal ${isSuccess ? "success" : "error"}`}>
+//       <div className="modal-content">
+//         <span className="close" onClick={onClose}>
+//           &times;
+//         </span>
+//         <p>{message}</p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Modal;
 
 export const Contact = () => {
   // State variables for form fields and validation
@@ -197,6 +223,13 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  // const [showModal, setShowModal] = useState(false);
+  // const [modalMessage, setModalMessage] = useState("");
+  // const [isSuccess, setIsSuccess] = useState(false);
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
@@ -230,13 +263,40 @@ export const Contact = () => {
         }
       );
 
+      // setModalMessage("Form submitted successfully!");
+      // setIsSuccess(true);
+      // setShowModal(true);
+      setShowModal(true);
+      setModalMessage(response.data.message); // Assuming a success message is returned
+      setIsSuccess(true);
+
+      // Clear form fields
+      setName("");
+      setEmail("");
+      setMessage("");
       // Handle the response accordingly (e.g., show success message)
       console.log(response.data);
     } catch (error) {
+      // setModalMessage("Error submitting form. Please try again later.");
+      // setIsSuccess(false);
+      // setShowModal(true);
+      setShowModal(true);
+      setModalMessage("Error submitting form: " + error.message);
+      setIsSuccess(false);
       // Handle errors (e.g., show error message)
       console.error("Error submitting form:", error);
     }
   };
+
+  // const closeModal = () => {
+  //   setShowModal(false);
+  //   setModalMessage("");
+  //   setIsSuccess(false);
+  //   setName("");
+  //   setEmail("");
+  //   setMessage("");
+  //   setErrors({});
+  // };
 
   return (
     <div className="container-fluid">
@@ -316,6 +376,33 @@ export const Contact = () => {
           </form>
         </div>
       </div>
+      {/* <Modal
+        show={showModal}
+        onClose={closeModal}
+        isSuccess={isSuccess}
+        message={modalMessage}
+      /> */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          {/* <Modal.Title>{isSuccess ? "Success!" : "Error"}</Modal.Title> */}
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          <img
+            src={successicon}
+            className="img-fluid"
+            width="100"
+            height="100"
+          />
+        </Modal.Body>
+        <Modal.Body className="h5 text-center">{modalMessage}</Modal.Body>
+
+        {/* <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
+
       <Footer />
     </div>
   );
