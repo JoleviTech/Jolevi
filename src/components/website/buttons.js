@@ -65,15 +65,16 @@ export const ChallengeBtn = () => {
   return (
     <>
       <a
-        href="https://forms.gle/M2fw9iM6re1wgP1SA"
+        href="https://chat.whatsapp.com/CsOm0fmgaQFD38b98i8qid"
+        // href="https://forms.gle/M2fw9iM6re1wgP1SA"
         // previous link
         // href="https://forms.gle/dRdRsVyWfQa4Cks38"
         target="_blank"
         className="text-decoration-none btnText linkColor"
       >
-        <button class="WorkWithUsBtnn mx-1 mt-2">
+        <button class="JoinOurComunityBtn mx-1 mt-2">
           {/* <button class="ChallengeBtn mx-1 mt-2"> */}{" "}
-          <b> 45-Day Challenge </b>
+          <b> Join our Community </b>
         </button>
       </a>
     </>
