@@ -276,7 +276,7 @@ export const Contact = () => {
       setModalMessage("Error submitting form: " + error.message);
       setIsSuccess(false);
       // Handle errors (e.g., show error message)
-      console.error("Error submitting form:", error);
+      // console.error("Error submitting form:", error);
     } finally {
       setIsSubmitting(false); // Reset loading state whether success or error
     }
@@ -285,87 +285,80 @@ export const Contact = () => {
   return (
     <div className="container-fluid">
       <NewNavbar />
-      <div
-        className="main text-align-center"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          // backgroundColor: "#28B3E10D",
-        }}
-      >
-        <div className="content mt-4">
-          <div className="text-content">
-            <h5 className="mt-3" style={{ fontWeight: "700" }}>
-              <b>WE LOVE TO HEAR FROM YOU</b>
-            </h5>
-            <p
-              style={{
-                width: "400px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              We will get back to you within the next 24 hours, thank you.
-            </p>
-          </div>
+      <div className="row justify-content-center align-items-center">
+        <div className="col-lg-6 col-md-8 col-sm-10 col-12 text-center mt-4">
+          <h5 className="mt-3" style={{ fontWeight: "700" }}>
+            <b>WE LOVE TO HEAR FROM YOU</b>
+          </h5>
+          <p className="text-center mb-0 pt-0">
+            We will get back to you within the next 24 hours, thank you.
+          </p>
+        </div>
+      </div>
+      <div className="d-flex justify-content-center align-items-center">
+        {/* <div className="w-100 justify-content-center text-center"> */}
+        {/* <div className="col-lg-6 col-md-8 col-sm-10 col-12 text-center"> */}
+        {/* <div
+          className="container-fluid"
+          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
+        > */}
+        <form onSubmit={handleSubmit} className="mt-3">
+          <input
+            type="text"
+            className="mt-3"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+              setErrors({ ...errors, name: "" }); // Clear validation error on change
+            }}
+          />
+          {errors.name && <p className="error-text">{errors.name}</p>}
+          <br />
 
-          <form onSubmit={handleSubmit} className="mt-5">
-            <input
-              type="text"
-              className="mt-3"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-                setErrors({ ...errors, name: "" }); // Clear validation error on change
-              }}
-            />
-            {errors.name && <p className="error-text">{errors.name}</p>}
-            <br />
+          <input
+            type="email"
+            className="mt-3"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setErrors({ ...errors, email: "" });
+            }}
+          />
+          {errors.email && <p className="error-text">{errors.email}</p>}
+          <br />
 
-            <input
-              type="email"
-              className="mt-3"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                setErrors({ ...errors, email: "" });
-              }}
-            />
-            {errors.email && <p className="error-text">{errors.email}</p>}
-            <br />
+          <textarea
+            name="txtarea"
+            id="txtarea"
+            placeholder="Message"
+            cols="30"
+            rows="10"
+            className="mt-3"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+              setErrors({ ...errors, message: "" });
+            }}
+          />
+          {errors.message && <p className="error-text">{errors.message}</p>}
 
-            <textarea
-              name="txtarea"
-              id="txtarea"
-              placeholder="Message"
-              cols="30"
-              rows="10"
-              className="mt-3"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-                setErrors({ ...errors, message: "" });
-              }}
-            />
-            {errors.message && <p className="error-text">{errors.message}</p>}
-
-            <div className="button mt-3">
-              {/* <button type="submit" className="WorkWithUsBtnn mt-3 mb-3">
+          <div className="button mt-3">
+            {/* <button type="submit" className="WorkWithUsBtnn mt-3 mb-3">
                 Submit
               </button> */}
-              <button
-                type="submit"
-                className="WorkWithUsBtnn mt-3 mb-3"
-                disabled={isSubmitting} // Disable the button during submission
-              >
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </div>
-          </form>
-        </div>
+            <button
+              type="submit"
+              className="WorkWithUsBtnn mt-3 mb-3"
+              disabled={isSubmitting} // Disable the button during submission
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          </div>
+        </form>
+        {/* </div> */}
+        {/* </div> */}
       </div>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>

@@ -15,6 +15,9 @@ export const NewNavvbar = () => {
       <NavLink style={navActive} to="/services">
         Services
       </NavLink>
+      <NavLink style={navActive} to="/contact">
+        Contact
+      </NavLink>
       <NavLink style={navActive} to="/blog">
         Blog
       </NavLink>
@@ -122,7 +125,7 @@ export const NewNavbar = () => {
                   <b>Blog</b>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
 
             <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
@@ -135,7 +138,7 @@ export const NewNavbar = () => {
                   <b>Contact</b>
                 </div>
               </NavLink>
-            </li> */}
+            </li>
           </div>{" "}
           {/* <Navicons className="d-flex">
             <Link
