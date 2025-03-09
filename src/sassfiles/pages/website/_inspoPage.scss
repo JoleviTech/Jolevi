@@ -1,0 +1,164 @@
+@use "../../colors" as *;
+
+.hero-section {
+    padding: 60px 0;
+  
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      // Optional: set a fixed height to ensure consistent sizing
+      height: 300px; 
+      overflow: hidden;
+  
+      .slide {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .slider-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  
+.cards-page {
+    background-color: $prybgcolor;
+    color: $prytextcolor;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    // Hero Section & Slider
+    .hero-section {
+      .hero-slide {
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        transition: background-image 0.5s ease-in-out;
+      }
+  
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+  
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+  
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+    }
+  
+    // Products Section
+    .products-section {
+      background-color: $prybgcolor;
+  
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+  
+      .modern-card {
+        background-color: $secbgcolor;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+  
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+  
+        .card-image {
+          overflow: hidden;
+  
+          img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+          }
+  
+          &:hover img {
+            transform: scale(1.05);
+          }
+        }
+  
+        .card-body {
+          padding: 20px;
+          background: $prybgcolor;
+          text-align: center;
+  
+          .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: $prytextcolor;
+          }
+  
+          .card-text {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: darken($prytextcolor, 20%);
+          }
+        }
+      }
+    }
+  
+    // Buttons
+    // .btn-primary {
+    //   background-color: $primarybtncolor;
+    //   border-color: $primarybtncolor;
+    //   transition: background-color 0.3s ease, border-color 0.3s ease;
+  
+    //   &:hover {
+    //     background-color: darken($primarybtncolor, 10%);
+    //     border-color: darken($primarybtncolor, 10%);
+    //   }
+    // }
+  
+    // .btn-outline-primary {
+    //   border-color: $primarybtncolor;
+    //   color: $primarybtncolor;
+    //   transition: background-color 0.3s ease, color 0.3s ease;
+  
+    //   &:hover {
+    //     background-color: $primarybtncolor;
+    //     color: $sectextcolor;
+    //   }
+    // }
+  }
+
+  .custom-buy-now {
+    border: 2px solid #fbb03b;
+    color: #fbb03b;
+    background-color: transparent;
+    font-family: "Comic Neue";
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  
+    &:focus {
+      outline: none !important; /* Removes the default blue outline */
+      box-shadow: none; /* Removes any additional shadow */
+    }
+  
+    &:hover {
+      background-color: #fbb03b;
+      color: #fff;
+      border: 2px solid #fbb03b !important;
+
+    }
+  }
+  

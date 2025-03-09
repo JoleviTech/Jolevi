@@ -451,6 +451,121 @@ p {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.hero-section {
+  padding: 60px 0;
+}
+.hero-section .slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.hero-section .slider-wrapper .slide {
+  width: 100%;
+  height: 100%;
+}
+.hero-section .slider-wrapper .slider-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.cards-page {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cards-page .hero-section .hero-slide {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: background-image 0.5s ease-in-out;
+}
+.cards-page .hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+}
+.cards-page .hero-section .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.cards-page .hero-section .hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.cards-page .products-section {
+  background-color: #ffffff;
+}
+.cards-page .products-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.cards-page .products-section .modern-card {
+  background-color: rgba(94, 178, 81, 0.02);
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.cards-page .products-section .modern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+.cards-page .products-section .modern-card .card-image {
+  overflow: hidden;
+}
+.cards-page .products-section .modern-card .card-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.cards-page .products-section .modern-card .card-image:hover img {
+  transform: scale(1.05);
+}
+.cards-page .products-section .modern-card .card-body {
+  padding: 20px;
+  background: #ffffff;
+  text-align: center;
+}
+.cards-page .products-section .modern-card .card-body .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+.cards-page .products-section .modern-card .card-body .card-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.custom-buy-now {
+  border: 2px solid #fbb03b;
+  color: #fbb03b;
+  background-color: transparent;
+  font-family: "Comic Neue";
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.custom-buy-now:focus {
+  outline: none !important; /* Removes the default blue outline */
+  box-shadow: none; /* Removes any additional shadow */
+}
+.custom-buy-now:hover {
+  background-color: #fbb03b;
+  color: #fff;
+  border: 2px solid #fbb03b !important;
+}
+
 input {
   height: 40px;
   width: 300px;

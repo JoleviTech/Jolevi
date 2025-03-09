@@ -9,7 +9,7 @@ import About from "./pages/website/about";
 import { Blog } from "./pages/website/blog";
 import { BlogReadMore } from "./pages/website/blogReadMore";
 import { Contact } from "./pages/website/contact";
-
+import InspoPage from "./pages/website/inspoCards";
 //Author
 import { Author } from "./pages/website/author";
 
@@ -26,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* <Route path="/author" element={<Author />} /> */}
+        <Route path="/cards" element={<InspoPage />} />
       </Routes>
     </BrowserRouter>
   );

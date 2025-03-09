@@ -147,20 +147,20 @@ const FirstBook = () => {
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
           </p> */}
-          <p className="m-0 p-0">
+          {/* <p className="m-0 p-0">
             <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
             &#8358;
             <b>3000</b>, Audiobook &#8358;<b>3500</b>
-          </p>
+          </p> */}
           {/* <p className="mt-2">
             Books are available at <a href="#">Amazon</a>,{" "}
             <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
             <a href="#">Bambooks</a>
           </p> */}
 
-          <div className="">
+          {/* <div className="">
             <PreOrderBtn />
-          </div>
+          </div> */}
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
           <img
@@ -208,19 +208,19 @@ const SecondBook = () => {
             amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
             et dolore magna Lorem ipsum dolor sit amet, cse
           </p> */}
-          <p className="m-0 p-0">
+          {/* <p className="m-0 p-0">
             <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
             &#8358;
             <b>3000</b>, Audiobook &#8358;<b>3500</b>
-          </p>
+          </p> */}
           {/* <p className="mt-2">
             Books are available at <a href="#">Amazon</a>,{" "}
             <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
             <a href="#">Bambooks</a>
           </p> */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <PreOrderBtn />
-          </div>
+          </div> */}
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
           <img

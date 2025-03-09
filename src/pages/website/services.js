@@ -927,48 +927,216 @@ const ServicessSection = () => {
     </>
   );
 };
+// const Pricing = () => {
+//   return (
+//     <>
+//       <div className="container p-5">
+//         {" "}
+//         <h3 className="text-center">
+//           <b>IDEA TO SALES - I2S BOUQUET</b>
+//         </h3>
+//         <div className="row justify-content-evenly mt-5 mx-5">
+//           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
+//             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
+//               <div class="card-body">
+//                 <div className="d-flex align-items-center">
+//                   <img src={goldicon} />
+//                   <h3 class="card-title ms-3">
+//                     <b>Gold</b>
+//                   </h3>
+//                 </div>
+
+//                 <div className="text-center pt-3 pb-4">
+//                   <GetaQuoteBtn />
+//                 </div>
+
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Book Coaching
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Editing
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Proofreading
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Publishing
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           {/* <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0 d-flex align-items-stretch">
+//             <div class="w-75 pricingCard p-4 mt-4"> */}
+//           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
+//             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
+//               <div class="card-body">
+//                 <div className="d-flex align-items-center">
+//                   <img src={platinumicon} />
+//                   <h3 class="card-title ms-3">
+//                     <b>Platinium</b>
+//                   </h3>
+//                 </div>
+
+//                 <div className="text-center pt-3 pb-4">
+//                   <GetaQuoteBtn />
+//                 </div>
+
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p
+//                       className="p-0 m-0 ms-1"
+//                       style={{
+//                         fontSize: "0.85rem",
+//                         color: "#0087cb",
+//                         fontWeight: "700",
+//                       }}
+//                     >
+//                       Everything in Gold
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Book Launch Planning (Virtual & Physical)
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Distribution to other platforms e.g Okada, Amazon,
+//                       Bambooks
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           {/* <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0 d-flex align-items-stretch">
+//             <div class="w-75 pricingCard p-4 mt-4"> */}
+//           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
+//             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
+//               <div class="card-body">
+//                 <div className="d-flex align-items-center">
+//                   <img src={rhodiumicon} />
+//                   <h3 class="card-title ms-3">
+//                     <b>Rhodium</b>
+//                   </h3>
+//                 </div>
+
+//                 <div className="text-center pt-3 pb-4">
+//                   <GetaQuoteBtn />
+//                 </div>
+
+//                 <div className="d-flex align-items-center mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p
+//                       className="p-0 m-0 ms-1"
+//                       style={{
+//                         fontSize: "0.85rem",
+//                         color: "#0087cb",
+//                         fontWeight: "700",
+//                       }}
+//                     >
+//                       Everything in Platinum
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Sales and Marketing (Short video ads, ads on book
+//                       platform)
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="d-flex  mx-1">
+//                   <div>
+//                     <i class="bi bi-check2-all"></i>
+//                   </div>
+//                   <div>
+//                     <p className="p-0 m-0 ms-1" style={{ fontSize: "0.85rem" }}>
+//                       Media coverage and Mention e.g Newspaper articles, Tv and
+//                       radio Shows, Podcast interviews etc
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
 const Pricing = () => {
   return (
     <>
       <div className="container p-5">
-        {" "}
         <h3 className="text-center">
           <b>IDEA TO SALES - I2S BOUQUET</b>
         </h3>
-        {/* <h4 className="ms-5 mb-4">Pricing</h4> */}
-        {/* <div
-          className="col-lg-4 card firstPricingCard"
-          style={{ width: "18rem" }}
-        >
-          <div className="card-body">
-            <h5 className="card-title">Lorem Ipsum</h5>
-            <h5 className="card-title">Lorem Ipsum Dolor</h5>
-            <p className="card-text">
-              Lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum
-              dolor sit amet consectetur adipiscing Lorem ipsum dolor sit amet
-              consectetur adipiscing
-            </p>
-          </div>{" "}
-          <img src={pricing} className="card-img-top" alt="..." />
-        </div> */}
-        {/* <div class="row justify-content-center justify-content-evenly">
-          <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0 d-flex align-items-stretch">
-            <div class="w-75 pricingCard p-4 mt-4"> */}
-        <div className="row justify-content-evenly mt-5 mx-5">
+
+        {/* Row with centralized cards */}
+        <div className="row justify-content-center mt-5">
+          {/* Gold Card */}
           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
-              <div class="card-body">
+              <div className="card-body">
                 <div className="d-flex align-items-center">
-                  <img src={goldicon} />
-                  <h3 class="card-title ms-3">
+                  <img src={goldicon} alt="Gold Icon" />
+                  <h3 className="card-title ms-3">
                     <b>Gold</b>
                   </h3>
                 </div>
-
                 <div className="text-center pt-3 pb-4">
                   <GetaQuoteBtn />
                 </div>
-
                 <div className="d-flex align-items-center mx-1">
                   <div>
                     <i class="bi bi-check2-all"></i>
@@ -1012,18 +1180,17 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-          {/* <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0 d-flex align-items-stretch">
-            <div class="w-75 pricingCard p-4 mt-4"> */}
+
+          {/* Platinum Card */}
           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
-              <div class="card-body">
+              <div className="card-body">
                 <div className="d-flex align-items-center">
-                  <img src={platinumicon} />
-                  <h3 class="card-title ms-3">
-                    <b>Platinium</b>
+                  <img src={platinumicon} alt="Platinum Icon" />
+                  <h3 className="card-title ms-3">
+                    <b>Platinum</b>
                   </h3>
                 </div>
-
                 <div className="text-center pt-3 pb-4">
                   <GetaQuoteBtn />
                 </div>
@@ -1069,18 +1236,17 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-          {/* <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0 d-flex align-items-stretch">
-            <div class="w-75 pricingCard p-4 mt-4"> */}
+
+          {/* Rhodium Card */}
           <div className="col-lg-4 col-md-6 col-sm-10 d-flex align-items-stretch">
             <div className="mb-5 py-4 pricingCard p-4 flex-fill">
-              <div class="card-body">
+              <div className="card-body">
                 <div className="d-flex align-items-center">
-                  <img src={rhodiumicon} />
-                  <h3 class="card-title ms-3">
+                  <img src={rhodiumicon} alt="Rhodium Icon" />
+                  <h3 className="card-title ms-3">
                     <b>Rhodium</b>
                   </h3>
                 </div>
-
                 <div className="text-center pt-3 pb-4">
                   <GetaQuoteBtn />
                 </div>
