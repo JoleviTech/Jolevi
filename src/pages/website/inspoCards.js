@@ -12,6 +12,7 @@ const InspoPage = () => {
     <>
       <NewNavbar />
       <InspoCards />
+      <YouTubeSection />
       <Footer />
     </>
   );
@@ -93,9 +94,15 @@ const HeroSection = () => (
             Discover our unique range of gratitude, confession, and
             entrepreneurial inspiration cards.
           </p>
-          <Button size="lg" className="custom-buy-now mt-3 w-auto">
-            Buy Now
-          </Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeF35YWFwfBVejIF5-2QhGPiYC2yJkDUz3z6l0gevWKBhPDDQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="custom-buy-now mt-3 w-auto">
+              Buy Now
+            </Button>
+          </a>
         </Col>
 
         {/* Image/Slider Column */}
@@ -130,9 +137,112 @@ const BuyNowSection = () => (
         Find the perfect card for every occasion and make someone’s day special.
       </p>
 
-      <Button size="lg" className="custom-buy-now mt-3 w-auto">
-        Buy Now
-      </Button>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeF35YWFwfBVejIF5-2QhGPiYC2yJkDUz3z6l0gevWKBhPDDQ/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button size="lg" className="custom-buy-now mt-3 w-auto">
+          Buy Now
+        </Button>
+      </a>
+    </Container>
+  </section>
+);
+
+// const YouTubeSection = () => (
+//   <section
+//     className="youtube-section"
+//     style={{
+
+//       background: "#ffffff",
+//       textAlign: "center",
+//     }}
+//   >
+//     <Container>
+//       <h3 className="mt-5 mb-4">WATCH & BE INSIPIRED</h3>
+//       <Row>
+//         {/* First Video */}
+//         <Col md={6} className="mb-4">
+//           <iframe
+//             width="100%"
+//             height="315"
+//             src="https://www.youtube.com/embed/6YV4vEyy4aE"
+//             title="YouTube Video 1"
+//             frameBorder="0"
+//             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//             allowFullScreen
+//           ></iframe>
+//         </Col>
+//         {/* Second Video */}
+//         <Col md={6} className="mb-4">
+//           <iframe
+//             width="100%"
+//             height="315"
+//             src="https://www.youtube.com/embed/OKlogBpRRfI"
+//             title="YouTube Video 2"
+//             frameBorder="0"
+//             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//             allowFullScreen
+//           ></iframe>
+//         </Col>
+//       </Row>
+//     </Container>
+//   </section>
+// );
+
+const YouTubeSection = () => (
+  <section className="youtube-section">
+    <Container>
+      <h3 className="my-5 text-center">WATCH & BE INSIPIRED</h3>
+      <Row>
+        {/* First Video */}
+        <Col md={6} className="mb-4">
+          <div
+            style={{
+              borderRadius: "8px",
+              overflow: "hidden",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/6YV4vEyy4aE"
+              title="YouTube Video 1"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p style={{ marginTop: "10px", color: "#555" }}>
+            Discover how gratitude can transform moments into lifelong memories.
+          </p>
+        </Col>
+        {/* Second Video */}
+        <Col md={6} className="mb-4">
+          <div
+            style={{
+              borderRadius: "8px",
+              overflow: "hidden",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/OKlogBpRRfI"
+              title="YouTube Video 2"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p style={{ marginTop: "10px", color: "#555" }}>
+            Empower your day with words of positivity and affirmation.
+          </p>
+        </Col>
+      </Row>
     </Container>
   </section>
 );
@@ -226,4 +336,5 @@ const InspoCards = () => {
     </div>
   );
 };
+
 export default InspoPage;
