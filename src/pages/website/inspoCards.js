@@ -7,6 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 
+import gratitudeimg1 from "../../assets/website/images/cards/gratitude1.jpeg";
+import gratitudeimg2 from "../../assets/website/images/cards/gratitude2.jpeg";
+import gratitudeimg3 from "../../assets/website/images/cards/gratitude3.jpeg";
+import gratitudeimg4 from "../../assets/website/images/cards/gratitude4.jpeg";
+
 const InspoPage = () => {
   return (
     <>
@@ -20,9 +25,13 @@ const InspoPage = () => {
 
 // Sample hero images for the slider
 const heroImages = [
-  "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
-  "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
-  "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
+  gratitudeimg1,
+  gratitudeimg2,
+  gratitudeimg3,
+  gratitudeimg4,
+  // "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
+  // "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
+  // "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
 ];
 
 // Sample products with additional collection variants
@@ -31,38 +40,23 @@ const products = [
     id: 1,
     title: "Gratitude Cards",
     description: "Express your heartfelt thanks with elegance and style.",
-    image:
-      "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
-    collections: [
-      "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
-      "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
-      "https://img.freepik.com/free-vector/thank-you-label-editorial-template_23-2148701231.jpg",
-    ],
+    image: gratitudeimg1,
+    collections: [gratitudeimg1, gratitudeimg2, gratitudeimg3],
   },
   {
     id: 2,
     title: "Confession Cards",
     description: "Share your feelings with honesty and subtle design.",
-    image:
-      "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
-    collections: [
-      "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
-      "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
-      "https://img.freepik.com/free-vector/thank-you-label-editorial-template_23-2148701231.jpg",
-    ],
+    image: gratitudeimg2,
+    collections: [gratitudeimg3, gratitudeimg2, gratitudeimg1],
   },
   {
     id: 3,
     title: "Entrepreneur Cards",
     description:
       "Inspire and motivate with modern designs crafted for success.",
-    image:
-      "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
-    collections: [
-      "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
-      "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
-      "https://img.freepik.com/free-vector/thank-you-label-editorial-template_23-2148701231.jpg",
-    ],
+    image: gratitudeimg3,
+    collections: [gratitudeimg2, gratitudeimg3, gratitudeimg1],
   },
 ];
 
