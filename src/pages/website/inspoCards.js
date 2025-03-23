@@ -10,7 +10,9 @@ import { Footer } from "../../components/website/footer";
 import gratitudeimg1 from "../../assets/website/images/cards/gratitude1.jpeg";
 import gratitudeimg2 from "../../assets/website/images/cards/gratitude2.jpeg";
 import gratitudeimg3 from "../../assets/website/images/cards/gratitude3.jpeg";
-import gratitudeimg4 from "../../assets/website/images/cards/gratitude4.jpeg";
+import confession1 from "../../assets/website/images/cards/confession1.jpg";
+import confession2 from "../../assets/website/images/cards/confession2.jpg";
+import confession3 from "../../assets/website/images/cards/confession3.jpg";
 
 const InspoPage = () => {
   return (
@@ -26,9 +28,7 @@ const InspoPage = () => {
 // Sample hero images for the slider
 const heroImages = [
   gratitudeimg1,
-  gratitudeimg2,
-  gratitudeimg3,
-  gratitudeimg4,
+  confession1,
   // "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
   // "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
   // "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
@@ -41,14 +41,14 @@ const products = [
     title: "Gratitude Cards",
     description: "Express your heartfelt thanks with elegance and style.",
     image: gratitudeimg1,
-    collections: [gratitudeimg1, gratitudeimg2, gratitudeimg3],
+    collections: [gratitudeimg1, gratitudeimg2],
   },
   {
     id: 2,
     title: "Confession Cards",
     description: "Share your feelings with honesty and subtle design.",
-    image: gratitudeimg2,
-    collections: [gratitudeimg3, gratitudeimg2, gratitudeimg1],
+    image: confession1,
+    collections: [confession2, confession3],
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const products = [
     description:
       "Inspire and motivate with modern designs crafted for success.",
     image: gratitudeimg3,
-    collections: [gratitudeimg2, gratitudeimg3, gratitudeimg1],
+    collections: [gratitudeimg2, gratitudeimg3],
   },
 ];
 
