@@ -27,8 +27,8 @@ const InspoPage = () => {
 
 // Sample hero images for the slider
 const heroImages = [
-  gratitudeimg1,
-  confession1,
+  confession2,
+  gratitudeimg2,
   // "https://img.freepik.com/free-psd/floral-mother-s-day-celebration-template_23-2151395034.jpg",
   // "https://img.freepik.com/free-vector/painted-thank-you-label-template_23-2148689616.jpg",
   // "https://img.freepik.com/free-vector/floral-thank-you-label-template_23-2148649210.jpg",
@@ -40,15 +40,15 @@ const products = [
     id: 1,
     title: "Gratitude Cards",
     description: "Express your heartfelt thanks with elegance and style.",
-    image: gratitudeimg1,
+    image: gratitudeimg2,
     collections: [gratitudeimg1, gratitudeimg2],
   },
   {
     id: 2,
     title: "Confession Cards",
     description: "Share your feelings with honesty and subtle design.",
-    image: confession1,
-    collections: [confession2, confession3],
+    image: confession2,
+    collections: [confession3, confession2],
   },
   {
     id: 3,
