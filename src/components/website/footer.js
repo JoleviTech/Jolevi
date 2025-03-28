@@ -35,6 +35,11 @@ export const Footer = () => {
                 Services
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/cards" class="nav-link px-2 footerParagraph">
+                Cards
+              </Link>
+            </li>
             {/* <li class="nav-item">
               <Link to="/marketplace" class="nav-link px-2 footerParagraph">
                 Marketplace

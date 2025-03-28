@@ -15,6 +15,9 @@ export const NewNavvbar = () => {
       <NavLink style={navActive} to="/services">
         Services
       </NavLink>
+      <NavLink style={navActive} to="/cards">
+        Cards
+      </NavLink>
       <NavLink style={navActive} to="/contact">
         Contact
       </NavLink>
@@ -99,6 +102,18 @@ export const NewNavbar = () => {
               >
                 <div className="Navitemmobile Navitemlarge">
                   <b>Services</b>
+                </div>
+              </NavLink>
+            </li>
+            <li className="nav-item mx-3 d-flex justify-content-center">
+              <NavLink
+                style={navActive}
+                to="/cards"
+                // style={{ color: "#000000" }}
+                className="nav-link navText"
+              >
+                <div className="Navitemmobile Navitemlarge">
+                  <b>Cards</b>
                 </div>
               </NavLink>
             </li>
