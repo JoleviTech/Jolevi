@@ -25,7 +25,7 @@ function App() {
         <Route path="/blogarticle" element={<BlogReadMore />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        {/* <Route path="/author" element={<Author />} /> */}
+        <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
       </Routes>
     </BrowserRouter>
