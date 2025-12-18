@@ -540,7 +540,7 @@ const Footer = () => {
         </div>
 
         <p className="text-center m-0 p-0" style={{ fontSize: "0.8rem" }}>
-          Copyright &copy; Jolevi 2023
+          Copyright &copy; Jolevi 2025
         </p>
       </div>
     </>
