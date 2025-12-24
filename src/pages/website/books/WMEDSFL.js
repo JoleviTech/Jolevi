@@ -227,11 +227,11 @@ const AnthologyPage = () => {
                   Wetin My Eyes Don See For Lagos
                 </h2>
                 <p className="anthology-tagline mb-4">
-                  21 Voices. One City. Countless Stories.
+                  22 Voices. One City. Countless Stories.
                 </p>
                 <div className="anthology-summary">
                   <p className="mb-3">
-                    An extraordinary anthology that captures the essence, energy, and soul of Lagos through the eyes of 21 talented writers. From the bustling streets of Oshodi to the serene beaches of Lekki, from the vibrant markets of Balogun to the corporate towers of Victoria Island, these stories paint a vivid portrait of Nigeria's most dynamic city.
+                    An extraordinary anthology that captures the essence, energy, and soul of Lagos through the eyes of 22 talented writers. From the bustling streets of Oshodi to the serene beaches of Lekki, from the vibrant markets of Balogun to the corporate towers of Victoria Island, these stories paint a vivid portrait of Nigeria's most dynamic city.
                   </p>
                   <p className="mb-4">
                     Each contributor brings their unique perspective, weaving tales of struggle and triumph, laughter and tears, tradition and modernity. Together, they create a tapestry that celebrates the indomitable spirit of Lagos and its people.
@@ -264,7 +264,7 @@ const AnthologyPage = () => {
           <div className="text-center mb-5">
             <h3 className="contributors-title mb-3">MEET THE CONTRIBUTORS</h3>
             <p className="contributors-subtitle">
-              21 talented writers sharing their Lagos experiences
+              22 talented writers sharing their Lagos experiences
             </p>
           </div>
           
