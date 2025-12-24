@@ -10,9 +10,10 @@ import { Blog } from "./pages/website/blog";
 import { BlogReadMore } from "./pages/website/blogReadMore";
 import { Contact } from "./pages/website/contact";
 import InspoPage from "./pages/website/inspoCards";
-import PreOrder from "./pages/website/preorder";
+import PreOrder from "./pages/website/books/preorder";
 //Author
-import { Author } from "./pages/website/author";
+import { Author } from "./pages/website/books/author";
+import WMEDSFL from "./pages/website/books/WMEDSFL";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
         <Route path="/pre-order" element={<PreOrder />} />
+        <Route path="/WMEDSFL" element={<WMEDSFL/>} />
       </Routes>
     </BrowserRouter>
   );

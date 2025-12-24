@@ -8,7 +8,8 @@ import { PreOrderBtn } from "../../components/website/buttons";
 //images
 import bookone from "../../assets/website/images/books/bookone.png";
 import booktwo from "../../assets/website/images/books/booktwo.png";
-import bookthree from "../../assets/website/images/books/bookthree.png";
+import toam from "../../assets/website/images/books/TOAM Mockup.png";
+import wmedsfl from "../../assets/website/images/books/WMEDSFL Mockup.png";
 import impact from "../../assets/website/images/home/impactnumbers/impact.png";
 
 const LandingPage = () => {
@@ -118,16 +119,11 @@ const FirstBook = () => {
       <div className="row align-items-center justify-content-center px-4 pb-5 pt-3">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3 ">
           <h4 className="">
-            <b>Abeg who send me</b>
+            <b>Threads of a Mind</b>
             <br />
           </h4>
           <p className="mt-2">
-            "Abeg Who Send Me: Embracing Fear and Embracing Growth in
-            Entrepreneurship" is a compelling and insightful compilation of
-            short stories,chronicling the author's entrepreneurial journey in
-            Nigeria. Fueled by a need to share lessons learned, the book
-            captures mistakes made, both avoidable and unavoidable, and the
-            invaluable insights gained in hindsight.
+            "A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.
             {/* With a candid narrative and
             a "so what" attitude towards failure, the book serves as an
             indispensable guide for aspiring and young entrepreneurs, offering
@@ -158,13 +154,13 @@ const FirstBook = () => {
             <a href="#">Bambooks</a>
           </p> */}
 
-          {/* <div className="">
+          <div className="">
             <PreOrderBtn />
-          </div> */}
+          </div>
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
           <img
-            src={bookone}
+            src={toam}
             className="d-block mx-auto img-fluid"
             alt=""
             loading=""
@@ -180,16 +176,11 @@ const SecondBook = () => {
       <div className="row align-items-center justify-content-center px-4 py-5 flex-lg-row-reverse">
         <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
           <h4 className="">
-            <b>Tts Random Thoughts</b>
+            <b>Wetin My Eyes Don See For Lagos</b>
             <br />
           </h4>
           <p className="mt-2">
-            "Inspired Reflections: 365 Days of Enlightening Thoughts" is a
-            delightful collection of random musings that began with a playful
-            WhatsApp status challenge. Evolving into a treasure trove of quotes,
-            each page aims to leave readers enriched and inspired. Extracted
-            from the author's daily encounters, every thought comes with a
-            charming short story, providing context and depth.
+            "An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria's most dynamic city.
             {/* This fantastic
             read offers 365 days of instructive, educative, and enlightening
             insights, making it a must-have for those seeking daily doses of
@@ -218,13 +209,13 @@ const SecondBook = () => {
             <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
             <a href="#">Bambooks</a>
           </p> */}
-          {/* <div className="mb-4">
+          <div className="mb-4">
             <PreOrderBtn />
-          </div> */}
+          </div>
         </div>
         <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
           <img
-            src={booktwo}
+            src={wmedsfl}
             className="d-block mx-auto img-fluid"
             alt=""
             loading=""
