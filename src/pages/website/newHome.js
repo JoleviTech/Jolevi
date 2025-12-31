@@ -12,6 +12,8 @@ import toam from "../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../assets/website/images/books/WMEDSFL Mockup.png";
 import impact from "../../assets/website/images/home/impactnumbers/impact.png";
 
+import google_logo from "../../assets/website/images/books/google-logo.png"
+
 const LandingPage = () => {
   return (
     <>
@@ -19,10 +21,9 @@ const LandingPage = () => {
       <LandingPageHero />
       <WhatWeDoCard />
       <OurProcesses />
-      <FirstBook />
-      <SecondBook />
-      {/* <Books /> */}
+      <BooksSection/>
       {/* <ImpactNumbers /> */}
+      <GoogleReviewSection/>
       <Footer />
     </>
   );
@@ -110,170 +111,92 @@ const OurProcesses = () => {
   );
 };
 
-const FirstBook = () => {
-  return (
-    <div className="container-fluid WhatWeDoBg">
-      <h3 className="text-center pt-5">
-        <b>BOOKS</b>
-      </h3>
-      <div className="row align-items-center justify-content-center px-4 pb-5 pt-3">
-        <div className="col-lg-6 col-md-7 col-sm-12 pt-3 ">
-          <h4 className="">
-            <b>Threads of a Mind</b>
-            <br />
-          </h4>
-          <p className="mt-2">
-            "A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.
-            {/* With a candid narrative and
-            a "so what" attitude towards failure, the book serves as an
-            indispensable guide for aspiring and young entrepreneurs, offering
-            them a chance to navigate their ventures more confidently. Even
-            seasoned businesspeople can find it a refreshing reminder of the
-            fundamentals that drive success. */}
-          </p>
-          {/* <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p> */}
-          {/* <p className="m-0 p-0">
-            <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
-            &#8358;
-            <b>3000</b>, Audiobook &#8358;<b>3500</b>
-          </p> */}
-          {/* <p className="mt-2">
-            Books are available at <a href="#">Amazon</a>,{" "}
-            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
-            <a href="#">Bambooks</a>
-          </p> */}
 
-          <div className="">
+const BooksSection = () => {
+  return (
+    <section className="py-5">
+      <div className="container">
+        <div className="text-center mb-5">
+          <span className="text-warning fw-bold text-uppercase small d-block mb-2" style={{ letterSpacing: '2px' }}>The Library</span>
+          <h3 className="fw-bold mt-0">CURATED THOUGHTS & STORIES</h3>
+        </div>
+
+        {/* First Book: Image LEFT, Text RIGHT (Desktop) */}
+        <div className="row align-items-center justify-content-center my-5 gx-md-5">
+          <div className="col-lg-5 col-md-5 text-center mb-4 mb-md-0">
+            <img src={toam} alt="Threads of a Mind" className="img-fluid book-img-responsive" />
+          </div>
+          <div className="col-lg-5 col-md-6 text-md-start text-start px-4 px-md-0">
+            <h3 className="fw-bold mb-3">Threads of a Mind</h3>
+            <div className="yellow-border-box mb-4">
+              <p className="text-muted mb-0">
+                An intimate collection of reflections that invites readers into the author’s inner world through honest thoughts and quiet observations.
+              </p>
+            </div>
             <PreOrderBtn />
           </div>
         </div>
-        <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
-          <img
-            src={toam}
-            className="d-block mx-auto img-fluid"
-            alt=""
-            loading=""
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
-const SecondBook = () => {
-  return (
-    <div className="container-fluid WhatWeDoBg">
-      <div className="row align-items-center justify-content-center px-4 py-5 flex-lg-row-reverse">
-        <div className="col-lg-6 col-md-7 col-sm-12 pt-3">
-          <h4 className="">
-            <b>Wetin My Eyes Don See For Lagos</b>
-            <br />
-          </h4>
-          <p className="mt-2">
-            "An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria's most dynamic city.
-            {/* This fantastic
-            read offers 365 days of instructive, educative, and enlightening
-            insights, making it a must-have for those seeking daily doses of
-            inspiration. */}
-            "
-          </p>
-          {/* <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna Lorem ipsum dolor sit
-            amet, cse adipiscing elit, sed do eiusmod tempr incididunt ut labore
-            et dolore magna Lorem ipsum dolor sit amet, cse
-          </p> */}
-          {/* <p className="m-0 p-0">
-            <b>Pre Order Amount</b> - Hardcopy &#8358;<b>4000</b>, Softcopy
-            &#8358;
-            <b>3000</b>, Audiobook &#8358;<b>3500</b>
-          </p> */}
-          {/* <p className="mt-2">
-            Books are available at <a href="#">Amazon</a>,{" "}
-            <a href="#">Okada books</a>, <a href="#">Audible</a>,{" "}
-            <a href="#">Bambooks</a>
-          </p> */}
-          <div className="mb-4">
+
+        {/* Second Book: Text LEFT, Image RIGHT (Desktop) */}
+        {/* On mobile, this will stack as: Text then Image */}
+        <div className="row align-items-center justify-content-center my-5 gx-md-5">
+          <div className="col-lg-5 col-md-6 text-md-start text-start px-4 px-md-0 order-2 order-md-1">
+            <h3 className="fw-bold mb-3">Wetin My Eyes Don See For Lagos</h3>
+            <div className="yellow-border-box mb-4">
+              <p className="text-muted mb-0">
+                An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria's most dynamic city.
+              </p>
+            </div>
             <PreOrderBtn />
           </div>
-        </div>
-        <div className="col-lg-5 col-md-5 col-sm-12 text-center pt-4">
-          <img
-            src={wmedsfl}
-            className="d-block mx-auto img-fluid"
-            alt=""
-            loading=""
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
-const OldBooks = () => {
-  return (
-    <div className="container-fluid p-5 WhatWeDoBg">
-      {" "}
-      <h3 className="text-center">
-        <b>BOOKS</b>
-      </h3>
-      <div className="card-group row justify-content-center mt-5">
-        {" "}
-        <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 m-auto">
-          <div className="col d-lg-flex d-md-flex mb-5 align-items-center">
-            <div className="col">
-              <img src={bookone} />
-            </div>
-            <div className="col">
-              <h4 className="mt-3">Lorem Ipsum</h4>
-              <p>
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
-              </p>
-              <p>Buy Now</p>
-            </div>
-          </div>
-          <div className="col d-lg-flex d-md-flex mb-5 align-items-center">
-            <div className="col">
-              <img src={booktwo} />
-            </div>
-            <div className="col">
-              <h4 className="mt-3">Lorem Ipsum</h4>
-              <p>
-                Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-                tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
-              </p>
-            </div>
+          <div className="col-lg-5 col-md-5 text-center mb-4 mb-md-0 order-1 order-md-2">
+            <img src={wmedsfl} alt="Lagos Stories" className="img-fluid book-img-responsive" />
           </div>
         </div>
-        {/* <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
-          <img src={bookthree} className="card-img-top" alt="..." />
-          <h4 className="mt-4">Lorem Ipsum</h4>
-          <p>
-            Lorem ipsum dolor sit amet, cse adipiscing elit, sed do eiusmod
-            tempr incididunt ut labore et dolore magna aliqua. Ut enim ad
-          </p>
-        </div> */}
       </div>
-    </div>
+
+      
+    </section>
   );
 };
 
+const GoogleReviewSection = () => {
+  return (
+    <section className="py-5 bg-light border-top border-bottom">
+      <div className="container tight-review-container">
+        <div className="row align-items-center justify-content-center text-center text-md-start">
+          <div className="col-md-7 mb-3 mb-md-0">
+            <h4 className="fw-bold mb-1">Help Us Shape the Narrative</h4>
+            <p className="text-muted mb-0 small">
+              Your voice matters. Share your thoughts on Google and help our community grow.
+            </p>
+          </div>
+          <div className="col-md-auto ms-md-4">
+            <a 
+              href="https://bit.ly/JoleviGoogleReview" 
+              className="google-review-pill-styled" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+             <img 
+                src={google_logo} 
+                alt="Google" 
+                style={{ 
+                  width: '50px', 
+                  height: '50px', 
+                  marginRight: '12px',
+                  flexShrink: 0, // This prevents the shrinking
+                  objectFit: 'contain' 
+                }} 
+              />
+              <span>Review us on Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 const ImpactNumbers = () => {
   return (
     //     margin-left: 20px;
@@ -319,22 +242,7 @@ const ImpactNumbers = () => {
             </div>
           </div>
         </div>
-        {/* <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
-          <div
-            className="d-flex align-items-center impactCard px-4 py-4"
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>120</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div> */}
+       
       </div>
       <div className="row justify-content-center justify-content-evenly">
         <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">

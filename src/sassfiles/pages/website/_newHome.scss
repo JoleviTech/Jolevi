@@ -69,3 +69,131 @@
 .impactNumber {
   font-size: 1.8rem;
 }
+
+// Add this to your SCSS file
+
+// Custom variables
+$pry-yellow: #fbb03b;
+$soft-bg: #fdfdfd;
+
+.ls-2 { letter-spacing: 3px; }
+
+.editorial-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-weight: 300;
+  border-left: 2px solid $pry-yellow;
+  padding-left: 20px;
+}
+
+// Background Design Elements
+.bg-light-yellow-blob {
+  width: 300px;
+  height: 300px;
+  background: rgba($pry-yellow, 0.08);
+  border-radius: 45% 55% 70% 30% / 30% 60% 40% 70%;
+  z-index: -1;
+}
+
+.book-wrapper-modern {
+  background: white;
+  padding: 40px;
+  border-radius: 8px; // Sharp but slight rounded
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+  display: inline-block;
+  transition: all 0.5s ease;
+  
+  &:hover {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 25px 25px 70px rgba(0,0,0,0.08);
+  }
+}
+
+.book-main-img {
+  max-height: 350px;
+  filter: drop-shadow(10px 15px 15px rgba(0,0,0,0.2));
+}
+
+
+// Google Review Styling
+
+// Match the Google button to your PreOrder button style
+
+// Controls the maximum spread of the section
+.tight-container {
+  max-width: 900px !important; // Keeps the elements from drifting too far apart
+  margin: 0 auto;
+}
+
+// 1. Fixes the "Large Book" issue
+.book-img-constrained {
+  max-height: 380px !important; // Forces the image to stay small
+  width: auto;
+  filter: drop-shadow(15px 20px 25px rgba(0,0,0,0.12));
+}
+
+// 2. Fixes the "Too far apart" issue
+.editorial-text-wrapper {
+  max-width: 350px; // Tightens the text block so it sits next to the book
+}
+
+// 3. Google Section Width Control
+.tight-review-container {
+  max-width: 900px !important; // Keeps text and button from drifting to edges
+}
+
+.book-img-responsive {
+            max-height: 400px;
+            width: auto;
+        }
+
+        .yellow-border-box {
+            border-left: 4px solid #ffc107;
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .book-img-responsive {
+                max-height: 300px;
+                margin-bottom: 20px;
+            }
+            .yellow-border-box {
+                padding-left: 1rem;
+            }
+            /* Adjusting the text for mobile to match your screenshot */
+            .text-start {
+                text-align: left !important;
+            }
+        }
+
+.google-review-pill-styled {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 10px;
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 12px;
+  border: 1px solid #fbb03b; 
+  transition: all 0.3s ease;
+
+  &:hover {
+    // background-color: #fbb03b;
+    // color: #fff;
+    transform: translateY(-2px);
+  }
+}
+
+// Spacing Utilities
+.ls-2 { letter-spacing: 2px; }
+
+// Spacing adjustment for mobile
+@media (max-width: 768px) {
+  .tight-container {
+    padding: 0 20px;
+  }
+  .ms-md-4 {
+    margin-left: 0 !important;
+  }
+}

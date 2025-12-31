@@ -13,7 +13,7 @@ import InspoPage from "./pages/website/inspoCards";
 import PreOrder from "./pages/website/books/preorder";
 //Author
 import { Author } from "./pages/website/books/author";
-import WMEDSFL from "./pages/website/books/WMEDSFL";
+import Anthology from "./pages/website/books/anthology";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
         <Route path="/pre-order" element={<PreOrder />} />
-        <Route path="/WMEDSFL" element={<WMEDSFL/>} />
+        <Route path="/anthology" element={<Anthology/>} />
       </Routes>
     </BrowserRouter>
   );

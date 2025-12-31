@@ -501,11 +501,11 @@ const Footer = () => {
           </div>
           <div className="mb-sm-0 mx-3">
             <a
-              href="tel:2349065996599"
+              href="tel:2348165769208"
               className="text-decoration-none text-black"
             >
               <p className="paragraphColor textShow">
-                <i class="bi bi-telephone me-2"></i>+2349065996599
+                <i class="bi bi-telephone me-2"></i>+2348165769208
               </p>
             </a>
           </div>
@@ -535,7 +535,7 @@ const Footer = () => {
             target="_blank"
             className="text-decoration-none text-black"
           >
-            <p className="">41 CMD Road, Magodo/Secretariat, Lagos</p>
+            <p className="">32, Ikosi Road, Ketu, Lagos</p>
           </a>
         </div>
 
