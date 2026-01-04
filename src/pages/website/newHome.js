@@ -130,7 +130,7 @@ const BooksSection = () => {
             <h3 className="fw-bold mb-3">Threads of a Mind</h3>
             <div className="yellow-border-box mb-4">
               <p className="text-muted mb-0">
-                An intimate collection of reflections that invites readers into the author’s inner world through honest thoughts and quiet observations.
+              Thread of a Mind by Titilayo Ekundayo is an intimate collection of reflections that invites readers into the author’s inner world. Through honest thoughts and quiet observations, the book explores the beliefs, fears, questions, and moments that shape how we see ourselves and the world around us.
               </p>
             </div>
             <PreOrderBtn />
