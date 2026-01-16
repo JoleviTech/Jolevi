@@ -26,7 +26,7 @@ export const Author = () => {
 const GetMyBookBtn = () => {
   return (
     <>
-      <a href="" target="_blank" className="text-decoration-none">
+      <a href="#" target="_blank" className="text-decoration-none">
         <button class="GetMyBookBtn btnText mt-2">
           {" "}
           <b>Get My Book </b>
@@ -38,7 +38,7 @@ const GetMyBookBtn = () => {
 const GetMyBookBtnTwo = () => {
   return (
     <>
-      <a href="" target="_blank" className="text-decoration-none">
+      <a href="#"  target="_blank" className="text-decoration-none">
         <button class="GetMyBookBtnTwo btnText mt-2">
           {" "}
           <b>Get My Book </b>
@@ -290,7 +290,7 @@ const Services = () => {
             <div className="row d-lg-flex d-md-flex ">
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -303,7 +303,7 @@ const Services = () => {
               </div>
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -316,7 +316,7 @@ const Services = () => {
               </div>
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -329,7 +329,7 @@ const Services = () => {
               </div>
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -342,7 +342,7 @@ const Services = () => {
               </div>
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -355,7 +355,7 @@ const Services = () => {
               </div>
               <div className="col-lg-4 col-md-6 d-flex py-2 align-items-center">
                 <div>
-                  <img src={Icon} className="img-fluid" />
+                  <img src={Icon} className="img-fluid" alt="imag"/>
                   <h6 className="mt-3">Writing</h6>
                 </div>
                 <div>
@@ -513,6 +513,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/company/joleving/"
               target="_blank"
+              rel="noreferrer"
               className="text-decoration-none"
             >
               <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
@@ -520,11 +521,12 @@ const Footer = () => {
             <a
               href="https://instagram.com/joleving?igshid=MzRlODBiNWFlZA=="
               target="_blank"
+              rel="noreferrer"
               className=""
             >
               <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
             </a>
-            <a href="" target="_blank" className="text-decoration-none">
+            <a href="#" target="_blank" className="text-decoration-none">
               <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
             </a>
           </div>
@@ -533,6 +535,7 @@ const Footer = () => {
           <a
             href="https://maps.app.goo.gl/DFurq3id3D9i5TrE7"
             target="_blank"
+            rel="noreferrer"
             className="text-decoration-none text-black"
           >
             <p className="">32, Ikosi Road, Ketu, Lagos</p>

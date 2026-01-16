@@ -133,8 +133,8 @@ const VirtualLaunchModal = () => {
 
 
 const AnthologyPage = () => {
-  const preorderLink = "/pre-order";
-  const reviewFormLink = "https://forms.google.com/your-review-form"; // Replace with your actual Google Form link
+  // const preorderLink = "/pre-order";
+  // const reviewFormLink = "https://forms.google.com/your-review-form"; // Replace with your actual Google Form link
   const [selectedContributor, setSelectedContributor] = React.useState(null);
   
   // Function to format bio with paragraph breaks

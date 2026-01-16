@@ -25,7 +25,7 @@ export const WhatWeDoCard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
           <div className="mb-5 py-4 WhatWeDoCard px-2">
             <div className="ms-3">
-              <img src={publish} className="img-fluid" />
+              <img src={publish} className="img-fluid" alt="publish"/>
             </div>
             <div className="card-body">
               <h4 className="card-title ms-3 mt-3">Publishing</h4>
@@ -40,7 +40,7 @@ export const WhatWeDoCard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
           <div className="mb-5 py-4 WhatWeDoCard px-2">
             <div className="ms-3">
-              <img src={publishnow} className="img-fluid" />
+              <img src={publishnow} className="img-fluid" alt="publish" />
             </div>
             <div className="card-body">
               <h4 className="card-title ms-3 mt-3">Publish now, pay later</h4>
@@ -55,7 +55,7 @@ export const WhatWeDoCard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
           <div className="mb-5 py-4 WhatWeDoCard px-2">
             <div className="ms-3">
-              <img src={sales} className="img-fluid" />
+              <img src={sales} className="img-fluid" alt="publish"/>
             </div>
             <div className="card-body">
               <h4 className="card-title ms-3 mt-3">Sales and Marketing</h4>

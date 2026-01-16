@@ -10,7 +10,7 @@ import { Footer } from "../../components/website/footer";
 import gratitudeimg1 from "../../assets/website/images/cards/gratitude1.jpeg";
 import gratitudeimg2 from "../../assets/website/images/cards/gratitude2.jpeg";
 import gratitudeimg3 from "../../assets/website/images/cards/gratitude3.jpeg";
-import confession1 from "../../assets/website/images/cards/confession1.jpg";
+// import confession1 from "../../assets/website/images/cards/confession1.jpg";
 import confession2 from "../../assets/website/images/cards/confession2.jpg";
 import confession3 from "../../assets/website/images/cards/confession3.jpg";
 

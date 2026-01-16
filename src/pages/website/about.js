@@ -1,4 +1,3 @@
-import writing from "../../assets/website/images/services/writing.png";
 import vision from "../../assets/website/icons/about/vision.png";
 import mission from "../../assets/website/icons/about/mission.png";
 import discipline from "../../assets/website/icons/about/corevalues/discipline.png";
@@ -54,7 +53,7 @@ const VisionAndMission = () => {
           <div className="col-lg-4 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-stretch">
             <div className="px-3 mb-5 py-4 visionCard">
               <div className="text-center">
-                <img src={vision} />
+                <img src={vision} alt="vision"/>
               </div>
               <div className="card-body">
                 <h4 className="card-title mt-3">Vision</h4>
@@ -70,7 +69,7 @@ const VisionAndMission = () => {
             {" "}
             <div className="px-3 mb-5 py-4 visionCard">
               <div className="text-center">
-                <img src={mission} />
+                <img src={mission} alt="vision"/>
               </div>
               <div className="card-body">
                 <h4 className="card-title mt-3">Mission</h4>
@@ -98,7 +97,7 @@ const CoreValues = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={discipline} className="h-100" />
+                <img src={discipline} className="h-100" alt="vision" />
                 <h5 className="mt-2">
                   <b>Discipline</b>
                 </h5>
@@ -108,7 +107,7 @@ const CoreValues = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={authentic} className="h-100" />
+                <img src={authentic} className="h-100" alt="vision"/>
                 <h5 className="mt-2">
                   <b>Authentic</b>
                 </h5>
@@ -118,7 +117,7 @@ const CoreValues = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={creative} className="h-100" />
+                <img src={creative} className="h-100" alt="vision"/>
                 <h5 className="mt-2">
                   <b>Creative</b>
                 </h5>
@@ -128,7 +127,7 @@ const CoreValues = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={impactdriven} className="h-100" />
+                <img src={impactdriven} className="h-100" alt="vision"/>
                 <h5 className="mt-2">
                   <b>Impact driven</b>
                 </h5>
@@ -138,7 +137,7 @@ const CoreValues = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={learning} className="h-100" />
+                <img src={learning} className="h-100" alt="vision"/>
                 <h5 className="mt-2">
                   <b>Continuous Learning</b>
                 </h5>
@@ -151,62 +150,62 @@ const CoreValues = () => {
   );
 };
 
-const Team = () => {
-  return (
-    <>
-      <div className="container px-5 pt-3 pb-3 SectionTwoBg mt-5">
-        {" "}
-        <h3 className="text-center">
-          <b>TEAM</b>
-        </h3>
-        {/* <h4 className="ms-4">
-          <b>Team</b>
-        </h4> */}
-        <div className="row justify-content-center text-center">
-          <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard mt-4">
-              <img src={titi} className="card-img-top" alt="Teamimage" />
-              <div className="card-body teamcardbody">
-                <div className="text-center">
-                  <figcaption className="card-text m-0 p-0">
-                    Titilayo Ekundayo
-                  </figcaption>
-                  <p className="Text mb-3 m-0 p-0"> Lead Orchestrator</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard mt-4">
-              <img src={advisory} className="card-img-top" alt="Teamimage" />
-              <div className="card-body teamcardbody">
-                <div className="text-center">
-                  <figcaption className="card-text m-0 p-0">
-                    Victor Ekundayo
-                  </figcaption>
-                  <p className="Text mb-3 m-0 p-0">Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
-            <div className="card w-75 mx-auto teamCard mt-4">
-              <img src={advisory} className="card-img-top" alt="Teamimage" />
-              <div className="card-body teamcardbody">
-                <div className="text-center">
-                  <figcaption className="card-text m-0 p-0">
-                    Opeyemi Bioku
-                  </figcaption>
-                  <p className="Text mb-3 m-0 p-0">Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+// const Team = () => {
+//   return (
+//     <>
+//       <div className="container px-5 pt-3 pb-3 SectionTwoBg mt-5">
+//         {" "}
+//         <h3 className="text-center">
+//           <b>TEAM</b>
+//         </h3>
+//         {/* <h4 className="ms-4">
+//           <b>Team</b>
+//         </h4> */}
+//         <div className="row justify-content-center text-center">
+//           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
+//             <div className="card w-75 mx-auto teamCard mt-4">
+//               <img src={titi} className="card-img-top" alt="Teamimage" />
+//               <div className="card-body teamcardbody">
+//                 <div className="text-center">
+//                   <figcaption className="card-text m-0 p-0">
+//                     Titilayo Ekundayo
+//                   </figcaption>
+//                   <p className="Text mb-3 m-0 p-0"> Lead Orchestrator</p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
+//             <div className="card w-75 mx-auto teamCard mt-4">
+//               <img src={advisory} className="card-img-top" alt="Teamimage" />
+//               <div className="card-body teamcardbody">
+//                 <div className="text-center">
+//                   <figcaption className="card-text m-0 p-0">
+//                     Victor Ekundayo
+//                   </figcaption>
+//                   <p className="Text mb-3 m-0 p-0">Developer</p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-4 col-md-4 col-sm-10 d-flex align-items-stretch">
+//             <div className="card w-75 mx-auto teamCard mt-4">
+//               <img src={advisory} className="card-img-top" alt="Teamimage" />
+//               <div className="card-body teamcardbody">
+//                 <div className="text-center">
+//                   <figcaption className="card-text m-0 p-0">
+//                     Opeyemi Bioku
+//                   </figcaption>
+//                   <p className="Text mb-3 m-0 p-0">Developer</p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
 const AdvisoryCouncil = () => {
   return (
     <>
@@ -231,6 +230,7 @@ const AdvisoryCouncil = () => {
                   <a
                     href="https://www.linkedin.com/in/ifeolujuyigbe/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <i class="bi bi-linkedin textShow LinkedIncolor"></i>
                   </a>
@@ -251,6 +251,7 @@ const AdvisoryCouncil = () => {
                     <a
                       href="https://8thgearpartners.com/"
                       target="_blank"
+                      rel="noreferrer"
                       className="text-decoration-none text-black"
                     >
                       8thGear Partners Limited
@@ -259,6 +260,7 @@ const AdvisoryCouncil = () => {
                   <a
                     href="https://www.linkedin.com/in/damilolaobidairo/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <i class="bi bi-linkedin textShow LinkedIncolor"></i>
                   </a>
@@ -278,6 +280,7 @@ const AdvisoryCouncil = () => {
                   <a
                     href="https://www.linkedin.com/in/adeniran-akinboyewa-b851a0ba/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <i class="bi bi-linkedin textShow LinkedIncolor"></i>
                   </a>
@@ -302,35 +305,35 @@ const Partners = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={eightgear} className="h-100" />
+                <img src={eightgear} className="h-100" alt="vision"/>
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={freshchow} className="h-100" />
+                <img src={freshchow} className="h-100" alt="vision"/>
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={seda} className="h-100" />
+                <img src={seda} className="h-100" alt="vision"/>
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={solakat} className="h-100" />
+                <img src={solakat} className="h-100" alt="vision"/>
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={vouch} className="h-100" />
+                <img src={vouch} className="h-100" alt="vision"/>
               </div>
             </div>
           </div>
@@ -342,76 +345,76 @@ const Partners = () => {
   );
 };
 
-const Partnners = () => {
-  return (
-    <>
-      <div className="container-fluid px-5 pt-5 pb-3 mt-5 WhatWeDoBg">
-        {" "}
-        <h4 className="ms-4">
-          <b>Partners</b>
-        </h4>
-        <div className="row justify-content-center text-center mt-5">
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard w-100 h-100 ">
-              <div className="text-center">
-                <img src={eightgear} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={freshchow} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={seda} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={solakat} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={vouch} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={jolevi} />
-              </div>
-            </div>
-          </div>
-          {/* <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={jolevi} />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
-            <div className="px-4 mb-5 py-2 visionCard">
-              <div className="text-center">
-                <img src={jolevi} />
-              </div>
-            </div>
-          </div> */}
-        </div>
-      </div>
-    </>
-  );
-};
+// const Partnners = () => {
+//   return (
+//     <>
+//       <div className="container-fluid px-5 pt-5 pb-3 mt-5 WhatWeDoBg">
+//         {" "}
+//         <h4 className="ms-4">
+//           <b>Partners</b>
+//         </h4>
+//         <div className="row justify-content-center text-center mt-5">
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard w-100 h-100 ">
+//               <div className="text-center">
+//                 <img src={eightgear} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={freshchow} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={seda} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={solakat} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={vouch} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={jolevi} alt="vision"/>
+//               </div>
+//             </div>
+//           </div>
+//           {/* <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={jolevi} />
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-3 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex">
+//             <div className="px-4 mb-5 py-2 visionCard">
+//               <div className="text-center">
+//                 <img src={jolevi} />
+//               </div>
+//             </div>
+//           </div> */}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
 const JoinTheTeam = () => {
   return (
     <>

@@ -1,15 +1,15 @@
 import { NewNavbar } from "../../../components/website/navbar";
-import { LandingPageHero } from "../../../components/website/hero";
-import { WhatWeDoCard } from "../../../components/website/cards/homeCards";
+// import { LandingPageHero } from "../../../components/website/hero";
+// import { WhatWeDoCard } from "../../../components/website/cards/homeCards";
 import { Footer } from "../../../components/website/footer";
 
-import { PreOrderBtn } from "../../../components/website/buttons";
+// import { PreOrderBtn } from "../../../components/website/buttons"; 
 
 //images
-import bookone from "../../../assets/website/images/books/bookone.png";
-import booktwo from "../../../assets/website/images/books/booktwo.png";
-import bookthree from "../../../assets/website/images/books/bookthree.png";
-import impact from "../../../assets/website/images/home/impactnumbers/impact.png";
+// import bookone from "../../../assets/website/images/books/bookone.png";
+// import booktwo from "../../../assets/website/images/books/booktwo.png";
+// import bookthree from "../../../assets/website/images/books/bookthree.png";
+// import impact from "../../../assets/website/images/home/impactnumbers/impact.png";
 import toam from "../../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../../assets/website/images/books/WMEDSFL Mockup.png";
 

@@ -6,8 +6,8 @@ import { Footer } from "../../components/website/footer";
 import { PreOrderBtn } from "../../components/website/buttons";
 
 //images
-import bookone from "../../assets/website/images/books/bookone.png";
-import booktwo from "../../assets/website/images/books/booktwo.png";
+// import bookone from "../../assets/website/images/books/bookone.png";
+// import booktwo from "../../assets/website/images/books/booktwo.png";
 import toam from "../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../assets/website/images/books/WMEDSFL Mockup.png";
 import impact from "../../assets/website/images/home/impactnumbers/impact.png";
@@ -197,105 +197,105 @@ const GoogleReviewSection = () => {
     </section>
   );
 };
-const ImpactNumbers = () => {
-  return (
-    //     margin-left: 20px;
-    <div
-      className="container-fluid justify-content-center p-5"
-      // style={{ backgroundColor: "#fbb03b" }}
-    >
-      {" "}
-      <h3 className="text-center">
-        <b>IMPACT NUMBERS</b>
-      </h3>
-      {/* <h4 className="ms-5">Impact Numbers</h4> */}
-      <div className="row justify-content-center justify-content-evenly mt-5">
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
-          <div
-            className="d-flex align-items-center impactCard px-4 "
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>180</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
-          <div
-            className="d-flex align-items-center impactCard px-4 "
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>100</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div>
+// const ImpactNumbers = () => {
+//   return (
+//     //     margin-left: 20px;
+//     <div
+//       className="container-fluid justify-content-center p-5"
+//       // style={{ backgroundColor: "#fbb03b" }}
+//     >
+//       {" "}
+//       <h3 className="text-center">
+//         <b>IMPACT NUMBERS</b>
+//       </h3>
+//       {/* <h4 className="ms-5">Impact Numbers</h4> */}
+//       <div className="row justify-content-center justify-content-evenly mt-5">
+//         <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
+//           <div
+//             className="d-flex align-items-center impactCard px-4 "
+//             style={{ width: "20rem", height: "8rem" }}
+//           >
+//             <div className="mx-3">
+//               <img src={impact} className="img-fluid" width="50" height="50" />
+//             </div>
+//             <div className="card-body mx-3">
+//               <h4 className="card-title impactNumber">
+//                 <b>180</b>
+//               </h4>
+//               <p className="card-text">Projects Delivered</p>
+//             </div>
+//           </div>
+//         </div>
+//         <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
+//           <div
+//             className="d-flex align-items-center impactCard px-4 "
+//             style={{ width: "20rem", height: "8rem" }}
+//           >
+//             <div className="mx-3">
+//               <img src={impact} className="img-fluid" width="50" height="50" />
+//             </div>
+//             <div className="card-body mx-3">
+//               <h4 className="card-title impactNumber">
+//                 <b>100</b>
+//               </h4>
+//               <p className="card-text">Projects Delivered</p>
+//             </div>
+//           </div>
+//         </div>
        
-      </div>
-      <div className="row justify-content-center justify-content-evenly">
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
-          <div
-            className="d-flex align-items-center impactCard px-4 "
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>190</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
-          <div
-            className="d-flex align-items-center impactCard px-4 "
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>150</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div>
-        {/* <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
-          <div
-            className="d-flex align-items-center impactCard px-4 py-4"
-            style={{ width: "20rem", height: "8rem" }}
-          >
-            <div className="mx-3">
-              <img src={impact} className="img-fluid" width="50" height="50" />
-            </div>
-            <div className="card-body mx-3">
-              <h4 className="card-title impactNumber">
-                <b>200</b>
-              </h4>
-              <p className="card-text">Projects Delivered</p>
-            </div>
-          </div>
-        </div> */}
-      </div>
-    </div>
-  );
-};
+//       </div>
+//       <div className="row justify-content-center justify-content-evenly">
+//         <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
+//           <div
+//             className="d-flex align-items-center impactCard px-4 "
+//             style={{ width: "20rem", height: "8rem" }}
+//           >
+//             <div className="mx-3">
+//               <img src={impact} className="img-fluid" width="50" height="50" />
+//             </div>
+//             <div className="card-body mx-3">
+//               <h4 className="card-title impactNumber">
+//                 <b>190</b>
+//               </h4>
+//               <p className="card-text">Projects Delivered</p>
+//             </div>
+//           </div>
+//         </div>
+//         <div className="col-lg-3 col-md-6 col-sm-10 mx-4 my-3">
+//           <div
+//             className="d-flex align-items-center impactCard px-4 "
+//             style={{ width: "20rem", height: "8rem" }}
+//           >
+//             <div className="mx-3">
+//               <img src={impact} className="img-fluid" width="50" height="50" />
+//             </div>
+//             <div className="card-body mx-3">
+//               <h4 className="card-title impactNumber">
+//                 <b>150</b>
+//               </h4>
+//               <p className="card-text">Projects Delivered</p>
+//             </div>
+//           </div>
+//         </div>
+//         {/* <div className="col-lg-3 col-md-6 col-sm-10 mx-4 mt-5">
+//           <div
+//             className="d-flex align-items-center impactCard px-4 py-4"
+//             style={{ width: "20rem", height: "8rem" }}
+//           >
+//             <div className="mx-3">
+//               <img src={impact} className="img-fluid" width="50" height="50" />
+//             </div>
+//             <div className="card-body mx-3">
+//               <h4 className="card-title impactNumber">
+//                 <b>200</b>
+//               </h4>
+//               <p className="card-text">Projects Delivered</p>
+//             </div>
+//           </div>
+//         </div> */}
+//       </div>
+//     </div>
+//   );
+// };
 
 export default LandingPage;

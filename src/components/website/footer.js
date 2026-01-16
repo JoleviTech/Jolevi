@@ -106,6 +106,7 @@ export const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/joleving/"
                 target="_blank"
+                rel="noreferrer"
                 className="text-decoration-none"
               >
                 <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
@@ -113,6 +114,7 @@ export const Footer = () => {
               <a
                 href="https://instagram.com/jolevi_?igshid=ZGUzMzM3NWJiOQ=="
                 target="_blank"
+                rel="noreferrer"
                 className=""
               >
                 <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
@@ -120,6 +122,7 @@ export const Footer = () => {
               <a
                 href="https://twitter.com/joleving95281?t=OjgIPFBCLzQDc-PVxkjz2A&s=09"
                 target="_blank"
+                rel="noreferrer"
                 className="text-decoration-none"
               >
                 <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
@@ -131,6 +134,7 @@ export const Footer = () => {
             <a
               href="https://maps.app.goo.gl/DFurq3id3D9i5TrE7"
               target="_blank"
+              rel="noreferrer"
               className="text-decoration-none text-black"
             >
               <p className="">32, Ikosi Road, Ketu, Lagos</p>

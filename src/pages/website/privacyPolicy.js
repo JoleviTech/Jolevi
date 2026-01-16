@@ -17,7 +17,7 @@ export const PrivacyPolicy = () => {
           Jolevi (“we” or “us” or “our”) respects the privacy of our users
           (“user” or “you”). This Privacy Policy explains how we collect, use,
           disclose, and safeguard your information when you visit our website [
-          <a href="https://www.jolevi.com/" target="_blank">
+          <a href="https://www.jolevi.com/" target="_blank" rel="noreferrer">
             www.jolevi.com
           </a>
           ] quizzes, forms and survey platforms including any other media form,

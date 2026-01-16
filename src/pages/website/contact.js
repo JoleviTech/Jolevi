@@ -185,9 +185,9 @@
 //     </div>
 //   );
 // };
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Modal, Button } from "react-bootstrap";
+import { Modal} from "react-bootstrap";
 
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
@@ -225,7 +225,7 @@ export const Contact = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false); // New state for loading
 
   // Function to handle form submission
@@ -364,7 +364,7 @@ export const Contact = () => {
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body className="text-center pb-0 mb-0">
-          <img src={successicon} className="img-fluid" width="80" height="80" />
+          <img src={successicon} className="img-fluid" width="80" height="80" alt="success" />
         </Modal.Body>
         <Modal.Body className="h5 text-center pt-0 mt-0">
           {modalMessage}
