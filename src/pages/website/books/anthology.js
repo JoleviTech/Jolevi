@@ -31,9 +31,102 @@ import daniel_c from "../../../assets/website/images/books/WMEDSFL_contributors/
 const Anthology = () => {
  return (
     <>
+     <VirtualLaunchModal />
       <NewNavbar />
       <AnthologyPage />
       <Footer />
+    </>
+  );
+};
+
+
+// ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
+const VirtualLaunchModal = () => {
+  const [showModal, setShowModal] = React.useState(false);
+  const [showBanner, setShowBanner] = React.useState(false);
+
+  React.useEffect(() => {
+    // Always show modal on page load after 1 second delay
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setShowBanner(true);
+    // Removed sessionStorage - modal will show again on next page load
+  };
+
+  const handleCloseBanner = () => {
+    setShowBanner(false);
+  };
+
+  return (
+    <>
+      {/* Modal */}
+      {showModal && (
+        <div className="launch-modal-overlay" onClick={handleCloseModal}>
+          <div className="launch-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="launch-modal-close" onClick={handleCloseModal}>
+              ×
+            </button>
+            <div className="launch-modal-content">
+              <div className="launch-badge">LIVE EVENT</div>
+              <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
+                 <div className="launch-features">
+              <div className="launch-date">
+                <span className="date-icon">📅</span>
+                 <span>January 25, 2025</span>
+                 </div>
+                {/* <span className="date-text">January 25, 2025</span> */}
+              </div>
+              <p className="launch-description">
+                Experience <span className="highlight">"Wetin My Eyes Don See For Lagos"</span> come alive with live readings, contributor insights, and exclusive Q&A.
+              </p>
+            
+              <a 
+                href="https://forms.gle/PfNaxtMJ8MCNCh178"
+                className="btn launch-register-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register Now
+              </a>
+              <p className="launch-note">Limited spots</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Sticky Banner */}
+      {showBanner && (
+        <div className="launch-banner">
+          <div className="launch-banner-content">
+            <div className="banner-left">
+              <span className="banner-badge">LIVE EVENT</span>
+              <span className="banner-text">
+                🎉 Virtual Book Launch • <strong>Jan 25, 2025</strong>
+              </span>
+            </div>
+            <div className="banner-right">
+              <a 
+                href="https://forms.gle/PfNaxtMJ8MCNCh178"
+                className="banner-register-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register Now
+              </a>
+              <button className="banner-close" onClick={handleCloseBanner}>
+                ×
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
@@ -212,6 +305,9 @@ const AnthologyPage = () => {
 
   return (
     <div className="anthology-page">
+
+      
+
       {/* Hero Section */}
       <section className="anthology-hero">
         <div className="container">
@@ -254,6 +350,7 @@ const AnthologyPage = () => {
           </div>
         </div>
       </section>
+
 
       {/* Contributors Section */}
       <section className="contributors-section">
