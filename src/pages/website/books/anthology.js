@@ -27,6 +27,7 @@ import titi_ekundayo from "../../../assets/website/images/books/WMEDSFL_contribu
 import mosunmola_olagunju from "../../../assets/website/images/books/WMEDSFL_contributors/mosunmola_olagunju.jpg";
 import oluwafunke_folami from "../../../assets/website/images/books/WMEDSFL_contributors/oluwafunke_folami.png";
 import daniel_c from "../../../assets/website/images/books/WMEDSFL_contributors/daniel_c.png";
+import { useLocation } from "react-router";
 
 const Anthology = () => {
  return (
@@ -41,18 +42,24 @@ const Anthology = () => {
 
 
 // ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
-const VirtualLaunchModal = () => {
+export const VirtualLaunchModal = () => {
   const [showModal, setShowModal] = React.useState(false);
   const [showBanner, setShowBanner] = React.useState(false);
+  const location = useLocation(); // Import from react-router-dom
 
   React.useEffect(() => {
+
+       // Reset and show modal on route change
+    setShowModal(false);
+    setShowBanner(false);
+    
     // Always show modal on page load after 1 second delay
     const timer = setTimeout(() => {
       setShowModal(true);
     }, 1000);
     
     return () => clearTimeout(timer);
-  }, []);
+   }, [location.pathname]); // Add dependency on pathname
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -76,26 +83,38 @@ const VirtualLaunchModal = () => {
             <div className="launch-modal-content">
               <div className="launch-badge">LIVE EVENT</div>
               <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
+              
                  <div className="launch-features">
-              <div className="launch-date">
-                <span className="date-icon">📅</span>
-                 <span>January 25, 2025</span>
+              <div className="launch-date m-0">
+                {/* <span className="date-icon">📅</span> */}
+                 <span>1st of February, 2026</span>
                  </div>
                 {/* <span className="date-text">January 25, 2025</span> */}
               </div>
-              <p className="launch-description">
+              {/* <p className="launch-description">
                 Experience <span className="highlight">"Wetin My Eyes Don See For Lagos"</span> come alive with live readings, contributor insights, and exclusive Q&A.
-              </p>
-            
+              </p> */}
+
+    
               <a 
                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
-                className="btn launch-register-btn"
+                className="btn launch-register-btn mb-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Register Now
               </a>
-              <p className="launch-note">Limited spots</p>
+  <p className="launch-description">
+    <span className="highlight">"Wetin My Eyes Don See For Lagos"</span> — An anthology featuring live readings, contributor insights, and exclusive Q&A.
+  </p>
+  <p className="launch-description">
+    <span className="highlight">"Thread of a Mind"</span> by Titilayo Ekundayo — An intimate journey through reflections and thoughts that shape us.
+  </p>
+        
+        <p className="launch-note">
+    Celebrate two remarkable collections with live readings, contributor insights, and exclusive Q&A
+  </p>
+           
             </div>
           </div>
         </div>
