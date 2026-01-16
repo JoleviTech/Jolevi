@@ -107,7 +107,7 @@ export const VirtualLaunchModal = () => {
                 eyes of 22 talented creatives.
               </p>
               <p className="launch-description">
-                <span className="highlight">"Thread of a Mind"</span> is is a
+                <span className="highlight">"Thread of a Mind"</span> is a
                 quiet honest exploration of the small moments that shapes who we
                 become
               </p>
