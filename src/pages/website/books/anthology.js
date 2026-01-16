@@ -30,16 +30,15 @@ import daniel_c from "../../../assets/website/images/books/WMEDSFL_contributors/
 import { useLocation } from "react-router";
 
 const Anthology = () => {
- return (
+  return (
     <>
-     <VirtualLaunchModal />
+      <VirtualLaunchModal />
       <NewNavbar />
       <AnthologyPage />
       <Footer />
     </>
   );
 };
-
 
 // ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
 export const VirtualLaunchModal = () => {
@@ -48,18 +47,17 @@ export const VirtualLaunchModal = () => {
   const location = useLocation(); // Import from react-router-dom
 
   React.useEffect(() => {
-
-       // Reset and show modal on route change
+    // Reset and show modal on route change
     setShowModal(false);
     setShowBanner(false);
-    
+
     // Always show modal on page load after 1 second delay
     const timer = setTimeout(() => {
       setShowModal(true);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
-   }, [location.pathname]); // Add dependency on pathname
+  }, [location.pathname]); // Add dependency on pathname
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -83,20 +81,16 @@ export const VirtualLaunchModal = () => {
             <div className="launch-modal-content">
               <div className="launch-badge">LIVE EVENT</div>
               <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
-              
-                 <div className="launch-features">
-              <div className="launch-date m-0">
-                {/* <span className="date-icon">📅</span> */}
-                 <span>1st of February, 2026</span>
-                 </div>
-                {/* <span className="date-text">January 25, 2025</span> */}
-              </div>
-              {/* <p className="launch-description">
-                Experience <span className="highlight">"Wetin My Eyes Don See For Lagos"</span> come alive with live readings, contributor insights, and exclusive Q&A.
-              </p> */}
 
-    
-              <a 
+              <div className="launch-features">
+                <div className="launch-date m-0">
+                
+                  <span>1st of February, 2026 • 5:00 PM WAT</span>
+                </div>
+                
+              </div>
+
+              <a
                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
                 className="btn launch-register-btn mb-3"
                 target="_blank"
@@ -104,17 +98,24 @@ export const VirtualLaunchModal = () => {
               >
                 Register Now
               </a>
-  <p className="launch-description">
-    <span className="highlight">"Wetin My Eyes Don See For Lagos"</span> — An anthology featuring live readings, contributor insights, and exclusive Q&A.
-  </p>
-  <p className="launch-description">
-    <span className="highlight">"Thread of a Mind"</span> by Titilayo Ekundayo — An intimate journey through reflections and thoughts that shape us.
-  </p>
-        
-        <p className="launch-note">
-    Celebrate two remarkable collections with live readings, contributor insights, and exclusive Q&A
-  </p>
-           
+              <p className="launch-description">
+                <span className="highlight">
+                  "Wetin My Eyes Don See For Lagos"
+                </span>{" "}
+                — A collection of art, poetry, short stories, and photographs
+                that capture the essence, energy, and soul of Lagos through the
+                eyes of 22 talented creatives.
+              </p>
+              <p className="launch-description">
+                <span className="highlight">"Thread of a Mind"</span> is is a
+                quiet honest exploration of the small moments that shapes who we
+                become
+              </p>
+
+              <p className="launch-note">
+                Celebrate two remarkable collections with live readings,
+                contributor insights, and exclusive Q&A
+              </p>
             </div>
           </div>
         </div>
@@ -131,7 +132,7 @@ export const VirtualLaunchModal = () => {
               </span>
             </div>
             <div className="banner-right">
-              <a 
+              <a
                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
                 className="banner-register-btn"
                 target="_blank"
@@ -150,43 +151,46 @@ export const VirtualLaunchModal = () => {
   );
 };
 
-
 const AnthologyPage = () => {
   // const preorderLink = "/pre-order";
   // const reviewFormLink = "https://forms.google.com/your-review-form"; // Replace with your actual Google Form link
   const [selectedContributor, setSelectedContributor] = React.useState(null);
-  
+
   // Function to format bio with paragraph breaks
   const formatBio = (bio) => {
     const sentences = bio.match(/[^.!?]+[.!?]+/g) || [bio];
     let paragraphs = [];
-    let currentParagraph = '';
-    
+    let currentParagraph = "";
+
     sentences.forEach((sentence, index) => {
       currentParagraph += sentence;
       if ((index + 1) % 3 === 0 || index === sentences.length - 1) {
         paragraphs.push(currentParagraph.trim());
-        currentParagraph = '';
+        currentParagraph = "";
       }
     });
-    
-    return paragraphs.filter(p => p.length > 0).join('\n\n');
+
+    return paragraphs.filter((p) => p.length > 0).join("\n\n");
   };
-  
+
   // Function to render bio with bold text support
   const renderBioWithBold = (bio) => {
     const formattedBio = formatBio(bio);
     const parts = formattedBio.split(/(\*\*.*?\*\*)/g);
-    
+
     return parts.map((part, index) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
+      if (part.startsWith("**") && part.endsWith("**")) {
         const boldText = part.slice(2, -2);
-        return <strong key={index} style={{ fontWeight: 700, color: '#000' }}>{boldText}</strong>;
+        return (
+          <strong key={index} style={{ fontWeight: 700, color: "#000" }}>
+            {boldText}
+          </strong>
+        );
       }
       return part;
     });
   };
-  
+
   const contributors = [
     {
       id: 1,
@@ -324,9 +328,6 @@ const AnthologyPage = () => {
 
   return (
     <div className="anthology-page">
-
-      
-
       {/* Hero Section */}
       <section className="anthology-hero">
         <div className="container">
@@ -341,16 +342,24 @@ const AnthologyPage = () => {
                 </p>
                 <div className="anthology-summary">
                   <p className="mb-3">
-                    An extraordinary anthology that captures the essence, energy, and soul of Lagos through the eyes of 22 talented writers. From the bustling streets of Oshodi to the serene beaches of Lekki, from the vibrant markets of Balogun to the corporate towers of Victoria Island, these stories paint a vivid portrait of Nigeria's most dynamic city.
+                    An extraordinary anthology that captures the essence,
+                    energy, and soul of Lagos through the eyes of 22 talented
+                    writers. From the bustling streets of Oshodi to the serene
+                    beaches of Lekki, from the vibrant markets of Balogun to the
+                    corporate towers of Victoria Island, these stories paint a
+                    vivid portrait of Nigeria's most dynamic city.
                   </p>
                   <p className="mb-4">
-                    Each contributor brings their unique perspective, weaving tales of struggle and triumph, laughter and tears, tradition and modernity. Together, they create a tapestry that celebrates the indomitable spirit of Lagos and its people.
+                    Each contributor brings their unique perspective, weaving
+                    tales of struggle and triumph, laughter and tears, tradition
+                    and modernity. Together, they create a tapestry that
+                    celebrates the indomitable spirit of Lagos and its people.
                   </p>
-                  <a 
+                  <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331"
                     className="btn anthology-cta-btn"
                     target="_blank"
-                     rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                   >
                     Preorder Now
                   </a>
@@ -370,7 +379,6 @@ const AnthologyPage = () => {
         </div>
       </section>
 
-
       {/* Contributors Section */}
       <section className="contributors-section">
         <div className="container">
@@ -380,11 +388,11 @@ const AnthologyPage = () => {
               22 talented writers sharing their Lagos experiences
             </p>
           </div>
-          
+
           <div className="row g-4 justify-content-center">
             {contributors.map((contributor) => (
               <div key={contributor.id} className="col-lg-3 col-md-4 col-sm-6">
-                <div 
+                <div
                   className="contributor-card"
                   onClick={() => setSelectedContributor(contributor)}
                 >
@@ -398,7 +406,11 @@ const AnthologyPage = () => {
                     ) : (
                       <div className="contributor-placeholder">
                         <span className="contributor-initials">
-                          {contributor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                          {contributor.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")
+                            .slice(0, 2)}
                         </span>
                       </div>
                     )}
@@ -416,9 +428,15 @@ const AnthologyPage = () => {
 
       {/* Bio Modal */}
       {selectedContributor && (
-        <div className="bio-modal-overlay" onClick={() => setSelectedContributor(null)}>
+        <div
+          className="bio-modal-overlay"
+          onClick={() => setSelectedContributor(null)}
+        >
           <div className="bio-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedContributor(null)}>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedContributor(null)}
+            >
               ×
             </button>
             <div className="modal-content">
@@ -432,35 +450,43 @@ const AnthologyPage = () => {
                 ) : (
                   <div className="modal-contributor-placeholder">
                     <span className="modal-contributor-initials">
-                      {selectedContributor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                      {selectedContributor.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)}
                     </span>
                   </div>
                 )}
               </div>
-              <h3 className="modal-contributor-name">{selectedContributor.name}</h3>
-              <p className="modal-contributor-bio">{renderBioWithBold(selectedContributor.bio)}</p>
+              <h3 className="modal-contributor-name">
+                {selectedContributor.name}
+              </h3>
+              <p className="modal-contributor-bio">
+                {renderBioWithBold(selectedContributor.bio)}
+              </p>
             </div>
           </div>
         </div>
       )}
- 
-      
+
       <section className="review-section">
         <div className="container">
           <div className="review-content text-center">
-            <h3 className="review-title mb-3">Experience Lagos Like Never Before</h3>
+            <h3 className="review-title mb-3">
+              Experience Lagos Like Never Before
+            </h3>
             <p className="review-subtitle mb-4">
-            Get your copy of this groundbreaking anthology and discover the stories that make Lagos unforgettable.
+              Get your copy of this groundbreaking anthology and discover the
+              stories that make Lagos unforgettable.
             </p>
-            <a 
+            <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331"
-             
               target="_blank"
               rel="noopener noreferrer"
               className="btn review-btn"
             >
-                 Preorder Your Copy
-              
+              Preorder Your Copy
             </a>
           </div>
         </div>
@@ -468,26 +494,25 @@ const AnthologyPage = () => {
 
       {/* Review Section */}
 
-        <section className="anthology-final-cta">
+      <section className="anthology-final-cta">
         <div className="container text-center">
-           <h3 className="final-cta-title">Share Your Thoughts</h3>
-          <p className="final-cta-text mb-4">  Have you read "Wetin My Eyes Don See For Lagos"? We'd love to hear your thoughts! Your feedback helps us create even better stories that capture the spirit of Lagos.
-            
+          <h3 className="final-cta-title">Share Your Thoughts</h3>
+          <p className="final-cta-text mb-4">
+            {" "}
+            Have you read "Wetin My Eyes Don See For Lagos"? We'd love to hear
+            your thoughts! Your feedback helps us create even better stories
+            that capture the spirit of Lagos.
           </p>
-          <a  href="https://docs.google.com/forms/d/1xAw_k-d8oaWvFMa0nLck3OTa1_3qbAdy-w9B4Jb1Pgc/viewform"
-          
+          <a
+            href="https://docs.google.com/forms/d/1xAw_k-d8oaWvFMa0nLck3OTa1_3qbAdy-w9B4Jb1Pgc/viewform"
             className="btn preorder-cta-btn"
             target="_blank"
-             rel="noopener noreferrer"
+            rel="noopener noreferrer"
           >
-         Leave a Review
+            Leave a Review
           </a>
         </div>
       </section>
-
-     
-
-    
     </div>
   );
 };
