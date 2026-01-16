@@ -10,7 +10,7 @@ import { PreOrderBtn } from "../../components/website/buttons";
 // import booktwo from "../../assets/website/images/books/booktwo.png";
 import toam from "../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../assets/website/images/books/WMEDSFL Mockup.png";
-import impact from "../../assets/website/images/home/impactnumbers/impact.png";
+// import impact from "../../assets/website/images/home/impactnumbers/impact.png";
 
 import google_logo from "../../assets/website/images/books/google-logo.png"
 

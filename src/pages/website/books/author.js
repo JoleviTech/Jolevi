@@ -26,7 +26,7 @@ export const Author = () => {
 const GetMyBookBtn = () => {
   return (
     <>
-      <a href="#" target="_blank" className="text-decoration-none">
+      <a href="https://www.jolevi.com/" target="_blank" className="text-decoration-none">
         <button class="GetMyBookBtn btnText mt-2">
           {" "}
           <b>Get My Book </b>
@@ -38,7 +38,7 @@ const GetMyBookBtn = () => {
 const GetMyBookBtnTwo = () => {
   return (
     <>
-      <a href="#"  target="_blank" className="text-decoration-none">
+      <a href="https://www.jolevi.com/"  target="_blank" className="text-decoration-none">
         <button class="GetMyBookBtnTwo btnText mt-2">
           {" "}
           <b>Get My Book </b>
@@ -526,7 +526,7 @@ const Footer = () => {
             >
               <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
             </a>
-            <a href="#" target="_blank" className="text-decoration-none">
+            <a href="https://www.jolevi.com/" target="_blank" className="text-decoration-none">
               <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
             </a>
           </div>

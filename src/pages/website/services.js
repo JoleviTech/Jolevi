@@ -1,4 +1,3 @@
-import writing from "../../assets/website/images/services/writing.png";
 import bookcoaching from "../../assets/website/images/services/bookcoaching.png";
 import proofreading from "../../assets/website/images/services/proofreading.png";
 import publishnow from "../../assets/website/images/services/publishnow.png";

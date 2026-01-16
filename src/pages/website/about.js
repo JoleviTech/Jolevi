@@ -5,9 +5,9 @@ import creative from "../../assets/website/icons/about/corevalues/authentic.png"
 import impactdriven from "../../assets/website/icons/about/corevalues/creative.png";
 import learning from "../../assets/website/icons/about/corevalues/impactdriven.png";
 import authentic from "../../assets/website/icons/about/corevalues/learning.png";
-import titi from "../../assets/website/images/about/titi.png";
-import advisory from "../../assets/website/images/about/advisory.png";
-import jolevi from "../../assets/website/images/about/jolevi.png";
+// import titi from "../../assets/website/images/about/titi.png";
+// import advisory from "../../assets/website/images/about/advisory.png";
+// import jolevi from "../../assets/website/images/about/jolevi.png";
 import eightgear from "../../assets/website/images/about/eightgear.png";
 import freshchow from "../../assets/website/images/about/freshchow.png";
 import seda from "../../assets/website/images/about/seda.png";

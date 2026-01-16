@@ -125,6 +125,7 @@ export const GetaQuoteBtn = () => {
       <a
         href="https://forms.gle/xivFgq8rtsU4d5MeA"
         target="_blank"
+        rel="noreferrer"
 
         className="text-decoration-none"
       >
@@ -156,7 +157,7 @@ export const JoinTheTeamBtn = () => {
 export const PreOrderBtn = () => {
   return (
     <>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331" target="_blank" className="text-decoration-none">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331" target="_blank" rel="noreferrer" className="text-decoration-none">
         <button class="WorkWithUsBtnn btnText mx-1 mt-2">
           {" "}
           <b>PreOrder</b>
