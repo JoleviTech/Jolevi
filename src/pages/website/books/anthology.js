@@ -128,7 +128,7 @@ export const VirtualLaunchModal = () => {
             <div className="banner-left">
               <span className="banner-badge">LIVE EVENT</span>
               <span className="banner-text">
-                🎉 Virtual Book Launch • <strong>Jan 25, 2025</strong>
+                🎉 Virtual Book Launch • <strong>1st of February, 2026 • 5:00 PM WAT</strong>
               </span>
             </div>
             <div className="banner-right">
