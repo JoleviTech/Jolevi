@@ -29,7 +29,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
-        <Route path="/pre-order" element={<PreOrder />} />
+        <Route path="/buy-books" element={<PreOrder />} />
         <Route path="/anthology" element={<Anthology/>} />
       </Routes>
     </BrowserRouter>

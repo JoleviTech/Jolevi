@@ -52,7 +52,7 @@ const BookPreorderPage=()=> {
       {/* Hero Section */}
       <section className="hero-section text-center py-5">
         <div className="container">
-          <h2 className="mb-2">Preorder Now</h2>
+          <h2 className="mb-2">Get Your Books</h2>
         <p className="" style={{fontSize: "1.3rem"}}>
             Two <span className="text-primary-green">extraordinary</span> books, one incredible reading experience
           </p>
@@ -83,7 +83,7 @@ const BookPreorderPage=()=> {
                       rel="noopener noreferrer"
                       className="btn preorder-btn"
                     >
-                      Preorder Now
+                       Buy Books
                     </a>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const BookPreorderPage=()=> {
             rel="noopener noreferrer"
             className="btn preorder-btn"
           >
-            Preorder Now
+            Buy Books
           </a>
         </div>
       </section>

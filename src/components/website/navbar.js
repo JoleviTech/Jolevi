@@ -144,12 +144,12 @@ export const NewNavbar = () => {
             <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
                 style={navActive}
-                to="/pre-order"
+                to="/buy-books"
                 // style={{ color: "#000000" }}
                 className="nav-link navText"
               >
                 <div className="Navitemmobile Navitemlarge">
-                  <b>Preorder</b>
+                  <b>Buy Books</b>
                 </div>
               </NavLink>
             </li>

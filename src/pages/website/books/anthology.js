@@ -361,7 +361,7 @@ const AnthologyPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Preorder Now
+                     Buy Books
                   </a>
                 </div>
               </div>
@@ -486,7 +486,7 @@ const AnthologyPage = () => {
               rel="noopener noreferrer"
               className="btn review-btn"
             >
-              Preorder Your Copy
+              Buy Your Copy
             </a>
           </div>
         </div>
