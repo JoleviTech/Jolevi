@@ -1,6 +1,6 @@
 import * as React from "react";
 // import { Component } from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { PrivacyPolicy } from "./pages/website/privacyPolicy";
 import LandingPage from "./pages/website/newHome";
 import Services from "./pages/website/services";
@@ -30,6 +30,7 @@ function App() {
         <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
         <Route path="/buy-books" element={<BuyBooks />} />
+<Route path="/pre-order" element={<Navigate to="/buy-books" replace />} />
         <Route path="/anthology" element={<Anthology/>} />
       </Routes>
     </BrowserRouter>
