@@ -14,7 +14,7 @@ import toam from "../../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../../assets/website/images/books/WMEDSFL Mockup.png";
 
 
-const PreOrder = () => {
+const BuyBooks = () => {
   return (
     <>
     <NewNavbar />
@@ -115,7 +115,7 @@ const BookPreorderPage=()=> {
   );
 }
 
-export default PreOrder;
+export default BuyBooks;
 
 
 
