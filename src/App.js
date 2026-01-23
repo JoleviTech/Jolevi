@@ -9,7 +9,7 @@ import About from "./pages/website/about";
 import { BlogReadMore } from "./pages/website/blogReadMore";
 import { Contact } from "./pages/website/contact";
 import InspoPage from "./pages/website/inspoCards";
-import BuyBooks from "./pages/website/books/buybooks";
+import BuyBook from "./pages/website/books/buybook";
 //Author
 import { Author } from "./pages/website/books/author";
 import Anthology, { VirtualLaunchModal } from "./pages/website/books/anthology";
@@ -29,8 +29,8 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/author" element={<Author />} />
         <Route path="/cards" element={<InspoPage />} />
-        <Route path="/buy-books" element={<BuyBooks />} />
-<Route path="/pre-order" element={<Navigate to="/buy-books" replace />} />
+        <Route path="/buy-book" element={<BuyBook />} />
+<Route path="/pre-order" element={<Navigate to="/buy-book" replace />} />
         <Route path="/anthology" element={<Anthology/>} />
       </Routes>
     </BrowserRouter>

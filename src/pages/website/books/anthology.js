@@ -360,7 +360,7 @@ const AnthologyPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                     Buy Books
+                     Buy Book
                   </a>
                 </div>
               </div>

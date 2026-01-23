@@ -13,8 +13,7 @@ import { Footer } from "../../../components/website/footer";
 import toam from "../../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../../assets/website/images/books/WMEDSFL Mockup.png";
 
-
-const BuyBooks = () => {
+const BuyBook = () => {
   return (
     <>
     <NewNavbar />
@@ -83,7 +82,7 @@ const BookPreorderPage=()=> {
                       rel="noopener noreferrer"
                       className="btn preorder-btn"
                     >
-                       Buy Books
+                       Buy Book
                     </a>
                   </div>
                 </div>
@@ -107,7 +106,7 @@ const BookPreorderPage=()=> {
             rel="noopener noreferrer"
             className="btn preorder-btn"
           >
-            Buy Books
+            Buy Book
           </a>
         </div>
       </section>
@@ -115,7 +114,7 @@ const BookPreorderPage=()=> {
   );
 }
 
-export default BuyBooks;
+export default BuyBook;
 
 
 
