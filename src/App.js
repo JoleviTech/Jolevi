@@ -12,12 +12,11 @@ import InspoPage from "./pages/website/inspoCards";
 import BuyBook from "./pages/website/books/buybook";
 //Author
 import { Author } from "./pages/website/books/author";
-import Anthology, { VirtualLaunchModal } from "./pages/website/books/anthology";
+import Anthology from "./pages/website/books/anthology";
 
 function App() {
   return (
     <BrowserRouter>
-     {/* <VirtualLaunchModal /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/services" element={<Services />} />
