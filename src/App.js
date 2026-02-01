@@ -17,7 +17,7 @@ import Anthology, { VirtualLaunchModal } from "./pages/website/books/anthology";
 function App() {
   return (
     <BrowserRouter>
-     <VirtualLaunchModal />
+     {/* <VirtualLaunchModal /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/services" element={<Services />} />

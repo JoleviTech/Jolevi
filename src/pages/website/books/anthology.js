@@ -32,7 +32,7 @@ import { useLocation } from "react-router";
 const Anthology = () => {
   return (
     <>
-      <VirtualLaunchModal />
+      {/* <VirtualLaunchModal /> */}
       <NewNavbar />
       <AnthologyPage />
       <Footer />
