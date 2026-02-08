@@ -99,8 +99,7 @@ const BookPreorderPage=()=> {
         <b>READY TO DIVE IN?</b>
       </h3>
           <p className="mx-auto mb-4" style={{ maxWidth: '700px' }}>
-            Secure your copies today and be among the first to experience these remarkable literary journeys. 
-            Fill out our preorder form and we'll notify you as soon as the books are available!
+            Secure your copies today and be among the first to experience these remarkable literary journeys.
           </p>
           <a
             href={formLink}
@@ -333,9 +332,9 @@ const GallerySection = () => {
                         </div>
                         <div className="video-card-body">
                           <h6 className="mb-2">{video.title}</h6>
-                          <p className="text-muted small mb-0">
+                          {/* <p className="text-muted small mb-0">
                             <i className="bi bi-clock me-1"></i>Watch video
-                          </p>
+                          </p> */}
                         </div>
                       </div>
                     </div>
