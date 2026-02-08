@@ -95,7 +95,10 @@ const BookPreorderPage=()=> {
       {/* CTA Section */}
       <section className="cta-section text-center py-5">
         <div className="container">
-          <h2 className="mb-2">Ready to Dive In?</h2>
+      
+          <h3 className="text-center">
+        <b>READY TO DIVE IN?</b>
+      </h3>
           <p className="mx-auto mb-4" style={{ maxWidth: '700px' }}>
             Secure your copies today and be among the first to experience these remarkable literary journeys. 
             Fill out our preorder form and we'll notify you as soon as the books are available!
@@ -153,7 +156,10 @@ const GallerySection = () => {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-5">
-          <h2 className="mb-3">Gallery</h2>
+          {/* <h2 className="mb-3">Gallery</h2> */}
+          <h3 className="text-center">
+        <b>GALLERY</b>
+      </h3>
           <p className="text-muted" style={{ fontSize: '1.1rem' }}>
             Moments from our book launch celebration
           </p>
@@ -406,7 +412,9 @@ const ReviewsSection = () => {
     <section className="reviews-section">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="mb-3">What Readers Say</h2>
+                   <h3 className="text-center">
+        <b>WHAT READERS SAY</b>
+      </h3>
           <p className="text-muted" style={{ fontSize: '1.1rem' }}>
             Real reviews from real readers
           </p>
