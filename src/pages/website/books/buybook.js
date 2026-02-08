@@ -3,14 +3,13 @@ import { NewNavbar } from "../../../components/website/navbar";
 // import { LandingPageHero } from "../../../components/website/hero";
 // import { WhatWeDoCard } from "../../../components/website/cards/homeCards";
 import { Footer } from "../../../components/website/footer";
-import picture from "../../../assets/website/images/books/book launch/_KIC0932.jpg"
 
 import toam from "../../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../../assets/website/images/books/WMEDSFL Mockup.png";
 
 
 // Import gallery data
-import { galleryPhotos, galleryVideos, getFeaturedPhotos, getPhotosByCategory } from "./gallery"; 
+import { galleryVideos, getFeaturedPhotos, getPhotosByCategory } from "./gallery"; 
 
 const BuyBook = () => {
   return (

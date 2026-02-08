@@ -4,7 +4,6 @@ import kic0255 from "../../../assets/website/images/books/book launch/_KIC0255.j
 import kic0254 from "../../../assets/website/images/books/book launch/_KIC0254.jpg";
 import kic0205 from "../../../assets/website/images/books/book launch/_KIC0205.jpg";
 import kic0258 from "../../../assets/website/images/books/book launch/_KIC0258.jpg";
-import kic0419 from "../../../assets/website/images/books/book launch/_KIC0419_1.jpg";
 import kic0932 from "../../../assets/website/images/books/book launch/_KIC0932.jpg";
 import kic0951 from "../../../assets/website/images/books/book launch/_KIC0951.jpg";
 import kic0558 from "../../../assets/website/images/books/book launch/_KIC0558.jpg";
