@@ -954,6 +954,708 @@ form {
     height: 40px;
   }
 }
+/* Gallery Section Styles */
+.gallery-section {
+  background: #ffffff;
+  padding: 60px 0;
+  position: relative;
+}
+
+/* Add subtle pattern/texture matching books section */
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 2px 2px, rgba(94, 178, 81, 0.03) 1px, transparent 0);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.gallery-section h2 {
+  color: #333;
+  font-weight: 700;
+}
+
+.gallery-tabs {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-tabs .btn {
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #fbb03b;
+  padding: 0.6rem 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.gallery-tabs .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 1px solid #fbb03b;
+}
+
+.gallery-tabs .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid #fbb03b;
+}
+
+.gallery-tabs .btn.btn-primary {
+  background-color: #fbb03b;
+  color: #ffffff;
+  border-color: #fbb03b;
+}
+
+.gallery-tabs .btn:hover {
+  background-color: #fbb03b;
+  color: #ffffff;
+  border-color: #fbb03b;
+  box-shadow: 0px 6px 12px rgba(251, 176, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Featured Carousel */
+.featured-carousel {
+  position: relative;
+  z-index: 1;
+}
+
+/* Featured Carousel - FIX FOR IMAGE CROPPING */
+.featured-carousel-container {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 500px; /* Increased from 450px for better portrait images */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(94, 178, 81, 0.15);
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* Changed from cover to contain - this prevents cropping */
+  background: #f8f9fa; /* Light background for letterboxing */
+  transition: transform 0.6s ease;
+}
+
+.featured-carousel-container:hover .featured-image {
+  transform: scale(1.02); /* Reduced from 1.05 to prevent issues with contain */
+}
+
+/* Featured carousel - also remove description overlay */
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  padding: 20px;
+  z-index: 2;
+  pointer-events: none; /* Allows clicking through to carousel controls */
+}
+
+/* Hide the featured overlay text but keep the gradient for visual depth */
+.featured-overlay h3 {
+  display: none; /* Remove the description text */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(251, 176, 59, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control:hover {
+  background: rgb(251, 176, 59);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background: white;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.category-btn {
+  background: white;
+  border: 2px solid rgba(94, 178, 81, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-btn:hover {
+  border-color: #5eb251;
+  color: #5eb251;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(94, 178, 81, 0.2);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #5eb251 0%, #4a9940 100%);
+  color: white;
+  border-color: #5eb251;
+  box-shadow: 0 4px 15px rgba(94, 178, 81, 0.3);
+}
+
+/* Modern Photo Grid */
+.gallery-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.gallery-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Updated gallery card with simpler hover effect (no overlay text) */
+.gallery-card-inner {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(94, 178, 81, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  cursor: pointer; /* Add cursor pointer to indicate interactivity */
+}
+
+.gallery-card-inner:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(94, 178, 81, 0.2);
+  border-color: rgba(94, 178, 81, 0.3);
+}
+
+.gallery-card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* Shows full image without cropping */
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle zoom on hover - much less aggressive */
+.gallery-card-inner:hover .gallery-card-image {
+  transform: scale(1.03); /* Reduced from 1.15 - very subtle zoom */
+}
+
+.gallery-card-inner:hover {
+  transform: translateY(0);
+}
+
+/* Optional: Add a subtle shadow to images for depth */
+.gallery-card-image,
+.featured-image {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Video Gallery */
+.video-gallery {
+  position: relative;
+  z-index: 1;
+}
+
+/* Featured Video Section */
+.featured-video-section {
+  background: linear-gradient(135deg, rgba(94, 178, 81, 0.05) 0%, rgba(251, 176, 59, 0.05) 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid rgba(94, 178, 81, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.featured-video-player {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(251, 176, 59, 0.3);
+}
+
+.featured-video-info {
+  padding: 20px;
+}
+
+.featured-video-info h3 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.video-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbb03b 0%, #f39c12 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(251, 176, 59, 0.3);
+}
+
+.video-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.stat-item .text-primary {
+  color: #5eb251 !important;
+}
+
+/* Video Cards */
+.video-card {
+  animation: fadeInUp 0.6s ease-out both;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(94, 178, 81, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(94, 178, 81, 0.25);
+  border-color: rgba(94, 178, 81, 0.3);
+}
+
+.video-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(94, 178, 81, 0.7) 0%, rgba(251, 176, 59, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.video-card:hover .video-play-overlay {
+  opacity: 1;
+}
+
+.video-play-overlay i {
+  font-size: 4rem;
+  color: white;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-play-overlay i {
+  transform: scale(1.2);
+}
+
+.video-card-body {
+  padding: 20px;
+  background: white;
+  flex-grow: 1;
+}
+
+.video-card-body h6 {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.video-card-body p {
+  font-size: 0.85rem;
+}
+
+/* Video CTA Section */
+.video-cta {
+  background: linear-gradient(135deg, rgba(94, 178, 81, 0.08) 0%, rgba(251, 176, 59, 0.08) 100%);
+  padding: 50px 30px;
+  border-radius: 20px;
+  border: 2px dashed rgba(94, 178, 81, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(251, 176, 59, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+.video-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.video-cta-icon {
+  font-size: 3rem;
+  color: #ff0000;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.video-cta h5 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.video-cta-btn {
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #fbb03b;
+  padding: 12px 35px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-cta-btn:hover {
+  background-color: #fbb03b;
+  color: #ffffff;
+  border-color: #fbb03b;
+  box-shadow: 0px 6px 12px rgba(251, 176, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive for Videos */
+@media (max-width: 991px) {
+  .featured-video-section {
+    padding: 30px 20px;
+  }
+  .featured-video-info {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .featured-video-info h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .featured-video-section {
+    padding: 20px 15px;
+  }
+  .video-cta {
+    padding: 40px 20px;
+  }
+  .video-cta-icon {
+    font-size: 2.5rem;
+  }
+  .video-cta h5 {
+    font-size: 1.3rem;
+  }
+  .video-play-overlay i {
+    font-size: 3rem;
+  }
+}
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .gallery-section {
+    padding: 50px 0;
+  }
+  .featured-carousel-container {
+    height: 350px; /* Adjusted for mobile */
+  }
+  .gallery-card-inner {
+    height: 280px; /* Better for mobile viewing */
+  }
+  /* Less aggressive hover on mobile */
+  .gallery-card-inner:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .carousel-control-prev {
+    left: 10px;
+  }
+  .carousel-control-next {
+    right: 10px;
+  }
+  .gallery-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-filters {
+    gap: 8px;
+  }
+  .category-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+  .gallery-tabs .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .featured-overlay h3 {
+    font-size: 1.1rem;
+  }
+  .gallery-grid-modern {
+    grid-template-columns: 1fr;
+  }
+  .featured-carousel-container {
+    height: 300px;
+  }
+  .gallery-card-inner {
+    height: 320px; /* Portrait orientation works better on small screens */
+  }
+}
+/* Optional: If you want some images to use cover (for landscape photos) */
+/* Reviews Section Styles */
+.reviews-section {
+  background: linear-gradient(180deg, rgba(94, 178, 81, 0.06) 0%, rgba(94, 178, 81, 0.12) 50%, rgba(94, 178, 81, 0.06) 100%);
+  padding: 60px 0;
+  position: relative;
+}
+
+.reviews-section h2 {
+  color: #333;
+  font-weight: 700;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(94, 178, 81, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(94, 178, 81, 0.15);
+  border-color: rgba(94, 178, 81, 0.25);
+}
+
+.reviewer-avatar {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #5eb251 0%, #4a9940 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.review-card .card-text {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.review-card h6 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Star ratings */
+.review-card .bi-star,
+.review-card .bi-star-fill {
+  font-size: 1.1rem;
+  margin-right: 2px;
+}
+
+/* Share review button - matching original preorder button style */
+.reviews-section .btn-outline-primary {
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #fbb03b;
+  width: 220px;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-section .btn-outline-primary:hover {
+  background-color: #fbb03b;
+  color: #ffffff;
+  border-color: #fbb03b;
+  box-shadow: 0px 6px 12px rgba(251, 176, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .gallery-section,
+  .reviews-section {
+    padding: 50px 0;
+  }
+  .gallery-item {
+    height: 250px;
+  }
+  .gallery-tabs .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .gallery-item {
+    height: 220px;
+  }
+  .gallery-tabs .btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+.book-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.book-image {
+  max-height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+}
+
+.text-primary-green {
+  color: #4caf50 !important;
+}
+
 .anthology-page {
   background: #ffffff;
 }
