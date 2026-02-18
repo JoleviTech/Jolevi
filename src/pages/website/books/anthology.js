@@ -40,116 +40,116 @@ const Anthology = () => {
   );
 };
 
-// ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
-export const VirtualLaunchModal = () => {
-  const [showModal, setShowModal] = React.useState(false);
-  const [showBanner, setShowBanner] = React.useState(false);
-  const location = useLocation(); // Import from react-router-dom
+// // ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
+// export const VirtualLaunchModal = () => {
+//   const [showModal, setShowModal] = React.useState(false);
+//   const [showBanner, setShowBanner] = React.useState(false);
+//   const location = useLocation(); // Import from react-router-dom
 
-  React.useEffect(() => {
-    // Reset and show modal on route change
-    setShowModal(false);
-    setShowBanner(false);
+//   React.useEffect(() => {
+//     // Reset and show modal on route change
+//     setShowModal(false);
+//     setShowBanner(false);
 
-    // Always show modal on page load after 1 second delay
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 1000);
+//     // Always show modal on page load after 1 second delay
+//     const timer = setTimeout(() => {
+//       setShowModal(true);
+//     }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [location.pathname]); // Add dependency on pathname
+//     return () => clearTimeout(timer);
+//   }, [location.pathname]); // Add dependency on pathname
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setShowBanner(true);
-    // Removed sessionStorage - modal will show again on next page load
-  };
+//   const handleCloseModal = () => {
+//     setShowModal(false);
+//     setShowBanner(true);
+//     // Removed sessionStorage - modal will show again on next page load
+//   };
 
-  const handleCloseBanner = () => {
-    setShowBanner(false);
-  };
+//   const handleCloseBanner = () => {
+//     setShowBanner(false);
+//   };
 
-  return (
-    <>
-      {/* Modal */}
-      {showModal && (
-        <div className="launch-modal-overlay" onClick={handleCloseModal}>
-          <div className="launch-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="launch-modal-close" onClick={handleCloseModal}>
-              ×
-            </button>
-            <div className="launch-modal-content">
-              <div className="launch-badge">LIVE EVENT</div>
-              <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
+//   return (
+//     <>
+//       {/* Modal */}
+//       {showModal && (
+//         <div className="launch-modal-overlay" onClick={handleCloseModal}>
+//           <div className="launch-modal" onClick={(e) => e.stopPropagation()}>
+//             <button className="launch-modal-close" onClick={handleCloseModal}>
+//               ×
+//             </button>
+//             <div className="launch-modal-content">
+//               <div className="launch-badge">LIVE EVENT</div>
+//               <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
 
-              <div className="launch-features">
-                <div className="launch-date m-0">
+//               <div className="launch-features">
+//                 <div className="launch-date m-0">
                 
-                  <span>1st of February, 2026 • 5:00 PM WAT</span>
-                </div>
+//                   <span>1st of February, 2026 • 5:00 PM WAT</span>
+//                 </div>
                 
-              </div>
+//               </div>
 
-              <a
-                href="https://forms.gle/PfNaxtMJ8MCNCh178"
-                className="btn launch-register-btn mb-3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Register Now
-              </a>
-              <p className="launch-description">
-                <span className="highlight">
-                  "Wetin My Eyes Don See For Lagos"
-                </span>{" "}
-                — A collection of art, poetry, short stories, and photographs
-                that capture the essence, energy, and soul of Lagos through the
-                eyes of 22 talented creatives.
-              </p>
-              <p className="launch-description">
-                <span className="highlight">"Thread of a Mind"</span> is a
-                quiet honest exploration of the small moments that shapes who we
-                become
-              </p>
+//               <a
+//                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
+//                 className="btn launch-register-btn mb-3"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
+//                 Register Now
+//               </a>
+//               <p className="launch-description">
+//                 <span className="highlight">
+//                   "Wetin My Eyes Don See For Lagos"
+//                 </span>{" "}
+//                 — A collection of art, poetry, short stories, and photographs
+//                 that capture the essence, energy, and soul of Lagos through the
+//                 eyes of 22 talented creatives.
+//               </p>
+//               <p className="launch-description">
+//                 <span className="highlight">"Thread of a Mind"</span> is a
+//                 quiet honest exploration of the small moments that shapes who we
+//                 become
+//               </p>
 
-              <p className="launch-note">
-                Celebrate two remarkable collections with live readings,
-                contributor insights, and exclusive Q&A
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+//               <p className="launch-note">
+//                 Celebrate two remarkable collections with live readings,
+//                 contributor insights, and exclusive Q&A
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       )}
 
-      {/* Sticky Banner */}
-      {showBanner && (
-        <div className="launch-banner">
-          <div className="launch-banner-content">
-            <div className="banner-left">
-              <span className="banner-badge">LIVE EVENT</span>
-              <span className="banner-text">
-                🎉 Virtual Book Launch • <strong>1st of February, 2026 • 5:00 PM WAT</strong>
-              </span>
-            </div>
-            <div className="banner-right">
-              <a
-                href="https://forms.gle/PfNaxtMJ8MCNCh178"
-                className="banner-register-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Register Now
-              </a>
-              <button className="banner-close" onClick={handleCloseBanner}>
-                ×
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
+//       {/* Sticky Banner */}
+//       {showBanner && (
+//         <div className="launch-banner">
+//           <div className="launch-banner-content">
+//             <div className="banner-left">
+//               <span className="banner-badge">LIVE EVENT</span>
+//               <span className="banner-text">
+//                 🎉 Virtual Book Launch • <strong>1st of February, 2026 • 5:00 PM WAT</strong>
+//               </span>
+//             </div>
+//             <div className="banner-right">
+//               <a
+//                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
+//                 className="banner-register-btn"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
+//                 Register Now
+//               </a>
+//               <button className="banner-close" onClick={handleCloseBanner}>
+//                 ×
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
 
 const AnthologyPage = () => {
   // const reviewFormLink = "https://forms.google.com/your-review-form"; // Replace with your actual Google Form link
