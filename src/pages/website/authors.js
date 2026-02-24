@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 import authorImg from "../../assets/website/images/authors/authorImg.png";
 import BookOne from "../../assets/website/images/authors/BookOne.png";
 import BookTwo from "../../assets/website/images/authors/BookTwo.png";
-import BookThree from "../../assets/website/images/authors/BookThree.png";
 import testimonial from "../../assets/website/images/authors/testimonial.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
