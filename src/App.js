@@ -1,19 +1,20 @@
 import * as React from "react";
 // import { Component } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { SimplePage } from "./pages/website/home";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { PrivacyPolicy } from "./pages/website/privacyPolicy";
 import LandingPage from "./pages/website/newHome";
 import Services from "./pages/website/services";
 import About from "./pages/website/about";
-import { Blog } from "./pages/website/blog";
+// import { Blog } from "./pages/website/blog";
 import { BlogReadMore } from "./pages/website/blogReadMore";
 import { Contact } from "./pages/website/contact";
-import InspoPage from "./pages/website/inspoCards";
-import PreOrder from "./pages/website/books/preorder";
+import InspoPage from "./pages/website/store/inspoCards";
+import Books from "./pages/website/store/books";
 //Author
-import { Author } from "./pages/website/books/author";
-import Anthology from "./pages/website/books/anthology";
+import { Authors } from "./pages/website/authors";
+import AnthologyLagos from "./pages/website/anthology/anthology-lagos";
+import { AnthologyKaduna } from "./pages/website/anthology/anthology-kaduna";
+import EventsPage from "./pages/website/events/events";
 
 function App() {
   return (
@@ -23,14 +24,17 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         {/* <Route path="/" element={<SimplePage />} /> */}
-        <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/blog" element={<Blog />} /> */}
         <Route path="/blogarticle" element={<BlogReadMore />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/author" element={<Author />} />
+        <Route path="/authors" element={<Authors />} />
         <Route path="/cards" element={<InspoPage />} />
-        <Route path="/pre-order" element={<PreOrder />} />
-        <Route path="/anthology" element={<Anthology/>} />
+        <Route path="/books" element={<Books />} />
+<Route path="/pre-order" element={<Navigate to="/buy-book" replace />} />
+        <Route path="/anthology-lagos" element={<AnthologyLagos/>} />
+        <Route path="/anthology-kaduna" element={<AnthologyKaduna/>} />
+        <Route path="/events" element={<EventsPage/>} />
       </Routes>
     </BrowserRouter>
   );

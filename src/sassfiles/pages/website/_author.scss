@@ -1,84 +1,581 @@
+// @use "../../colors" as *;
+
+// .AuthorHeroBgg::before {
+//   content: "";
+//   position: absolute;
+//   background-color: #2e3133;
+//   height: 80vh;
+//   width: 100%;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   opacity: 0.4;
+// }
+
+// .AuthorHeroBg {
+//   background: url(/src/assets/website/images/authors/hero.png);
+//   background-size: cover;
+//   position: relative;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   height: 80vh;
+//   width: 100%;
+// }
+
+// .AuthorHeroBg h1 {
+//   position: relative;
+// }
+// .AuthorHeroBg h2 {
+//   position: relative;
+// }
+// .AuthorHeroBg p {
+//   position: relative;
+// }
+// .AuthorHeroBg .GetMyBookBtn {
+//   position: relative;
+// }
+
+// .textWhite {
+//   color: $sectextcolor;
+// }
+
+// .aboutBg {
+//   background: rgba(94, 178, 81, 0.2);
+// }
+
+// .GetMyBookBtn {
+//   background-color: $secbtncolor;
+//   color: $sectextcolor;
+//   width: 180px;
+//   height: 50px;
+//   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+//   border: none;
+//   font-weight: 600;
+//   font-family: "Comic Neue", cursive;
+//   font-size: 1.2rem;
+// }
+
+// .GetMyBookBtnTwo {
+//   width: 180px;
+//   height: 50px;
+//   color: $prytextcolor;
+//   border: 2px solid $secbtncolor;
+//   background: rgba(94, 178, 81, 0.04);
+//   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+//   font-weight: 600;
+//   font-family: "Comic Neue", cursive;
+//   font-size: 1.2rem;
+//   &:hover {
+//     background-color: $secbtncolor;
+//     color: $sectextcolor;
+//   }
+// }
+// .booksBg {
+//   background: rgba(94, 178, 81, 0.1);
+// }
+
+// .testimonialCard {
+//   border-radius: 15px;
+//   // background: #FFF;
+//   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+// }
+
+
 @use "../../colors" as *;
 
-.AuthorHeroBgg::before {
-  content: "";
-  position: absolute;
-  background-color: #2e3133;
-  height: 80vh;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.4;
-}
+// ─────────────────────────────────────────────────────────────────────────────
+// VARIABLES (mirrors brand tokens)
+// ─────────────────────────────────────────────────────────────────────────────
+$green:        #5eb251;
+$green-light:  rgba(94, 178, 81, 0.12);
+$green-mid:    rgba(94, 178, 81, 0.2);
+$orange:       #f15a24;
+$white:        #ffffff;
+$dark:         #1a1a1a;
+$muted:        #888;
+$font:         "Comic Neue", cursive;
 
-.AuthorHeroBg {
-  background: url(/src/assets/website/images/authors/hero.png);
-  background-size: cover;
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: 80vh;
-  width: 100%;
-}
+// ─────────────────────────────────────────────────────────────────────────────
+// SHARED HELPERS (kept from original)
+// ─────────────────────────────────────────────────────────────────────────────
+.textWhite   { color: $white; }
+.aboutBg     { background: $green-mid; }
+.booksBg     { background: rgba(94, 178, 81, 0.08); }
 
-.AuthorHeroBg h1 {
-  position: relative;
-}
-.AuthorHeroBg h2 {
-  position: relative;
-}
-.AuthorHeroBg p {
-  position: relative;
-}
-.AuthorHeroBg .GetMyBookBtn {
-  position: relative;
-}
-
-.textWhite {
-  color: $sectextcolor;
-}
-
-.aboutBg {
-  background: rgba(94, 178, 81, 0.2);
-}
-
-.GetMyBookBtn {
-  background-color: $secbtncolor;
-  color: $sectextcolor;
-  width: 180px;
+// ─────────────────────────────────────────────────────────────────────────────
+// BOOK BUTTON — cream fill, orange-yellow border (matches site style)
+// ─────────────────────────────────────────────────────────────────────────────
+.author-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf6ec;
+  color: #1a1a1a;
+  border: 2px solid #fbb03b;
+  padding: 0 1.75rem;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border: none;
-  font-weight: 600;
-  font-family: "Comic Neue", cursive;
-  font-size: 1.2rem;
-}
+  border-radius: 15px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: $font;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 
-.GetMyBookBtnTwo {
-  width: 180px;
-  height: 50px;
-  color: $prytextcolor;
-  border: 2px solid $secbtncolor;
-  background: rgba(94, 178, 81, 0.04);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-weight: 600;
-  font-family: "Comic Neue", cursive;
-  font-size: 1.2rem;
   &:hover {
-    background-color: $secbtncolor;
-    color: $sectextcolor;
+    background-color: #fbb03b;
+    color: #1a1a1a;
+    box-shadow: 0 6px 16px rgba(251, 176, 59, 0.35);
+    transform: translateY(-2px);
   }
 }
-.booksBg {
-  background: rgba(94, 178, 81, 0.1);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AUTHORS HERO
+// ─────────────────────────────────────────────────────────────────────────────
+.authors-hero {
+  position: relative;
+  background: url(/src/assets/website/images/authors/hero.png) center/cover no-repeat;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
 }
 
-.testimonialCard {
+.authors-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(26, 26, 26, 0.82) 0%,
+    rgba(26, 26, 26, 0.5) 60%,
+    rgba(94, 178, 81, 0.18) 100%
+  );
+}
+
+.authors-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.authors-hero-eyebrow {
+  display: inline-block;
+  font-family: $font;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $green;
+  background: rgba(94, 178, 81, 0.15);
+  border: 1px solid rgba(94, 178, 81, 0.4);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.authors-hero-title {
+  font-family: $font;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: $white;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.authors-hero-accent {
+  color: $green;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: $green;
+    opacity: 0.4;
+    border-radius: 2px;
+  }
+}
+
+.authors-hero-sub {
+  font-family: $font;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  line-height: 1.8;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AUTHOR CARD (listing)
+// ─────────────────────────────────────────────────────────────────────────────
+.author-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: $white;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+
+    .author-card-image {
+      transform: scale(1.04);
+    }
+
+    .author-card-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.author-card-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+}
+
+.author-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.author-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(94, 178, 81, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.author-card-cta {
+  font-family: $font;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: $white;
+  letter-spacing: 0.5px;
+}
+
+.author-card-body {
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.author-card-accent {
+  height: 3px;
+  width: 40px;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.author-card-name {
+  font-family: $font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $dark;
+  margin-bottom: 0.2rem;
+}
+
+.author-card-role {
+  font-family: $font;
+  font-size: 0.8rem;
+  color: $muted;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.author-card-tagline {
+  font-family: $font;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.author-card-books-count {
+  font-family: $font;
+  font-size: 0.82rem;
+  color: $muted;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BECOME AN AUTHOR CTA
+// ─────────────────────────────────────────────────────────────────────────────
+.become-author-section {
+  background: $dark;
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(94, 178, 81, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(241, 90, 36, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.become-author-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.become-author-decoration {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+
+  span {
+    color: $green;
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+}
+
+.become-author-title {
+  font-family: $font;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: $white;
+  margin-bottom: 1rem;
+}
+
+.become-author-sub {
+  font-family: $font;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.become-author-perks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.become-author-perk {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+
+  i {
+    font-size: 1.1rem;
+    color: $green;
+  }
+}
+
+.become-author-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fdf6ec;
+  color: #1a1a1a;
+  border: 2px solid #fbb03b;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0 2.25rem;
+  height: 54px;
   border-radius: 15px;
-  // background: #FFF;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(251, 176, 59, 0.2);
+
+  &:hover {
+    background-color: #fbb03b;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(251, 176, 59, 0.35);
+  }
+}
+
+.become-author-note {
+  margin-top: 1rem;
+  font-family: $font;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AUTHOR DETAIL PAGE
+// ─────────────────────────────────────────────────────────────────────────────
+.author-back-btn {
+  font-family: $font;
+  font-size: 0.95rem;
+  color: $green !important;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease;
+
+  &:hover { opacity: 0.75; }
+}
+
+.author-detail-hero {
+  background: $green-light;
+  border-bottom: 3px solid rgba(94, 178, 81, 0.2);
+}
+
+.author-detail-portrait-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.author-detail-portrait {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+  position: relative;
+  z-index: 1;
+}
+
+.author-detail-portrait-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 18px;
+  border: 3px solid;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.author-detail-eyebrow {
+  display: inline-block;
+  font-family: $font;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.author-detail-name {
+  font-family: $font;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: $dark;
+  margin-bottom: 0.4rem;
+  line-height: 1.15;
+}
+
+.author-detail-tagline {
+  font-family: $font;
+  font-size: 1.1rem;
+  color: $muted;
+  margin-bottom: 1.25rem;
+}
+
+.author-detail-bio p {
+  font-family: $font;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+
+// ── Books section ────────────────────────────────────────────────────────────
+.author-book-cover {
+  max-height: 340px;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease;
+
+  &:hover { transform: rotate(-1deg) scale(1.02); }
+}
+
+// ── Testimonial cards ────────────────────────────────────────────────────────
+.author-testimonial-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+
+  &:hover { transform: translateY(-2px); }
+}
+
+.author-testimonial-quote {
+  flex: 1;
+
+  p {
+    font-family: $font;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.75;
+  }
+}
+
+.author-testimonial-person {
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  span {
+    font-family: $font;
+    font-size: 0.9rem;
+    color: $dark;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RESPONSIVE
+// ─────────────────────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .author-detail-portrait {
+    width: 200px;
+    height: 240px;
+  }
+
+  .authors-hero {
+    min-height: 60vh;
+  }
+
+  .become-author-perks {
+    flex-direction: column;
+    align-items: center;
+  }
 }

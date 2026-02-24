@@ -9,6 +9,7 @@ export const CreativesLink = () => {
         href="https://forms.gle/dVBbG4bWPPTNzfhc6"
         className="text-decoration-underline CreativesLink"
         target="_blank"
+        rel="noreferrer"
         type="button"
       >
         Creatives <i className="bi bi-arrow-right"></i>
@@ -23,6 +24,7 @@ export const AuthorsLink = () => {
         href="https://docs.google.com/forms/d/1y3jtbbVYLJ9V9dldLTf5fQrywNclBzeUJ-lgwheMsGg/edit?usp=sharing_eip_se_dm&ts=6496c410"
         className="text-decoration-underline AuthorsLink"
         target="_blank"
+        rel="noreferrer"
       >
         Authors <i className="bi bi-arrow-right"></i>
       </a>
@@ -35,6 +37,7 @@ export const WorkWithUsBtn = () => {
       <a
         href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none"
       >
         <button class="WorkWithUsBtn btnText mx-1 mt-2">
@@ -51,6 +54,7 @@ export const WorkWithUsBtnn = () => {
       <a
         href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none"
       >
         <button class="WorkWithUsBtnn btnText mx-1 mt-2">
@@ -70,6 +74,7 @@ export const ChallengeBtn = () => {
         // previous link
         // href="https://forms.gle/dRdRsVyWfQa4Cks38"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none btnText linkColor"
       >
         <button class="JoinOurComunityBtn mx-1 mt-2">
@@ -86,6 +91,7 @@ export const PublishNowPayLaterBtn = () => {
       <a
         href="https://forms.gle/wuqyN4WWXq8MBYvK8"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none btnText linkColor"
       >
         <button class="PublishNowPayLaterBtn mx-1 mt-2">
@@ -102,6 +108,7 @@ export const GetStartedBtn = () => {
       <a
         href="https://forms.gle/mWnkHhN5qmJ1DVJK6"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none"
       >
         <button class="WorkWithUsBtn btnText mx-1 mt-2">
@@ -118,6 +125,8 @@ export const GetaQuoteBtn = () => {
       <a
         href="https://forms.gle/xivFgq8rtsU4d5MeA"
         target="_blank"
+        rel="noreferrer"
+
         className="text-decoration-none"
       >
         <button class="WorkWithUsBtnn btnText mx-1 mt-2">
@@ -134,6 +143,7 @@ export const JoinTheTeamBtn = () => {
       <a
         href="https://forms.gle/fQ6yZGwUNvco27H9A"
         target="_blank"
+        rel="noreferrer"
         className="text-decoration-none"
       >
         <button class="WorkWithUsBtnn btnText mx-1 mt-2">
@@ -147,10 +157,10 @@ export const JoinTheTeamBtn = () => {
 export const PreOrderBtn = () => {
   return (
     <>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331" target="_blank" className="text-decoration-none">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331" target="_blank" rel="noreferrer" className="text-decoration-none">
         <button class="WorkWithUsBtnn btnText mx-1 mt-2">
           {" "}
-          <b>PreOrder</b>
+          <b>Buy Book</b>
         </button>
       </a>
     </>

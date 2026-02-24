@@ -1,5 +1,224 @@
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
+
+
+import { useState, useEffect, useRef } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+
+// import jolevilogo from "../../assets/jolevilogo.png"; // uncomment & adjust path
+
+const NAV_ITEMS = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Services", to: "/services" },
+  {
+    label: "Anthology",
+    dropdown: [
+      { label: "Lagos", to: "/anthology-lagos" },
+      { label: "Kaduna", to: "/anthology-kaduna" },
+    ],
+  },
+  {
+    label: "Store",
+    dropdown: [
+      { label: "Books", to: "/books" },
+      { label: "Cards", to: "/cards" },
+    ],
+  },
+  { label: "Events", to: "/events" },
+  { label: "Authors", to: "/authors" },
+  { label: "Contact", to: "/contact" },
+];
+
+export const NewNavbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navRef = useRef(null);
+
+  // Close everything on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+  }, [location]);
+
+  // Scroll shadow
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (label) =>
+    setOpenDropdown((prev) => (prev === label ? null : label));
+
+  return (
+    <nav
+      ref={navRef}
+      className={`navbar-main${scrolled ? " navbar-scrolled" : ""}`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div className="navbar-inner">
+
+        {/* Logo */}
+        <a href="/" className="navbar-logo" aria-label="JOLEVI Home">
+          {/* Replace src with {jolevilogo} once imported */}
+          <img src={jolevilogo} alt="JOLEVI" />
+        </a>
+
+        {/* Desktop links */}
+        <ul className="navbar-links" role="list">
+          {NAV_ITEMS.map((item) =>
+            item.dropdown ? (
+              <li key={item.label} className="nav-dropdown">
+                <button
+                  className={`nav-dropdown-btn${openDropdown === item.label ? " open" : ""}`}
+                  onClick={() => toggleDropdown(item.label)}
+                  aria-expanded={openDropdown === item.label}
+                  aria-haspopup="true"
+                >
+                  {item.label}
+                  <svg
+                    className="nav-chevron"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div
+                  className={`nav-dropdown-panel${openDropdown === item.label ? " open" : ""}`}
+                  role="menu"
+                >
+                  {item.dropdown.map((sub) => (
+                    <NavLink
+                      key={sub.to}
+                      to={sub.to}
+                      role="menuitem"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      {sub.label}
+                    </NavLink>
+                  ))}
+                </div>
+              </li>
+            ) : (
+              <li key={item.label}>
+                <NavLink
+                  to={item.to}
+                  end={item.to === "/"}
+                  className={({ isActive }) =>
+                    `nav-item-link${isActive ? " active" : ""}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            )
+          )}
+        </ul>
+
+        {/* Hamburger */}
+        <button
+          className={`navbar-hamburger${mobileOpen ? " open" : ""}`}
+          onClick={() => setMobileOpen((p) => !p)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      {/* Hairline accent */}
+      <div className="navbar-accent" aria-hidden="true" />
+
+      {/* Mobile drawer */}
+      <div
+        className={`navbar-mobile${mobileOpen ? " open" : ""}`}
+        aria-hidden={!mobileOpen}
+      >
+        {NAV_ITEMS.map((item) =>
+          item.dropdown ? (
+            <div key={item.label} className="mobile-nav-item">
+              <button
+                className={`mobile-nav-link${openDropdown === item.label ? " active" : ""}`}
+                onClick={() => toggleDropdown(item.label)}
+                aria-expanded={openDropdown === item.label}
+              >
+                {item.label}
+                <svg
+                  style={{
+                    width: 15,
+                    height: 15,
+                    opacity: 0.45,
+                    transition: "transform 0.22s",
+                    transform:
+                      openDropdown === item.label
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                  }}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div
+                className={`mobile-nav-sub${openDropdown === item.label ? " open" : ""}`}
+              >
+                {item.dropdown.map((sub) => (
+                  <NavLink
+                    key={sub.to}
+                    to={sub.to}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    {sub.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div key={item.label} className="mobile-nav-item">
+              <NavLink
+                to={item.to}
+                end={item.to === "/"}
+                className={({ isActive }) =>
+                  `mobile-nav-link${isActive ? " active" : ""}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            </div>
+          )
+        )}
+      </div>
+    </nav>
+  );
+};
 
 // export const NewNavvbar = () => {
 //   const navActive = ({ isActive }) => {
@@ -27,194 +246,146 @@ import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 //     </nav>
 //   );
 // };
-export const NewNavbar = () => {
-  const navActive = ({ isActive }) => {
-    return {
-      // color: isActive ? "#FBB03B" : "#000000",
-      color: isActive ? "#0087cb" : "#000000",
-    };
-  };
-  return (
-    <div className="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-center">
-      <div className="container ">
-        <a className="navbar-brand" href="/">
-          <img
-            src={jolevilogo}
-            alt=""
-            className="d-inline-block align-text-top"
-            style={{ maxWidth: "6rem", maxHeight: "6rem" }}
-          />
-        </a>
-        {/* <Link to="/" className="navbar-brand ms-2 ">
-          {" "}
-          <img src={havenfavico} className="w-200 h-200" alt="" />
-        </Link> */}
-        <div
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </div>
 
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <div className="navbar-nav NavUL py-2 d-flex">
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/"
-                className="nav-link navText"
-                // style={{ color: "#000000" }}
-                aria-current="page"
-              >
-                <div className="Navitemmobile Navitemlarge ">
-                  <b>Home</b>
-                </div>{" "}
-              </NavLink>
-            </li>
+// import { useState, useEffect, useRef } from "react";
+// import { NavLink, useLocation } from "react-router-dom";
 
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/about"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>About</b>
-                </div>
-              </NavLink>
-            </li>
+// Replace with your actual logo import:
+// import jolevilogo from "./path/to/logo";
 
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/services"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Services</b>
-                </div>
-              </NavLink>
-            </li>
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/cards"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Cards</b>
-                </div>
-              </NavLink>
-            </li>
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/anthology"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Anthology</b>
-                </div>
-              </NavLink>
-            </li>
-            {/* <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/WMEDSFL"
-            
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>WMEDSFL</b>
-                </div>
-              </NavLink>
-            </li> */}
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/pre-order"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Preorder</b>
-                </div>
-              </NavLink>
-            </li>
-            {/* <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/marketplace"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile">
-                  <b>Marketplace</b>
-                </div>
-              </NavLink>
-            </li> */}
-            {/* <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/blog"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Blog</b>
-                </div>
-              </NavLink>
-            </li> */}
 
-            <li className="nav-item mx-3 d-flex justify-content-center">
-              <NavLink
-                style={navActive}
-                to="/contact"
-                // style={{ color: "#000000" }}
-                className="nav-link navText"
-              >
-                <div className="Navitemmobile Navitemlarge">
-                  <b>Contact</b>
-                </div>
-              </NavLink>
-            </li>
-          </div>{" "}
-          {/* <Navicons className="d-flex">
-            <Link
-              to="https://m.facebook.com/haveneduservices/"
-              className="mx-2"
-              style={{ color: "#2D25E1" }}
-            >
-              <FacebookIcon />
-            </Link>
-            <Link
-              to="https://instagram.com/haveneduservices?igshid=1fyt565z18d4u"
-              className="mx-2"
-              style={{ color: "#E1116C" }}
-            >
-              <InstagramIcon />
-            </Link>
-            <Link to="/about" className="mx-2" style={{ color: "#37A7CF" }}>
-              <LinkedInIcon />
-            </Link>
-          </Navicons> */}
-        </div>
-      </div>
-    </div>
-  );
-};
+
+
+// export const NewNavbar = () => {
+//   const navActive = ({ isActive }) => {
+//     return {
+//       // color: isActive ? "#FBB03B" : "#000000",
+//       color: isActive ? "#0087cb" : "#000000",
+//     };
+//   };
+//   return (
+//     <div className="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-center">
+//       <div className="container ">
+//         <a className="navbar-brand" href="/">
+//           <img
+//             src={jolevilogo}
+//             alt=""
+//             className="d-inline-block align-text-top"
+//             style={{ maxWidth: "6rem", maxHeight: "6rem" }}
+//           />
+//         </a>
+    
+//         <div
+//           className="navbar-toggler"
+//           type="button"
+//           data-bs-toggle="collapse"
+//           data-bs-target="#navbarNav"
+//           aria-controls="navbarNav"
+//           aria-expanded="false"
+//           aria-label="Toggle navigation"
+//         >
+//           <span className="navbar-toggler-icon"></span>
+//         </div>
+
+//         <div
+//           className="collapse navbar-collapse justify-content-center"
+//           id="navbarNav"
+//         >
+//           <div className="navbar-nav NavUL py-2 d-flex">
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/"
+//                 className="nav-link navText"
+//                 // style={{ color: "#000000" }}
+//                 aria-current="page"
+//               >
+//                 <div className="Navitemmobile Navitemlarge ">
+//                   <b>Home</b>
+//                 </div>{" "}
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/about"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>About</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/services"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>Services</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/cards"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>Cards</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/anthology"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>Anthology</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+          
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/buy-book"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>Store</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+//             <li className="nav-item mx-3 d-flex justify-content-center">
+//               <NavLink
+//                 style={navActive}
+//                 to="/contact"
+//                 // style={{ color: "#000000" }}
+//                 className="nav-link navText"
+//               >
+//                 <div className="Navitemmobile Navitemlarge">
+//                   <b>Contact</b>
+//                 </div>
+//               </NavLink>
+//             </li>
+//           </div>{" "}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 // export const NewNavbarr = () => {
 //   return (

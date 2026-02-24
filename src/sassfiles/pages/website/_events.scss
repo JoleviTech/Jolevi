@@ -1,0 +1,100 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Events Page Styles
+// Add this to your existing events/buyBook SCSS file, or import separately.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ── Section Labels ──────────────────────────────────────────────────────────
+.events-section-label {
+  display: flex;
+  align-items: center;
+}
+
+.events-label-badge {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 20px;
+
+  &.upcoming-badge {
+    background: rgba(94, 178, 81, 0.12);
+    color: #5eb251;
+    border: 1px solid rgba(94, 178, 81, 0.3);
+  }
+
+  &.past-badge {
+    background: rgba(0, 0, 0, 0.05);
+    color: #666;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// ── Event Cards (shared) ─────────────────────────────────────────────────────
+.event-card {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1) !important;
+  }
+
+//   .event-card-body {
+//     // inherits padding from inline styles
+//   }
+}
+
+// ── Upcoming Event Card ──────────────────────────────────────────────────────
+.event-card--upcoming {
+  border-left-width: 5px !important;
+  border-left-style: solid;
+}
+
+// // ── Past Event Card ──────────────────────────────────────────────────────────
+// .event-card--past {
+//   // colour bar applied inline per-event
+// }
+
+// ── Event Meta List ──────────────────────────────────────────────────────────
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-meta-item {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+// ── Highlights List ──────────────────────────────────────────────────────────
+.event-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-family: "Comic Neue", cursive;
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+// // ── Detail Page Header ───────────────────────────────────────────────────────
+// .event-detail-header {
+//   // background + border applied inline per-event
+// }
+
+// ── Responsive tweaks ────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .event-card--upcoming {
+    border-left-width: 4px !important;
+  }
+}

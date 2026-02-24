@@ -4,7 +4,7 @@
 
 //images, footer, sales and marketing
 
-import { ChallengeBtn, WorkWithUsBtn, WorkWithUsBtnn } from "./buttons";
+import { ChallengeBtn, WorkWithUsBtnn } from "./buttons";
 
 export const LandingPageHero = () => {
   return (
