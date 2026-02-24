@@ -25,8 +25,8 @@ const NAV_ITEMS = [
       { label: "Cards", to: "/cards" },
     ],
   },
-  { label: "Events", to: "/events" },
   { label: "Authors", to: "/authors" },
+  { label: "Events", to: "/events" },
   { label: "Contact", to: "/contact" },
 ];
 

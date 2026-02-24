@@ -3025,149 +3025,203 @@ form {
 .ka-page {
   font-family: "Comic Neue", cursive;
   background: #ffffff;
-  color: #000;
+  color: #1a1a1a;
   overflow-x: hidden;
 }
 
 .ka-container {
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.ka-section-title {
-  font-family: "Comic Neue", cursive;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 0.75rem;
-  line-height: 1.2;
-}
-
-.ka-section-sub {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
 }
 
 .ka-centered {
   text-align: center;
 }
 
-.ka-hero {
-  background: linear-gradient(180deg, rgba(94, 178, 81, 0.06) 0%, rgba(94, 178, 81, 0.12) 100%);
-  padding: 70px 0 60px;
-  position: relative;
+.ka-section-header {
+  margin-bottom: 3rem;
 }
 
-.ka-hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.ka-section-title {
+  font-family: "Comic Neue", cursive;
+  font-size: clamp(1.7rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.ka-section-sub {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0;
+}
+
+.ka-hero {
+  background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+  padding: 80px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+.ka-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 178, 81, 0.25) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.ka-hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Comic Neue", cursive;
+  font-size: clamp(8rem, 18vw, 18rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  letter-spacing: -0.02em;
+}
+
+.ka-hero-grid {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .ka-eyebrow {
-  display: inline-block;
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #5eb251;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
+.ka-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5eb251;
+  animation: ka-pulse 2s ease-in-out infinite;
+}
+
+@keyframes ka-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
 .ka-hero-title {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 700;
-  color: #000;
-  line-height: 1.1;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2.6rem, 5.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .ka-title-accent {
   color: #5eb251;
+  display: block;
 }
 
 .ka-hero-tagline {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  color: #5eb251;
-  margin-bottom: 1.25rem;
+  color: #fbb03b;
   font-style: italic;
+  margin-bottom: 1.25rem;
 }
 
 .ka-hero-body {
   font-size: 0.95rem;
-  color: #444;
-  line-height: 1.8;
-  max-width: 520px;
-  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.85;
+  max-width: 500px;
+  margin-bottom: 2.25rem;
 }
 
 .ka-hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .ka-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background-color: transparent;
-  border: 2px solid #f15a24;
-  padding: 0 1.5rem;
+  background: #5eb251;
+  color: #ffffff;
+  border: 2px solid #5eb251;
+  padding: 0 1.75rem;
   height: 50px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
   font-family: "Comic Neue", cursive;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(94, 178, 81, 0.3);
 }
 .ka-btn-primary:hover {
-  background-color: #f15a24;
+  background: #4a9940;
+  border-color: #4a9940;
   color: #ffffff;
-  border-color: #f15a24;
-  box-shadow: 0px 6px 12px rgba(241, 90, 36, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(94, 178, 81, 0.4);
 }
 
-.ka-btn-green {
+.ka-btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #5eb251;
-  color: #ffffff;
-  border: none;
-  padding: 0 2rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0 1.5rem;
   height: 50px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(94, 178, 81, 0.3);
+  border-radius: 12px;
   font-family: "Comic Neue", cursive;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
-.ka-btn-green:hover {
-  background-color: #4a9940;
+.ka-btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.65);
   color: #ffffff;
-  box-shadow: 0px 6px 16px rgba(94, 178, 81, 0.4);
-  transform: translateY(-2px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .ka-btn-large {
   height: 56px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0 2.5rem;
+  border-radius: 14px;
 }
 
 .ka-hero-cover {
@@ -3175,308 +3229,406 @@ form {
   flex-shrink: 0;
 }
 
-.ka-cover-placeholder {
-  width: 200px;
-  background: linear-gradient(145deg, #5eb251 0%, #3d7a34 100%);
-  border-radius: 6px 16px 16px 6px;
-  padding: 2.5rem 1.5rem;
+.ka-cover-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -6px 0 0 rgba(0, 0, 0, 0.2), 0 16px 40px rgba(0, 0, 0, 0.2);
+  width: 210px;
+  border-radius: 4px 16px 16px 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
 }
-.ka-cover-placeholder::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 6px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 6px 0 0 6px;
+
+.ka-cover-spine {
+  width: 18px;
+  background: linear-gradient(180deg, #3d7a34 0%, #2a5424 100%);
+  flex-shrink: 0;
 }
 
-.ka-cover-inner {
+.ka-cover-face {
+  flex: 1;
+  background: linear-gradient(145deg, #5eb251 0%, #3d7a34 100%);
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 0;
+  position: relative;
+}
+.ka-cover-face::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .ka-cover-city {
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   font-weight: 700;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.35em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.ka-cover-title-group {
   margin-bottom: 0.75rem;
+  position: relative;
 }
 
-.ka-cover-pretitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.15;
+.ka-cover-line {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.3;
   margin: 0;
+  letter-spacing: 0.04em;
 }
 
-.ka-cover-highlight {
-  color: #f15a24;
+.ka-cover-yellow {
+  color: #fbb03b;
 }
 
 .ka-cover-divider {
-  width: 36px;
+  width: 32px;
   height: 2px;
-  background: #f15a24;
-  margin: 0.9rem auto;
+  background: #fbb03b;
+  margin: 0.75rem auto;
   border-radius: 2px;
+  position: relative;
 }
 
 .ka-cover-pub {
-  font-size: 0.58rem;
+  font-size: 0.5rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
+  position: relative;
 }
 
 .ka-cover-shadow {
   position: absolute;
-  bottom: -16px;
-  left: 8px;
-  right: -8px;
-  height: 32px;
-  background: rgba(0, 0, 0, 0.2);
-  filter: blur(14px);
+  bottom: -20px;
+  left: 10px;
+  right: -10px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.35);
+  filter: blur(16px);
   border-radius: 50%;
 }
 
-.ka-why {
-  background: #ffffff;
-  padding: 80px 0;
-  position: relative;
+.ka-stats-strip {
+  background: #5eb251;
+  padding: 0;
 }
-.ka-why::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 2px 2px, rgba(94, 178, 81, 0.03) 1px, transparent 0);
-  background-size: 40px 40px;
-  pointer-events: none;
+
+.ka-stats-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ka-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  gap: 2px;
+}
+
+.ka-stat-number {
+  font-family: "Comic Neue", cursive;
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.ka-stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ka-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ka-why {
+  padding: 90px 0;
+  background: #ffffff;
 }
 
 .ka-why-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
+}
+
+.ka-why-quote-box {
+  background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.ka-why-quote-box::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 178, 81, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ka-big-quote {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  color: #5eb251;
+  line-height: 0.7;
+  margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+
+.ka-why-quote-box blockquote {
+  font-family: "Comic Neue", cursive;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.65;
+  color: #ffffff;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  border: none;
   position: relative;
   z-index: 1;
 }
 
-.ka-why-quote {
-  background: linear-gradient(135deg, rgba(94, 178, 81, 0.08) 0%, rgba(94, 178, 81, 0.15) 100%);
-  border-left: 4px solid #5eb251;
-  border-radius: 0 16px 16px 0;
-  padding: 2.5rem;
-}
-
-.ka-quote-icon {
-  font-size: 2.5rem;
-  color: #5eb251;
-  display: block;
-  margin-bottom: 0.75rem;
-  line-height: 1;
-}
-
-.ka-why-quote blockquote {
-  font-size: 1.15rem;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.6;
-  color: #000;
-  margin: 0 0 1rem 0;
-  border: none;
-  padding: 0;
-}
-
 .ka-why-sub {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.88rem;
   color: #5eb251;
-  font-size: 0.9rem;
+  font-weight: 700;
   margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ka-why-label {
+  font-size: 0.78rem;
   font-weight: 700;
-}
-
-.ka-why-body p {
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
-  font-size: 0.95rem;
-}
-.ka-why-body strong {
-  color: #000;
-}
-
-.ka-theme-band {
-  background: linear-gradient(180deg, rgba(94, 178, 81, 0.12) 0%, rgba(94, 178, 81, 0.18) 50%, rgba(94, 178, 81, 0.1) 100%);
-  padding: 60px 0;
-  text-align: center;
-}
-
-.ka-theme-band .ka-theme-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #5eb251;
   margin-bottom: 0.75rem;
 }
 
-.ka-theme-headline {
-  font-family: "Comic Neue", cursive;
-  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+.ka-why-body p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.ka-why-body strong {
+  color: #1a1a1a;
+}
+
+.ka-theme-band {
+  background: linear-gradient(135deg, rgba(94, 178, 81, 0.18) 0%, rgba(94, 178, 81, 0.1) 100%);
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(94, 178, 81, 0.15);
+  border-bottom: 1px solid rgba(94, 178, 81, 0.15);
+}
+.ka-theme-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(94, 178, 81, 0.04) 40px, rgba(94, 178, 81, 0.04) 80px);
+}
+
+.ka-band-label {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #000;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5eb251;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ka-band-headline {
+  font-family: "Comic Neue", cursive;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
   margin: 0;
+  position: relative;
 }
 
 .ka-subthemes {
   padding: 80px 0;
-  background: #ffffff;
-  position: relative;
-}
-.ka-subthemes::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 2px 2px, rgba(94, 178, 81, 0.03) 1px, transparent 0);
-  background-size: 40px 40px;
-  pointer-events: none;
+  background: #f8f8f6;
 }
 
 .ka-themes-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  position: relative;
-  z-index: 1;
+  gap: 10px;
 }
 
 .ka-theme-card {
-  background: #fff;
-  border: 1px solid rgba(94, 178, 81, 0.15);
-  border-radius: 12px;
-  padding: 1.25rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(94, 178, 81, 0.15);
+  border-radius: 10px;
+  padding: 1.1rem 1rem;
   text-align: left;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  outline: none;
 }
 .ka-theme-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(94, 178, 81, 0.15);
-  border-color: rgba(94, 178, 81, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(94, 178, 81, 0.15);
+  border-color: #5eb251;
 }
-.ka-theme-card.active {
+.ka-theme-card--active {
   background: #5eb251;
   border-color: #5eb251;
 }
-.ka-theme-card.active .ka-theme-num {
-  color: rgba(255, 255, 255, 0.7);
+.ka-theme-card--active .ka-theme-num {
+  color: rgba(255, 255, 255, 0.6);
 }
-.ka-theme-card.active .ka-theme-label-text {
-  color: #fff;
+.ka-theme-card--active .ka-theme-label {
+  color: #ffffff;
 }
 
 .ka-theme-num {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: #5eb251;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-.ka-theme-label-text {
-  font-size: 0.85rem;
+.ka-theme-label {
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #000;
-  line-height: 1.3;
+  color: #1a1a1a;
+  line-height: 1.35;
 }
 
 .ka-formats {
   padding: 80px 0;
-  background: linear-gradient(180deg, rgba(94, 178, 81, 0.06) 0%, rgba(94, 178, 81, 0.12) 100%);
+  background: #ffffff;
 }
 
 .ka-formats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .ka-format-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  border: 1px solid rgba(94, 178, 81, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  border: 1.5px solid rgba(94, 178, 81, 0.12);
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  align-items: flex-start;
+  gap: 1.1rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 .ka-format-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(94, 178, 81, 0.15);
-  border-color: rgba(94, 178, 81, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(94, 178, 81, 0.14);
+  border-color: rgba(94, 178, 81, 0.3);
 }
 
-.ka-format-icon {
-  font-size: 1.8rem;
+.ka-format-icon-wrap {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: rgba(94, 178, 81, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   color: #5eb251;
-  margin-bottom: 0.25rem;
 }
 
 .ka-format-title {
-  font-size: 1rem;
+  font-family: "Comic Neue", cursive;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #000;
-  margin: 0;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem 0;
 }
 
 .ka-format-limit {
-  font-size: 0.8rem;
-  color: #777;
-  font-weight: 400;
-  background: rgba(94, 178, 81, 0.08);
+  font-size: 0.78rem;
+  color: #666666;
+  font-weight: 600;
+  background: rgba(94, 178, 81, 0.1);
   padding: 3px 10px;
   border-radius: 100px;
   display: inline-block;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .ka-who {
   padding: 80px 0;
-  background: #ffffff;
-  position: relative;
-}
-.ka-who::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 2px 2px, rgba(94, 178, 81, 0.03) 1px, transparent 0);
-  background-size: 40px 40px;
-  pointer-events: none;
+  background: #f8f8f6;
 }
 
 .ka-who-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  position: relative;
-  z-index: 1;
+  gap: 2rem;
+}
+
+.ka-who-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1.5px solid rgba(94, 178, 81, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ka-who-box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.ka-who-box-header i {
+  font-size: 1.4rem;
+  color: #5eb251;
+}
+.ka-who-box-header .ka-section-title {
+  margin: 0;
 }
 
 .ka-req-list {
@@ -3491,18 +3643,18 @@ form {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: #555;
   font-size: 0.95rem;
+  color: #555;
   line-height: 1.6;
 }
 .ka-req-list li i {
   color: #5eb251;
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .ka-req-list li strong {
-  color: #000;
+  color: #1a1a1a;
 }
 
 .ka-guide-list {
@@ -3511,35 +3663,43 @@ form {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 .ka-guide-list li {
   display: flex;
   align-items: flex-start;
   gap: 0.9rem;
-  color: #555;
   font-size: 0.9rem;
+  color: #555;
   line-height: 1.6;
 }
 .ka-guide-list li span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 24px;
   height: 24px;
   min-width: 24px;
   background: #5eb251;
-  color: #fff;
-  font-size: 0.75rem;
+  color: #ffffff;
+  font-size: 0.72rem;
   font-weight: 700;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   margin-top: 1px;
 }
 
 .ka-timeline {
   padding: 80px 0;
-  background: linear-gradient(180deg, rgba(94, 178, 81, 0.06) 0%, rgba(94, 178, 81, 0.12) 100%);
+  background: linear-gradient(180deg, rgba(94, 178, 81, 0.08) 0%, rgba(94, 178, 81, 0.14) 100%);
+}
+
+.ka-timeline .ka-section-title {
+  color: #1a1a1a;
+}
+
+.ka-timeline .ka-section-sub {
+  color: #666666;
 }
 
 .ka-timeline-track {
@@ -3549,24 +3709,31 @@ form {
   position: relative;
   margin-top: 3rem;
 }
-.ka-timeline-track::before {
-  content: "";
-  position: absolute;
-  top: 27px;
-  left: 12.5%;
-  right: 12.5%;
-  height: 2px;
-  background: linear-gradient(90deg, #5eb251, #f15a24);
-  z-index: 0;
-}
 
-.ka-timeline-step {
+.ka-tl-step {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 0.75rem;
   position: relative;
+}
+
+.ka-tl-connector {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  z-index: 0;
+}
+.ka-tl-connector .ka-tl-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #5eb251, rgba(94, 178, 81, 0.3));
 }
 
 .ka-tl-icon {
@@ -3574,140 +3741,173 @@ form {
   height: 54px;
   border-radius: 50%;
   background: #5eb251;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 15px rgba(94, 178, 81, 0.3);
+  box-shadow: 0 0 0 6px rgba(94, 178, 81, 0.15), 0 4px 16px rgba(94, 178, 81, 0.3);
 }
 
 .ka-tl-phase {
+  font-family: "Comic Neue", cursive;
   font-weight: 700;
-  color: #000;
+  color: #1a1a1a;
   font-size: 0.9rem;
   margin: 0;
 }
 
 .ka-tl-date {
   font-size: 0.8rem;
-  color: #777;
+  color: #5eb251;
+  font-weight: 600;
   margin: 0;
 }
 
 .ka-benefits {
   padding: 80px 0;
   background: #ffffff;
-  position: relative;
-}
-.ka-benefits::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 2px 2px, rgba(94, 178, 81, 0.03) 1px, transparent 0);
-  background-size: 40px 40px;
-  pointer-events: none;
 }
 
 .ka-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 1rem;
-  position: relative;
-  z-index: 1;
+  gap: 20px;
 }
 
 .ka-benefit-card {
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  background: #fff;
-  border: 1px solid rgba(94, 178, 81, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background: #ffffff;
+  border: 1.5px solid rgba(94, 178, 81, 0.12);
+  transition: all 0.25s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 .ka-benefit-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(94, 178, 81, 0.15);
-  border-color: rgba(94, 178, 81, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(94, 178, 81, 0.14);
+  border-color: rgba(94, 178, 81, 0.3);
 }
 .ka-benefit-card h4 {
+  font-family: "Comic Neue", cursive;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #000;
+  color: #1a1a1a;
   margin: 0;
 }
 .ka-benefit-card p {
   font-size: 0.9rem;
-  color: #666;
-  line-height: 1.7;
+  color: #666666;
+  line-height: 1.75;
   margin: 0;
 }
 
-.ka-benefit-icon {
-  font-size: 2rem;
+.ka-benefit-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(94, 178, 81, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
   color: #5eb251;
+  margin-bottom: 0.25rem;
 }
 
 .ka-cta {
-  background: linear-gradient(180deg, rgba(94, 178, 81, 0.12) 0%, rgba(94, 178, 81, 0.18) 50%, rgba(94, 178, 81, 0.1) 100%);
-  padding: 80px 0;
+  background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+  padding: 90px 0;
   position: relative;
+  overflow: hidden;
+}
+.ka-cta::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 178, 81, 0.25) 0%, transparent 65%);
+  pointer-events: none;
 }
 .ka-cta::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, rgb(255, 255, 255) 100%);
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 65%);
+  pointer-events: none;
 }
 
-.ka-cta-box {
+.ka-cta-inner {
   text-align: center;
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 600px;
   margin: 0 auto;
 }
-.ka-cta-box h2 {
+.ka-cta-inner h2 {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 700;
-  color: #000;
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  font-weight: 900;
+  color: #ffffff;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
-.ka-cta-box > p {
-  color: #555;
+.ka-cta-inner > p {
   font-size: 1rem;
-  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.25rem;
   line-height: 1.7;
 }
 
-.ka-cta-pattern {
-  display: none;
+.ka-cta-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 5px 16px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
 .ka-cta-enquiry {
-  margin-top: 1.5rem !important;
-  font-size: 0.85rem !important;
-  color: #888 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.ka-cta-enquiry span {
+  color: rgba(255, 255, 255, 0.45);
 }
 .ka-cta-enquiry a {
-  color: #5eb251;
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.2s;
 }
 .ka-cta-enquiry a:hover {
-  text-decoration: underline;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -3718,21 +3918,27 @@ form {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
-  .ka-timeline-track::before {
+  .ka-timeline-track .ka-tl-connector {
     display: none;
+  }
+  .ka-stat {
+    padding: 1.5rem 2rem;
   }
 }
 @media (max-width: 768px) {
-  .ka-hero-content {
+  .ka-hero-grid {
     grid-template-columns: 1fr;
+    gap: 0;
   }
   .ka-hero-cover {
     display: none;
   }
+  .ka-hero {
+    padding: 60px 0 50px;
+  }
   .ka-why-grid,
   .ka-who-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
   }
   .ka-formats-grid,
   .ka-benefits-grid {
@@ -3740,6 +3946,15 @@ form {
   }
   .ka-themes-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .ka-stat-divider {
+    display: none;
+  }
+  .ka-stats-grid {
+    gap: 0;
+  }
+  .ka-stat {
+    padding: 1.25rem 1.5rem;
   }
 }
 @media (max-width: 576px) {
@@ -3750,8 +3965,11 @@ form {
   .ka-timeline-track {
     grid-template-columns: 1fr;
   }
-  .ka-themes-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .ka-who-grid {
+    grid-template-columns: 1fr;
+  }
+  .ka-hero-title {
+    font-size: 2.4rem;
   }
 }
 .footer-main {
