@@ -1,32 +1,32 @@
 import { Link, NavLink } from "react-router-dom";
 import jolevilogo from "../../assets/website/icons/logo/jolevilogo.png";
 
-export const NewNavvbar = () => {
-  const navActive = ({ isActive }) => {
-    return {
-      color: isActive ? "#ff0000" : "#000000",
-    };
-  };
-  return (
-    <nav>
-      <NavLink style={navActive} to="/about">
-        About
-      </NavLink>
-      <NavLink style={navActive} to="/services">
-        Services
-      </NavLink>
-      <NavLink style={navActive} to="/cards">
-        Cards
-      </NavLink>
-      <NavLink style={navActive} to="/contact">
-        Contact
-      </NavLink>
-      <NavLink style={navActive} to="/blog">
-        Blog
-      </NavLink>
-    </nav>
-  );
-};
+// export const NewNavvbar = () => {
+//   const navActive = ({ isActive }) => {
+//     return {
+//       color: isActive ? "#ff0000" : "#000000",
+//     };
+//   };
+//   return (
+//     <nav>
+//       <NavLink style={navActive} to="/about">
+//         About
+//       </NavLink>
+//       <NavLink style={navActive} to="/services">
+//         Services
+//       </NavLink>
+//       <NavLink style={navActive} to="/cards">
+//         Cards
+//       </NavLink>
+//       <NavLink style={navActive} to="/contact">
+//         Contact
+//       </NavLink>
+//       <NavLink style={navActive} to="/blog">
+//         Blog
+//       </NavLink>
+//     </nav>
+//   );
+// };
 export const NewNavbar = () => {
   const navActive = ({ isActive }) => {
     return {
@@ -216,85 +216,85 @@ export const NewNavbar = () => {
   );
 };
 
-export const NewNavbarr = () => {
-  return (
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container-fluid">
-        <Link to="/" className="navbar-brand ms-lg-5">
-          {" "}
-          <img
-            src={jolevilogo}
-            className="img-fluid"
-            alt="jolevi"
-            width="120"
-            height="124"
-          />
-        </Link>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <Link to="/" className="text-decoration-none text-black my-auto">
-              {" "}
-              <li class="nav-item mx-2">
-                {/* <a class="nav-link active" aria-current="page" href="#"> */}
-                Home
-                {/* </a> */}
-              </li>
-            </Link>
-            <Link
-              to="/about"
-              className="text-decoration-none text-black my-auto"
-            >
-              <li class="nav-item mx-2">
-                {/* <a class="nav-link" href="#"> */}
-                About
-                {/* </a> */}
-              </li>
-            </Link>
-            <Link
-              to="/services"
-              className="text-decoration-none text-black my-auto"
-            >
-              <li class="nav-item mx-2">Services</li>
-            </Link>
-            <Link to="/" className="text-decoration-none text-black my-auto">
-              {" "}
-              <li class="nav-item mx-2">Marketplace</li>
-            </Link>
+// export const NewNavbarr = () => {
+//   return (
+//     <nav class="navbar navbar-expand-lg bg-white">
+//       <div class="container-fluid">
+//         <Link to="/" className="navbar-brand ms-lg-5">
+//           {" "}
+//           <img
+//             src={jolevilogo}
+//             className="img-fluid"
+//             alt="jolevi"
+//             width="120"
+//             height="124"
+//           />
+//         </Link>
+//         <button
+//           class="navbar-toggler"
+//           type="button"
+//           data-bs-toggle="collapse"
+//           data-bs-target="#navbarNav"
+//           aria-controls="navbarNav"
+//           aria-expanded="false"
+//           aria-label="Toggle navigation"
+//         >
+//           <span class="navbar-toggler-icon"></span>
+//         </button>
+//         <div
+//           class="collapse navbar-collapse justify-content-center"
+//           id="navbarNav"
+//         >
+//           <ul class="navbar-nav">
+//             <Link to="/" className="text-decoration-none text-black my-auto">
+//               {" "}
+//               <li class="nav-item mx-2">
+//                 {/* <a class="nav-link active" aria-current="page" href="#"> */}
+//                 Home
+//                 {/* </a> */}
+//               </li>
+//             </Link>
+//             <Link
+//               to="/about"
+//               className="text-decoration-none text-black my-auto"
+//             >
+//               <li class="nav-item mx-2">
+//                 {/* <a class="nav-link" href="#"> */}
+//                 About
+//                 {/* </a> */}
+//               </li>
+//             </Link>
+//             <Link
+//               to="/services"
+//               className="text-decoration-none text-black my-auto"
+//             >
+//               <li class="nav-item mx-2">Services</li>
+//             </Link>
+//             <Link to="/" className="text-decoration-none text-black my-auto">
+//               {" "}
+//               <li class="nav-item mx-2">Marketplace</li>
+//             </Link>
 
-            <Link
-              to="/blog"
-              className="text-decoration-none text-black my-auto"
-            >
-              {" "}
-              <li class="nav-item mx-2">Blog</li>
-            </Link>
-            <Link
-              to="/contact"
-              className="text-decoration-none text-black my-auto"
-            >
-              {" "}
-              <li class="nav-item mx-2">Contact</li>
-            </Link>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-};
+//             <Link
+//               to="/blog"
+//               className="text-decoration-none text-black my-auto"
+//             >
+//               {" "}
+//               <li class="nav-item mx-2">Blog</li>
+//             </Link>
+//             <Link
+//               to="/contact"
+//               className="text-decoration-none text-black my-auto"
+//             >
+//               {" "}
+//               <li class="nav-item mx-2">Contact</li>
+//             </Link>
+//           </ul>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
