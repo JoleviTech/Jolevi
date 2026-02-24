@@ -27,7 +27,7 @@ import titi_ekundayo from "../../../assets/website/images/books/WMEDSFL_contribu
 import mosunmola_olagunju from "../../../assets/website/images/books/WMEDSFL_contributors/mosunmola_olagunju.jpg";
 import oluwafunke_folami from "../../../assets/website/images/books/WMEDSFL_contributors/oluwafunke_folami.png";
 import daniel_c from "../../../assets/website/images/books/WMEDSFL_contributors/daniel_c.png";
-import { useLocation } from "react-router";
+
 
 const AnthologyLagos = () => {
   return (

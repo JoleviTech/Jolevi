@@ -81,7 +81,7 @@ export const NewNavbar = () => {
         </a>
 
         {/* Desktop links */}
-        <ul className="navbar-links" role="list">
+        <ul className="navbar-links">
           {NAV_ITEMS.map((item) =>
             item.dropdown ? (
               <li key={item.label} className="nav-dropdown">
