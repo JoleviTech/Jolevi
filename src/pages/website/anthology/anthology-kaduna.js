@@ -69,8 +69,7 @@ export const AnthologyKaduna = () => {
                 </span>
                 <h3 className="ka-hero-title">
                   Wetin My Eyes<br />
-                  Don See For<br />
-                  <span className="ka-title-accent">Kaduna</span>
+                  Don See For <span className="ka-title-accent">Kaduna</span>
                 </h3>
                 <p className="ka-hero-tagline">One City. Countless Stories.</p>
                 <p className="ka-hero-body">
