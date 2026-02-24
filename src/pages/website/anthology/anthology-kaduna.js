@@ -70,7 +70,7 @@ export const AnthologyKaduna = () => {
                 <h3 className="ka-hero-title">
                   Wetin My Eyes<br />
                   Don See For<br />
-                  <span className="ka-title-accent">This Kaduna</span>
+                  <span className="ka-title-accent">Kaduna</span>
                 </h3>
                 <p className="ka-hero-tagline">One City. Countless Stories.</p>
                 <p className="ka-hero-body">
