@@ -28,7 +28,6 @@ import mosunmola_olagunju from "../../../assets/website/images/books/WMEDSFL_con
 import oluwafunke_folami from "../../../assets/website/images/books/WMEDSFL_contributors/oluwafunke_folami.png";
 import daniel_c from "../../../assets/website/images/books/WMEDSFL_contributors/daniel_c.png";
 
-
 const AnthologyLagos = () => {
   return (
     <>
@@ -40,119 +39,83 @@ const AnthologyLagos = () => {
   );
 };
 
-// // ADD THE VIRTUAL LAUNCH MODAL COMPONENT HERE (BEFORE AnthologyPage)
-// export const VirtualLaunchModal = () => {
-//   const [showModal, setShowModal] = React.useState(false);
-//   const [showBanner, setShowBanner] = React.useState(false);
-//   const location = useLocation(); // Import from react-router-dom
+const ReviewsSection = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: "Samuel Afolayan",
+      book: "Wetin My Eyes Don See For Lagos",
+      rating: 5,
+      review:
+        "Wetin My Eyes Don See for Lagos is full of amazing stories, expressed in different styles. It also captures interesting and important places of the city. It's an absolute must-read!",
+    },
+  ];
 
-//   React.useEffect(() => {
-//     // Reset and show modal on route change
-//     setShowModal(false);
-//     setShowBanner(false);
+  const renderStars = (rating) => {
+    return [...Array(5)].map((_, index) => (
+      <i
+        key={index}
+        className={`bi bi-star${index < rating ? "-fill" : ""}`}
+        style={{ color: "#fbb03b" }}
+      ></i>
+    ));
+  };
 
-//     // Always show modal on page load after 1 second delay
-//     const timer = setTimeout(() => {
-//       setShowModal(true);
-//     }, 1000);
+  return (
+    <section className="review-card-bg">
+      <div className="container">
+        <div className="text-center mb-5">
+          <h3 className="text-center">
+            <b>WHAT READERS SAY</b>
+          </h3>
+          <p className="text-muted" style={{ fontSize: "1.1rem" }}>
+            Real reviews from real readers
+          </p>
+        </div>
 
-//     return () => clearTimeout(timer);
-//   }, [location.pathname]); // Add dependency on pathname
+        <div className="row g-4 mb-5 justify-content-center">
+          {reviews.map((review) => (
+            <div key={review.id} className="col-lg-4 col-md-6">
+              <div className="card review-card h-100 border-0">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div
+                      className="reviewer-avatar rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        color: "#fff",
+                      }}
+                    >
+                      {review.name.charAt(0)}
+                    </div>
+                    <div className="flex-grow-1">
+                      <h6 className="mb-0">{review.name}</h6>
+                    </div>
+                  </div>
 
-//   const handleCloseModal = () => {
-//     setShowModal(false);
-//     setShowBanner(true);
-//     // Removed sessionStorage - modal will show again on next page load
-//   };
+                  <div className="mb-2">{renderStars(review.rating)}</div>
 
-//   const handleCloseBanner = () => {
-//     setShowBanner(false);
-//   };
+                  <p className="text-muted small mb-3 fst-italic">
+                    {review.book}
+                  </p>
 
-//   return (
-//     <>
-//       {/* Modal */}
-//       {showModal && (
-//         <div className="launch-modal-overlay" onClick={handleCloseModal}>
-//           <div className="launch-modal" onClick={(e) => e.stopPropagation()}>
-//             <button className="launch-modal-close" onClick={handleCloseModal}>
-//               ×
-//             </button>
-//             <div className="launch-modal-content">
-//               <div className="launch-badge">LIVE EVENT</div>
-//               <h3 className="launch-title"> Join the Virtual Book Launch!</h3>
-
-//               <div className="launch-features">
-//                 <div className="launch-date m-0">
-                
-//                   <span>1st of February, 2026 • 5:00 PM WAT</span>
-//                 </div>
-                
-//               </div>
-
-//               <a
-//                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
-//                 className="btn launch-register-btn mb-3"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 Register Now
-//               </a>
-//               <p className="launch-description">
-//                 <span className="highlight">
-//                   "Wetin My Eyes Don See For Lagos"
-//                 </span>{" "}
-//                 — A collection of art, poetry, short stories, and photographs
-//                 that capture the essence, energy, and soul of Lagos through the
-//                 eyes of 22 talented creatives.
-//               </p>
-//               <p className="launch-description">
-//                 <span className="highlight">"Thread of a Mind"</span> is a
-//                 quiet honest exploration of the small moments that shapes who we
-//                 become
-//               </p>
-
-//               <p className="launch-note">
-//                 Celebrate two remarkable collections with live readings,
-//                 contributor insights, and exclusive Q&A
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-
-//       {/* Sticky Banner */}
-//       {showBanner && (
-//         <div className="launch-banner">
-//           <div className="launch-banner-content">
-//             <div className="banner-left">
-//               <span className="banner-badge">LIVE EVENT</span>
-//               <span className="banner-text">
-//                 🎉 Virtual Book Launch • <strong>1st of February, 2026 • 5:00 PM WAT</strong>
-//               </span>
-//             </div>
-//             <div className="banner-right">
-//               <a
-//                 href="https://forms.gle/PfNaxtMJ8MCNCh178"
-//                 className="banner-register-btn"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 Register Now
-//               </a>
-//               <button className="banner-close" onClick={handleCloseBanner}>
-//                 ×
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
+                  <p className="card-text" style={{ fontSize: "0.95rem" }}>
+                    "{review.review}"
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const AnthologyPage = () => {
-  // const reviewFormLink = "https://forms.google.com/your-review-form"; // Replace with your actual Google Form link
   const [selectedContributor, setSelectedContributor] = React.useState(null);
 
   // Function to format bio with paragraph breaks
@@ -333,6 +296,10 @@ const AnthologyPage = () => {
           <div className="row align-items-center g-5">
             <div className="col-lg-8">
               <div className="anthology-hero-content">
+                <span className="lagos-eyebrow">
+                  <span className="lagos-eyebrow-dot"></span>
+                  Jolevi Anthology · Lagos Edition
+                </span>
                 <h2 className="anthology-title mb-4">
                   Wetin My Eyes Don See For Lagos
                 </h2>
@@ -360,7 +327,7 @@ const AnthologyPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                     Buy Book
+                    Buy Book
                   </a>
                 </div>
               </div>
@@ -492,10 +459,11 @@ const AnthologyPage = () => {
       </section>
 
       {/* Review Section */}
+      <ReviewsSection />
 
       <section className="anthology-final-cta">
         <div className="container text-center">
-          <h3 className="final-cta-title">Share Your Thoughts</h3>
+          <h3 className="final-cta-title">SHARE YOUR THOUGHTS</h3>
           <p className="final-cta-text mb-4">
             {" "}
             Have you read "Wetin My Eyes Don See For Lagos"? We'd love to hear

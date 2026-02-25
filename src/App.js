@@ -1,6 +1,5 @@
-import * as React from "react";
-// import { Component } from "react";
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { PrivacyPolicy } from "./pages/website/privacyPolicy";
 import LandingPage from "./pages/website/newHome";
 import Services from "./pages/website/services";
@@ -29,12 +28,17 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/authors" element={<Authors />} />
+        <Route path="/authors/:authorId" element={<Authors />} />
         <Route path="/cards" element={<InspoPage />} />
         <Route path="/books" element={<Books />} />
-<Route path="/pre-order" element={<Navigate to="/buy-book" replace />} />
-        <Route path="/anthology-lagos" element={<AnthologyLagos/>} />
-        <Route path="/anthology-kaduna" element={<AnthologyKaduna/>} />
-        <Route path="/events" element={<EventsPage/>} />
+        <Route
+          path="/pre-order"
+          element={<Navigate to="/buy-book" replace />}
+        />
+        <Route path="/anthology-lagos" element={<AnthologyLagos />} />
+        <Route path="/anthology-kaduna" element={<AnthologyKaduna />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/:eventId" element={<EventsPage />} />
       </Routes>
     </BrowserRouter>
   );

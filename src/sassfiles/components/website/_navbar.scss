@@ -210,6 +210,15 @@ $blue: #0087cb;
   }
 }
 
+
+.nav-dropdown-btn.active {
+  color: $terbtncolor;
+  font-weight: 700;
+    &::before { opacity: 1; } 
+
+}
+
+
 // ── Chevron icon ──────────────────────────────────────────
 .nav-chevron {
   width: 13px;
@@ -378,6 +387,12 @@ $blue: #0087cb;
   &.active {
     color: $terbtncolor;
   }
+}
+
+.mobile-nav-link.active {
+  color: $terbtncolor;
+  font-weight: 700;
+   &::before { opacity: 1; }
 }
 
 .mobile-nav-sub {
