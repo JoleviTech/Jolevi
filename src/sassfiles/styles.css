@@ -3176,7 +3176,7 @@ form {
 }
 .ka-hero-title {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(2.6rem, 5.5vw, 3.5rem);
+  font-size: clamp(2rem, 4.5vw, 2.5rem);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.05;
@@ -3218,7 +3218,7 @@ form {
   background: #5eb251;
   color: #ffffff;
   border: 2px solid #5eb251;
-  padding: 0 1.75rem;
+  padding: 0 1rem;
   height: 50px;
   border-radius: 12px;
   font-family: "Comic Neue", cursive;
@@ -3261,7 +3261,7 @@ form {
 .ka-btn-large {
   height: 56px;
   font-size: 1.1rem;
-  padding: 0 2.5rem;
+  padding: 0 1rem;
   border-radius: 14px;
 }
 
@@ -3518,7 +3518,7 @@ form {
 
 .ka-band-headline {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
   font-weight: 700;
   color: #1a1a1a;
   margin: 0;
