@@ -29,7 +29,7 @@ const FORMATS = [
 const TIMELINE = [
   { phase: "Entry Opens",               date: "March 1, 2026",   icon: "bi-pencil-square" },
   { phase: "Entries Close",             date: "May 31, 2026",    icon: "bi-hourglass-bottom" },
-  { phase: "Shortlist Announced",       date: "July 30, 2026",   icon: "bi-list-check"    },
+  { phase: "Shortlist Announcement",       date: "July 30, 2026",   icon: "bi-list-check"    },
   { phase: "Pre-Order Opens",           date: "December 1, 2026",icon: "bi-bag-heart"     },
   { phase: "Book Launch",               date: "January 2027",    icon: "bi-stars"         },
 ];
