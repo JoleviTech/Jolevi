@@ -22,7 +22,7 @@ const FORMATS = [
   { icon: "bi-person-lines-fill", label: "Creative Nonfiction",              limit: "Max. 3,000 words"    },
   { icon: "bi-camera",            label: "Photography / Drawing / Cartoons", limit: "Visual submissions"  },
   { icon: "bi-file-text",         label: "Essays",                           limit: "Max. 1,500 words"    },
-  { icon: "bi-pencil",           label: "Poetry",                           limit: "Max. 700 words"      },
+  { icon: "bi-pencil",            label: "Poetry",                           limit: "Max. 700 words"      },
   { icon: "bi-newspaper",         label: "Articles",                         limit: "Max. 1,500 words"    },
 ];
 
@@ -74,7 +74,6 @@ export const AnthologyKaduna = () => {
                   Wetin My Eyes<br />
                   Don See For <span className="ka-title-accent">Kaduna</span>
                 </h3>
-          
                 <p className="ka-hero-body">
                   Words carry power. A passage can capture the soul of a people, and a poem
                   can reveal the beauty of a land. It is time to unveil the beauty of Kaduna, to honor the rich culture of our ancient city and tell its story through the
@@ -82,7 +81,7 @@ export const AnthologyKaduna = () => {
                 </p>
                 <div className="ka-hero-actions">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfl3E4BbVPhATC6A27aUN6MN4zD_qRJQ_WbM1P1H-ymrocIww/viewform?usp=send_form"
+                    href="https://forms.gle/VANuwM2bug3wvjGU8"
                     target="_blank"
                     rel="noreferrer"
                     className="ka-btn-primary"
@@ -139,7 +138,7 @@ export const AnthologyKaduna = () => {
                   capture that complexity: the laughter, the struggle, the beauty, and everything in between.
                 </p>
                 <p>
-                  We are looking for <strong>originality, relatability and creativity, </strong>
+                  We are looking for <strong>originality, relatability and creativity </strong>
                   pieces that depict the character, uniqueness, idiosyncrasies, nuances and the beauty
                   of Kaduna, Nigeria. Fundamentally, we are looking for <strong>memorable and impactful pieces</strong>.
                   You can approach the theme from any angle of your choosing.
@@ -154,7 +153,7 @@ export const AnthologyKaduna = () => {
           <div className="ka-container">
             <p className="ka-band-label">Central Theme</p>
             <h2 className="ka-band-headline">
-              "Wetin My Eye Don See For This Kaduna"
+              "Wetin My Eye Don See For Kaduna"
             </h2>
           </div>
         </section>
@@ -214,15 +213,15 @@ export const AnthologyKaduna = () => {
                 <ul className="ka-req-list">
                   <li>
                     <i className="bi bi-check-circle-fill"></i>
-                    <strong>18 years and above</strong>
+                    <span className="ka-req-text"><strong>18 years and above</strong></span>
                   </li>
                   <li>
                     <i className="bi bi-check-circle-fill"></i>
-                    Must have lived in <strong>Kaduna, Nigeria</strong> for at least two years
+                    <span className="ka-req-text">Must have lived in <strong>Kaduna, Nigeria</strong> for at least two years</span>
                   </li>
                   <li>
                     <i className="bi bi-check-circle-fill"></i>
-                    Must be of <strong>African descent</strong>
+                    <span className="ka-req-text">Must be of <strong>African descent</strong></span>
                   </li>
                 </ul>
               </div>
@@ -298,7 +297,7 @@ export const AnthologyKaduna = () => {
               <h2>Ready to Share Your<br />Kaduna Story?</h2>
               <p>Your story matters. Submit your entry and become part of something historic.</p>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfl3E4BbVPhATC6A27aUN6MN4zD_qRJQ_WbM1P1H-ymrocIww/viewform?usp=send_form"
+                href="https://forms.gle/VANuwM2bug3wvjGU8"
                 target="_blank"
                 rel="noreferrer"
                 className="ka-btn-primary ka-btn-large"
