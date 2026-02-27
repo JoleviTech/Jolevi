@@ -4013,6 +4013,207 @@ form {
     font-size: 2.4rem;
   }
 }
+.events-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 560px;
+  overflow: hidden;
+}
+.events-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  transform: scale(1.04);
+  animation: heroZoom 14s ease-out forwards;
+  will-change: transform;
+}
+.events-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(8, 28, 6, 0.82) 68%, rgba(8, 28, 6, 0.98) 100%);
+}
+.events-hero__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-bottom: 5rem;
+  animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.15s;
+}
+.events-hero__eyebrow {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.events-hero__title {
+  font-size: clamp(3.2rem, 7.5vw, 6.5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.95;
+  margin-bottom: 0.8rem;
+  letter-spacing: -2px;
+}
+.events-hero__sub {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+}
+.events-hero__accent {
+  color: #8ee07e;
+  font-style: italic;
+}
+.events-hero__fade-bottom {
+  display: none;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(45deg) translate(3px, 3px);
+    opacity: 1;
+  }
+}
+.events-social-btn {
+  background: transparent;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  transition: background 0.18s ease, opacity 0.18s ease;
+}
+.events-social-btn:hover, .events-social-btn:focus {
+  background: transparent !important;
+  opacity: 0.75;
+  box-shadow: none !important;
+}
+
+.events-section-label {
+  display: flex;
+  align-items: center;
+}
+
+.events-label-badge {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+.events-label-badge.upcoming-badge {
+  background: rgba(94, 178, 81, 0.12);
+  color: #5eb251;
+  border: 1px solid rgba(94, 178, 81, 0.3);
+}
+.events-label-badge.past-badge {
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.event-card {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1) !important;
+}
+
+.event-card--upcoming {
+  border-left-width: 5px !important;
+  border-left-style: solid;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-meta-item {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.event-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.event-highlights li {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.9rem;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .events-hero {
+    height: 70vh;
+    min-height: 450px;
+  }
+  .events-hero__content {
+    padding-bottom: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .events-hero {
+    height: 65vh;
+    min-height: 400px;
+  }
+  .events-hero__bg {
+    background-position: 60% 20%;
+  }
+  .events-hero__title {
+    letter-spacing: -1px;
+  }
+  .events-hero__content {
+    padding-bottom: 3.5rem;
+  }
+  .event-card--upcoming {
+    border-left-width: 4px !important;
+  }
+}
 .footer-main {
   background: #ffffff;
   font-family: "Comic Neue", cursive;
@@ -4303,8 +4504,8 @@ form {
 
 .authors-hero {
   position: relative;
-  background: url(/src/assets/website/images/authors/hero.png) center/cover no-repeat;
-  min-height: 75vh;
+  background: url(/src/assets/website/images/authors/_KIC0952.jpg) center/cover no-repeat;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }

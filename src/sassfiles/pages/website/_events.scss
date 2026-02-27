@@ -1,9 +1,239 @@
+// // ─────────────────────────────────────────────────────────────────────────────
+// // Events Page Styles
+// // Add this to your existing events/buyBook SCSS file, or import separately.
+// // ─────────────────────────────────────────────────────────────────────────────
+
+// // ── Section Labels ──────────────────────────────────────────────────────────
+// .events-section-label {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .events-label-badge {
+//   font-family: "Comic Neue", cursive;
+//   font-weight: 700;
+//   font-size: 0.85rem;
+//   text-transform: uppercase;
+//   letter-spacing: 2px;
+//   padding: 6px 16px;
+//   border-radius: 20px;
+
+//   &.upcoming-badge {
+//     background: rgba(94, 178, 81, 0.12);
+//     color: #5eb251;
+//     border: 1px solid rgba(94, 178, 81, 0.3);
+//   }
+
+//   &.past-badge {
+//     background: rgba(0, 0, 0, 0.05);
+//     color: #666;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
+//   }
+// }
+
+// // ── Event Cards (shared) ─────────────────────────────────────────────────────
+// .event-card {
+//   border-radius: 10px;
+//   background: #fff;
+//   border: 1px solid rgba(0, 0, 0, 0.07);
+//   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+//   &:hover {
+//     transform: translateY(-3px);
+//     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1) !important;
+//   }
+
+// //   .event-card-body {
+// //     // inherits padding from inline styles
+// //   }
+// }
+
+// // ── Upcoming Event Card ──────────────────────────────────────────────────────
+// .event-card--upcoming {
+//   border-left-width: 5px !important;
+//   border-left-style: solid;
+// }
+
+// // // ── Past Event Card ──────────────────────────────────────────────────────────
+// // .event-card--past {
+// //   // colour bar applied inline per-event
+// // }
+
+// // ── Event Meta List ──────────────────────────────────────────────────────────
+// .event-meta {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+// }
+
+// .event-meta-item {
+//   font-family: "Comic Neue", cursive;
+//   font-size: 0.9rem;
+//   color: #555;
+// }
+
+// // ── Highlights List ──────────────────────────────────────────────────────────
+// .event-highlights {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+
+//   li {
+//     font-family: "Comic Neue", cursive;
+//     font-size: 0.9rem;
+//     color: #444;
+//     display: flex;
+//     align-items: flex-start;
+//   }
+// }
+
+// // // ── Detail Page Header ───────────────────────────────────────────────────────
+// // .event-detail-header {
+// //   // background + border applied inline per-event
+// // }
+
+// // ── Responsive tweaks ────────────────────────────────────────────────────────
+// @media (max-width: 768px) {
+//   .event-card--upcoming {
+//     border-left-width: 4px !important;
+//   }
+// }
+
 // ─────────────────────────────────────────────────────────────────────────────
-// Events Page Styles
-// Add this to your existing events/buyBook SCSS file, or import separately.
+// Events Page Styles  — full-bleed image hero, fixed layout
 // ─────────────────────────────────────────────────────────────────────────────
 
-// ── Section Labels ──────────────────────────────────────────────────────────
+// ── HERO ─────────────────────────────────────────────────────────────────────
+// Strategy: use position:relative with a tall min-height.
+// The __content is absolutely positioned to the bottom-left.
+// This avoids any flex height-collapse issues with Bootstrap containers.
+.events-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 560px;
+  overflow: hidden;
+
+  // ── background photo ──
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    transform: scale(1.04);
+    animation: heroZoom 14s ease-out forwards;
+    will-change: transform;
+  }
+
+  // ── dark + green gradient overlay ──
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.10) 0%,
+      rgba(0, 0, 0, 0.15) 30%,
+      rgba(8, 28, 6, 0.82) 68%,
+      rgba(8, 28, 6, 0.98) 100%
+    );
+  }
+
+  // ── text content — absolutely pinned to bottom-left ──
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding-bottom: 5rem;   // space above page fold
+    animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0.15s;
+  }
+
+  &__eyebrow {
+    font-family: "Comic Neue", cursive;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: clamp(3.2rem, 7.5vw, 6.5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    margin-bottom: 0.8rem;
+    letter-spacing: -2px;
+  }
+
+  &__sub {
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 0;
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+  }
+
+  &__accent {
+    color: #8ee07e;
+    font-style: italic;
+  }
+
+
+
+  // ── bottom fade — removed, clean edge preferred ──
+  &__fade-bottom {
+    display: none;
+  }
+}
+
+// ── Hero animations ──────────────────────────────────────────────────────────
+@keyframes heroZoom {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1); }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: rotate(45deg) translate(0, 0);  opacity: 0.5; }
+  50%       { transform: rotate(45deg) translate(3px, 3px); opacity: 1; }
+}
+
+// ── No-upcoming social buttons ───────────────────────────────────────────────
+.events-social-btn {
+  background: transparent;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  transition: background 0.18s ease, opacity 0.18s ease;
+
+  &:hover,
+  &:focus {
+    background: transparent !important;
+    opacity: 0.75;
+    // keep the inline color + borderColor, just dim slightly
+    box-shadow: none !important;
+  }
+}
+
+
 .events-section-label {
   display: flex;
   align-items: center;
@@ -42,22 +272,12 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1) !important;
   }
-
-//   .event-card-body {
-//     // inherits padding from inline styles
-//   }
 }
 
-// ── Upcoming Event Card ──────────────────────────────────────────────────────
 .event-card--upcoming {
   border-left-width: 5px !important;
   border-left-style: solid;
 }
-
-// // ── Past Event Card ──────────────────────────────────────────────────────────
-// .event-card--past {
-//   // colour bar applied inline per-event
-// }
 
 // ── Event Meta List ──────────────────────────────────────────────────────────
 .event-meta {
@@ -87,13 +307,36 @@
   }
 }
 
-// // ── Detail Page Header ───────────────────────────────────────────────────────
-// .event-detail-header {
-//   // background + border applied inline per-event
-// }
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 992px) {
+  .events-hero {
+    height: 70vh;
+    min-height: 450px;
 
-// ── Responsive tweaks ────────────────────────────────────────────────────────
+    &__content {
+      padding-bottom: 4rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
+  .events-hero {
+    height: 65vh;
+    min-height: 400px;
+
+    &__bg {
+      background-position: 60% 20%;
+    }
+
+    &__title {
+      letter-spacing: -1px;
+    }
+
+    &__content {
+      padding-bottom: 3.5rem;
+    }
+  }
+
   .event-card--upcoming {
     border-left-width: 4px !important;
   }

@@ -2,52 +2,16 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { NewNavbar } from "../../../components/website/navbar";
 import { Footer } from "../../../components/website/footer";
+import eventsHero from "../../../assets/website/images/books/book launch/_KIC0932.jpg";
 
-// Import your existing gallery helpers for the 2026 book launch.
-// For future events, you can pass per-event static arrays instead.
 import {
   galleryVideos,
   getFeaturedPhotos,
   getPhotosByCategory,
 } from "./gallery";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// EVENTS DATA
-//
-// HOW TO ADD A NEW EVENT:
-//
-// 1. Upcoming event → copy the commented template below, set status:"upcoming",
-//    fill registrationLink, registrationDeadline, venue, capacity, date, time.
-//    Leave photos/videos as empty arrays (gallery appears after the event).
-//
-// 2. Past event → set status:"past", add photos[] and videos[] arrays,
-//    OR pass getFeaturedPhotos / getPhotosByCategory / galleryVideos helpers
-//    if you're using the gallery module.
-//
-// That's it. The page handles the rest automatically.
-// ─────────────────────────────────────────────────────────────────────────────
-const EVENTS = [
-  // ── UPCOMING EVENT TEMPLATE (uncomment + fill to use) ────────────────────
-  // {
-  //   id: "unique-event-id",           // URL-safe identifier
-  //   status: "upcoming",
-  //   title: "Event Title",
-  //   tagline: "Short exciting subtitle",
-  //   date: "Saturday, 14 June 2025",
-  //   time: "10:00 AM – 4:00 PM",
-  //   venue: "The Hub, Victoria Island, Lagos",
-  //   capacity: "50 seats",
-  //   coverColor: "#f15a24",           // accent colour for this event
-  //   registrationLink: "https://forms.google.com/...",
-  //   registrationDeadline: "7 June 2025",
-  //   description: "Describe what attendees can expect...",
-  //   highlights: ["Item 1", "Item 2", "Item 3"],
-  //   // For upcoming events leave photos/videos empty:
-  //   photos: [],
-  //   videos: [],
-  // },
 
-  // ── BOOK LAUNCH 2024 (PAST) ───────────────────────────────────────────────
+const EVENTS = [
   {
     id: "TOAM-&-WMEDSFL-Launch",
     status: "past",
@@ -64,9 +28,6 @@ const EVENTS = [
       "Author signing session",
       "Community celebration",
     ],
-    // Using gallery module helpers — swap for static arrays if you prefer:
-    // photos: [ { id:1, src:"...", alt:"...", category:"events", featured:true }, ... ]
-    // videos: [ { id:1, embedUrl:"...", title:"..." }, ... ]
     getFeaturedPhotos,
     getPhotosByCategory,
     galleryVideos,
@@ -74,13 +35,13 @@ const EVENTS = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PAGE ROOT
-// ─────────────────────────────────────────────────────────────────────────────
 const EventsPage = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
 
-  const selectedEvent = eventId ? EVENTS.find((e) => e.id === eventId) || null : null;
+  const selectedEvent = eventId
+    ? EVENTS.find((e) => e.id === eventId) || null
+    : null;
 
   const handleSelectEvent = (event) => {
     navigate(`/events/${event.id}`);
@@ -92,7 +53,6 @@ const EventsPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
-  // remove the useState for selectedEvent — it's now derived from the URL
   const upcomingEvents = EVENTS.filter((e) => e.status === "upcoming");
   const pastEvents = EVENTS.filter((e) => e.status === "past");
 
@@ -118,23 +78,46 @@ const EventsPage = () => {
     </>
   );
 };
+
 // ─────────────────────────────────────────────────────────────────────────────
-// EVENTS LISTING VIEW  (the main /events page)
+// EVENTS LISTING VIEW
 // ─────────────────────────────────────────────────────────────────────────────
 const EventsListingView = ({ upcomingEvents, pastEvents, onSelectEvent }) => (
   <div className="events-listing-page">
-    {/* Hero */}
-    <section className="hero-section text-center py-5">
-      <div className="container">
-        <h2 className="mb-2">Events</h2>
-        <p style={{ fontSize: "1.3rem" }}>
-          Where <span className="text-primary-green">stories</span> come alive
+
+    {/* ── HERO ─────────────────────────────────────────────────────────────── */}
+    <section className="events-hero">
+
+      {/* Background photo */}
+      <div
+        className="events-hero__bg"
+        style={{ backgroundImage: `url(${eventsHero})` }}
+      />
+
+      {/* Gradient overlay */}
+      <div className="events-hero__overlay" />
+
+      {/*
+        Content is position:absolute pinned to bottom-left.
+        We combine events-hero__content + container so Bootstrap's
+        horizontal padding applies correctly without a nested wrapper.
+      */}
+      <div className="events-hero__content container">
+        <p className="events-hero__eyebrow">Jolevi Books presents</p>
+        <h1 className="events-hero__title">Events</h1>
+        <p className="events-hero__sub">
+          Where <span className="events-hero__accent">stories</span> come alive
         </p>
       </div>
+
+      {/* Bottom fade — pointer-events:none so it doesn't block clicks */}
+      <div className="events-hero__fade-bottom" />
     </section>
 
-    <div className="container py-4">
-      {/* ── Upcoming ── */}
+    {/* ── Main content ─────────────────────────────────────────────────────── */}
+    <div className="container py-5">
+
+      {/* Upcoming */}
       {upcomingEvents.length > 0 && (
         <div className="mb-5">
           <SectionLabel label="● Upcoming" className="upcoming-badge" />
@@ -168,7 +151,7 @@ const EventsListingView = ({ upcomingEvents, pastEvents, onSelectEvent }) => (
               href="https://www.instagram.com/jolevibooks"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-secondary btn-sm"
+              className="btn btn-sm events-social-btn"
               style={{ color: "#E1306C", borderColor: "#E1306C" }}
             >
               <i className="bi bi-instagram me-2"></i>Instagram
@@ -177,7 +160,7 @@ const EventsListingView = ({ upcomingEvents, pastEvents, onSelectEvent }) => (
               href="https://www.youtube.com/@JoleviBooks"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-secondary btn-sm"
+              className="btn btn-sm events-social-btn"
               style={{ color: "#FF0000", borderColor: "#FF0000" }}
             >
               <i className="bi bi-youtube me-2"></i>YouTube
@@ -186,7 +169,7 @@ const EventsListingView = ({ upcomingEvents, pastEvents, onSelectEvent }) => (
         </div>
       )}
 
-      {/* ── Past Events ── */}
+      {/* Past Events */}
       {pastEvents.length > 0 && (
         <div>
           <SectionLabel label="✦ Past Events" className="past-badge" />
@@ -206,7 +189,6 @@ const EventsListingView = ({ upcomingEvents, pastEvents, onSelectEvent }) => (
   </div>
 );
 
-// Small reusable section label
 const SectionLabel = ({ label, className }) => (
   <div className="events-section-label mb-4">
     <span className={`events-label-badge ${className}`}>{label}</span>
@@ -250,10 +232,7 @@ const UpcomingEventCard = ({ event, onSelect }) => (
 
       <h3 className="mb-1">{event.title}</h3>
       {event.tagline && (
-        <p
-          className="fst-italic mb-3"
-          style={{ fontSize: "0.95rem", color: "#888" }}
-        >
+        <p className="fst-italic mb-3" style={{ fontSize: "0.95rem", color: "#888" }}>
           {event.tagline}
         </p>
       )}
@@ -262,28 +241,19 @@ const UpcomingEventCard = ({ event, onSelect }) => (
       <div className="event-meta mb-4">
         {event.time && (
           <div className="event-meta-item">
-            <i
-              className="bi bi-clock me-2"
-              style={{ color: event.coverColor || "#5eb251" }}
-            ></i>
+            <i className="bi bi-clock me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
             {event.time}
           </div>
         )}
         {event.venue && (
           <div className="event-meta-item">
-            <i
-              className="bi bi-geo-alt me-2"
-              style={{ color: event.coverColor || "#5eb251" }}
-            ></i>
+            <i className="bi bi-geo-alt me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
             {event.venue}
           </div>
         )}
         {event.capacity && (
           <div className="event-meta-item">
-            <i
-              className="bi bi-people me-2"
-              style={{ color: event.coverColor || "#5eb251" }}
-            ></i>
+            <i className="bi bi-people me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
             {event.capacity}
           </div>
         )}
@@ -293,10 +263,7 @@ const UpcomingEventCard = ({ event, onSelect }) => (
         <ul className="event-highlights mb-4">
           {event.highlights.map((h, i) => (
             <li key={i}>
-              <i
-                className="bi bi-check-circle-fill me-2"
-                style={{ color: event.coverColor || "#5eb251" }}
-              ></i>
+              <i className="bi bi-check-circle-fill me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
               {h}
             </li>
           ))}
@@ -320,10 +287,7 @@ const UpcomingEventCard = ({ event, onSelect }) => (
       </div>
 
       {event.registrationDeadline && (
-        <p
-          className="mt-2 mb-0"
-          style={{ fontSize: "0.8rem", color: "#e05a24" }}
-        >
+        <p className="mt-2 mb-0" style={{ fontSize: "0.8rem", color: "#e05a24" }}>
           <i className="bi bi-exclamation-circle me-1"></i>
           Registration closes: {event.registrationDeadline}
         </p>
@@ -365,10 +329,7 @@ const PastEventCard = ({ event, onSelect }) => (
       </span>
       <h4 className="mt-1 mb-1">{event.title}</h4>
       {event.tagline && (
-        <p
-          className="fst-italic mb-2"
-          style={{ fontSize: "0.85rem", color: "#888" }}
-        >
+        <p className="fst-italic mb-2" style={{ fontSize: "0.85rem", color: "#888" }}>
           {event.tagline}
         </p>
       )}
@@ -403,9 +364,7 @@ const PastEventCard = ({ event, onSelect }) => (
         </span>
         <span style={{ fontSize: "0.8rem", color: "#bbb" }}>
           {(event.galleryVideos || event.videos || []).length > 0 && (
-            <>
-              <i className="bi bi-play-circle me-1"></i>Videos
-            </>
+            <><i className="bi bi-play-circle me-1"></i>Videos</>
           )}
         </span>
       </div>
@@ -414,14 +373,13 @@ const PastEventCard = ({ event, onSelect }) => (
 );
 
 // ─────────────────────────────────────────────────────────────────────────────
-// EVENT DETAIL VIEW  (drilled into from a card click)
+// EVENT DETAIL VIEW
 // ─────────────────────────────────────────────────────────────────────────────
 const EventDetailView = ({ event, onBack }) => {
   const [activeTab, setActiveTab] = useState("photos");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [featuredIndex, setFeaturedIndex] = useState(0);
 
-  // Resolve media — supports both gallery-module helpers and static arrays
   const featuredPhotos = event.getFeaturedPhotos
     ? event.getFeaturedPhotos()
     : (event.photos || []).filter((p) => p.featured);
@@ -453,7 +411,6 @@ const EventDetailView = ({ event, onBack }) => {
 
   return (
     <div className="event-detail-page">
-      {/* Back button */}
       <div className="container pt-4">
         <button
           className="btn btn-link p-0 mb-3"
@@ -469,7 +426,6 @@ const EventDetailView = ({ event, onBack }) => {
         </button>
       </div>
 
-      {/* Event header */}
       <div
         className="event-detail-header text-center py-5"
         style={{
@@ -496,36 +452,24 @@ const EventDetailView = ({ event, onBack }) => {
           </span>
           <h2 className="mb-2">{event.title}</h2>
           {event.tagline && (
-            <p
-              className="fst-italic"
-              style={{ fontSize: "1.1rem", color: "#888" }}
-            >
+            <p className="fst-italic" style={{ fontSize: "1.1rem", color: "#888" }}>
               {event.tagline}
             </p>
           )}
           <div className="d-flex flex-wrap justify-content-center gap-4 mt-3">
             <span style={{ fontSize: "0.95rem" }}>
-              <i
-                className="bi bi-calendar3 me-2"
-                style={{ color: event.coverColor || "#5eb251" }}
-              ></i>
+              <i className="bi bi-calendar3 me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
               {event.date}
             </span>
             {event.time && (
               <span style={{ fontSize: "0.95rem" }}>
-                <i
-                  className="bi bi-clock me-2"
-                  style={{ color: event.coverColor || "#5eb251" }}
-                ></i>
+                <i className="bi bi-clock me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
                 {event.time}
               </span>
             )}
             {event.venue && (
               <span style={{ fontSize: "0.95rem" }}>
-                <i
-                  className="bi bi-geo-alt me-2"
-                  style={{ color: event.coverColor || "#5eb251" }}
-                ></i>
+                <i className="bi bi-geo-alt me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
                 {event.venue}
               </span>
             )}
@@ -534,7 +478,6 @@ const EventDetailView = ({ event, onBack }) => {
       </div>
 
       <div className="container py-5">
-        {/* About + Highlights */}
         <div className="row g-5 mb-5">
           <div className="col-lg-8">
             <h4 className="mb-3">About this Event</h4>
@@ -555,10 +498,7 @@ const EventDetailView = ({ event, onBack }) => {
                 <ul className="event-highlights">
                   {event.highlights.map((h, i) => (
                     <li key={i} className="mb-2">
-                      <i
-                        className="bi bi-check-circle-fill me-2"
-                        style={{ color: event.coverColor || "#5eb251" }}
-                      ></i>
+                      <i className="bi bi-check-circle-fill me-2" style={{ color: event.coverColor || "#5eb251" }}></i>
                       {h}
                     </li>
                   ))}
@@ -568,15 +508,12 @@ const EventDetailView = ({ event, onBack }) => {
           )}
         </div>
 
-        {/* Registration CTA — upcoming only */}
         {event.status === "upcoming" && event.registrationLink && (
           <div
             className="text-center p-5 mb-5 rounded"
             style={{ background: event.coverColor || "#5eb251" }}
           >
-            <h3 className="mb-2" style={{ color: "#fff" }}>
-              Ready to join us?
-            </h3>
+            <h3 className="mb-2" style={{ color: "#fff" }}>Ready to join us?</h3>
             {event.registrationDeadline && (
               <p className="mb-4" style={{ color: "rgba(255,255,255,0.85)" }}>
                 Registration closes {event.registrationDeadline}
@@ -601,20 +538,13 @@ const EventDetailView = ({ event, onBack }) => {
           </div>
         )}
 
-        {/* Gallery — past events only */}
         {event.status === "past" && (
           <div>
-            <h3 className="text-center mb-2">
-              <b>GALLERY</b>
-            </h3>
-            <p
-              className="text-muted text-center mb-5"
-              style={{ fontSize: "1.05rem" }}
-            >
+            <h3 className="text-center mb-2"><b>GALLERY</b></h3>
+            <p className="text-muted text-center mb-5" style={{ fontSize: "1.05rem" }}>
               Moments from {event.title}
             </p>
 
-            {/* Tab nav */}
             <div className="d-flex justify-content-center mb-5">
               <div className="btn-group gallery-tabs" role="group">
                 <button
@@ -634,7 +564,6 @@ const EventDetailView = ({ event, onBack }) => {
               </div>
             </div>
 
-            {/* Photos */}
             {activeTab === "photos" && (
               <div>
                 {featuredPhotos.length > 0 && (
@@ -654,9 +583,7 @@ const EventDetailView = ({ event, onBack }) => {
                         className="carousel-control carousel-control-prev"
                         onClick={() =>
                           setFeaturedIndex(
-                            (p) =>
-                              (p - 1 + featuredPhotos.length) %
-                              featuredPhotos.length,
+                            (p) => (p - 1 + featuredPhotos.length) % featuredPhotos.length,
                           )
                         }
                         aria-label="Previous"
@@ -666,9 +593,7 @@ const EventDetailView = ({ event, onBack }) => {
                       <button
                         className="carousel-control carousel-control-next"
                         onClick={() =>
-                          setFeaturedIndex(
-                            (p) => (p + 1) % featuredPhotos.length,
-                          )
+                          setFeaturedIndex((p) => (p + 1) % featuredPhotos.length)
                         }
                         aria-label="Next"
                       >
@@ -709,11 +634,7 @@ const EventDetailView = ({ event, onBack }) => {
                       style={{ animationDelay: `${index * 0.05}s` }}
                     >
                       <div className="gallery-card-inner">
-                        <img
-                          src={item.src}
-                          alt={item.alt}
-                          className="gallery-card-image"
-                        />
+                        <img src={item.src} alt={item.alt} className="gallery-card-image" />
                       </div>
                     </div>
                   ))}
@@ -721,7 +642,6 @@ const EventDetailView = ({ event, onBack }) => {
               </div>
             )}
 
-            {/* Videos */}
             {activeTab === "videos" && (
               <div className="video-gallery">
                 {videos.length > 0 && (
@@ -743,13 +663,10 @@ const EventDetailView = ({ event, onBack }) => {
                       <div className="col-lg-4">
                         <div className="featured-video-info">
                           <span className="video-badge mb-3">
-                            <i className="bi bi-play-circle-fill me-2"></i>
-                            Featured Video
+                            <i className="bi bi-play-circle-fill me-2"></i>Featured Video
                           </span>
                           <h3 className="mb-3">{videos[0].title}</h3>
-                          <p className="text-muted mb-4">
-                            An exclusive look at {event.title}.
-                          </p>
+                          <p className="text-muted mb-4">An exclusive look at {event.title}.</p>
                         </div>
                       </div>
                     </div>
@@ -793,8 +710,7 @@ const EventDetailView = ({ event, onBack }) => {
                     <i className="bi bi-youtube video-cta-icon mb-3"></i>
                     <h5 className="mb-3">Want to see more?</h5>
                     <p className="text-muted mb-4">
-                      Subscribe to our YouTube channel for more exclusive
-                      content and events.
+                      Subscribe to our YouTube channel for more exclusive content and events.
                     </p>
                     <a
                       href="https://www.youtube.com/@JoleviBooks"
