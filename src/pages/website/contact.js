@@ -225,7 +225,8 @@ export const Contact = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const [setIsSuccess] = useState(false);
+  // const [setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false); // New state for loading
 
   // Function to handle form submission
