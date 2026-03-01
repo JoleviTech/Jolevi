@@ -362,15 +362,19 @@ export const Contact = () => {
         {/* </div> */}
       </div>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body className="text-center pb-0 mb-0">
-          <img src={successicon} className="img-fluid" width="80" height="80" alt="success" />
-        </Modal.Body>
-        <Modal.Body className="h5 text-center pt-0 mt-0">
-          {modalMessage}
-        </Modal.Body>
-      </Modal>
+    <Modal show={showModal} onHide={() => setShowModal(false)}>
+  <Modal.Header closeButton></Modal.Header>
+  <Modal.Body className="text-center pb-0 mb-0">
+    {isSuccess ? (
+      <img src={successicon} className="img-fluid" width="80" height="80" alt="success" />
+    ) : (
+      <p style={{ fontSize: "40px" }}>❌</p>
+    )}
+  </Modal.Body>
+  <Modal.Body className="h5 text-center pt-0 mt-0">
+    {modalMessage}
+  </Modal.Body>
+</Modal>
 
       <Footer />
     </div>
