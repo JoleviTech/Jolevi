@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NewNavbar } from "../../../components/website/navbar";
 import { Footer } from "../../../components/website/footer";
 
@@ -59,14 +59,6 @@ const BENEFITS = [
 
 export const AnthologyKaduna = () => {
   const [activeTheme, setActiveTheme] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth <= 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   return (
     <>
