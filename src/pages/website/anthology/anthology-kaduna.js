@@ -59,7 +59,7 @@ const BENEFITS = [
 
 export const AnthologyKaduna = () => {
   const [activeTheme, setActiveTheme] = useState(null);
-  const [setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 768);
