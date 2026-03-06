@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { NewNavbar } from "../../../components/website/navbar";
 // import { LandingPageHero } from "../../../components/website/hero";
 // import { WhatWeDoCard } from "../../../components/website/cards/homeCards";
@@ -7,9 +6,7 @@ import { Footer } from "../../../components/website/footer";
 import toam from "../../../assets/website/images/books/TOAM Mockup.png";
 import wmedsfl from "../../../assets/website/images/books/WMEDSFL Mockup.png";
 
-
-// Import gallery data
-import { galleryVideos, getFeaturedPhotos, getPhotosByCategory } from "../events/gallery"; 
+; 
 
 const Books = () => {
   return (
