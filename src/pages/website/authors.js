@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { NewNavbar } from "../../components/website/navbar";
 import { Footer } from "../../components/website/footer";
 import authorTiti1 from "../../assets/website/images/authors/author-titi_1.jpg"
-import authorTiti2 from "../../assets/website/images/authors/author-titi_2.jpg"
+import authorTiti2 from "../../assets/website/images/authors/author-titi_2.jpeg"
 import authorTiti3 from "../../assets/website/images/authors/author-titi_3.jpg"
 
 import BookOne from "../../assets/website/images/authors/TOAM Mockup.png";
@@ -32,8 +32,8 @@ const AUTHORS_DATA = [
 She believes deeply in the creative and transformative power of words and in the idea that every voice, no matter how small, can add light to the vast body of human knowledge. And so she writes, hoping to leave the world a little fuller, a little wiser, and a little more alive.`,
     image: authorTiti1,
     gallery: [
-      { src: authorTiti2, alt: "Titi Ekundayo at a reading event" },
-      { src: authorTiti3, alt: "Titi signing copies of Threads of a Mind" },
+      { src: authorTiti1, alt: "Titi Ekundayo at a reading event" },
+      { src: authorTiti2, alt: "Titi signing copies of Threads of a Mind" },
       { src: authorTiti3, alt: "Titi at the Lagos Book Festival" },
     ],
     accentColor: "#5eb251",
@@ -635,7 +635,7 @@ const AuthorDetailPage = ({ author, onBack }) => (
     {author.testimonials?.length > 0 && (
       <section className="booksBg py-5">
         <div className="container">
-          <h3 className="mb-5"><b>Reviews</b></h3>
+          <h3 className="mb-5"><b>REVIEWS</b></h3>
           <div className="row g-4">
             {author.testimonials.map((t, i) => (
               <div key={i} className="col-lg-4 col-md-6">

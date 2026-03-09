@@ -422,21 +422,21 @@ export const getPhotosByCategory = (category) => {
 // Video data - update with your actual YouTube video IDs
 export const galleryVideos = [
   { 
-    id: 1, 
-    embedUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_1', 
-    title: 'Book Launch Highlights', 
-    thumbnail: '/path/to/video-thumb1.jpg' 
+    id: 1,
+    embedUrl: 'https://www.youtube.com/embed/EGZmLlLkaVw?si=6d21MyV6KVZ8VFC7', 
+    title: 'Snippet from Contributors', 
+    // thumbnail: '/path/to/video-thumb1.jpg' 
   },
   { 
     id: 2, 
-    embedUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_2', 
-    title: 'Author Interviews and Insights', 
-    thumbnail: '/path/to/video-thumb2.jpg' 
+    embedUrl: 'https://www.youtube.com/embed/CEtJ5mMQRR0?si=gu6PHg3dSNY5a1HA', 
+    title: 'Interview with the Arthur: Titilayo', 
+    // thumbnail: '/path/to/video-thumb2.jpg' 
   },
   { 
     id: 3, 
-    embedUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_3', 
-    title: 'Behind the Scenes - Book Signing', 
-    thumbnail: '/path/to/video-thumb3.jpg' 
+    embedUrl: 'https://www.youtube.com/embed/MaGRKEVWZqY?si=05uS7_JT7p6eefCt', 
+    title: 'Interview Highlights: Bamidele Sola', 
+    // thumbnail: '/path/to/video-thumb3.jpg' 
   },
 ];

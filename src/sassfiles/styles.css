@@ -68,118 +68,122 @@ p {
   font-size: 1.3rem;
 }
 
-.AboutPageHeroBgg::before {
-  content: "";
-  position: absolute;
-  background-color: #2e3133;
-  height: 80vh;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-}
-
-.AboutPageHeroBgg {
-  overflow-x: hidden;
-}
-
+/* ── Hero Base ── */
 .AboutPageHeroBg {
-  background: url(/src/assets/website/images/hero/abouthero/aboutheroimage3.jpg);
+  background: url(/src/assets/website/images/hero/abouthero/_KIC0923.jpg);
   background-size: cover;
+  background-position: center;
   position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
   height: 80vh;
   width: 100%;
+  overflow: hidden; /* keeps blur contained */
+  display: flex;
+  align-items: center;
 }
 
-.AboutPageHeroBg h1 {
+/* ── Gradient overlay: dark left (text area), clear right (faces show) ── */
+.AboutPageHeroBgg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(8, 8, 18, 0.88) 0%, rgba(8, 8, 18, 0.72) 35%, rgba(8, 8, 18, 0.2) 58%, rgba(8, 8, 18, 0) 72%), linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 40%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── All content must sit above both layers ── */
+.AboutPageHeroBg .row,
+.AboutPageHeroBg .container-fluid > .row {
   position: relative;
+  z-index: 2;
 }
 
+/* ── Typography ── */
+.AboutPageHeroBg h1,
 .AboutPageHeroBg h2 {
   position: relative;
-}
-
-.AboutPageHeroBg h3 {
-  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 4px 32px rgba(0, 0, 0, 0.4);
 }
 
 .AboutPageHeroBg p {
   position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-.AboutPageHeroBg,
-.WorkWithUsBtn,
-.WorkWithUsBtnn,
-.JoinOurComunityBtn {
+/* Buttons stay above */
+.AboutPageHeroBg .WorkWithUsBtn,
+.AboutPageHeroBg .WorkWithUsBtnn,
+.AboutPageHeroBg .JoinOurComunityBtn {
   position: relative;
+  z-index: 2;
 }
 
-.ServicesPageHeroBgg::before {
-  content: "";
-  position: absolute;
-  background-color: #2e3133;
-  height: 80vh;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-}
-
+/* ══════════════════════════════════════
+   SERVICES PAGE (same pattern)
+══════════════════════════════════════ */
 .ServicesPageHeroBg {
   background: url(/src/assets/website/images/hero/abouthero/serviceshero.jpg);
   background-size: cover;
+  background-position: center;
   position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
   height: 80vh;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-.ServicesPageHeroBg h1 {
+.ServicesPageHeroBg::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.ServicesPageHeroBgg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(10, 10, 20, 0.72) 0%, rgba(10, 10, 20, 0.45) 60%, rgba(10, 10, 20, 0.15) 100%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ServicesPageHeroBg .row {
   position: relative;
+  z-index: 2;
 }
 
-.ServicesPageHeroBg h2 {
-  position: relative;
-}
-
-.ServicesPageHeroBg h3 {
-  position: relative;
-}
-
+.ServicesPageHeroBg h1,
+.ServicesPageHeroBg h2,
+.ServicesPageHeroBg h3,
 .ServicesPageHeroBg p {
   position: relative;
+  z-index: 2;
 }
 
-.ServicesPageHeroBg,
-.WorkWithUsBtn,
-.WorkWithUsBtnn,
-.JoinOurComunityBtn {
-  position: relative;
-}
-
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
 @media only screen and (max-width: 725px) {
-  .AboutPageHeroBgg::before {
-    content: "";
-    height: 70vh;
-  }
-  .AboutPageHeroBg {
-    height: 70vh;
-  }
-  .ServicesPageHeroBgg::before {
-    content: "";
-    height: 70vh;
-  }
+  .AboutPageHeroBg,
   .ServicesPageHeroBg {
     height: 70vh;
   }
