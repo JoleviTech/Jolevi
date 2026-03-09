@@ -3180,7 +3180,7 @@ form {
 }
 .ka-hero-title {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(2rem, 4.5vw, 2.5rem);
+  font-size: clamp(2.6rem, 5.5vw, 3.5rem);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.05;
@@ -3222,7 +3222,7 @@ form {
   background: #5eb251;
   color: #ffffff;
   border: 2px solid #5eb251;
-  padding: 0 1rem;
+  padding: 0 1.75rem;
   height: 50px;
   border-radius: 12px;
   font-family: "Comic Neue", cursive;
@@ -3265,7 +3265,7 @@ form {
 .ka-btn-large {
   height: 56px;
   font-size: 1.1rem;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
   border-radius: 14px;
 }
 
@@ -3369,7 +3369,7 @@ form {
 }
 
 .ka-why {
-  padding: 60px 0;
+  padding: 90px 0;
   background: #ffffff;
 }
 
@@ -3383,7 +3383,7 @@ form {
 .ka-why-quote-box {
   background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -3405,7 +3405,7 @@ form {
   font-size: 6rem;
   color: #5eb251;
   line-height: 0.7;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.25rem;
   opacity: 0.8;
 }
 
@@ -3480,7 +3480,7 @@ form {
 
 .ka-band-headline {
   font-family: "Comic Neue", cursive;
-  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: #1a1a1a;
   margin: 0;
@@ -3492,56 +3492,32 @@ form {
   background: #f8f8f6;
 }
 
-.ka-themes-grid {
-  display: grid;
+.ka-themes-desktop-grid {
+  display: grid !important;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
-.ka-theme-card {
-  background: #ffffff;
-  border: 1.5px solid rgba(94, 178, 81, 0.15);
-  border-radius: 10px;
-  padding: 1.1rem 1rem;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  outline: none;
+@media (max-width: 1024px) {
+  .ka-themes-desktop-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
 }
-.ka-theme-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(94, 178, 81, 0.15);
-  border-color: #5eb251;
-}
-.ka-theme-card--active {
-  background: #5eb251;
-  border-color: #5eb251;
-}
-.ka-theme-card--active .ka-theme-num {
-  color: rgba(255, 255, 255, 0.6);
-}
-.ka-theme-card--active .ka-theme-label {
-  color: #ffffff;
+.ka-themes-mobile-list {
+  display: none !important;
 }
 
-.ka-theme-num {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #5eb251;
-  letter-spacing: 0.06em;
+@media (max-width: 768px) {
+  .ka-themes-desktop-grid {
+    display: none !important;
+  }
+  .ka-themes-mobile-list {
+    display: block !important;
+  }
+  .ka-subthemes .ka-container {
+    padding: 0 0.75rem;
+  }
 }
-
-.ka-theme-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  line-height: 1.35;
-}
-
 .ka-formats {
   padding: 80px 0;
   background: #ffffff;
@@ -3660,11 +3636,6 @@ form {
   color: #1a1a1a;
 }
 
-.ka-req-text {
-  flex: 1;
-  min-width: 0;
-}
-
 .ka-guide-list {
   list-style: none;
   padding: 0;
@@ -3712,7 +3683,7 @@ form {
 
 .ka-timeline-track {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   position: relative;
   margin-top: 3rem;
@@ -3895,12 +3866,32 @@ form {
   margin-bottom: 1.5rem;
 }
 
+.ka-cta-enquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.ka-cta-enquiry span {
+  color: rgba(255, 255, 255, 0.45);
+}
+.ka-cta-enquiry a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.ka-cta-enquiry a:hover {
+  color: #ffffff;
+}
+
 @media (max-width: 1024px) {
-  .ka-themes-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
   .ka-timeline-track {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
   .ka-timeline-track .ka-tl-connector {
@@ -3926,34 +3917,17 @@ form {
   .ka-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .ka-themes-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .ka-timeline-track {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2rem;
-  }
-  .ka-timeline-track .ka-tl-connector {
-    display: none;
-  }
 }
 @media (max-width: 576px) {
   .ka-formats-grid,
   .ka-benefits-grid {
     grid-template-columns: 1fr;
   }
-  .ka-themes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .ka-timeline-track {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
   }
   .ka-who-grid {
     grid-template-columns: 1fr;
-  }
-  .ka-who-box {
-    padding: 1.5rem;
   }
   .ka-hero-title {
     font-size: 2.4rem;

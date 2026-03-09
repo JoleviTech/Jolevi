@@ -1192,7 +1192,11 @@ display: flex;
   animation: ka-pulse 2s ease-in-out infinite;
 }
 
-//kaduna anthology
+//anthology kaduna
+
+// ─────────────────────────────────────────────────────────────────────────────
+// KADUNA ANTHOLOGY — SCSS
+// ─────────────────────────────────────────────────────────────────────────────
 $green:        #5eb251;
 $green-dark:   #4a9940;
 $green-10:     rgba(94, 178, 81, 0.10);
@@ -1211,7 +1215,9 @@ $font:         "Comic Neue", cursive;
 $radius:       16px;
 $radius-sm:    10px;
 
+// ─────────────────────────────────────────────────────────────────────────────
 // BASE
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-page {
   font-family: $font;
   background: $white;
@@ -1227,7 +1233,9 @@ $radius-sm:    10px;
 
 .ka-centered { text-align: center; }
 
-.ka-section-header { margin-bottom: 3rem; }
+.ka-section-header {
+  margin-bottom: 3rem;
+}
 
 .ka-section-title {
   font-family: $font;
@@ -1244,7 +1252,9 @@ $radius-sm:    10px;
   margin: 0;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // HERO
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-hero {
   background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
   padding: 80px 0 70px;
@@ -1254,8 +1264,10 @@ $radius-sm:    10px;
   &::before {
     content: '';
     position: absolute;
-    top: -120px; right: -120px;
-    width: 500px; height: 500px;
+    top: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(94,178,81,0.25) 0%, transparent 65%);
     pointer-events: none;
@@ -1264,7 +1276,8 @@ $radius-sm:    10px;
 
 .ka-hero-bg-text {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: $font;
   font-size: clamp(8rem, 18vw, 18rem);
@@ -1298,7 +1311,8 @@ $radius-sm:    10px;
 }
 
 .ka-eyebrow-dot {
-  width: 7px; height: 7px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: $green;
   animation: ka-pulse 2s ease-in-out infinite;
@@ -1311,7 +1325,7 @@ $radius-sm:    10px;
 
 .ka-hero-title {
   font-family: $font;
-  font-size: clamp(2rem, 4.5vw, 2.5rem);
+  font-size: clamp(2.6rem, 5.5vw, 3.5rem);
   font-weight: 900;
   color: $white;
   line-height: 1.05;
@@ -1319,7 +1333,9 @@ $radius-sm:    10px;
   letter-spacing: -0.01em;
 }
 
-.ka-title-accent { color: $green; }
+.ka-title-accent {
+  color: $green;
+}
 
 .ka-hero-tagline {
   font-size: 1.05rem;
@@ -1344,7 +1360,9 @@ $radius-sm:    10px;
   align-items: center;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // BUTTONS
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-btn-primary {
   display: inline-flex;
   align-items: center;
@@ -1352,7 +1370,7 @@ $radius-sm:    10px;
   background: $green;
   color: $white;
   border: 2px solid $green;
-  padding: 0 1rem;
+  padding: 0 1.75rem;
   height: 50px;
   border-radius: 12px;
   font-family: $font;
@@ -1397,11 +1415,13 @@ $radius-sm:    10px;
 .ka-btn-large {
   height: 56px;
   font-size: 1.1rem;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
   border-radius: 14px;
 }
 
-// BOOK COVER
+// ─────────────────────────────────────────────────────────────────────────────
+// BOOK COVER MOCKUP
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-hero-cover {
   position: relative;
   flex-shrink: 0;
@@ -1412,7 +1432,9 @@ $radius-sm:    10px;
   width: 210px;
   border-radius: 4px 16px 16px 4px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    0 4px 16px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1;
 }
@@ -1469,7 +1491,8 @@ $radius-sm:    10px;
 .ka-cover-yellow { color: $yellow; }
 
 .ka-cover-divider {
-  width: 32px; height: 2px;
+  width: 32px;
+  height: 2px;
   background: $yellow;
   margin: 0.75rem auto;
   border-radius: 2px;
@@ -1487,16 +1510,20 @@ $radius-sm:    10px;
 
 .ka-cover-shadow {
   position: absolute;
-  bottom: -20px; left: 10px; right: -10px;
+  bottom: -20px;
+  left: 10px;
+  right: -10px;
   height: 36px;
   background: rgba(0,0,0,0.35);
   filter: blur(16px);
   border-radius: 50%;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // WHY
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-why {
-  padding: 60px 0;
+  padding: 90px 0;
   background: $white;
 }
 
@@ -1510,15 +1537,17 @@ $radius-sm:    10px;
 .ka-why-quote-box {
   background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 3rem;
   position: relative;
   overflow: hidden;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -30px; right: -30px;
-    width: 160px; height: 160px;
+    bottom: -30px;
+    right: -30px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(94,178,81,0.3) 0%, transparent 70%);
     pointer-events: none;
@@ -1531,7 +1560,7 @@ $radius-sm:    10px;
   font-size: 6rem;
   color: $green;
   line-height: 0.7;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.25rem;
   opacity: 0.8;
 }
 
@@ -1578,7 +1607,9 @@ $radius-sm:    10px;
   strong { color: $dark; }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // THEME BAND
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-theme-band {
   background: linear-gradient(135deg, rgba(94,178,81,0.18) 0%, rgba(94,178,81,0.10) 100%);
   padding: 60px 0;
@@ -1594,8 +1625,10 @@ $radius-sm:    10px;
     inset: 0;
     background: repeating-linear-gradient(
       45deg,
-      transparent, transparent 40px,
-      rgba(94,178,81,0.04) 40px, rgba(94,178,81,0.04) 80px
+      transparent,
+      transparent 40px,
+      rgba(94,178,81,0.04) 40px,
+      rgba(94,178,81,0.04) 80px
     );
   }
 }
@@ -1612,68 +1645,48 @@ $radius-sm:    10px;
 
 .ka-band-headline {
   font-family: $font;
-  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: $dark;
   margin: 0;
   position: relative;
 }
 
-// SUB THEMES — 6 cols = 2 clean rows of 6, no orphan problem
+// ─────────────────────────────────────────────────────────────────────────────
+// SUB THEMES
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-subthemes {
   padding: 80px 0;
   background: $off-white;
 }
 
-.ka-themes-grid {
-  display: grid;
+// Desktop grid — shown by default, hidden on mobile
+.ka-themes-desktop-grid {
+  display: grid !important;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
-.ka-theme-card {
-  background: $white;
-  border: 1.5px solid rgba(94,178,81,0.15);
-  border-radius: $radius-sm;
-  padding: 1.1rem 1rem;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  outline: none;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(94,178,81,0.15);
-    border-color: $green;
-  }
-
-  &--active {
-    background: $green;
-    border-color: $green;
-    .ka-theme-num { color: rgba(255,255,255,0.6); }
-    .ka-theme-label { color: $white; }
+@media (max-width: 1024px) {
+  .ka-themes-desktop-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
-.ka-theme-num {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: $green;
-  letter-spacing: 0.06em;
+// Mobile accordion — hidden by default, shown on mobile
+.ka-themes-mobile-list {
+  display: none !important;
 }
 
-.ka-theme-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: $dark;
-  line-height: 1.35;
+@media (max-width: 768px) {
+  .ka-themes-desktop-grid { display: none !important; }
+  .ka-themes-mobile-list  { display: block !important; }
+  .ka-subthemes .ka-container { padding: 0 0.75rem; }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // FORMATS
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-formats {
   padding: 80px 0;
   background: $white;
@@ -1704,7 +1717,9 @@ $radius-sm:    10px;
 }
 
 .ka-format-icon-wrap {
-  width: 48px; height: 48px; min-width: 48px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   border-radius: 12px;
   background: $green-10;
   display: flex;
@@ -1732,7 +1747,9 @@ $radius-sm:    10px;
   display: inline-block;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // WHO + GUIDELINES
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-who {
   padding: 80px 0;
   background: $off-white;
@@ -1758,13 +1775,18 @@ $radius-sm:    10px;
   gap: 0.75rem;
   margin-bottom: 1.75rem;
 
-  i { font-size: 1.4rem; color: $green; }
+  i {
+    font-size: 1.4rem;
+    color: $green;
+  }
+
   .ka-section-title { margin: 0; }
 }
 
 .ka-req-list {
   list-style: none;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1788,14 +1810,10 @@ $radius-sm:    10px;
   }
 }
 
-.ka-req-text {
-  flex: 1;
-  min-width: 0;
-}
-
 .ka-guide-list {
   list-style: none;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
@@ -1809,7 +1827,9 @@ $radius-sm:    10px;
     line-height: 1.6;
 
     span {
-      width: 24px; height: 24px; min-width: 24px;
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
       background: $green;
       color: $white;
       font-size: 0.72rem;
@@ -1824,7 +1844,9 @@ $radius-sm:    10px;
   }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // TIMELINE
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-timeline {
   padding: 80px 0;
   background: linear-gradient(180deg, rgba(94,178,81,0.08) 0%, rgba(94,178,81,0.14) 100%);
@@ -1835,7 +1857,7 @@ $radius-sm:    10px;
 
 .ka-timeline-track {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   position: relative;
   margin-top: 3rem;
@@ -1852,20 +1874,25 @@ $radius-sm:    10px;
 
 .ka-tl-connector {
   position: absolute;
-  top: 27px; left: 50%;
-  width: 100%; height: 2px;
+  top: 27px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
   z-index: 0;
 
   .ka-tl-line {
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 2px;
     background: linear-gradient(90deg, $green, rgba(94,178,81,0.3));
   }
 }
 
 .ka-tl-icon {
-  width: 54px; height: 54px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: $green;
   color: $white;
@@ -1893,7 +1920,9 @@ $radius-sm:    10px;
   margin: 0;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // BENEFITS
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-benefits {
   padding: 80px 0;
   background: $white;
@@ -1941,7 +1970,8 @@ $radius-sm:    10px;
 }
 
 .ka-benefit-icon-wrap {
-  width: 60px; height: 60px;
+  width: 60px;
+  height: 60px;
   border-radius: 16px;
   background: $green-10;
   display: flex;
@@ -1952,7 +1982,9 @@ $radius-sm:    10px;
   margin-bottom: 0.25rem;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
 // CTA
+// ─────────────────────────────────────────────────────────────────────────────
 .ka-cta {
   background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
   padding: 90px 0;
@@ -1962,8 +1994,10 @@ $radius-sm:    10px;
   &::before {
     content: '';
     position: absolute;
-    bottom: -100px; left: -100px;
-    width: 400px; height: 400px;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(94,178,81,0.25) 0%, transparent 65%);
     pointer-events: none;
@@ -1972,8 +2006,10 @@ $radius-sm:    10px;
   &::after {
     content: '';
     position: absolute;
-    top: -80px; right: -80px;
-    width: 320px; height: 320px;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 65%);
     pointer-events: none;
@@ -2018,53 +2054,76 @@ $radius-sm:    10px;
   margin-bottom: 1.5rem;
 }
 
+.ka-cta-enquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+
+  span { color: rgba(255,255,255,0.45); }
+
+  a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &:hover { color: $white; }
+  }
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // RESPONSIVE
 // ─────────────────────────────────────────────────────────────────────────────
 @media (max-width: 1024px) {
-  .ka-themes-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .ka-timeline-track {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+
     .ka-tl-connector { display: none; }
   }
 }
 
 @media (max-width: 768px) {
-  .ka-hero-grid { grid-template-columns: 1fr; gap: 0; }
+  .ka-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .ka-hero-cover { display: none; }
+
   .ka-hero { padding: 60px 0 50px; }
 
   .ka-why-grid,
-  .ka-who-grid { grid-template-columns: 1fr; }
+  .ka-who-grid {
+    grid-template-columns: 1fr;
+  }
 
   .ka-formats-grid,
-  .ka-benefits-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .ka-themes-grid { grid-template-columns: repeat(3, 1fr); }
-
-  .ka-timeline-track {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2rem;
-    .ka-tl-connector { display: none; }
+  .ka-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
   .ka-formats-grid,
-  .ka-benefits-grid { grid-template-columns: 1fr; }
-
-  .ka-themes-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .ka-timeline-track {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem;
+  .ka-benefits-grid {
+    grid-template-columns: 1fr;
   }
 
-  .ka-who-grid { grid-template-columns: 1fr; }
-  .ka-who-box { padding: 1.5rem; }
-  .ka-hero-title { font-size: 2.4rem; }
+  .ka-timeline-track {
+    grid-template-columns: 1fr;
+  }
+
+  .ka-who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ka-hero-title {
+    font-size: 2.4rem;
+  }
 }

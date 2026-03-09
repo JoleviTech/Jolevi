@@ -3,27 +3,32 @@ import { NewNavbar } from "../../../components/website/navbar";
 import { Footer } from "../../../components/website/footer";
 
 const SUB_THEMES = [
-  { number: "01", title: "Faith & Fault Lines" },
-  { number: "02", title: "Crisis, Curfew & Comeback" },
-  { number: "03", title: "Kaduna Hustle" },
-  { number: "04", title: "Love Across the Divide" },
-  { number: "05", title: "Barracks & Boots" },
-  { number: "06", title: "ABU Dreams & Zaria Days" },
-  { number: "07", title: "School Life" },
-  { number: "08", title: "Northern Womanhood" },
-  { number: "09", title: "Displacement & New Beginnings" },
-  { number: "10", title: "Street Gist & Area Chronicles" },
-  { number: "11", title: "Family, Culture & Tradition" },
-  { number: "12", title: "We Still Dey Laugh" },
+  { number: "01", title: "Market Women & Mall Culture",         tagline: "With the ever-increasing price of goods, come navigate the Markets of Kaduna with us." },
+  { number: "02", title: "Religion on the Loudspeaker",         tagline: "Celebrate the diversity of religion in KD." },
+  { number: "03", title: "Transport Tales",                     tagline: "From fuel hikes to bumpy roads, there's a lot to tell about travelling in Kaduna." },
+  { number: "04", title: "The Media Narrative vs Our Reality",  tagline: "Don't be fooled by the tabloids! Come see the vibrance of Kaduna!" },
+  { number: "05", title: "Food, Flavour & Firewood",            tagline: "Delicacies beyond imagination, tell us about the flavours of Kaduna that would leave mouths watering." },
+  { number: "06", title: "Security Checkpoints & Street Wisdom",tagline: "Nuggets to guide you on how to stay sharp in the city." },
+  { number: "07", title: "Kaduna at Night",                     tagline: "Lagos isn't the only city that doesn't sleep. Come explore the tales KD tells after dusk." },
+  { number: "08", title: "Crisis & Fault Lines",                tagline: "Travailing the turbulent waters of insecurity." },
+  { number: "09", title: "Kaduna Hustle",                       tagline: "The grind never stops, especially in Kaduna!" },
+  { number: "10", title: "Love Across the Divide",              tagline: "Tribe, class, religion, somehow love finds a way to bloom across walls." },
+  { number: "11", title: "Barracks & Boots",                    tagline: "Living in the state where men and legends are made." },
+  { number: "12", title: "ABU Dreams & Zaria Days",             tagline: "A call to ABU alumni and students! Share your stories." },
+  { number: "13", title: "School Life",                         tagline: "From primary to secondary to university, what makes schooling in Kaduna different from other states?" },
+  { number: "14", title: "Northern Womanhood",                  tagline: "Chronicles of a woman living in Croc City." },
+  { number: "15", title: "Displacement & New Beginnings",       tagline: "Come rain, come shine, the naija spirit prevails, and like seeds taking root in new soil, the people of Kaduna find a way to laugh again." },
+  { number: "16", title: "Street Gist & Area Chronicles",       tagline: "There is nothing sweeter than Amebo. Share the juicy stories of day-to-day life in KD city." },
+  { number: "17", title: "Family, Culture & Tradition",         tagline: "Asholio, Kadara, Ham, Gbagyi. With up to 60 tribes living in Kaduna. Show off the diversity of your people." },
 ];
 
 const FORMATS = [
-  { icon: "bi-journal-text",      label: "Short Stories",                    limit: "Max. 3,000 words"    },
-  { icon: "bi-person-lines-fill", label: "Creative Nonfiction",              limit: "Max. 3,000 words"    },
-  { icon: "bi-camera",            label: "Photography / Drawing / Cartoons", limit: "Visual submissions"  },
-  { icon: "bi-file-text",         label: "Essays",                           limit: "Max. 1,500 words"    },
-  { icon: "bi-pencil",            label: "Poetry",                           limit: "Max. 700 words"      },
-  { icon: "bi-newspaper",         label: "Articles",                         limit: "Max. 1,500 words"    },
+  { icon: "bi-journal-text",      label: "Short Stories",                    limit: "Max. 3,000 words"   },
+  { icon: "bi-person-lines-fill", label: "Creative Nonfiction",              limit: "Max. 3,000 words"   },
+  { icon: "bi-camera",            label: "Photography / Drawing / Cartoons", limit: "Visual submissions" },
+  { icon: "bi-file-text",         label: "Essays",                           limit: "Max. 1,500 words"   },
+  { icon: "bi-feather",           label: "Poetry",                           limit: "Max. 700 words"     },
+  { icon: "bi-newspaper",         label: "Articles",                         limit: "Max. 1,500 words"   },
 ];
 
 const TIMELINE = [
@@ -75,9 +80,9 @@ export const AnthologyKaduna = () => {
                   Don See For <span className="ka-title-accent">Kaduna</span>
                 </h3>
                 <p className="ka-hero-body">
-                  Words carry power. A passage can capture the soul of a people, and a poem
-                  can reveal the beauty of a land. It is time to unveil the beauty of Kaduna, to honor the rich culture of our ancient city and tell its story through the
-                  power of our words and art.
+                  An extraordinary anthology capturing the essence, energy and soul of
+                  Kaduna through the eyes of talented writers — from its vibrant markets
+                  to its resilient people.
                 </p>
                 <div className="ka-hero-actions">
                   <a
@@ -133,15 +138,14 @@ export const AnthologyKaduna = () => {
                   Kaduna deserves to be heard, in its own words.
                 </h2>
                 <p>
-                  Kaduna is one of Nigeria's oldest and most storied cities, a place shaped
-                  by faith, resilience, conflict, and community. This anthology exists to
-                  capture that complexity: the laughter, the struggle, the beauty, and everything in between.
+                  We want to showcase the richness of Kaduna's culture, the resilience of
+                  its people, and the strength of its communities to the world. This anthology,
+                  in hard and soft copy, will be a landmark collection of authentic Kaduna voices.
                 </p>
                 <p>
-                  We are looking for <strong>originality, relatability and creativity </strong>
-                  pieces that depict the character, uniqueness, idiosyncrasies, nuances and the beauty
-                  of Kaduna, Nigeria. Fundamentally, we are looking for <strong>memorable and impactful pieces</strong>.
-                  You can approach the theme from any angle of your choosing.
+                  We are looking for <strong>originality, relatability and creativity</strong> —
+                  pieces that depict the character, uniqueness and beauty of Kaduna. You can
+                  approach the theme from any angle of your choosing.
                 </p>
               </div>
             </div>
@@ -163,19 +167,127 @@ export const AnthologyKaduna = () => {
           <div className="ka-container">
             <div className="ka-section-header ka-centered">
               <h3 className="ka-section-title">SUB THEMES</h3>
+              
             </div>
-            <div className="ka-themes-grid">
+
+            {/* ── DESKTOP grid — shown above 768px via CSS ── */}
+            <div className="ka-themes-desktop-grid">
               {SUB_THEMES.map((t) => (
-                <button
+                <div
                   key={t.number}
-                  className={`ka-theme-card${activeTheme === t.number ? " ka-theme-card--active" : ""}`}
-                  onClick={() => setActiveTheme(activeTheme === t.number ? null : t.number)}
+                  style={{
+                    background: "#ffffff",
+                    border: "none",
+                    borderRadius: "14px",
+                    padding: "1.25rem 1.1rem 1.1rem",
+                    textAlign: "left",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.45rem",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.07)",
+                    fontFamily: "Comic Neue, cursive",
+                  }}
                 >
-                  <span className="ka-theme-num">{t.number}</span>
-                  <span className="ka-theme-label">{t.title}</span>
-                </button>
+                  <span style={{
+                    fontSize: "0.6rem",
+                    fontWeight: 800,
+                    color: "#5eb251",
+                    letterSpacing: "0.1em",
+                    marginBottom: "0.1rem",
+                  }}>{t.number}</span>
+                  <span style={{
+                    fontSize: "0.88rem",
+                    fontWeight: 700,
+                    color: "#1a1a1a",
+                    lineHeight: 1.3,
+                  }}>{t.title}</span>
+                  <span style={{
+                    fontSize: "0.74rem",
+                    color: "#888",
+                    lineHeight: 1.6,
+                    marginTop: "0.15rem",
+                  }}>{t.tagline}</span>
+                </div>
               ))}
             </div>
+
+            {/* ── MOBILE accordion — matches image 1 exactly ── */}
+            <div className="ka-themes-mobile-list" style={{
+              border: "1px solid rgba(0,0,0,0.1)",
+              borderRadius: "16px",
+              overflow: "hidden",
+              background: "#fff",
+              boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
+            }}>
+              {SUB_THEMES.map((t, i) => {
+                const isActive = activeTheme === t.number;
+                return (
+                  <button
+                    key={t.number}
+                    onClick={() => setActiveTheme(isActive ? null : t.number)}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      background: "#fff",
+                      border: "none",
+                      borderBottom: i < SUB_THEMES.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none",
+                      padding: 0,
+                      cursor: "pointer",
+                      textAlign: "left",
+                      outline: "none",
+                      fontFamily: "Comic Neue, cursive",
+                    }}
+                  >
+                    <div style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1rem",
+                      padding: "1.1rem 1.25rem",
+                    }}>
+                      <span style={{
+                        fontSize: "0.65rem",
+                        fontWeight: 700,
+                        color: "#bbb",
+                        letterSpacing: "0.06em",
+                        minWidth: "20px",
+                        flexShrink: 0,
+                      }}>{t.number}</span>
+                      <span style={{
+                        fontSize: "0.95rem",
+                        fontWeight: 700,
+                        color: "#1a1a1a",
+                        flex: 1,
+                        lineHeight: 1.4,
+                        textAlign: "left",
+                      }}>{t.title}</span>
+                      <span style={{
+                        fontSize: "1.3rem",
+                        color: "rgba(94,178,81,0.45)",
+                        flexShrink: 0,
+                        fontWeight: 300,
+                        display: "inline-block",
+                        transform: isActive ? "rotate(45deg)" : "rotate(0deg)",
+                        transition: "transform 0.2s ease",
+                        lineHeight: 1,
+                        marginRight: "0.1rem",
+                      }}>+</span>
+                    </div>
+                    {isActive && (
+                      <p style={{
+                        margin: 0,
+                        padding: "0 1.25rem 1rem 3.1rem",
+                        fontSize: "0.84rem",
+                        color: "#666",
+                        lineHeight: 1.7,
+                        borderTop: "1px solid rgba(0,0,0,0.05)",
+                        paddingTop: "0.75rem",
+                      }}>{t.tagline}</p>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
           </div>
         </section>
 
@@ -232,12 +344,11 @@ export const AnthologyKaduna = () => {
                   <h2 className="ka-section-title">Submission Guidelines</h2>
                 </div>
                 <ul className="ka-guide-list">
-                  <li><span>1</span>Piece should be original work.</li>
-                  <li><span>2</span>All entries must be previously unpublished.</li>
-                  <li><span>3</span>No use of A.I. for creative writing.</li>
-                  <li><span>4</span>Contributors can submit as many entries as possible cutting across different sub-themes revolving around the central theme.</li>
-                  <li><span>5</span>Titles are not included in the word count.</li>
-                  <li><span>6</span>Give your piece a unique, creative title.</li>
+                  <li><span>1</span>All entries must be previously unpublished.</li>
+                  <li><span>2</span>Titles are not included in the word count.</li>
+                  <li><span>3</span>Give your piece a unique, creative title.</li>
+                  <li><span>4</span>Piece must be original work.</li>
+                  <li><span>5</span>By submitting your entry you agree to transfer any right or reproductions of your work to Jolevi upon acceptance of your entry.</li>
                 </ul>
               </div>
             </div>
@@ -276,6 +387,7 @@ export const AnthologyKaduna = () => {
               <p className="ka-section-sub">Contributing to this anthology opens doors.</p>
             </div>
             <div className="ka-benefits-grid">
+           
               {BENEFITS.map((b) => (
                 <div key={b.title} className="ka-benefit-card">
                   <div className="ka-benefit-icon-wrap">
