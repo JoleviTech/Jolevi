@@ -9,7 +9,7 @@ import authorTiti3 from "../../assets/website/images/authors/author-titi_3.jpg"
 import BookOne from "../../assets/website/images/authors/TOAM Mockup.png";
 import BookTwo from "../../assets/website/images/authors/WMEDSFL Mockup.png";
 import daniel from "../../assets/website/images/authors/daniel.png";
-import testimonial from "../../assets/website/images/authors/testimonial.png";
+// import testimonial from "../../assets/website/images/authors/testimonial.png";
 import samuel from "../../assets/website/images/authors/samuel.png";
 
 // ───────────────────────────────────────────────────────────────────────────
