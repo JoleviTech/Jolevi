@@ -138,6 +138,45 @@ const ReviewsSection = () => {
       rating: 4,
       review: 'The lessons in the book are amazing. Every page carries a meaningful lesson, and what makes them stand out is how practical they are and how easily they apply to our daily lives.',
      
+    },
+    {
+      id: 4,
+      name: 'Pelumi Okunronmu',
+      book: 'Threads of a Mind',
+      rating: 4,
+      review: 'Threads of a Mind was a delight to read. Relatable stories carrying valuable lessons. A great book to lose yourself in when you need to take a break.',
+     
+    },
+    {
+      id: 5,
+      name: 'Engr. Odiase',
+      book: 'Threads of a Mind',
+      rating: 5,
+      review: 'It is a beautiful thing and a rare privilege to have someone close write a book. Threads of a mind is an exceptionally articulated collection, full of wise nuggets that anyone can relate to.',
+    },
+    { 
+      id: 6,
+      name: 'Bwejuah Jojo Bibinu ',
+      book: 'Threads of a Mind',
+      rating: 5,
+      review: `A motivational masterpiece that's all about pushing you to chase your dreams and believe that you can make it. The book captures the reality of life's affairs and tells the outcome of every toil, turning visions into reality.`,
+     
+    },
+    {
+      id: 7,
+      name: 'Tolulope',
+      book: 'Wetin My Eyes Don See For Lagos',
+      rating: 5,
+      review: 'It’s a beautiful read. My mind wanders to some of these stories when I see similar occurrences on the streets of Lagos and I’m able to relate it to people’s experiences that I’ve read in the book.',
+     
+    },
+    {
+      id: 8,
+      name: 'Joseph Osifeso',
+      book: 'Threads of a Mind',
+      rating: 4,
+      review: `Reading "Threads of a Mind" was like journeying with Titi in her adventures. She perfectly exemplified the impact and importance of having goals and with her writing and the creation of this book, she showed the impact of being consistent.`,
+
     }
   ];
 

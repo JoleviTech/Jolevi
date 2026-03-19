@@ -38,9 +38,9 @@ She believes deeply in the creative and transformative power of words and in the
     ],
     accentColor: "#5eb251",
     contact: {
-      email: "t@jolevi.com",
+      email: "hi@titiekundayo.com",
       instagram: "https://www.instagram.com/titiekundayo/",
-      website: "https://www.jolevi.com/",
+      website: "www.titiekundayo.com",
     },
     books: [
       {
@@ -82,13 +82,33 @@ She believes deeply in the creative and transformative power of words and in the
       },
       {
         name: "Peter Yohanna Gwafan",
-        image: testimonial,
+        // image: testimonial,
         quote: "Every page carries a meaningful lesson, and what makes them stand out is how practical they are and how easily they apply to our daily lives.",
       },
       {
         name: "Samuel Afolayan",
         image: samuel,
         quote: "An absolute must-read. Titi has a rare gift for making the complex feel intimate and the personal feel universal.",
+      },
+      {
+        name: "Pelumi Okunronmu",
+        // image: samuel,
+        quote: "Threads of a Mind was a delight to read. Relatable stories carrying valuable lessons. A great book to lose yourself in when you need to take a break.",
+      },
+      {
+        name: "Engr. Odiase",
+        // image: samuel,
+        quote: "It is a beautiful thing and a rare privilege to have someone close write a book. Threads of a mind is an exceptionally articulated collection, full of wise nuggets that anyone can relate to.",
+      },
+      {
+        name: "Bwejuah Jojo Bibinu",
+        // image: samuel,
+        quote: `"THREADS OF A MIND" By Titi Ekundayo is a motivational masterpiece that's all about pushing you to chase your dreams and believe that you can make it.`,
+      },
+      {
+        name: "Joseph Osifeso",
+        // image: samuel,
+        quote: `Reading "Threads of a Mind" was like journeying with Titi in her adventures. She perfectly exemplified the impact and importance of having goals and with her writing and the creation of this book, she showed the impact of being consistent.`,
       },
     ],
   },
@@ -648,14 +668,35 @@ const AuthorDetailPage = ({ author, onBack }) => (
                     <p className="mt-1">{t.quote}</p>
                   </div>
                   <div className="author-testimonial-person">
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      width="48"
-                      height="48"
-                      className="rounded-circle"
-                      style={{ border: `3px solid ${author.accentColor || "#5eb251"}` }}
-                    />
+                  {t.image ? (
+  <img
+    src={t.image}
+    alt={t.name}
+    width="48"
+    height="48"
+    className="rounded-circle"
+    style={{ border: `3px solid ${author.accentColor || "#5eb251"}` }}
+  />
+) : (
+  <div
+    style={{
+      width: 48,
+      height: 48,
+      borderRadius: "50%",
+      border: `3px solid ${author.accentColor || "#5eb251"}`,
+      background: `${author.accentColor || "#5eb251"}22`,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "1.2rem",
+      fontWeight: "bold",
+      color: author.accentColor || "#5eb251",
+      flexShrink: 0,
+    }}
+  >
+    {t.name.charAt(0).toUpperCase()}
+  </div>
+)}
                     <span className="ms-3"><b>{t.name}</b></span>
                   </div>
                 </div>

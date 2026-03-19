@@ -44,10 +44,16 @@ const ReviewsSection = () => {
     {
       id: 1,
       name: "Samuel Afolayan",
-      book: "Wetin My Eyes Don See For Lagos",
       rating: 5,
       review:
         "Wetin My Eyes Don See for Lagos is full of amazing stories, expressed in different styles. It also captures interesting and important places of the city. It's an absolute must-read!",
+    },
+    {
+      id: 2,
+      name: "Tolulope",
+      rating: 5,
+      review:
+        "It’s a beautiful read. My mind wanders to some of these stories when I see similar occurrences on the streets of Lagos and I’m able to relate it to people’s experiences that I’ve read in the book.",
     },
   ];
 
@@ -97,11 +103,6 @@ const ReviewsSection = () => {
                   </div>
 
                   <div className="mb-2">{renderStars(review.rating)}</div>
-
-                  <p className="text-muted small mb-3 fst-italic">
-                    {review.book}
-                  </p>
-
                   <p className="card-text" style={{ fontSize: "0.95rem" }}>
                     "{review.review}"
                   </p>
