@@ -14,7 +14,7 @@ const PER_PAGE    = 12;
 
 const ALL_PRODUCTS = [
   {
-    id: "toam", category: "Books", tag: "Fiction",
+    id: "toam", category: "Books", tag: "Memoir",
     title: "Threads of a Mind", subtitle: "Titi Ekundayo",
     price: "₦10,000", image: toam, badge: "New", showBuyLinks: true,
     brief: "A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.",
