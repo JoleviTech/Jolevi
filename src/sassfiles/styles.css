@@ -5823,14 +5823,6 @@ form {
   margin-bottom: 0.5rem;
 }
 
-.author-card-tagline {
-  font-family: "Comic Neue", cursive;
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 0.75rem;
-}
-
 .author-card-books-count {
   font-family: "Comic Neue", cursive;
   font-size: 0.82rem;
@@ -5946,13 +5938,6 @@ form {
   box-shadow: 0 8px 24px rgba(251, 176, 59, 0.35);
 }
 
-.become-author-note {
-  margin-top: 1rem;
-  font-family: "Comic Neue", cursive;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.4);
-}
-
 .author-back-btn {
   font-family: "Comic Neue", cursive;
   font-size: 0.95rem;
@@ -5967,31 +5952,6 @@ form {
 .author-detail-hero {
   background: rgba(94, 178, 81, 0.12);
   border-bottom: 3px solid rgba(94, 178, 81, 0.2);
-}
-
-.author-detail-portrait-wrap {
-  position: relative;
-  display: inline-block;
-}
-
-.author-detail-portrait {
-  width: 260px;
-  height: 320px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
-  position: relative;
-  z-index: 1;
-}
-
-.author-detail-portrait-ring {
-  position: absolute;
-  inset: -8px;
-  border-radius: 18px;
-  border: 3px solid;
-  opacity: 0.3;
-  z-index: 0;
 }
 
 .author-detail-eyebrow {
@@ -6011,13 +5971,6 @@ form {
   color: #1a1a1a;
   margin-bottom: 0.4rem;
   line-height: 1.15;
-}
-
-.author-detail-tagline {
-  font-family: "Comic Neue", cursive;
-  font-size: 1.1rem;
-  color: #888;
-  margin-bottom: 1.25rem;
 }
 
 .author-detail-bio p {
@@ -6476,43 +6429,162 @@ form {
   text-align: center;
 }
 
-.author-testimonial-card {
-  background: #ffffff;
-  border-radius: 12px;
+.reviews-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.reviews-header h3 {
+  margin: 0;
+}
+.reviews-header .reviews-subhead {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.reviews-carousel {
+  position: relative;
+  padding: 0 44px;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  padding-bottom: 4px;
+}
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+.reviews-track:active {
+  cursor: grabbing;
+}
+
+.reviews-track-spacer {
+  flex-shrink: 0;
+  width: 1px;
+}
+
+.reviews-card {
+  flex-shrink: 0;
+  width: 320px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 14px;
   padding: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.author-testimonial-card:hover {
-  transform: translateY(-2px);
+.reviews-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.author-testimonial-quote {
+.reviews-card-quote {
   flex: 1;
 }
-.author-testimonial-quote p {
+.reviews-card-quote p {
   font-family: "Comic Neue", cursive;
   font-size: 0.95rem;
   color: #444;
   line-height: 1.75;
+  margin: 0.25rem 0 0;
 }
 
-.author-testimonial-person {
+.reviews-card-person {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   margin-top: 1.25rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
-.author-testimonial-person span {
+.reviews-card-person span {
   font-family: "Comic Neue", cursive;
   font-size: 0.9rem;
   color: #1a1a1a;
+}
+
+.reviews-card-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.reviews-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.18s, color 0.18s, box-shadow 0.18s;
+  color: #555;
+  z-index: 2;
+}
+.reviews-arrow i {
+  font-size: 0.85rem;
+}
+.reviews-arrow:hover:not(:disabled) {
+  border-color: var(--accent, #5eb251);
+  color: var(--accent, #5eb251);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.reviews-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.reviews-arrow--prev {
+  left: 0;
+}
+.reviews-arrow--next {
+  right: 0;
+}
+
+.reviews-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.reviews-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+.reviews-dot.active {
+  width: 22px;
+  border-radius: 4px;
 }
 
 .author-contact-section {
@@ -6606,16 +6678,8 @@ form {
   }
 }
 @media (max-width: 768px) {
-  .author-detail-portrait {
-    width: 200px;
-    height: 240px;
-  }
   .authors-hero {
     min-height: 60vh;
-  }
-  .become-author-perks {
-    flex-direction: column;
-    align-items: center;
   }
   .author-gallery-main {
     aspect-ratio: 4/5;
@@ -6626,6 +6690,13 @@ form {
   }
   .author-contact-item {
     padding: 0.75rem;
+  }
+  .become-author-perks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviews-carousel {
+    padding: 0 38px;
   }
 }
 @media (max-width: 600px) {
@@ -6650,5 +6721,11 @@ form {
   }
   .books-sort-select {
     width: 100%;
+  }
+  .reviews-carousel {
+    padding: 0 36px;
+  }
+  .reviews-card {
+    width: 280px;
   }
 }/*# sourceMappingURL=styles.css.map */
