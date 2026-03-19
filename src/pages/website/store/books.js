@@ -1,6 +1,4 @@
 import { NewNavbar } from "../../../components/website/navbar";
-// import { LandingPageHero } from "../../../components/website/hero";
-// import { WhatWeDoCard } from "../../../components/website/cards/homeCards";
 import { Footer } from "../../../components/website/footer";
 
 import toam from "../../../assets/website/images/books/TOAM Mockup.png";
@@ -24,23 +22,6 @@ const Books = () => {
 
 const BookPreorderPage=()=> {
   const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331";
-
-  // const books = [
-  //   {
-  //     id: 1,
-  //     title: 'Threads of a Mind',
-  //     author: 'Titi Ekundayo',
-  //     description: 'A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.',
-  //     image: toam
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Wetin My Eyes Don See For Lagos',
-  //     author: 'Various Authors',
-  //     description: 'An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria\'s most dynamic city.',
-  //     image: wmedsfl
-  //   },
-  // ];
 
   const books = [
     {
@@ -131,65 +112,7 @@ const BookPreorderPage=()=> {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="cta-section text-center py-5">
-        <div className="container">
-      
-          <h3 className="text-center">
-        <b>READY TO DIVE IN?</b>
-      </h3>
-          <p className="mx-auto mb-4" style={{ maxWidth: '700px' }}>
-            Secure your copies today and be among the first to experience these remarkable literary journeys.
-          </p>
-          <a
-            href={formLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn preorder-btn"
-          >
-            Buy Book
-          </a>
-        </div>
-      </section> */}
-
-{/* <section className="cta-section text-center py-5">
-  <div className="container">
-    <h3 className="text-center"><b>READY TO DIVE IN?</b></h3>
-    <p className="mx-auto mb-4" style={{ maxWidth: '700px' }}>
-      Secure your copies today and be among the first to experience these remarkable literary journeys.
-    </p>
-
-   
-    <a href={formLink} target="_blank" rel="noopener noreferrer" className="btn preorder-btn mb-4">
-      Buy on Jolevi
-    </a>
-
-  
-    <div>
-      <p style={{ fontSize: '11px', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600', marginBottom: '12px' }}>
-        Also available on RH Books
-      </p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-        <a
-          href="https://rhbooks.com.ng/product/threads-of-a-mind/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '9px 18px', borderRadius: '8px', border: '1.5px solid #5eb251', color: '#5eb251', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', whiteSpace: 'nowrap' }}
-        >
-          Threads of a Mind →
-        </a>
-        <a
-          href="https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '9px 18px', borderRadius: '8px', border: '1.5px solid #5eb251', color: '#5eb251', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', whiteSpace: 'nowrap' }}
-        >
-          Wetin My Eyes Don See For Lagos →
-        </a>
-      </div>
-    </div>
-  </div>
-</section> */}
+     
     </div>
 
   );

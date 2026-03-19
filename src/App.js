@@ -9,6 +9,7 @@ import { BlogReadMore } from "./pages/website/blogReadMore";
 import { Contact } from "./pages/website/contact";
 import InspoPage from "./pages/website/store/inspoCards";
 import Books from "./pages/website/store/books";
+import Store from "./pages/website/store/store";
 //Author
 import { Authors } from "./pages/website/authors";
 import AnthologyLagos from "./pages/website/anthology/anthology-lagos";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/authors/:authorId" element={<Authors />} />
         <Route path="/cards" element={<InspoPage />} />
         <Route path="/books" element={<Books />} />
+        <Route path="/store" element={<Store />} />
         <Route
           path="/pre-order"
           element={<Navigate to="/buy-book" replace />}
