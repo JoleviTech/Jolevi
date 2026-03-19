@@ -25,20 +25,45 @@ const Books = () => {
 const BookPreorderPage=()=> {
   const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSddijfqcoguOfqv5-QiE-jH4-g3LUnRrAA_qkp6Lo5NhK17iQ/viewform?usp=sharing&ouid=112731816547039664331";
 
+  // const books = [
+  //   {
+  //     id: 1,
+  //     title: 'Threads of a Mind',
+  //     author: 'Titi Ekundayo',
+  //     description: 'A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.',
+  //     image: toam
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Wetin My Eyes Don See For Lagos',
+  //     author: 'Various Authors',
+  //     description: 'An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria\'s most dynamic city.',
+  //     image: wmedsfl
+  //   },
+  // ];
+
   const books = [
     {
       id: 1,
       title: 'Threads of a Mind',
       author: 'Titi Ekundayo',
       description: 'A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.',
-      image: toam
+      image: toam,
+      buyLinks: [
+        { label: 'Buy on Jolevi', href: formLink },
+        { label: 'Buy on RH Books', href: 'https://rhbooks.com.ng/product/threads-of-a-mind/' },
+      ]
     },
     {
       id: 2,
       title: 'Wetin My Eyes Don See For Lagos',
       author: 'Various Authors',
       description: 'An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria\'s most dynamic city.',
-      image: wmedsfl
+      image: wmedsfl,
+      buyLinks: [
+        { label: 'Buy on Jolevi', href: formLink },
+        { label: 'Buy on RH Books', href: 'https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/' },
+      ]
     },
   ];
 
@@ -68,18 +93,36 @@ const BookPreorderPage=()=> {
                       className="img-fluid rounded book-image"
                     />
                   </div>
-                  <div className="card-body text-center">
+                  <div className="card-body text-center d-flex flex-column">
                     <h3 className="card-title mb-3">{book.title}</h3>
                     <p className="text-muted mb-3 fst-italic">by {book.author}</p>
                     <p className="card-text mb-4">{book.description}</p>
-                    <a
-                      href={formLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn preorder-btn"
-                    >
-                       Buy Book
-                    </a>
+                  
+
+                    <div style={{ marginTop: 'auto', paddingTop: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  <p style={{ fontSize: '11px', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600', marginBottom: '10px' }}>
+    Available at
+  </p>
+  <div style={{ display: 'inline-flex', borderRadius: '8px', overflow: 'hidden', border: '1.5px solid #5eb251' }}>
+    <a
+      href={book.buyLinks[0].href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '10px 20px', background: '#5eb251', color: '#fff', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', whiteSpace: 'nowrap' }}
+    >
+      <i className="" style={{ fontSize: '13px' }}></i>
+      Jolevi →
+    </a>
+    <a
+      href={book.buyLinks[1].href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '10px 20px', background: 'transparent', color: '#5eb251', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', borderLeft: '1.5px solid #5eb251', whiteSpace: 'nowrap' }}
+    >
+      RH Books →
+    </a>
+  </div>
+</div>
                   </div>
                 </div>
               </div>
@@ -89,7 +132,7 @@ const BookPreorderPage=()=> {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section text-center py-5">
+      {/* <section className="cta-section text-center py-5">
         <div className="container">
       
           <h3 className="text-center">
@@ -107,8 +150,48 @@ const BookPreorderPage=()=> {
             Buy Book
           </a>
         </div>
-      </section>
+      </section> */}
+
+{/* <section className="cta-section text-center py-5">
+  <div className="container">
+    <h3 className="text-center"><b>READY TO DIVE IN?</b></h3>
+    <p className="mx-auto mb-4" style={{ maxWidth: '700px' }}>
+      Secure your copies today and be among the first to experience these remarkable literary journeys.
+    </p>
+
+   
+    <a href={formLink} target="_blank" rel="noopener noreferrer" className="btn preorder-btn mb-4">
+      Buy on Jolevi
+    </a>
+
+  
+    <div>
+      <p style={{ fontSize: '11px', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600', marginBottom: '12px' }}>
+        Also available on RH Books
+      </p>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+        <a
+          href="https://rhbooks.com.ng/product/threads-of-a-mind/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '9px 18px', borderRadius: '8px', border: '1.5px solid #5eb251', color: '#5eb251', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', whiteSpace: 'nowrap' }}
+        >
+          Threads of a Mind →
+        </a>
+        <a
+          href="https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '9px 18px', borderRadius: '8px', border: '1.5px solid #5eb251', color: '#5eb251', fontWeight: '600', fontSize: '0.85rem', textDecoration: 'none', whiteSpace: 'nowrap' }}
+        >
+          Wetin My Eyes Don See For Lagos →
+        </a>
+      </div>
     </div>
+  </div>
+</section> */}
+    </div>
+
   );
 }
 
