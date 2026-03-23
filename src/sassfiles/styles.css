@@ -3068,6 +3068,15 @@ form {
   animation: ka-pulse 2s ease-in-out infinite;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .ka-page {
   font-family: "Comic Neue", cursive;
   background: #ffffff;
@@ -3137,6 +3146,8 @@ form {
      -moz-user-select: none;
           user-select: none;
   letter-spacing: -0.02em;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .ka-hero-grid {
@@ -3669,7 +3680,7 @@ form {
 }
 
 .ka-timeline {
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(180deg, rgba(94, 178, 81, 0.08) 0%, rgba(94, 178, 81, 0.14) 100%);
 }
 
@@ -3683,7 +3694,7 @@ form {
 
 .ka-timeline-track {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   position: relative;
   margin-top: 3rem;
@@ -3891,8 +3902,8 @@ form {
 
 @media (max-width: 1024px) {
   .ka-timeline-track {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem;
   }
   .ka-timeline-track .ka-tl-connector {
     display: none;
@@ -3917,13 +3928,17 @@ form {
   .ka-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .ka-timeline-track {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem;
+  }
+  .ka-timeline-track .ka-tl-connector {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
   .ka-formats-grid,
   .ka-benefits-grid {
-    grid-template-columns: 1fr;
-  }
-  .ka-timeline-track {
     grid-template-columns: 1fr;
   }
   .ka-who-grid {
@@ -3931,6 +3946,53 @@ form {
   }
   .ka-hero-title {
     font-size: 2.4rem;
+  }
+  .ka-timeline-track {
+    grid-template-columns: 1fr !important;
+    gap: 0;
+    position: relative;
+  }
+  .ka-timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 23px;
+    width: 2px;
+    background: linear-gradient(180deg, #5eb251, rgba(94, 178, 81, 0.3));
+    z-index: 0;
+  }
+  .ka-timeline-track .ka-tl-connector {
+    display: none;
+  }
+  .ka-tl-step {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.85rem 0;
+    position: relative;
+  }
+  .ka-tl-step .ka-tl-phase,
+  .ka-tl-step .ka-tl-date {
+    display: block;
+  }
+  .ka-tl-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  .ka-tl-phase {
+    font-size: 0.88rem;
+    margin: 0 0 0.2rem 0;
+  }
+  .ka-tl-date {
+    font-size: 0.78rem;
+    margin: 0;
   }
 }
 :root {

@@ -364,16 +364,22 @@ export const AnthologyKaduna = () => {
             </div>
             <div className="ka-timeline-track" style={{ gridTemplateColumns: "repeat(5, 1fr)" }}>
               {TIMELINE.map((item, i) => (
-                <div key={item.phase} className="ka-tl-step">
-                  <div className="ka-tl-connector">
-                    {i < TIMELINE.length - 1 && <div className="ka-tl-line"></div>}
-                  </div>
-                  <div className="ka-tl-icon">
-                    <i className={`bi ${item.icon}`}></i>
-                  </div>
-                  <p className="ka-tl-phase">{item.phase}</p>
-                  <p className="ka-tl-date">{item.date}</p>
-                </div>
+               
+
+             
+<div key={item.phase} className="ka-tl-step">
+  <div className="ka-tl-connector">
+    {i < TIMELINE.length - 1 && <div className="ka-tl-line"></div>}
+  </div>
+  <div className="ka-tl-icon">
+    <i className={`bi ${item.icon}`}></i>
+  </div>
+  {/* ↓ Add this wrapper div */}
+  <div>
+    <p className="ka-tl-phase">{item.phase}</p>
+    <p className="ka-tl-date">{item.date}</p>
+  </div>
+</div>
               ))}
             </div>
           </div>
