@@ -348,7 +348,7 @@ export const AnthologyKaduna = () => {
                   <li><span>2</span>Titles are not included in the word count.</li>
                   <li><span>3</span>Give your piece a unique, creative title.</li>
                   <li><span>4</span>Piece must be original work.</li>
-                  <li><span>5</span>By submitting your entry you agree to transfer any right or reproductions of your work to Jolevi upon acceptance of your entry.</li>
+               
                 </ul>
               </div>
             </div>
