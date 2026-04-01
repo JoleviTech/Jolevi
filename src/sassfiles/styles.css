@@ -133,26 +133,15 @@ p {
    SERVICES PAGE (same pattern)
 ══════════════════════════════════════ */
 .ServicesPageHeroBg {
-  background: url(/src/assets/website/images/hero/abouthero/serviceshero.jpg);
+  background: url(/src/assets/website/images/hero/abouthero/_KIC1054.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   position: relative;
   height: 80vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-}
-
-.ServicesPageHeroBg::after {
-  content: "";
-  position: absolute;
-  inset: -10px;
-  background: inherit;
-  background-size: cover;
-  background-position: center;
-  filter: blur(2px);
-  z-index: 0;
 }
 
 .ServicesPageHeroBgg {
