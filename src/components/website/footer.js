@@ -136,7 +136,7 @@ export const Footer = () => {
                   <Link to="/services">Services</Link>
                 </li>
                 <li>
-                  <Link to="/author">Author</Link>
+                  <Link to="/authors">Author</Link>
                 </li>
                 <li>
                   <Link to="/events">Events</Link>
