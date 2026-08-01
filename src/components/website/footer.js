@@ -162,7 +162,7 @@ export const Footer = () => {
               </h6>
               <ul>
                 <li>
-                  <Link to="/buy-book">Books</Link>
+                  <Link to="/books">Books</Link>
                 </li>
                 <li>
                   <Link to="/cards">Cards</Link>

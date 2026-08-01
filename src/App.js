@@ -35,7 +35,7 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route
           path="/pre-order"
-          element={<Navigate to="/buy-book" replace />}
+          element={<Navigate to="/books" replace />}
         />
         <Route path="/anthology-lagos" element={<AnthologyLagos />} />
         <Route path="/anthology-kaduna" element={<AnthologyKaduna />} />
