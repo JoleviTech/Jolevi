@@ -33,7 +33,7 @@ const BookPreorderPage = () => {
       buyLinks: [
   { label: 'Jolevi', href: formLink, type: 'physical' },
   { label: 'RH Books', href: 'https://rhbooks.com.ng/product/threads-of-a-mind/', type: 'physical' },
-  { label: 'Selar (E-book)', href: 'https://selar.com/31d306a758', type: 'ebook' },
+  { label: 'Selar', href: 'https://selar.com/31d306a758', type: 'ebook' },
 ]
     },
     {
@@ -45,7 +45,7 @@ const BookPreorderPage = () => {
       buyLinks: [
   { label: 'Jolevi', href: formLink, type: 'physical' },
   { label: 'RH Books', href: 'https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/', type: 'physical' },
-  { label: 'Selar (E-book)', href: 'https://selar.com/77687g1sx7', type: 'ebook' },
+  { label: 'Selar', href: 'https://selar.com/77687g1sx7', type: 'ebook' },
 ]
     },
   ];
