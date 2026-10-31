@@ -16,6 +16,9 @@ import AnthologyLagos from "./pages/website/anthology/anthology-lagos";
 import { AnthologyKaduna } from "./pages/website/anthology/anthology-kaduna";
 import EventsPage from "./pages/website/events/events";
 
+import BookClub from "./pages/website/book-club/book-club";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +44,8 @@ function App() {
         <Route path="/anthology-kaduna" element={<AnthologyKaduna />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:eventId" element={<EventsPage />} />
+
+        <Route path="/book-club" element={<BookClub />} />
       </Routes>
     </BrowserRouter>
   );

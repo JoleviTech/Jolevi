@@ -31,10 +31,10 @@ const BookPreorderPage = () => {
       description: 'A captivating exploration of consciousness, identity, and the intricate connections that weave through our thoughts and experiences.',
       image: toam,
       buyLinks: [
-  { label: 'Jolevi', href: formLink, type: 'physical' },
-  { label: 'RH Books', href: 'https://rhbooks.com.ng/product/threads-of-a-mind/', type: 'physical' },
-  { label: 'Selar', href: 'https://selar.com/31d306a758', type: 'ebook' },
-]
+        { label: 'Jolevi', href: formLink, type: 'physical' },
+        { label: 'RH Books', href: 'https://rhbooks.com.ng/product/threads-of-a-mind/', type: 'physical' },
+        { label: 'Selar', href: 'https://selar.com/31d306a758', type: 'ebook' },
+      ]
     },
     {
       id: 2,
@@ -43,10 +43,10 @@ const BookPreorderPage = () => {
       description: 'An anthology of authentic Lagos stories, capturing the vibrant spirit, struggles, and triumphs of life in Nigeria\'s most dynamic city.',
       image: wmedsfl,
       buyLinks: [
-  { label: 'Jolevi', href: formLink, type: 'physical' },
-  { label: 'RH Books', href: 'https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/', type: 'physical' },
-  { label: 'Selar', href: 'https://selar.com/77687g1sx7', type: 'ebook' },
-]
+        { label: 'Jolevi', href: formLink, type: 'physical' },
+        { label: 'RH Books', href: 'https://rhbooks.com.ng/product/wetin-my-eyes-don-see-for-lagos-an-anthology/', type: 'physical' },
+        { label: 'Selar', href: 'https://selar.com/77687g1sx7', type: 'ebook' },
+      ]
     },
   ];
 
@@ -81,25 +81,25 @@ const BookPreorderPage = () => {
                     <h3 className="card-title mb-3">{book.title}</h3>
                     <p className="text-muted mb-3 fst-italic">by {book.author}</p>
                     <p className="card-text mb-4">{book.description}</p>
- 
+
                     <div style={{ marginTop: 'auto', paddingTop: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6rem', width: '100%' }}>
                       {/* <p style={{ fontSize: '11px', color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '600', marginBottom: '4px' }}>
                         Available at
                       </p> */}
 
                       <p
-  style={{
-    fontSize: '11px',
-    color: '#888',
-    textTransform: 'uppercase',
-    letterSpacing: '0.1em',
-    fontWeight: '600',
-    marginBottom: '4px'
-  }}
->
-  Physical copies available at
-</p>
-                      
+                        style={{
+                          fontSize: '11px',
+                          color: '#888',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.1em',
+                          fontWeight: '600',
+                          marginBottom: '4px'
+                        }}
+                      >
+                        Physical copies available at
+                      </p>
+
                       {/* Physical Books - Pill Style */}
                       <div style={{ display: 'inline-flex', borderRadius: '8px', overflow: 'hidden', border: '1.5px solid #5eb251' }}>
                         {book.buyLinks.filter(link => link.type === 'physical').map((link, index) => (
@@ -139,54 +139,54 @@ const BookPreorderPage = () => {
                           </a>
                         ))}
                       </div>
- 
+
                       {/* E-books - Pill Style */}
                       {/* E-books */}
-{book.buyLinks.some(link => link.type === 'ebook') && (
-  <>
-    <p
-      style={{
-        fontSize: '11px',
-        color: '#888',
-        textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        fontWeight: '600',
-        marginTop: '8px',
-        marginBottom: '4px'
-      }}
-    >
-      E-book available on
-    </p>
+                      {book.buyLinks.some(link => link.type === 'ebook') && (
+                        <>
+                          <p
+                            style={{
+                              fontSize: '11px',
+                              color: '#888',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.1em',
+                              fontWeight: '600',
+                              marginTop: '8px',
+                              marginBottom: '4px'
+                            }}
+                          >
+                            E-book available on
+                          </p>
 
-    {book.buyLinks
-      .filter(link => link.type === 'ebook')
-      .map((link, index) => (
-        <a
-          key={index}
-          href={link.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '10px 28px',
-            background: '#fbb03b',
-            color: '#fff',
-            fontWeight: '600',
-            fontSize: '0.85rem',
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            borderRadius: '8px',
-            border: '1.5px solid #fbb03b',
-            transition: 'all 0.2s ease'
-          }}
-        >
-          {link.label} →
-        </a>
-      ))}
-  </>
-)}
+                          {book.buyLinks
+                            .filter(link => link.type === 'ebook')
+                            .map((link, index) => (
+                              <a
+                                key={index}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                  display: 'inline-flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  padding: '10px 28px',
+                                  background: '#fbb03b',
+                                  color: '#fff',
+                                  fontWeight: '600',
+                                  fontSize: '0.85rem',
+                                  textDecoration: 'none',
+                                  whiteSpace: 'nowrap',
+                                  borderRadius: '8px',
+                                  border: '1.5px solid #fbb03b',
+                                  transition: 'all 0.2s ease'
+                                }}
+                              >
+                                {link.label} →
+                              </a>
+                            ))}
+                        </>
+                      )}
                       {/* {book.buyLinks.filter(link => link.type === 'ebook').map((link, index) => (
                         <a
                           key={index}
